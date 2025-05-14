@@ -12,7 +12,7 @@ public sealed partial class PaperComponent : Component
     public string Content { get; set; } = "";
 
     [DataField("contentSize")]
-    public int ContentSize { get; set; } = 10000;
+    public int ContentSize { get; set; } = 262144; // collard-Longify
 
     [DataField("stampedBy"), AutoNetworkedField]
     public List<StampDisplayInfo> StampedBy { get; set; } = new();
