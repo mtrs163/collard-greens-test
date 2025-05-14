@@ -15,6 +15,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Content.Shared.Collard.Humanoid; // collard-ERPStatus
 
 namespace Content.Shared.Preferences
 {
@@ -84,6 +85,14 @@ namespace Content.Shared.Preferences
         [DataField]
         public Sex Sex { get; private set; } = Sex.Male;
 
+        // collard-ERPStatus-start
+        /// <summary>
+        /// Ehhh something with the erpstatus ig.
+        /// </summary>
+        [DataField]
+        public ERPStatus ERPStatus { get; private set; } = ERPStatus.Ask;
+        // collard-ERPStatus-end
+
         [DataField]
         public Gender Gender { get; private set; } = Gender.Male;
 
@@ -132,6 +141,7 @@ namespace Content.Shared.Preferences
             string species,
             int age,
             Sex sex,
+            ERPStatus erpStatus, // collard-ERPStatus
             Gender gender,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
@@ -146,6 +156,7 @@ namespace Content.Shared.Preferences
             Species = species;
             Age = age;
             Sex = sex;
+            ERPStatus = erpStatus; // collard-ERPStatus
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
@@ -177,6 +188,7 @@ namespace Content.Shared.Preferences
                 other.Species,
                 other.Age,
                 other.Sex,
+                other.ERPStatus, // collard-ERPStatus
                 other.Gender,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
@@ -282,6 +294,13 @@ namespace Content.Shared.Preferences
         {
             return new(this) { Sex = sex };
         }
+
+        // collard-ERPStatus-start
+        public HumanoidCharacterProfile WithERPStatus(ERPStatus erpStatus)
+        {
+            return new(this) { ERPStatus = erpStatus };
+        }
+        // collard-ERPStatus-end
 
         public HumanoidCharacterProfile WithGender(Gender gender)
         {
@@ -461,6 +480,7 @@ namespace Content.Shared.Preferences
             if (Name != other.Name) return false;
             if (Age != other.Age) return false;
             if (Sex != other.Sex) return false;
+            if (ERPStatus != other.ERPStatus) return false; // collard-ERPStatus
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
@@ -549,6 +569,7 @@ namespace Content.Shared.Preferences
                 flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
             }
 
+            var erpstatus = ERPStatus; // collard-ERPStatus
             var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex);
 
             var prefsUnavailableMode = PreferenceUnavailable switch
@@ -599,6 +620,7 @@ namespace Content.Shared.Preferences
             FlavorText = flavortext;
             Age = age;
             Sex = sex;
+            ERPStatus = erpstatus; // collard-ERPStatus
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
@@ -709,6 +731,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add((int)Sex);
+            hashCode.Add((int)ERPStatus); // collard-ERPStatus
             hashCode.Add((int)Gender);
             hashCode.Add(Appearance);
             hashCode.Add((int)SpawnPriority);

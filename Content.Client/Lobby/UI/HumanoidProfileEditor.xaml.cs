@@ -34,6 +34,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
+using Content.Shared.Collard.Humanoid; // collard-ERPStatus
 
 namespace Content.Client.Lobby.UI
 {
@@ -185,6 +186,18 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Sex
+
+            // collard-ERPStatus-start
+            #region ERPStatus
+
+            ERPButton.OnItemSelected += args =>
+            {
+                ERPButton.SelectId(args.Id);
+                SetERPStatus((ERPStatus) args.Id);
+            };
+
+            #endregion ERPStatus
+            // collard-ERPStatus-end
 
             #region Age
 
@@ -441,6 +454,7 @@ namespace Content.Client.Lobby.UI
             };
 
             SpeciesInfoButton.OnPressed += OnSpeciesInfoButtonPressed;
+            //ERPStatusInfoButton.OnPressed += OnERPStatusInfoButtonPressed; // collard-ERPStatus-TODO: add guidebook
 
             UpdateSpeciesGuidebookIcon();
             IsDirty = false;
@@ -749,6 +763,7 @@ namespace Content.Client.Lobby.UI
             UpdateNameEdit();
             UpdateFlavorTextEdit();
             UpdateSexControls();
+            UpdateERPStatusControls();// collard-ERPStatus
             UpdateGenderControls();
             UpdateSkinColor();
             UpdateSpawnPriorityControls();
@@ -809,6 +824,29 @@ namespace Content.Client.Lobby.UI
                 guidebookController.OpenGuidebook(dict, includeChildren:true, selected: page);
             }
         }
+
+        /*private void OnERPStatusInfoButtonPressed(BaseButton.ButtonEventArgs args) collard-ERPStatus-TODO:add guidebook
+        {
+            var guidebookController = UserInterfaceManager.GetUIController<GuidebookUIController>();
+            var page = "ERPStatus";
+            switch (ERPButton.SelectedId)
+            {
+                case 0:
+                    page = "ERPStatusNo";
+                    break;
+                case 1:
+                    page = "ERPStatusAsk";
+                    break;
+                case 2:
+                    page = "ERPStatusYes";
+                    break;
+                default:
+                    page = "ERPStatus";
+                    break;
+            }
+            var dict = new Dictionary<ProtoId<GuideEntryPrototype>, GuideEntry>();
+            guidebookController.OpenGuidebook(dict, includeChildren:true, selected: page);
+        }*/
 
         /// <summary>
         /// Refreshes all job selectors.
@@ -1192,6 +1230,15 @@ namespace Content.Client.Lobby.UI
             ReloadPreview();
         }
 
+        // collard-ERPStatus-start
+        private void SetERPStatus(ERPStatus newERPStatus)
+        {
+            Profile = Profile?.WithERPStatus(newERPStatus);
+            ReloadPreview();
+            SetDirty();
+        }
+        // collard-ERPStatus-end
+
         private void SetGender(Gender newGender)
         {
             Profile = Profile?.WithGender(newGender);
@@ -1305,6 +1352,21 @@ namespace Content.Client.Lobby.UI
             else
                 SexButton.SelectId((int) sexes[0]);
         }
+
+        // collard-ERPStatus-start
+        private void UpdateERPStatusControls()
+        {
+            if (Profile == null)
+                return;
+
+            ERPButton.Clear();
+            ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-no"), (int)ERPStatus.No);
+            ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-ask"), (int)ERPStatus.Ask);
+            ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-yes"), (int)ERPStatus.Yes);
+            ERPButton.SelectId((int) Profile.ERPStatus);
+
+        }
+        // collard-ERPStatus-end
 
         private void UpdateSkinColor()
         {

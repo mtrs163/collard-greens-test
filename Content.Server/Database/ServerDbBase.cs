@@ -21,6 +21,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared.Collard.Humanoid; // collard-ERPStatus
 
 namespace Content.Server.Database
 {
@@ -194,6 +195,12 @@ namespace Content.Server.Database
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
                 sex = sexVal;
 
+            // collard-ERPStatus-start
+            var erpstatus = ERPStatus.Ask;
+            if (Enum.TryParse<ERPStatus>(profile.ERPStatus, true, out var erpVal))
+                erpstatus = erpVal;
+            // collard-ERPStatus-end
+
             var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
 
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
@@ -246,6 +253,7 @@ namespace Content.Server.Database
                 profile.Species,
                 profile.Age,
                 sex,
+                erpstatus, // collard-ERPStatus
                 gender,
                 new HumanoidCharacterAppearance
                 (
@@ -282,6 +290,7 @@ namespace Content.Server.Database
             profile.Species = humanoid.Species;
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
+            profile.ERPStatus = humanoid.ERPStatus.ToString(); // collard-ERPStatus
             profile.Gender = humanoid.Gender.ToString();
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();

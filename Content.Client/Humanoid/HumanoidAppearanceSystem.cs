@@ -214,6 +214,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
+        humanoid.ERPStatus = profile.ERPStatus; // collard-ERPStatus
 
         UpdateSprite(humanoid, Comp<SpriteComponent>(uid));
     }
