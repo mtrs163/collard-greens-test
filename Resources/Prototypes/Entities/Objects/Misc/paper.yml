@@ -78,6 +78,12 @@
         type: PaperBoundUserInterface
   - type: FaxableObject
   - type: PaperVisuals
+# collard-Printer-start
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Paper: 100
+# collard-Printer-end
 
 - type: entity
   name: paper scrap
