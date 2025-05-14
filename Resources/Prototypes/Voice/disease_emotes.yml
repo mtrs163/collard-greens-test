@@ -26,6 +26,17 @@
     - cough!
     - coughs!
     - coughed!
+    # collard-Localization-start
+    - кашель
+    - кашляет
+    - кашлянул
+    - кашель.
+    - кашляет.
+    - кашлянул.
+    - кашель!
+    - кашляет!
+    - кашлянул!
+    # collard-Localization-start
 
 - type: emote
   id: CatMeow
@@ -66,6 +77,14 @@
   chatTriggers:
     - yawn
     - yawns
+    # collard-Localization-start
+    - зевок
+    - зевает
+    - зевок.
+    - зевает.
+    - зевок!
+    - зевает!
+    # collard-Localization-end
 
 - type: emote
   id: Snore
