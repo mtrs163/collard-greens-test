@@ -19,6 +19,7 @@
     - id: AstroNavCartridge
     - id: ClothingHandsKnuckleDustersQM
     - id: MailTeleporterMachineCircuitboard
+    - id: PrinterDocFlatpack # collard-Printer
 
 - type: entity
   id: LockerQuarterMasterFilled
@@ -141,6 +142,7 @@
     - id: RubberStampHop
     - id: WeaponDisabler
     - id: ClothingEyesHudCommand
+    - id: PrinterDocFlatpack # collard-Printer
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
