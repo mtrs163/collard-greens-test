@@ -38,7 +38,7 @@ public abstract class SharedClockSystem : EntitySystem
 
     private TimeSpan GetGlobalTime()
     {
-        return (EntityQuery<GlobalTimeManagerComponent>().FirstOrDefault()?.TimeOffset ?? TimeSpan.Zero) + _ticker.RoundDuration();
+        return _ticker.ICDateTime.TimeOfDay + _ticker.RoundDuration(); // collard-ICDateTime
     }
 
     public TimeSpan GetClockTime(Entity<ClockComponent> ent)

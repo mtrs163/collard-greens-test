@@ -373,6 +373,7 @@ namespace Content.Server.GameTicking
             var readyPlayers = new List<ICommonSession>();
             var readyPlayerProfiles = new Dictionary<NetUserId, HumanoidCharacterProfile>();
             var autoDeAdmin = _cfg.GetCVar(CCVars.AdminDeadminOnJoin);
+            var icDateTime = DateTime.UtcNow.AddYears(1000).ToString("dd.MM.yyyy, hh:mm:ss"); // collard-ICDateTime
             foreach (var (userId, status) in _playerGameStatuses)
             {
                 if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay) continue;
@@ -432,6 +433,7 @@ namespace Content.Server.GameTicking
             RunLevel = GameRunLevel.InRound;
 
             RoundStartTimeSpan = _gameTiming.CurTime;
+            ICDateTime = DateTime.UtcNow.AddYears(1000); // collard-ICDateTime
             SendStatusToAll();
             ReqWindowAttentionAll();
             UpdateLateJoinStatus();

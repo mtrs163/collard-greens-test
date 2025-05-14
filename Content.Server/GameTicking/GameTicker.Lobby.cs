@@ -88,13 +88,13 @@ namespace Content.Server.GameTicking
 
         private TickerConnectionStatusEvent GetConnectionStatusMsg()
         {
-            return new TickerConnectionStatusEvent(RoundStartTimeSpan);
+            return new TickerConnectionStatusEvent(RoundStartTimeSpan, ICDateTime); // collard-ICDateTime
         }
 
         private TickerLobbyStatusEvent GetStatusMsg(ICommonSession session)
         {
             _playerGameStatuses.TryGetValue(session.UserId, out var status);
-            return new TickerLobbyStatusEvent(RunLevel != GameRunLevel.PreRoundLobby, LobbyBackground, status == PlayerGameStatus.ReadyToPlay, _roundStartTime, RoundPreloadTime, RoundStartTimeSpan, Paused);
+            return new TickerLobbyStatusEvent(RunLevel != GameRunLevel.PreRoundLobby, LobbyBackground, status == PlayerGameStatus.ReadyToPlay, _roundStartTime, RoundPreloadTime, RoundStartTimeSpan, ICDateTime, Paused); // collard-ICDateTime
         }
 
         private void SendStatusToAll()
