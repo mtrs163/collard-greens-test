@@ -404,6 +404,7 @@ namespace Content.Server.Database
         public string FlavorText { get; set; } = null!;
         public int Age { get; set; }
         public string Sex { get; set; } = null!;
+        public string ERPStatus { get; set; } = null!; // collard-ERPStatus
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
         [Column(TypeName = "jsonb")] public JsonDocument? Markings { get; set; } = null!;

@@ -7,6 +7,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Content.Shared.Collard.Humanoid; // collard-ERPStatus
 
 namespace Content.Shared.Humanoid;
 
@@ -106,6 +107,27 @@ public sealed partial class HumanoidAppearanceComponent : Component
     /// </summary>
     [DataField]
     public Dictionary<HumanoidVisualLayers, DisplacementData> MarkingsDisplacement = new();
+
+    // collard-ERPstatus-start
+    /// <summary>
+    ///     ERP status of a humanoid
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public ERPStatus ERPStatus = ERPStatus.No;
+
+    public string GetERPStatusName()
+    {
+        switch (ERPStatus)
+        {
+            case ERPStatus.No:
+                return Loc.GetString("humanoid-ingame-erp-status-no");
+            case ERPStatus.Yes:
+                return Loc.GetString("humanoid-ingame-erp-status-yes");
+            default:
+                return Loc.GetString("humanoid-ingame-erp-status-ask");
+        }
+    }
+    // collard-ERPstatus-end
 }
 
 [DataDefinition]
