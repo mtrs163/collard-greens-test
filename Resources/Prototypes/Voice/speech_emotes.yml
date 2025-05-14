@@ -28,6 +28,20 @@
     - yells
     - yelled
     - yelling
+    # collard-Localization-start
+    - кричит
+    - кричит.
+    - кричит!
+    - орёт
+    - орёт.
+    - орёт!
+    - визжит
+    - визжит.
+    - визжит!
+    - вскрикивает
+    - вскрикивает.
+    - вскрикивает!
+    # collard-Localization-end
 
 - type: emote
   id: Laugh
@@ -57,6 +71,15 @@
     - chortle
     - chortles
     - chortling
+    # collard-Localization-start
+    - смеется
+    - смеётся
+    - хохочет
+    - хихикает
+    - хихикнул
+    - хихикнула
+    - ржёт
+    # collard-Localization-end
 
 - type: emote
   id: Honk
@@ -75,6 +98,9 @@
     - honks
     - honked
     - honking
+    # collard-Localization-start
+    - хонк
+    # collard-Localization-end
 
 - type: emote
   id: Sigh
@@ -92,6 +118,11 @@
     - sigh
     - sighs
     - sighed
+    # collard-Localization-start
+    - вздыхает
+    - вздохнул
+    - вздохнула
+    # collard-Localization-end
 
 - type: emote
   id: Whistle
@@ -109,6 +140,10 @@
     - whistle
     - whistles
     - whistleblowing
+    # collard-Localization-start
+    - свистит
+    - свистнул
+    # collard-Localization-end
 
 - type: emote
   id: Crying
@@ -129,6 +164,10 @@
     - sob
     - sobs
     - sobbing
+    # collard-Localization-start
+    - плачет
+    - рыдает
+    # collard-Localization-end
 
 - type: emote
   id: Squish
@@ -147,6 +186,9 @@
     - squish
     - squishing
     - squishes
+    # collard-Localization-start
+    - хлюпает
+    # collard-Localization-end
 
 - type: emote
   id: Chitter
@@ -165,6 +207,9 @@
    - chitter
    - chitters
    - chittered
+   # collard-Localization-start
+   - стрекочет
+   # collard-Localization-end
 
 - type: emote
   id: Squeak
@@ -183,6 +228,9 @@
    - squeak
    - squeaks
    - squeaked
+   # collard-Localization-start
+   - пищит
+   # collard-Localization-end
 
 - type: emote
   id: Click
@@ -200,6 +248,10 @@
   chatTriggers:
    - click
    - clicks
+   # collard-Localization-start
+   - клац
+   - клацает
+   # collard-Localization-end
 
 # hand emotes
 - type: emote
@@ -218,6 +270,13 @@
     - claps
     - clapping
     - clapped
+    # collard-Localization-start
+    - хлопает
+    - хлопнул
+    - хлопнула
+    - хлопнуло
+    - апплодирует
+    # collard-Localization-end
 
 - type: emote
   id: ClapSingle
@@ -237,6 +296,12 @@
     - claps her hands together
     - claps his hands together
     - claps its hands together
+    # collard-Localization-start
+    - хлопает в ладоши
+    - хлопнул в ладоши
+    - хлопнула в ладоши
+    - хлопнуло в ладоши
+    # collard-Localization-end
 
 - type: emote
   id: Snap
@@ -263,6 +328,22 @@
     - snaps its fingers
     - snapping fingers
     - snapped fingers
+    # collard-Localization-start
+    - щелкает
+    - щелкнул
+    - щелкнула
+    - щёлкает.
+    - щёлкнул.
+    - щёлкнула.
+    - щелкает пальцами
+    - щелкнул пальцами
+    - щелкнула пальцами
+    - щелкнуло пальцами
+    - щёлкает пальцами.
+    - щёлкнул пальцами.
+    - щёлкнула пальцами.
+    - щёлкнуло пальцами.
+    # collard-Localization-end
 
 - type: emote
   id: Thump
@@ -288,6 +369,13 @@
     - thumps her tail
     - thumps his tail
     - thumps its tail
+    # collard-Localization-start
+    - стучит хвостом
+    - стукнул хвостом
+    - стукнула хвостом
+    - стукнул своим хвостом
+    - стукнула своим хвостом
+    # collard-Localization-end
 
 - type: emote
   id: Salute
@@ -304,6 +392,12 @@
   chatTriggers:
     - salute
     - salutes
+    # collard-Localization-start
+    - салютует
+    - отдаёт честь
+    - отдал честь
+    - отдала честь
+    # collard-Localization-end
 
 - type: emote
   id: Gasp
@@ -316,6 +410,11 @@
    - gasp
    - gasps
    - gasped
+   # collard-Localization-start
+   - задыхается
+   - втягивает воздух
+   - глотает воздух
+    # collard-Localization-end
 
 - type: emote
   id: DefaultDeathgasp
@@ -351,13 +450,41 @@
     - buzz
     - buzzed
     - buzzes
+    # collard-Localization-start
+    - жужжит
+    - зажужжал
+    - зажужжала
+    # collard-Localization-end
 
 - type: emote
   id: Weh
   name: chat-emote-name-weh
   category: Vocal
   icon: Interface/Emotes/weh.png
+  # collard-start
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  # collard-end
   chatMessages: ["chat-emote-msg-weh"]
+  # collard-start
+  chatTriggers:
+  - wehs
+  - wehs!
+  - wehs.
+  - издаёт вех
+  - издаёт вех!
+  - издаёт вех.
+  - вехает
+  - вехает.
+  - вехает!
+  - вех
+  - вех.
+  - вех!
+  # collard-end
 
 - type: emote
   id: Hew
@@ -385,6 +512,9 @@
     - chirps
     - chirped
     - chirping
+    # collard-Localization-start
+    - чирикает
+    # collard-Localization-end
 
 # Machine Emotes
 - type: emote
@@ -404,6 +534,10 @@
     - beeps
     - beeped
     - beeping
+    # collard-Localization-start
+    - бип
+    - пиликает
+    # collard-Localization-end
 
 - type: emote
   id: Chime
@@ -422,6 +556,12 @@
     - chimes
     - chimed
     - chiming
+    # collard-Localization-start
+    - дзынькает
+    - дзынькает.
+    - дзынькает!
+    - дзынь
+    # collard-Localization-end
 
 - type: emote
   id: Buzz-Two
@@ -446,6 +586,15 @@
     - buzzes twice
     - buzzing twice
     - buzzed twice
+    # collard-Localization-start
+    - бипбуп
+    - бип буп
+    - бип-буп
+    - бипбип
+    - бип бип
+    - бип-бип
+    - дважды пищит
+    # collard-Localization-end
 
 - type: emote
   id: Ping
@@ -464,3 +613,6 @@
     - pings
     - pinged
     - pinging
+    # collard-Localization-start
+    - издаёт пинг
+    # collard-Localization-end

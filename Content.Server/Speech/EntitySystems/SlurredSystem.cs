@@ -71,6 +71,12 @@ public sealed class SlurredSystem : SharedSlurredSystem
                     'a' => "ah",
                     'u' => "oo",
                     'c' => "k",
+                    // collard-Localization-start
+                    'о' => "а",
+                    'к' => "кх",
+                    'щ' => "шч",
+                    'ц' => "тс",
+                    // collard-Localization-end
                     _ => $"{character}",
                 };
 
