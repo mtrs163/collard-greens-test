@@ -43,6 +43,11 @@
             <ContainerButton Name="StationTimeButton">
                 <RichTextLabel Name="StationTimeLabel" Access="Public"/>
             </ContainerButton>
+            <!-- collard-ICDateTime-start -->
+            <ContainerButton Name="WorldTimeButton">
+                <RichTextLabel Name="WorldTimeLabel" Access="Public"/>
+            </ContainerButton>
+            <!-- collard-ICDateTime-end -->
             <ContainerButton Name="StationAlertLevelInstructionsButton">
                 <RichTextLabel Name="StationAlertLevelInstructions" Access="Public"/>
             </ContainerButton>

@@ -32,7 +32,7 @@ namespace Content.Client.PDA
         private string _stationName = Loc.GetString("comp-pda-ui-unknown");
         private string _alertLevel = Loc.GetString("comp-pda-ui-unknown");
         private string _instructions = Loc.GetString("comp-pda-ui-unknown");
-        
+
 
         private int _currentView;
 
@@ -117,15 +117,24 @@ namespace Content.Client.PDA
             StationTimeButton.OnPressed += _ =>
             {
                 var stationTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
-                _clipboard.SetText((stationTime.ToString("hh\\:mm\\:ss")));
+                _clipboard.SetText((stationTime.ToString("dd\\:hh\\:mm\\:ss"))); // collard-long-shifts
             };
+
+            // collard-ICDateTime-start
+            WorldTimeButton.OnPressed += _ =>
+            {
+                var worldTime = _gameTicker.ICDateTime;
+                var stationTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
+                _clipboard.SetText((worldTime.AddSeconds(stationTime.TotalSeconds).ToString("dd.MM.yyyy; HH\\:mm\\:ss")));
+            };
+            // collard-ICDateTime-end
 
             StationAlertLevelInstructionsButton.OnPressed += _ =>
             {
                 _clipboard.SetText(_instructions);
             };
 
-            
+
 
 
             HideAllViews();
@@ -165,12 +174,18 @@ namespace Content.Client.PDA
             _stationName = state.StationName ?? Loc.GetString("comp-pda-ui-unknown");
             StationNameLabel.SetMarkup(Loc.GetString("comp-pda-ui-station",
                 ("station", _stationName)));
-            
+
 
             var stationTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
+            var worldTime = _gameTicker.ICDateTime; // collard-ICDateTime
 
             StationTimeLabel.SetMarkup(Loc.GetString("comp-pda-ui-station-time",
-                ("time", stationTime.ToString("hh\\:mm\\:ss"))));
+                ("time", stationTime.ToString("dd\\:hh\\:mm\\:ss")))); // collard-long-shifts
+
+            // collard-ICDateTime-start
+            WorldTimeLabel.SetMarkup(Loc.GetString("comp-pda-ui-world-time",
+                ("time", worldTime.AddSeconds(stationTime.TotalSeconds).ToString("dd.MM.yyyy; HH\\:mm\\:ss"))));
+            // collard-ICDateTime-end
 
             var alertLevel = state.PdaOwnerInfo.StationAlertLevel;
             var alertColor = state.PdaOwnerInfo.StationAlertColor;
@@ -345,6 +360,12 @@ namespace Content.Client.PDA
 
             StationTimeLabel.SetMarkup(Loc.GetString("comp-pda-ui-station-time",
                 ("time", stationTime.ToString("hh\\:mm\\:ss"))));
+
+            // collard-ICDateTime-start
+            var worldTime = _gameTicker.ICDateTime;
+            WorldTimeLabel.SetMarkup(Loc.GetString("comp-pda-ui-world-time",
+                ("time", worldTime.AddSeconds(stationTime.TotalSeconds).ToString("dd.MM.yyyy; HH\\:mm\\:ss"))));
+            // collard-ICDateTime-end
         }
     }
 }

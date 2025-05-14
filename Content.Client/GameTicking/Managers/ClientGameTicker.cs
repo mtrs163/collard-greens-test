@@ -114,12 +114,14 @@ namespace Content.Client.GameTicking.Managers
         private void ConnectionStatus(TickerConnectionStatusEvent message)
         {
             RoundStartTimeSpan = message.RoundStartTimeSpan;
+            ICDateTime = message.ICDateTime; // collard-ICDateTime
         }
 
         private void LobbyStatus(TickerLobbyStatusEvent message)
         {
             StartTime = message.StartTime;
             RoundStartTimeSpan = message.RoundStartTimeSpan;
+            ICDateTime = message.ICDateTime; // collard-ICDateTime
             IsGameStarted = message.IsRoundStarted;
             AreWeReady = message.YouAreReady;
             LobbyBackground = message.LobbyBackground;

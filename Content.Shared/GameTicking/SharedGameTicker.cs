@@ -28,6 +28,7 @@ namespace Content.Shared.GameTicking
         [ViewVariables]
         public int RoundId { get; protected set; }
         [ViewVariables] public TimeSpan RoundStartTimeSpan { get; protected set; }
+        [ViewVariables] public DateTime ICDateTime { get; protected set; } // collard-ICDateTime
 
         public override void Initialize()
         {
@@ -80,9 +81,11 @@ namespace Content.Shared.GameTicking
     public sealed class TickerConnectionStatusEvent : EntityEventArgs
     {
         public TimeSpan RoundStartTimeSpan { get; }
-        public TickerConnectionStatusEvent(TimeSpan roundStartTimeSpan)
+        public DateTime ICDateTime { get; } // collard-ICDateTime
+        public TickerConnectionStatusEvent(TimeSpan roundStartTimeSpan, DateTime icDateTime) // collard-ICDateTime
         {
             RoundStartTimeSpan = roundStartTimeSpan;
+            ICDateTime = icDateTime; // collard-ICDateTime
         }
     }
 
@@ -95,15 +98,17 @@ namespace Content.Shared.GameTicking
         // UTC.
         public TimeSpan StartTime { get; }
         public TimeSpan RoundStartTimeSpan { get; }
+        public DateTime ICDateTime { get; } // collard-ICDateTime
         public bool Paused { get; }
 
-        public TickerLobbyStatusEvent(bool isRoundStarted, string? lobbyBackground, bool youAreReady, TimeSpan startTime, TimeSpan preloadTime, TimeSpan roundStartTimeSpan, bool paused)
+        public TickerLobbyStatusEvent(bool isRoundStarted, string? lobbyBackground, bool youAreReady, TimeSpan startTime, TimeSpan preloadTime, TimeSpan roundStartTimeSpan, DateTime icDateTime, bool paused) // collard-ICDateTime
         {
             IsRoundStarted = isRoundStarted;
             LobbyBackground = lobbyBackground;
             YouAreReady = youAreReady;
             StartTime = startTime;
             RoundStartTimeSpan = roundStartTimeSpan;
+            ICDateTime = icDateTime; // collard-ICDateTime
             Paused = paused;
         }
     }
