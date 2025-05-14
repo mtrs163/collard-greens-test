@@ -29,9 +29,9 @@ namespace Content.Shared.Preferences
         private static readonly Regex RestrictedNameRegex = new(@"[^A-Za-zА-Яа-яёЁ0-9 '\-]"); // collard-Localization
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
-        public const int MaxNameLength = 32;
-        public const int MaxLoadoutNameLength = 32;
-        public const int MaxDescLength = 512;
+        public const int MaxNameLength = 128; // collard-Longify
+        public const int MaxLoadoutNameLength = 128; // collard-Longify
+        public const int MaxDescLength = 16384; // collard-Longify
 
         /// <summary>
         /// Job preferences for initial spawn.
