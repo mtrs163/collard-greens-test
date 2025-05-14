@@ -48,7 +48,6 @@ job-name-ertmedic = медик ОБР
 job-name-ertjanitor = уборщик ОБР
 job-name-boxer = боксёр
 job-name-zookeeper = зоотехник
-## Skyperster nuh-uh
 job-name-visitor = посетитель
 # unused jobs
 # these are required for the agent ID job icon tooltips
