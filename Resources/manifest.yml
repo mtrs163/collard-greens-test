@@ -1,5 +1,5 @@
-﻿defaultWindowTitle: Space Station 14
-windowIconSet: /Textures/Logo/icon
-splashLogo: /Textures/Logo/logo.png
+﻿defaultWindowTitle: Collard Greens # collard
+windowIconSet: /Textures/Logo/icon-col # collard
+splashLogo: /Textures/Logo/logo-col.png # collard
 
 # PJB PLEASE

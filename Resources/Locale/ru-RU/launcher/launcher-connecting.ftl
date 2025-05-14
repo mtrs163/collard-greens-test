@@ -1,6 +1,6 @@
 ### Connecting dialog when you start up the game
 
-connecting-title = skyperster14
+connecting-title = Collard
 connecting-exit = Выйти
 connecting-retry = Повторить
 connecting-reconnect = Переподключиться
