@@ -1,0 +1,10 @@
+atmos-plaque-component-desc-zum = Эта табличка чтит память подъёму атмосферной дивизии ZUM. Они могут поднять факел, который дивизии ZAS, LINDA и FEA оставили позади.
+atmos-plaque-component-desc-fea = Эта табличка чтит память падению атмосферной дивизии FEA. За всех обугленных, нездоровых и хрупких людей что погибли в её руках.
+atmos-plaque-component-desc-linda = Эта табличка чтит память падению атмосферной дивизии LINDA. За всех обугленных, нездоровых и хрупких людей что погибли в её руках.
+atmos-plaque-component-desc-zas = Эта табличка чтит память падению атмосферной дивизии ZAS. За всех обугленных, нездоровых и хрупких людей что погибли в её руках.
+atmos-plaque-component-desc-unset = Эээ
+atmos-plaque-component-name-zum = Atmospherics Division plaque ZUM
+atmos-plaque-component-name-fea = Atmospherics Division plaque FEA
+atmos-plaque-component-name-linda = Табличка атмосферной дивизии LINDA
+atmos-plaque-component-name-zas = Табличка атмосферной дивизии ZAS
+atmos-plaque-component-name-unset = Эээ
