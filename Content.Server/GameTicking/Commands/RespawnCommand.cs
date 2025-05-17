@@ -5,6 +5,7 @@ using Content.Shared.Players;
 using Robust.Server.Player;
 using Robust.Shared.Console;
 using Robust.Shared.Network;
+using Content.Server.Chat.Managers; // collard-Admin1984
 
 namespace Content.Server.GameTicking.Commands
 {
@@ -14,6 +15,7 @@ namespace Content.Server.GameTicking.Commands
         [Dependency] private readonly IPlayerLocator _locator = default!;
         [Dependency] private readonly GameTicker _gameTicker = default!;
         [Dependency] private readonly MindSystem _mind = default!;
+        [Dependency] private readonly IChatManager _chat = default!; // collard-Admin1984
 
         public override string Command => "respawn";
 
@@ -64,6 +66,11 @@ namespace Content.Server.GameTicking.Commands
             }
 
             _gameTicker.Respawn(targetPlayer);
+            // collard-Admin1984-start
+            if (shell.Player is null) return;
+            if (targetPlayer is null) return;
+            _chat.SendAdminAnnouncement(Loc.GetString("respawn-command-admin-notification", ("plrname", targetPlayer), ("adminname", shell.Player)));
+            // collard-Admin1984-end
         }
 
       public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)

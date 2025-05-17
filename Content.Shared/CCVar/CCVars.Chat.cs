@@ -65,4 +65,9 @@ public sealed partial class CCVars
             "",
             CVar.SERVER | CVar.SERVERONLY | CVar.ARCHIVE,
             "A message broadcast to each player that joins the lobby.");
+
+    // collard-Admin1984-start
+    public static readonly CVarDef<bool> ChatEnablePlayerJoinNotification =
+    CVarDef.Create("chat.playerJoinNotificationEnabled", true, CVar.REPLICATED | CVar.NOTIFY);
+    // collard-Admin1984-end
 }

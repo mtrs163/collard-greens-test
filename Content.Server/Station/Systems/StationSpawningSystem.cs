@@ -22,6 +22,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Server.Chat.Managers; // collard-Admin1984
 
 namespace Content.Server.Station.Systems;
 
@@ -41,6 +42,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly PdaSystem _pdaSystem = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!; // collard-Admin1984
 
     /// <summary>
     /// Attempts to spawn a player character onto the given station.
@@ -117,6 +119,12 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             {
                 EquipRoleName(jobEntity, loadout, roleProto!);
             }
+            // collard-Admin1984-start
+            if (job is null)
+                _chatManager.SendAdminAnnouncement(Loc.GetString("player-join-round-message-nojob", ("name", jobEntity)));
+            else
+                _chatManager.SendAdminAnnouncement(Loc.GetString("player-join-round-message", ("name", jobEntity), ("job", job.Value.ToString())));
+            // collard-Admin1984-end
 
             DoJobSpecials(job, jobEntity);
             _identity.QueueIdentityUpdate(jobEntity);
@@ -134,7 +142,12 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         {
             _humanoidSystem.LoadProfile(entity.Value, profile);
             _metaSystem.SetEntityName(entity.Value, profile.Name);
-
+            // collard-Admin1984-start
+            if (job is null)
+                _chatManager.SendAdminAnnouncement(Loc.GetString("player-join-round-message-nojob", ("name", profile.Name)));
+            else
+                _chatManager.SendAdminAnnouncement(Loc.GetString("player-join-round-message", ("name", profile.Name), ("job", job.Value.ToString())));
+            // collard-Admin1984-end
             if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
             {
                 AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;

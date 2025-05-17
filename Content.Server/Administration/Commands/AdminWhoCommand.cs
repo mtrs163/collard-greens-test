@@ -4,12 +4,14 @@ using Content.Server.Afk;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 using Robust.Shared.Utility;
+using Content.Server.Chat.Managers; // collard-Admin1984
 
 namespace Content.Server.Administration.Commands;
 
-[AdminCommand(AdminFlags.AdminWho)]
+[AnyCommand] // collard-Admin1984
 public sealed class AdminWhoCommand : IConsoleCommand
 {
+    [Dependency] private readonly IChatManager _chat = default!; // collard-Admin1984
     public string Command => "adminwho";
     public string Description => "Returns a list of all admins on the server";
     public string Help => "Usage: adminwho";
@@ -58,5 +60,9 @@ public sealed class AdminWhoCommand : IConsoleCommand
         }
 
         shell.WriteLine(sb.ToString());
+        // collard-Admin1984-start
+        if (shell.Player is null) return;
+        _chat.SendAdminAnnouncement(Loc.GetString("adminlist-asked-admin-notification", ("plrname", shell.Player)));
+        // collard-Admin1984-end
     }
 }

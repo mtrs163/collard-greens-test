@@ -40,6 +40,7 @@ public sealed class InfoUIController : UIController, IOnStateExited<GameplayStat
             (_, _, _) =>
         {
             OnAcceptPressed();
+            OnFuckrulesUsed(); // collard-Admin1984
         });
     }
 
@@ -88,6 +89,13 @@ public sealed class InfoUIController : UIController, IOnStateExited<GameplayStat
         _rulesPopup?.Orphan();
         _rulesPopup = null;
     }
+
+    // collard-Admin1984-start
+    private void OnFuckrulesUsed()
+    {
+        _netManager.ClientSendMessage(new RulesFuckedMessage());
+    }
+    // collard-Admin1984-end
 
     public GuideEntryPrototype GetCoreRuleEntry()
     {
