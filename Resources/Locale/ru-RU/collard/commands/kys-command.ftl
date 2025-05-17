@@ -1,0 +1,9 @@
+kys-command-description = Нанесите себе урон или убейте себя, не отвязываясь от вашей сущности.
+kys-command-help-text = Использование: {$command} <тип> <кол-во> [ингнор. сопротивления]
+kys-command-arg-ingorearmor = игнорировать сопротивление <bool>
+kys-command-error-quantity-low = Вы не можете нанести себе менее 1 урона.
+kys-command-error-quantity-high = Вы не можете нанести себе более 300 урона.
+kys-command-no-mind = Вы не привязаны к сущности.
+kys-command-denied = You should love yourself now!
+kys-command-finished-ignore = Вам нанесено { $damage } { $dmgtype } урона. Сопротивление урону проигнорировано.
+kys-command-finished-noignore = Вам нанесено { $damage } { $dmgtype } урона.
