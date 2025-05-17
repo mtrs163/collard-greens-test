@@ -5,6 +5,10 @@ using Robust.Client.Console;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
 using Robust.Shared.Player;
+using Robust.Shared.Timing; // collard-GhostRespawn
+using Robust.Client.UserInterface; // collard-GhostRespawn
+using Content.Client.UserInterface.Systems.Ghost.Widgets; // collard-GhostRespawn
+using Content.Shared.Mind; // collard-GhostRespawn
 
 namespace Content.Client.Ghost
 {
@@ -16,6 +20,19 @@ namespace Content.Client.Ghost
         [Dependency] private readonly PointLightSystem _pointLightSystem = default!;
         [Dependency] private readonly ContentEyeSystem _contentEye = default!;
         [Dependency] private readonly SpriteSystem _sprite = default!;
+        // collard-GhostRespawn-start
+        [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
+        public override void Update(float frameTime)
+        {
+            foreach (var ghost in EntityManager.EntityQuery<GhostComponent, MindComponent>(true))
+            {
+                var ui = _uiManager.GetActiveUIWidgetOrNull<GhostGui>();
+                if (ui != null && Player != null)
+                    ui.UpdateRespawn(ghost.Item2.TimeOfDeath);
+            }
+        }
+        // collard-GhostRespawn-end
 
         public int AvailableGhostRoleCount { get; private set; }
 
@@ -144,6 +161,11 @@ namespace Content.Client.Ghost
 
         private void OnGhostPlayerAttach(EntityUid uid, GhostComponent component, LocalPlayerAttachedEvent localPlayerAttachedEvent)
         {
+            // collard-GhostRespawn-start
+            if (uid != _playerManager.LocalSession?.AttachedEntity)
+                return;
+            component.TimeOfDeath = _gameTiming.CurTime;
+            // collard-GhostRespawn-end
             GhostVisibility = true;
             PlayerAttached?.Invoke(component);
         }

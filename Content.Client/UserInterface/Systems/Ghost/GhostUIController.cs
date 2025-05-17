@@ -5,6 +5,9 @@ using Content.Client.UserInterface.Systems.Ghost.Widgets;
 using Content.Shared.Ghost;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
+using Robust.Shared.Console; // collard-GhostRespawn
+using Content.Shared.CCVar; // collard-GhostRespawn
+using Robust.Shared.Configuration; // collard-GhostRespawn
 
 namespace Content.Client.UserInterface.Systems.Ghost;
 
@@ -12,6 +15,8 @@ namespace Content.Client.UserInterface.Systems.Ghost;
 public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSystem>
 {
     [Dependency] private readonly IEntityNetworkManager _net = default!;
+    [Dependency] private readonly IConsoleHost _consoleHost = default!; // collard-GhostRespawn
+    [Dependency] private readonly IConfigurationManager _cfg = default!; // collard-GhostRespawn
 
     [UISystemDependency] private readonly GhostSystem? _system = default;
 
@@ -64,8 +69,15 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         }
 
         Gui.Visible = _system?.IsGhost ?? false;
-        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody);
+        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, _system?.Player?.TimeOfDeath, _cfg.GetCVar(CCVars.RespawnTime)); // collard-GhostRespawn: added timeofdeath and respawntime
     }
+
+    // collard-GhostRespawn-start
+    private void UpdateRespawn(TimeSpan? timeOfDeath)
+    {
+        Gui?.UpdateRespawn(timeOfDeath);
+    }
+    // collard-GhostRespawn-end
 
     private void OnPlayerRemoved(GhostComponent component)
     {
@@ -126,6 +138,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.ReturnToBodyPressed += ReturnToBody;
         Gui.GhostRolesPressed += GhostRolesPressed;
         Gui.TargetWindow.WarpClicked += OnWarpClicked;
+        Gui.GhostRespawnPressed += GhostRespawnPressed; // collard-GhostRespawn
         Gui.TargetWindow.OnGhostnadoClicked += OnGhostnadoClicked;
 
         UpdateGui();
@@ -160,4 +173,11 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     {
         _system?.OpenGhostRoles();
     }
+
+    // collard-GhostRespawn-start
+    private void GhostRespawnPressed()
+    {
+        _consoleHost.ExecuteCommand("ghostrespawn");
+    }
+    // collard-GhostRespawn-end
 }
