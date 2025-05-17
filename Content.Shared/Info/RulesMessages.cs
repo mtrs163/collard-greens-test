@@ -45,3 +45,21 @@ public sealed class RulesAcceptedMessage : NetMessage
     {
     }
 }
+
+//  collard-Admin1984-start
+/// <summary>
+///     Sent by the client when it has used the "fuckrules" command.
+/// </summary>
+public sealed class RulesFuckedMessage : NetMessage
+{
+    public override MsgGroups MsgGroup => MsgGroups.Command;
+
+    public override void ReadFromBuffer(NetIncomingMessage buffer, IRobustSerializer serializer)
+    {
+    }
+
+    public override void WriteToBuffer(NetOutgoingMessage buffer, IRobustSerializer serializer)
+    {
+    }
+}
+//  collard-Admin1984-end

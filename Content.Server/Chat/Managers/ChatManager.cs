@@ -53,6 +53,7 @@ internal sealed partial class ChatManager : IChatManager
 
     private bool _oocEnabled = true;
     private bool _adminOocEnabled = true;
+    private bool _playerJoinNotificationEnabled = true;
 
     private readonly Dictionary<NetUserId, ChatUser> _players = new();
 
@@ -63,6 +64,7 @@ internal sealed partial class ChatManager : IChatManager
 
         _configurationManager.OnValueChanged(CCVars.OocEnabled, OnOocEnabledChanged, true);
         _configurationManager.OnValueChanged(CCVars.AdminOocEnabled, OnAdminOocEnabledChanged, true);
+        _configurationManager.OnValueChanged(CCVars.ChatEnablePlayerJoinNotification, OnPlayerJoinEnabledChanged, true); // collard-Admin1984
 
         RegisterRateLimits();
     }
@@ -83,10 +85,20 @@ internal sealed partial class ChatManager : IChatManager
         DispatchServerAnnouncement(Loc.GetString(val ? "chat-manager-admin-ooc-chat-enabled-message" : "chat-manager-admin-ooc-chat-disabled-message"));
     }
 
-        public void DeleteMessagesBy(NetUserId uid)
-        {
-            if (!_players.TryGetValue(uid, out var user))
-                return;
+    // collard-Admin1984-start
+    private void OnPlayerJoinEnabledChanged(bool val)
+    {
+        if (_playerJoinNotificationEnabled == val) return;
+
+        _playerJoinNotificationEnabled = val;
+        DispatchServerAnnouncement(Loc.GetString(val ? "set-playerjoin-command-playerjoin-enabled" : "set-playerjoin-command-playerjoin-disabled"));
+    }
+    // collard-Admin1984-end
+
+    public void DeleteMessagesBy(NetUserId uid)
+    {
+        if (!_players.TryGetValue(uid, out var user))
+            return;
 
         var msg = new MsgDeleteChatMessagesBy { Key = user.Key, Entities = user.Entities };
         _netManager.ServerSendToAll(msg);
