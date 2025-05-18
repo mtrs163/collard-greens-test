@@ -1,0 +1,13 @@
+- type: entity
+  name: terminal controller spawner
+  id: SpawnMobTerminalController
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Species/Human/parts.rsi
+      state: full
+  - type: ConditionalSpawner
+    prototypes:
+    - RandomHumanoidSpawnerTerminalController

@@ -1,0 +1,48 @@
+- type: job
+  id: TerminalController
+  name: job-name-terminalcontroller
+  description: job-description-terminalcontroller
+  playTimeTracker: JobTerminalController
+  setPreference: false
+  startingGear: TerminalControllerGear
+  icon: "JobIconNanotrasen"
+  supervisors: job-supervisors-centcom # Corvax-JobSupervisors
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: TerminalControllerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    back: ClothingBackpack
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatCentcom
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterArmorBulletproof
+    id: CentcomPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: WeaponPistolN1984
+    pocket1: BoxFolderCentComClipboard
+    pocket2: Handcuffs
+    underwearb: ClothingUnderwearBottomBoxersWhite
+  underweart: ClothingUnderwearTopBraWhite
+  underwearb: ClothingUnderwearBottomPantiesWhite
+  storage:
+    back:
+    - MagazineMagnum
+    - MagazineMagnum
+    - MagazineMagnum
+    - Handcuffs
+    - Handcuffs
+    - Handcuffs
+    - DoorRemoteAll
+  #  - InjectorCaseFilledCMO not yet added
+    - WeaponTaser
+    - RubberStampCentcom
