@@ -369,7 +369,7 @@ namespace Content.Client.Lobby.UI
 
             #region SpawnPriority
 
-            foreach (var value in Enum.GetValues<SpawnPriorityPreference>())
+            /*foreach (var value in Enum.GetValues<SpawnPriorityPreference>()) collard-NoSpawnPriority
             {
                 SpawnPriorityButton.AddItem(Loc.GetString($"humanoid-profile-editor-preference-spawn-priority-{value.ToString().ToLower()}"), (int) value);
             }
@@ -378,7 +378,7 @@ namespace Content.Client.Lobby.UI
             {
                 SpawnPriorityButton.SelectId(args.Id);
                 SetSpawnPriority((SpawnPriorityPreference) args.Id);
-            };
+            };*/
 
             #endregion SpawnPriority
 
@@ -1514,7 +1514,7 @@ namespace Content.Client.Lobby.UI
                 return;
             }
 
-            SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
+            //SpawnPriorityButton.SelectId((int) Profile.SpawnPriority); collard-NoSpawnPriority
         }
 
         private void UpdateHairPickers()
