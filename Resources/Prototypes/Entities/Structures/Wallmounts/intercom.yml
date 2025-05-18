@@ -105,6 +105,8 @@
               collection: MetalGlassBreak
               params:
                 volume: -4
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."
   - type: GenericVisualizer
     visuals:
       enum.WiresVisualLayers.MaintenancePanel:
@@ -145,6 +147,8 @@
       visible: false
       map: [ "wires" ]
   - type: Appearance
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."
   - type: GenericVisualizer
     visuals:
       enum.ConstructionVisuals.Layer:

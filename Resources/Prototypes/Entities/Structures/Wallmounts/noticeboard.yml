@@ -62,3 +62,5 @@
   - type: Construction
     graph: NoticeBoard
     node: noticeBoard
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."
