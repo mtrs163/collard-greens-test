@@ -1,0 +1,17 @@
+- type: entity
+  id: ArrivalsSpawnPointJobBase
+  parent: MarkerBase
+  abstract: true
+  name: arrivals job spawn
+  components:
+  - type: ArrivalsSpawnPoint
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+
+- type: entity
+  suffix: general
+  id: ArrivalsSpawnPointGeneral
+  parent: ArrivalsSpawnPointJobBase
+  components:
+  - type: Sprite
+    state: green

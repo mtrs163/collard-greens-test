@@ -1,0 +1,22 @@
+## Central Command
+
+- type: entity
+  name: Terminal Controller
+  id: RandomHumanoidSpawnerTerminalController
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: centcom
+    - type: RandomHumanoidSpawner
+      settings: TerminalController
+
+- type: randomHumanoidSettings
+  parent: EventHumanoidMindShielded
+  id: TerminalController
+  components:
+#    - type: GhostRole
+#      name: ghost-role-information-terminal-controller-name
+#      description: ghost-role-information-terminal-controller-description
+#    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ TerminalControllerGear ]

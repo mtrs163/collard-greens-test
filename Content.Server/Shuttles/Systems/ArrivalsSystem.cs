@@ -80,7 +80,7 @@ public sealed class ArrivalsSystem : EntitySystem
     /// <summary>
     ///     The first arrival is a little early, to save everyone 10s
     /// </summary>
-    private const float RoundStartFTLDuration = 10f;
+    private const float RoundStartFTLDuration = 120f; // collard-TerminalSpawns
 
     private readonly List<ProtoId<BiomeTemplatePrototype>> _arrivalsBiomeOptions = new()
     {
@@ -533,7 +533,7 @@ public sealed class ArrivalsSystem : EntitySystem
             _biomes.EnsurePlanet(mapUid, _protoManager.Index(template));
             var restricted = new RestrictedRangeComponent
             {
-                Range = 32f
+                Range = 96f // collard-Terminal
             };
             AddComp(mapUid, restricted);
         }
