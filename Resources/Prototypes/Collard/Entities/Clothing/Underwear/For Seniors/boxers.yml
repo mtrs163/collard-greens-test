@@ -1,0 +1,39 @@
+# SeniorSec
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersSeniorSec
+  name: Senior Sec boxers
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/seniors/SeniorSec/boxers.rsi
+
+# SeniorScience
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersSeniorScience
+  name: Senior Science boxers
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/seniors/SeniorScience/boxers.rsi
+
+# SeniorEnginer
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersSeniorEnginer
+  name: Senior Enginer boxers
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/seniors/SeniorEnginer/boxers.rsi
+
+# SeniorDoctor
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersSeniorDoctor
+  name: Senior Doctor boxers
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/seniors/SeniorDoctor/boxers.rsi

@@ -1,0 +1,123 @@
+#region underwear
+
+# region bottom
+- type: loadoutGroup
+  id: UnderwearBottom
+  name: loadout-group-underwear-bottom
+  minLimit: 0
+  loadouts:
+  #base
+  - WhiteBoxers
+  - BlueLongBoxers
+  - ClothBoxers
+  - WhitePanties
+  - BlueLongPanties
+  - ClothPanties
+  - ThongPanties
+  - NekoPanties
+  - LacePanties
+  #boxers
+  - RedBoxers
+  - OrangeBoxers
+  - YellowBoxers
+  - GreenBoxers
+  - SkyblueBoxers
+  - BlueBoxers
+  - VioletBoxers
+  - BlackBoxers
+  - RedWhBoxers
+  - ViolWhBoxers
+  - OrWhBoxers
+  - OrWhBoxersAlt
+  #panties
+  - RedPanties
+  - OrangePanties
+  - YellowPanties
+  - GreenPanties
+  - SkybluePanties
+  - BluePanties
+  - VioletPanties
+  - BlackPanties
+  - RedWhPanties
+  - ViolWhPanties
+  - OrWhPanties
+  - OrWhPantiesAlt
+
+#endregion bottom
+
+#region top
+
+- type: loadoutGroup
+  id: UnderwearTop
+  name: loadout-group-underwear-top
+  minLimit: 0
+  loadouts:
+  #base
+  - WhiteBra
+  - LaceBra
+  - HeartBra
+  - SportsBra
+  - SportsBraAlt
+  #colors
+  - RedBra
+  - OrangeBra
+  - YellowBra
+  - GreenBra
+  - SkyblueBra
+  - BlueBra
+  - VioletBra
+  - BlackBra
+
+#endregion top
+
+#region socks
+
+- type: loadoutGroup
+  id: UnderwearSocks
+  name: loadout-group-underwear-socks
+  minLimit: 0
+  loadouts:
+  #base
+  - SocksNormWhite
+  - SocksHighWhite
+  - SocksShortWhite
+  - SocksBee
+  - SocksCoder
+  - SocksThigh
+  - SocksFishnettights
+  - SocksPantyhose
+  - SocksGarters
+  - SocksRich
+  #colors
+  #norm
+  - SocksNormRed
+  - SocksNormOrange
+  - SocksNormYellow
+  - SocksNormGreen
+  - SocksNormSkyblue
+  - SocksNormBlue
+  - SocksNormViolet
+  - SocksNormBlack
+  #high
+  - SocksHighRed
+  - SocksHighOrange
+  - SocksHighYellow
+  - SocksHighGreen
+  - SocksHighSkyblue
+  - SocksHighBlue
+  - SocksHighViolet
+  - SocksHighBlack
+  #short
+  - SocksShortRed
+  - SocksShortOrange
+  - SocksShortYellow
+  - SocksShortGreen
+  - SocksShortSkyblue
+  - SocksShortBlue
+  - SocksShortViolet
+  - SocksShortBlack
+
+#endregion socks
+
+
+#endregion underwear

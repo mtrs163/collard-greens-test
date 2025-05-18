@@ -1,0 +1,66 @@
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesWhite
+  name: panties
+  description: Standard Nanotrasen underwear for station female employees. Painted white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+
+#etc
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesThong
+  name: thong
+  description: for a risky girl
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/thong.rsi
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesNeko
+  name: neko panties
+  description: for a "cat" girl
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/nekopanties.rsi
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesLace
+  name: lace panties
+  description: for a serios lady
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/lacepanties.rsi
+
+# BlueShild
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesBlueShild
+  name: Blue Shild Panties
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/BlueShild/panties.rsi
+
+# SpaceNinja
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesSpaceNinja
+  name: Space Ninja Panties
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/SpaceNinja/panties.rsi
+
+# DeathSquad
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomPantiesDeathSquad
+#  name: DeathSquad Panties
+#  description: the most technolohically advanced panties in the galaxy
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/deathpanties.rsi

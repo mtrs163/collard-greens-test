@@ -1,0 +1,93 @@
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHigh
+  name: high socks
+  description: Nanotrasen high socks for station employees. Painted white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderSocksBee # HACK
+  name: bee socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/bee.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/bee.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderSocksCoder # HACK
+  name: coder socks
+  description: It's time to code sisters!!11!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/coder.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/coder.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormal
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShort
+  name: short socks
+  description: Nanotrasen short socks for station employees. Dyed white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksThigh
+  name: stockings
+  description: Standard Nanotrasen stockings for station employees. Dyed white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksthigh.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksFishnettights
+  name: fishnet tights
+  description: you can cleary see your legs
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/fishnettights.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksPantyhose
+  name: pantyhose
+  description: for relly serious work
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/pantyhose.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksGarters
+  name: stocking with garters
+  description: if just stockings aren't enough for you
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/garters.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksRich
+  name: Rich stockings #idea from werkas
+  description: Those same stockings that will show that you are a rich bitch
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/richsocksthigh.rsi

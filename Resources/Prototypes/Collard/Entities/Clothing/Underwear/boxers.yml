@@ -1,0 +1,38 @@
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersWhite
+  name: boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+
+# BlueShild
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersBlueShild
+  name: Blue Shild Boxers
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/BlueShild/boxers.rsi
+
+# SpaceNinja
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersSpaceNinja
+  name: Space Ninja Boxers
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/SpaceNinja/boxers.rsi
+
+# DeathSquad
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomBoxersDeathSquad
+#  name: DeathSquad boxers
+#  description: the most technolohically advanced boxers in the galaxy
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/deathboxers.rsi

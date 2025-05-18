@@ -1,0 +1,16 @@
+ent-ClothingUnderwearBottomPantiesRed = красные трусики
+    .desc = Самые обычные трусики. Но красные.
+ent-ClothingUnderwearBottomPantiesOrange = оранжевые трусики
+    .desc = Самые обычные трусики. Но оранжевые.
+ent-ClothingUnderwearBottomPantiesYellow = жёлтые трусики
+    .desc = Самые обычные трусики. Но жёлтые.
+ent-ClothingUnderwearBottomPantiesGreen = зелёные трусики
+    .desc = Самые обычные трусики. Но зелёные.
+ent-ClothingUnderwearBottomPantiesSkyblue = голубые трусики
+    .desc = Самые обычные трусики. Но голубые.
+ent-ClothingUnderwearBottomPantiesBlue = синие трусики
+    .desc = Самые обычные трусики. Но синие.
+ent-ClothingUnderwearBottomPantiesViolet = фиолетовые трусики
+    .desc = Самые обычные трусики. Но фиолетовые.
+ent-ClothingUnderwearBottomPantiesBlack = чёрные трусики
+    .desc = Самые обычные трусики. Но чёрные.
