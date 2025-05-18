@@ -12,6 +12,7 @@ using Content.Shared.StationRecords;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Content.Shared.Humanoid; // collard-SexualDimorphism
 
 namespace Content.Server.StationRecords.Systems;
 
@@ -97,7 +98,7 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
         TryComp<FingerprintComponent>(player, out var fingerprintComponent);
         TryComp<DnaComponent>(player, out var dnaComponent);
 
-        CreateGeneralRecord(station, idUid.Value, profile.Name, profile.Age, profile.Species, profile.Gender, jobId, fingerprintComponent?.Fingerprint, dnaComponent?.DNA, profile, records);
+        CreateGeneralRecord(station, idUid.Value, profile.Name, profile.Age, profile.Species, profile.Sex, profile.Gender, jobId, fingerprintComponent?.Fingerprint, dnaComponent?.DNA, profile, records); // collard-SexualDimorphism: add sex
     }
 
 
@@ -134,6 +135,7 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
         string name,
         int age,
         string species,
+        Sex sex, // collard-SexualDimorphism: add sex
         Gender gender,
         string jobId,
         string? mobFingerprint,
@@ -160,6 +162,7 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
             JobIcon = jobPrototype.Icon,
             JobPrototype = jobId,
             Species = species,
+            Sex = sex,
             Gender = gender,
             DisplayPriority = jobPrototype.RealDisplayWeight,
             Fingerprint = mobFingerprint,

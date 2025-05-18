@@ -11,8 +11,9 @@
   maleFirstNames: NamesArachnidFirst
   femaleFirstNames: NamesArachnidFirst
   lastNames: NamesArachnidLast
-  sexes:
-  - Unsexed
+#  sexes: # collard-SexualDimorphism
+#  - Unsexed
+  sexualDimorphism: false # collard-SexualDimorphism
 
 - type: speciesBaseSprites
   id: MobArachnidSprites

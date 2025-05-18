@@ -8,6 +8,9 @@
   markingLimits: MobSlimeMarkingLimits
   dollPrototype: MobSlimePersonDummy
   skinColoration: Hues
+  sexualDimorphism: false # collard-SexualDimorphism
+  sexes:  # collard-SexualDimorphism || i mean it's a pile of goop
+  - Unsexed
 
 - type: speciesBaseSprites
   id: MobSlimeSprites

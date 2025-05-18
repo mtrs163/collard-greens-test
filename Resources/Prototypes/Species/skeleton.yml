@@ -10,6 +10,7 @@
   femaleFirstNames: NamesSkeletonFirst
   dollPrototype: MobSkeletonPersonDummy
   skinColoration: TintedHues
+  sexualDimorphism: false # collard-SexualDimorphism
 
 - type: speciesBaseSprites
   id: MobSkeletonSprites
