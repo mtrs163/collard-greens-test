@@ -11,6 +11,7 @@
   maleFirstNames: NamesReptilianMale
   femaleFirstNames: NamesReptilianFemale
   naming: FirstDashFirst
+  sexualDimorphism: false # collard-SexualDimorphism
 
 - type: speciesBaseSprites
   id: MobReptilianSprites

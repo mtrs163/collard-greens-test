@@ -111,8 +111,18 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         var identity = Identity.Entity(uid, EntityManager);
         var species = GetSpeciesRepresentation(component.Species).ToLower();
         var age = GetAgeRepresentation(component.Species, component.Age);
+        // collard-SexualDimorphism-start
+        var dimorphism = GetSexualDimorphism(component.Species);
+        if (dimorphism)
+        {
+            args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));
+        }
+        else
+        {
+            args.PushText(Loc.GetString("humanoid-appearance-component-examine-nodimorphism", ("age", age), ("species", species)));
+        }
+        // collard-SexualDimorphism-end
 
-        args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));
     }
 
     /// <summary>
@@ -199,7 +209,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         ref bool dirty)
     {
 #if DEBUG
-        if (source is {} s)
+        if (source is { } s)
         {
             DebugTools.AssertNotEqual(s, SlotFlags.NONE);
             // Check that only a single bit in the bitflag is set
@@ -210,7 +220,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         if (visible)
         {
-            if (source is not {} slot)
+            if (source is not { } slot)
             {
                 dirty |= ent.Comp.PermanentlyHidden.Remove(layer);
             }
@@ -552,4 +562,24 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         return Loc.GetString("identity-age-old");
     }
+
+    // collard-SexualDimorphism-start
+    public bool GetSexualDimorphism(string species)
+    {
+        if (!_proto.TryIndex<SpeciesPrototype>(species, out var speciesPrototype))
+        {
+            Log.Error("Tried to get sexual dimorphism representation of species that couldn't be indexed: " + species);
+            return false;
+        }
+
+        if (speciesPrototype.SexualDimorphism)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    // collard-SexualDimorphism-end
 }

@@ -1,5 +1,6 @@
 using Robust.Shared.Enums;
 using Robust.Shared.Serialization;
+using Content.Shared.Humanoid; // collard-SexualDimorphism
 
 namespace Content.Shared.StationRecords;
 
@@ -41,6 +42,14 @@ public sealed record GeneralStationRecord
     /// </summary>
     [DataField]
     public string Species = string.Empty;
+
+    // collard-SexualDimorphism-start
+    /// <summary>
+    ///     Sex tied to this station record.
+    /// </summary>
+    [DataField]
+    public Sex Sex = Sex.Unsexed;
+    // collard-SexualDimorphism-end
 
     /// <summary>
     ///     Gender identity tied to this station record.

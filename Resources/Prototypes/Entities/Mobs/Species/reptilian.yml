@@ -71,12 +71,12 @@
   - type: Wagging
   - type: Inventory
     speciesId: reptilian
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit-female
+#    femaleDisplacements: # collard-SexualDimorphism: not needed since lizors don't have sexual dimorphism
+#      jumpsuit:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Human/displacement.rsi
+#            state: jumpsuit-female
 
 
 - type: entity
@@ -94,11 +94,11 @@
     undergarmentBottom: UndergarmentBottomBoxersReptilian
   - type: Inventory
     speciesId: reptilian
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit-female
+#    femaleDisplacements: # collard-SexualDimorphism: not needed since lizors don't have sexual dimorphism
+#      jumpsuit:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Human/displacement.rsi
+#            state: jumpsuit-female
 
 #Weh

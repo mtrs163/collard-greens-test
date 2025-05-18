@@ -12,6 +12,9 @@
   femaleFirstNames: NamesDionaFirst
   lastNames: NamesDionaLast
   naming: TheFirstofLast
+  sexualDimorphism: false # collard-SexualDimorphism
+  sexes:  # collard-SexualDimorphism || i mean it's a tree
+  - Unsexed
 
 - type: speciesBaseSprites
   id: MobDionaSprites

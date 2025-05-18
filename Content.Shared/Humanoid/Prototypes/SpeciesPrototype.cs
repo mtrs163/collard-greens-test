@@ -121,7 +121,15 @@ public sealed partial class SpeciesPrototype : IPrototype
     ///     although imagine if ghosts could age people WYCI...
     /// </summary>
     [DataField]
-    public int MaxAge = 120;
+    public int MaxAge = 2048; // collard-Longify
+
+    // collard-SexualDimorphism-start
+    /// <summary>
+    ///     Determines if species has sexual dimorphism
+    /// </summary>
+    [DataField("sexualDimorphism")]
+    public bool SexualDimorphism = true;
+    // collard-SexualDimorphism-end
 }
 
 public enum SpeciesNaming : byte
