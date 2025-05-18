@@ -1,0 +1,15 @@
+- type: entity
+  parent: CryogenicSleepUnit
+  id: CentComTeleporter
+  name: centcom teleporter
+  description: A handy teleporter to CentCom station for people who have decided to end their shift early.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Collard/Structures/cent-tele.rsi
+    layers:
+    - state: sleeper_0
+      map: ["base"]
+  - type: Cryostorage
+    sleeperType: "centcomtele"
+    canRejoin: true

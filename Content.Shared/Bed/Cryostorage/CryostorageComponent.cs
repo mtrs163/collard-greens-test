@@ -15,6 +15,26 @@ public sealed partial class CryostorageComponent : Component
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public string ContainerId = "storage";
 
+    // collard-CentComTeleporter-start
+    /// <summary>
+    /// Defines the message of an announcement, when a person uses cryo.
+    /// </summary>
+    [DataField]
+    public string SleeperType = "cryo";
+
+    /// <summary>
+    /// Defines the sender of an announcement, when a person uses cryo.
+    /// </summary>
+    [DataField]
+    public string Announcer = "cryo";
+
+    /// <summary>
+    /// Defines if the person can rejoin as the same character.
+    /// </summary>
+    [DataField]
+    public bool CanRejoin = false;
+    // collard-CentComTeleporter-end
+
     /// <summary>
     /// How long a player can remain inside Cryostorage before automatically being taken care of, given that they have no mind.
     /// </summary>

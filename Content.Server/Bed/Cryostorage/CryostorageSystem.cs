@@ -237,7 +237,7 @@ public sealed class CryostorageSystem : SharedCryostorageSystem
 
         _chatSystem.DispatchStationAnnouncement(station.Value,
             Loc.GetString(
-                "earlyleave-cryo-announcement",
+                "earlyleave-" + cryostorageComponent.SleeperType + "-announcement", // collard-CentComTeleporter
                 ("character", name),
                 ("entity", ent.Owner), // gender things for supporting downstreams with other languages
                 ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))
@@ -287,6 +287,7 @@ public sealed class CryostorageSystem : SharedCryostorageSystem
         var locKey = CryoSleepRejoiningEnabled
             ? "cryostorage-insert-message-temp"
             : "cryostorage-insert-message-permanent";
+        if (comp.CanRejoin) locKey = locKey + "-canrejoin-" + comp.SleeperType; //skyperster
 
         var msg = Loc.GetString(locKey, ("time", comp.GracePeriod.TotalMinutes));
         if (TryComp<ActorComponent>(args.Entity, out var actor))

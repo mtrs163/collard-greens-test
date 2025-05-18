@@ -638,3 +638,5 @@ SuitStorageBasic: SuitStorageEVA
 
 # 2025-05-18
 ClothingNeckCloakMiner: null
+CryogenicSleepUnitSpawner: CentComTeleporter # collard-CentComTeleporter
+CryogenicSleepUnitSpawnerLateJoin: CentComTeleporter # collard-CentComTeleporter

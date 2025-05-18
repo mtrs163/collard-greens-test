@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA 3.0",
+  "copyright": "Taken from https://github.com/BlueMoon-Labs/MOLOT-BlueMoon-Station/commit/fb3dbd7bef9cfcbec047bc02a1f738083d0b99cf",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "sleeper_0"
+    },
+    {
+      "name": "sleeper_1",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}
