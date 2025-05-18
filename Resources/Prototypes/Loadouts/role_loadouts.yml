@@ -9,6 +9,9 @@
   - CaptainOuterClothing
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -23,6 +26,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 # Silicons
@@ -51,6 +57,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -64,6 +73,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -75,6 +87,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -89,6 +104,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -100,6 +118,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -112,6 +133,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -127,6 +151,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -141,6 +168,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - JanitorPlunger
   - GroupSpeciesBreathTool
 
@@ -155,6 +185,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -170,6 +203,9 @@
   - Glasses
   - SurvivalClown
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
 
 - type: roleLoadout
   id: JobMime
@@ -185,6 +221,9 @@
   - Glasses
   - SurvivalMime
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
 
 - type: roleLoadout
   id: JobMusician
@@ -196,6 +235,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - Instruments
   - GroupSpeciesBreathTool
 
@@ -213,6 +255,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -227,6 +272,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -239,6 +287,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 # Engineering
@@ -254,6 +305,9 @@
   - ChiefEngineerShoes
   - SurvivalExtended
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -264,6 +318,9 @@
   - StationEngineerBackpack
   - SurvivalExtended
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -278,6 +335,9 @@
   - StationEngineerID
   - SurvivalExtended
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -290,6 +350,9 @@
   - AtmosphericTechnicianShoes
   - SurvivalExtended
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 # Science
@@ -307,6 +370,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -324,6 +390,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -335,6 +404,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 # Security
@@ -350,6 +422,9 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
@@ -364,6 +439,9 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
@@ -379,6 +457,9 @@
   - SecurityBelt
   - SurvivalSecurity
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
@@ -393,6 +474,9 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
@@ -403,6 +487,9 @@
   - SecurityBackpack
   - SurvivalSecurity
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathToolSecurity
 
 # Medical
@@ -421,6 +508,9 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -438,6 +528,9 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -449,6 +542,9 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -463,6 +559,9 @@
   - MedicalShoes
   - SurvivalMedical
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -479,6 +578,9 @@
   - MedicalEyewear
   - SurvivalMedical
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathToolMedical
 
 # Wildcards
@@ -490,6 +592,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -501,6 +606,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -512,6 +620,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -524,6 +635,9 @@
   - Glasses
   - Survival
   - Trinkets
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
   - GroupSpeciesBreathTool
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs

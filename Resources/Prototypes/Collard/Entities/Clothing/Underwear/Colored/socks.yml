@@ -1,0 +1,392 @@
+#region standard socks
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormalRed
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed red.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    color: Red
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Red
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormalOrange
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed orange.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    color: Orange
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Orange
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormalYellow
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed yellow.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    color: Yellow
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Yellow
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormalGreen
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed green.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    color: Green
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Green
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormalSkyblue
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed sky blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    color: "#61d5ff"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: "#61d5ff"
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormalBlue
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    color: Blue
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Blue
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormalViolet
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed violet.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    color: Violet
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Violet
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksNormalBlack
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed black.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    color: "#363636"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksnorm.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: "#363636"
+
+#endregion standard socks
+
+#region high socks
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHighRed
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed red.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    color: Red
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Red
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHighOrange
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed orange.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    color: Orange
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Orange
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHighYellow
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed yellow.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    color: Yellow
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Yellow
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHighGreen
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed green.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    color: Green
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Green
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHighSkyblue
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed sky blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    color: "#61d5ff"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: "#61d5ff"
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHighBlue
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    color: Blue
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Blue
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHighViolet
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed violet.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    color: Violet
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Violet
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksHighBlack
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed black.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    color: "#363636"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksknee.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: "#363636"
+#endregion high socks
+
+#region short socks
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShortRed
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed red.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    color: Red
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Red
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShortOrange
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed orange.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    color: Orange
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Orange
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShortYellow
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed yellow.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    color: Yellow
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Yellow
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShortGreen
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed green.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    color: Green
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Green
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShortSkyblue
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed sky blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    color: "#61d5ff"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: "#61d5ff"
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShortBlue
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    color: Blue
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Blue
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShortViolet
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed violet.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    color: Violet
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: Violet
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksShortBlack
+  name: socks
+  description: Standard Nanotrasen socks for station employees. Dyed black.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    color: "#363636"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Socks/socksshort.rsi
+    clothingVisuals:
+      socks:
+      - state: equipped-SOCKS
+        color: "#363636"
+#endregion short socks

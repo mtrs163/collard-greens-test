@@ -1,0 +1,128 @@
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersRed
+  name: red boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed red.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    color: Red
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Red
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersOrange
+  name: orange boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed orange.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    color: Orange
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Orange
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersYellow
+  name: yellow boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed yellow.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    color: Yellow
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Yellow
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersGreen
+  name: green boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed green.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    color: Green
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Green
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersSkyblue
+  name: sky blue boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed sky blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    color: "#61d5ff"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: "#61d5ff"
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersBlue
+  name: blue boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    color: Blue
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Blue
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersViolet
+  name: violet boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed violet.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    color: Violet
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Violet
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersBlack
+  name: black boxers
+  description: Standard Nanotrasen underwear for station employees. Dyed black.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    color: "#363636"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/boxers.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: "#363636"
+

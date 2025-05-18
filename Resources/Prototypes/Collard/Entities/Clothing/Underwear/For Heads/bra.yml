@@ -1,0 +1,62 @@
+#- type: entity
+#  parent: ClothingUnderwearTopBase
+#  id: ClothingUnderwearTopBraCap
+#  name: captain's bra
+#  description: Standard station captain's underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Top/heads/capitan/bra.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearTopBase
+#  id: ClothingUnderwearTopBraCE
+#  name: chief engineer's bra
+#  description: Standard station chief engineer's underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Top/heads/ce/bra.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearTopBase
+#  id: ClothingUnderwearTopBraCMO
+#  name: chief medical officer's bra
+#  description: Standard underwear of the station chief medical officer. For some reason it smells like chloral hydrate...
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Top/heads/cmo/bra.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearTopBase
+#  id: ClothingUnderwearTopBraHOP
+#  name: head of personnel's bra
+#  description: The standard underwear of the station's chief of staff.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Top/heads/hop/bra.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearTopBase
+#  id: ClothingUnderwearTopBraHOS
+#  name: head of security's bra
+#  description: Standard underwear of the station's head of security.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Top/heads/hos/bra.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearTopBase
+#  id: ClothingUnderwearTopBraQM
+#  name: quartermaster's bra
+#  description: Standard station quartermaster underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Top/heads/qm/bra.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearTopBase
+#  id: ClothingUnderwearTopBraRD
+#  name: research director's bra
+#  description: Standard research director's underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Top/heads/rd/bra.rsi

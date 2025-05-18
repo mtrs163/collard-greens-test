@@ -1,0 +1,16 @@
+ent-ClothingUnderwearBottomBoxersRed = красные боксеры
+    .desc = Самые обычные боксеры. Но красные.
+ent-ClothingUnderwearBottomBoxersOrange = оранжевые боксеры
+    .desc = Самые обычные боксеры. Но оранжевые.
+ent-ClothingUnderwearBottomBoxersYellow = жёлтые боксеры
+    .desc = Самые обычные боксеры. Но жёлтые.
+ent-ClothingUnderwearBottomBoxersGreen = зелёные боксеры
+    .desc = Самые обычные боксеры. Но зелёные.
+ent-ClothingUnderwearBottomBoxersSkyblue = голубые боксеры
+    .desc = Самые обычные боксеры. Но голубые.
+ent-ClothingUnderwearBottomBoxersBlue = синие боксеры
+    .desc = Самые обычные боксеры. Но синие.
+ent-ClothingUnderwearBottomBoxersViolet = фиолетовые боксеры
+    .desc = Самые обычные боксеры. Но фиолетовые.
+ent-ClothingUnderwearBottomBoxersBlack = чёрные боксеры
+    .desc = Самые обычные боксеры. Но чёрные.

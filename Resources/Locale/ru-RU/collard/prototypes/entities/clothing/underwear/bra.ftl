@@ -1,0 +1,16 @@
+ent-ClothingUnderwearTopBraRed = красное бра
+    .desc = Самое обычное бра. Но красное.
+ent-ClothingUnderwearTopBraOrange = оранжевое бра
+    .desc = Самое обычное бра. Но оранжевое.
+ent-ClothingUnderwearTopBraYellow = жёлтое бра
+    .desc = Самое обычное бра. Но жёлтое.
+ent-ClothingUnderwearTopBraGreen = зелёное бра
+    .desc = Самое обычное бра. Но зелёное.
+ent-ClothingUnderwearTopBraSkyblue = голубое бра
+    .desc = Самое обычное бра. Но голубое.
+ent-ClothingUnderwearTopBraBlue = синее бра
+    .desc = Самое обычное бра. Но синее.
+ent-ClothingUnderwearTopBraViolet = фиолетовое бра
+    .desc = Самое обычное бра. Но фиолетовое.
+ent-ClothingUnderwearTopBraBlack = чёрное бра
+    .desc = Самое обычное бра. Но чёрное.

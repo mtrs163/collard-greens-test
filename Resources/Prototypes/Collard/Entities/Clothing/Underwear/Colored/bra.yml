@@ -1,0 +1,128 @@
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraRed
+  name: red bra
+  description: Standard Nanotrasen underwear for station employees. Dyed red.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    color: Red
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART
+        color: Red
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraOrange
+  name: orange bra
+  description: Standard Nanotrasen underwear for station employees. Dyed orange.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    color: Orange
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART
+        color: Orange
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraYellow
+  name: yellow bra
+  description: Standard Nanotrasen underwear for station employees. Dyed yellow.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    color: Yellow
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART
+        color: Yellow
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraGreen
+  name: green bra
+  description: Standard Nanotrasen underwear for station employees. Dyed green.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    color: Green
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART
+        color: Green
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraSkyblue
+  name: sky blue bra
+  description: Standard Nanotrasen underwear for station employees. Dyed sky blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    color: "#61d5ff"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART
+        color: "#61d5ff"
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraBlue
+  name: blue bra
+  description: Standard Nanotrasen underwear for station employees. Dyed blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    color: Blue
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART
+        color: Blue
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraViolet
+  name: violet bra
+  description: Standard Nanotrasen underwear for station employees. Dyed violet.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    color: Violet
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART
+        color: Violet
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraBlack
+  name: black bra
+  description: Standard Nanotrasen underwear for station employees. Dyed black.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    color: "#363636"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+    clothingVisuals:
+      underweart:
+      - state: equipped-UNDERWEART
+        color: "#363636"
+

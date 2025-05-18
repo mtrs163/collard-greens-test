@@ -1,0 +1,128 @@
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesRed
+  name: red panties
+  description: Standard Nanotrasen underwear for station employees. Dyed red.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    color: Red
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Red
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesOrange
+  name: orange panties
+  description: Standard Nanotrasen underwear for station employees. Dyed orange.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    color: Orange
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Orange
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesYellow
+  name: yellow panties
+  description: Standard Nanotrasen underwear for station employees. Dyed yellow.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    color: Yellow
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Yellow
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesGreen
+  name: green panties
+  description: Standard Nanotrasen underwear for station employees. Dyed green.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    color: Green
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Green
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesSkyblue
+  name: sky blue panties
+  description: Standard Nanotrasen underwear for station employees. Dyed sky blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    color: "#61d5ff"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: "#61d5ff"
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesBlue
+  name: blue panties
+  description: Standard Nanotrasen underwear for station employees. Dyed blue.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    color: Blue
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Blue
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesViolet
+  name: violet panties
+  description: Standard Nanotrasen underwear for station employees. Dyed violet.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    color: Violet
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: Violet
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesBlack
+  name: black panties
+  description: Standard Nanotrasen underwear for station employees. Dyed black.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    color: "#363636"
+  - type: Clothing
+    sprite: Collard/Clothing/Underwear/Bottom/panties.rsi
+    clothingVisuals:
+      underwearb:
+      - state: equipped-UNDERWEARB
+        color: "#363636"
+

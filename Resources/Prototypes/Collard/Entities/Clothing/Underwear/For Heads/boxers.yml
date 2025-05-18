@@ -1,0 +1,73 @@
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomBoxersCap
+#  name: captain's boxers
+#  description: Standard station captain's underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/capitan/boxers.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomBoxersCE
+#  name: chief engineer's boxers
+#  description: Standard station chief engineer underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/ce/boxers.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomBoxersCMO
+#  name: chief medical officer's boxers
+#  description: Standard station chief physician's underwear. For some reason they smell like chloral hydrate...
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/cmo/boxers.rsi
+#    state: icon
+#  - type: SolutionContainerManager
+#    solutions:
+#      food:
+#        maxVol: 30
+#        reagents:
+#        - ReagentId: Fiber
+#          Quantity: 10
+#        - ReagentId: ChloralHydrate
+#         Quantity: 20
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomBoxersHOP
+#  name: head of personnel's boxers
+#  description: The standard underwear of the station's chief of staff.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/hop/boxers.rsi
+#    state: icon
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomBoxersHOS
+#  name: head of security's boxers
+#  description: Standard station head of security underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/hos/boxers.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomBoxersQM
+#  name: quartermaster's boxers
+#  description: Standard station quartermaster underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/qm/boxers.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomBoxersRD
+#  name: research director's boxers
+#  description: Standard research director's underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/rd/boxers.rsi

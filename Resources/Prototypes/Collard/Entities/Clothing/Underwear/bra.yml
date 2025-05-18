@@ -1,0 +1,75 @@
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraWhite
+  name: bra
+  description: Standard Nanotrasen bra for station staff. Painted white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/bra.rsi
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraSports
+  name: sports bra
+  description: Sports bra. Painted white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/sportsbra.rsi
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBraSportsAlternative
+  name: alternative sports bra
+  description: Sports bra. Alternate version. Painted white.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/sportsbraalt.rsi
+
+#etc
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopNekoBra
+  name: neko bra
+  description: for those who love "cats"
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/nekobra.rsi
+
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearToplaceBra
+  name: Lace bra
+  description: for your massive documents
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/lacebra.rsi
+
+# BlueShild
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopBlueShild
+  name: Blue Shild bra
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/BlueShild/bra.rsi
+
+# SpaceNinja
+- type: entity
+  parent: ClothingUnderwearTopBase
+  id: ClothingUnderwearTopSpaceNinja
+  name: Space Ninja bra
+  description:
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Underwear/Top/SpaceNinja/bra.rsi
+
+# Deathsquad
+#- type: entity
+#  parent: ClothingUnderwearTopBase
+#  id: ClothingUnderwearTopDeathBra
+#  name: deathsquad bra
+#  description: the most technolohically advanced bra in the galaxy
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Top/deathbra.rsi

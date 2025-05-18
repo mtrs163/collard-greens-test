@@ -53,6 +53,15 @@
         "name": "id"
       },
       {
+        "name": "underweart"
+      },
+	  {
+        "name": "underwearb"
+      },
+	  {
+        "name": "socks"
+      },
+      {
         "name": "invtoggle"
       },
       {

@@ -1,0 +1,469 @@
+#region boxers
+
+#red
+- type: loadout
+  id: RedBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersRed
+
+#orange
+- type: loadout
+  id: OrangeBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersOrange
+
+#yellow
+- type: loadout
+  id: YellowBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersYellow
+
+#green
+- type: loadout
+  id: GreenBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersGreen
+
+- type: loadout
+  id: SkyblueBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSkyblue
+
+- type: loadout
+  id: BlueBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersBlue
+
+- type: loadout
+  id: VioletBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersViolet
+
+- type: loadout
+  id: BlackBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersBlack
+
+- type: loadout
+  id: WhiteBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersWhite
+
+- type: loadout
+  id: BlueLongBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersBlueShild
+
+- type: loadout
+  id: ClothBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSpaceNinja
+
+- type: loadout
+  id: RedWhBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSeniorSec
+
+- type: loadout
+  id: ViolWhBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSeniorScience
+
+- type: loadout
+  id: OrWhBoxersAlt
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSeniorEnginer
+
+- type: loadout
+  id: OrWhBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSeniorDoctor
+
+#endregion boxers
+
+#region panties
+
+- type: loadout
+  id: RedPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesRed
+
+- type: loadout
+  id: OrangePanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesOrange
+
+- type: loadout
+  id: YellowPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesYellow
+
+- type: loadout
+  id: GreenPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesGreen
+
+- type: loadout
+  id: SkybluePanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSkyblue
+
+- type: loadout
+  id: BluePanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesBlue
+
+- type: loadout
+  id: VioletPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesViolet
+
+- type: loadout
+  id: BlackPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesBlack
+
+- type: loadout
+  id: WhitePanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesWhite
+
+- type: loadout
+  id: BlueLongPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesBlueShild
+
+- type: loadout
+  id: ClothPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSpaceNinja
+
+- type: loadout
+  id: RedWhPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSeniorSec
+
+- type: loadout
+  id: ViolWhPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSeniorScience
+
+- type: loadout
+  id: OrWhPantiesAlt
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSeniorEnginer
+
+- type: loadout
+  id: OrWhPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSeniorDoctor
+
+#region pantiesspecial
+
+- type: loadout
+  id: ThongPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesThong
+
+- type: loadout
+  id: NekoPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesNeko
+
+- type: loadout
+  id: LacePanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesLace
+
+#endregion pantiesspecial
+
+#endregion panties
+
+#region bra
+
+- type: loadout
+  id: RedBra
+  equipment:
+    underweart: ClothingUnderwearTopBraRed
+
+- type: loadout
+  id: OrangeBra
+  equipment:
+    underweart: ClothingUnderwearTopBraOrange
+
+- type: loadout
+  id: YellowBra
+  equipment:
+    underweart: ClothingUnderwearTopBraYellow
+
+- type: loadout
+  id: GreenBra
+  equipment:
+    underweart: ClothingUnderwearTopBraGreen
+
+- type: loadout
+  id: SkyblueBra
+  equipment:
+    underweart: ClothingUnderwearTopBraSkyblue
+
+- type: loadout
+  id: BlueBra
+  equipment:
+    underweart: ClothingUnderwearTopBraBlue
+
+- type: loadout
+  id: VioletBra
+  equipment:
+    underweart: ClothingUnderwearTopBraViolet
+
+- type: loadout
+  id: BlackBra
+  equipment:
+    underweart: ClothingUnderwearTopBraBlack
+
+- type: loadout
+  id: WhiteBra
+  equipment:
+    underweart: ClothingUnderwearTopBraWhite
+
+- type: loadout
+  id: BlueLongBra
+  equipment:
+    underweart: ClothingUnderwearTopBraBlueShild
+
+- type: loadout
+  id: ClothBra
+  equipment:
+    underweart: ClothingUnderwearTopBraSpaceNinja
+
+- type: loadout
+  id: RedWhBra
+  equipment:
+    underweart: ClothingUnderwearTopBraSeniorSec
+
+- type: loadout
+  id: ViolWhBra
+  equipment:
+    underweart: ClothingUnderwearTopBraSeniorScience
+
+- type: loadout
+  id: OrWhBraAlt
+  equipment:
+    underweart: ClothingUnderwearTopBraSeniorEnginer
+
+- type: loadout
+  id: OrWhBra
+  equipment:
+    underweart: ClothingUnderwearTopBraSeniorDoctor
+
+#region specialbra
+
+- type: loadout
+  id: LaceBra
+  equipment:
+    underweart: ClothingUnderwearToplaceBra
+
+- type: loadout
+  id: HeartBra
+  equipment:
+    underweart: ClothingUnderwearTopNekoBra
+
+- type: loadout
+  id: SportsBra
+  equipment:
+    underweart: ClothingUnderwearTopBraSports
+
+- type: loadout
+  id: SportsBraAlt
+  equipment:
+    underweart: ClothingUnderwearTopBraSportsAlternative
+
+#endregion specialbra
+
+#endregion bra
+
+#region socksnorm
+
+- type: loadout
+  id: SocksNormWhite
+  equipment:
+    socks: ClothingUnderwearSocksNormal
+
+- type: loadout
+  id: SocksNormRed
+  equipment:
+    socks: ClothingUnderwearSocksNormalRed
+
+- type: loadout
+  id: SocksNormOrange
+  equipment:
+    socks: ClothingUnderwearSocksNormalOrange
+
+- type: loadout
+  id: SocksNormYellow
+  equipment:
+    socks: ClothingUnderwearSocksNormalYellow
+
+- type: loadout
+  id: SocksNormGreen
+  equipment:
+    socks: ClothingUnderwearSocksNormalGreen
+
+- type: loadout
+  id: SocksNormSkyblue
+  equipment:
+    socks: ClothingUnderwearSocksNormalSkyblue
+
+- type: loadout
+  id: SocksNormBlue
+  equipment:
+    socks: ClothingUnderwearSocksNormalBlue
+
+- type: loadout
+  id: SocksNormViolet
+  equipment:
+    socks: ClothingUnderwearSocksNormalViolet
+
+- type: loadout
+  id: SocksNormBlack
+  equipment:
+    socks: ClothingUnderwearSocksNormalBlack
+
+#endregion socksnorm
+
+#region sockshigh
+
+- type: loadout
+  id: SocksHighWhite
+  equipment:
+    socks: ClothingUnderwearSocksHigh
+
+- type: loadout
+  id: SocksHighRed
+  equipment:
+    socks: ClothingUnderwearSocksHighRed
+
+- type: loadout
+  id: SocksHighOrange
+  equipment:
+    socks: ClothingUnderwearSocksHighOrange
+
+- type: loadout
+  id: SocksHighYellow
+  equipment:
+    socks: ClothingUnderwearSocksHighYellow
+
+- type: loadout
+  id: SocksHighGreen
+  equipment:
+    socks: ClothingUnderwearSocksHighGreen
+
+- type: loadout
+  id: SocksHighSkyblue
+  equipment:
+    socks: ClothingUnderwearSocksHighSkyblue
+
+- type: loadout
+  id: SocksHighBlue
+  equipment:
+    socks: ClothingUnderwearSocksHighBlue
+
+- type: loadout
+  id: SocksHighViolet
+  equipment:
+    socks: ClothingUnderwearSocksHighViolet
+
+- type: loadout
+  id: SocksHighBlack
+  equipment:
+    socks: ClothingUnderwearSocksHighBlack
+
+#endregion sockshigh
+
+#region socksshort
+
+- type: loadout
+  id: SocksShortWhite
+  equipment:
+    socks: ClothingUnderwearSocksShort
+
+- type: loadout
+  id: SocksShortRed
+  equipment:
+    socks: ClothingUnderwearSocksShortRed
+
+- type: loadout
+  id: SocksShortOrange
+  equipment:
+    socks: ClothingUnderwearSocksShortOrange
+
+- type: loadout
+  id: SocksShortYellow
+  equipment:
+    socks: ClothingUnderwearSocksShortYellow
+
+- type: loadout
+  id: SocksShortGreen
+  equipment:
+    socks: ClothingUnderwearSocksShortGreen
+
+- type: loadout
+  id: SocksShortSkyblue
+  equipment:
+    socks: ClothingUnderwearSocksShortSkyblue
+
+- type: loadout
+  id: SocksShortBlue
+  equipment:
+    socks: ClothingUnderwearSocksShortBlue
+
+- type: loadout
+  id: SocksShortViolet
+  equipment:
+    socks: ClothingUnderwearSocksShortViolet
+
+- type: loadout
+  id: SocksShortBlack
+  equipment:
+    socks: ClothingUnderwearSocksShortBlack
+
+#endregion socksshort
+
+#region socksspecial
+
+- type: loadout
+  id: SocksBee
+  equipment:
+    socks: ClothingUnderSocksBee
+
+- type: loadout
+  id: SocksCoder
+  equipment:
+    socks: ClothingUnderSocksCoder
+
+- type: loadout
+  id: SocksThigh
+  equipment:
+    socks: ClothingUnderwearSocksThigh
+
+- type: loadout
+  id: SocksFishnettights
+  equipment:
+    socks: ClothingUnderwearSocksFishnettights
+
+- type: loadout
+  id: SocksPantyhose
+  equipment:
+    socks: ClothingUnderwearSocksPantyhose
+
+- type: loadout
+  id: SocksGarters
+  equipment:
+    socks: ClothingUnderwearSocksGarters
+
+- type: loadout
+  id: SocksRich
+  equipment:
+    socks: ClothingUnderwearSocksRich
+
+#endregion socksspecial

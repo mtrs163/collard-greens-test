@@ -1,0 +1,62 @@
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomPantiesCap
+#  name: captain's panties
+#  description: Standard station captain underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/capitan/panties.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomPantiesCE
+#  name: chief engineer's panties
+#  description: Standard station chief engineer underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/ce/panties.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomPantiesCMO
+#  name: chief medical officer's panties
+#  description: Standard station chief physician's underwear. For some reason they smell like chloral hydrate...
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/cmo/panties.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomPantiesHOP
+#  name: head of personnel's panties
+#  description: The standard underwear of the station's chief of staff.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/hop/panties.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomPantiesHOS
+#  name: head of security's panties
+#  description: Standard station head of security underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/hos/panties.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomPantiesQM
+#  name: quartermaster's panties
+#  description: Standard station quartermaster underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/qm/panties.rsi
+
+#- type: entity
+#  parent: ClothingUnderwearBottomBase
+#  id: ClothingUnderwearBottomPantiesRD
+#  name: research director's panties
+#  description: Standard research director's underwear.
+#  components:
+#  - type: Sprite
+#    sprite: Collard/Clothing/Underwear/Bottom/heads/rd/panties.rsi

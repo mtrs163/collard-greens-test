@@ -1,0 +1,95 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingUnderwearBottomBase
+  name: based underwearb
+  description: "baseunderwear"
+  components:
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Tiny
+  - type: Clothing
+    slots: [underwearb]
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+  - type: Tag
+    tags:
+      - underwearb
+      - ClothMade
+
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingUnderwearTopBase
+  name: based underweart
+  description: "baseunderwear"
+  components:
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Tiny
+  - type: Clothing
+    slots: [underweart]
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+  - type: Tag
+    tags:
+      - underweart
+      - ClothMade
+
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingUnderwearSocksBase
+  name: based socks
+  description: "baseunderwear"
+  components:
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Tiny
+  - type: Clothing
+    slots: [socks]
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+  - type: Tag
+    tags:
+      - socks
+      - ClothMade
