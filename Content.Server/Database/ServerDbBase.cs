@@ -269,6 +269,7 @@ namespace Content.Server.Database
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
+                profile.Pose, // collard-DetailExaminableGlowup
                 profile.Species,
                 profile.Age,
                 sex,
@@ -306,6 +307,7 @@ namespace Content.Server.Database
 
             profile.CharacterName = humanoid.Name;
             profile.FlavorText = humanoid.FlavorText;
+            profile.Pose = humanoid.Pose; // collard-DetailExaminableGlowup
             profile.Species = humanoid.Species;
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();

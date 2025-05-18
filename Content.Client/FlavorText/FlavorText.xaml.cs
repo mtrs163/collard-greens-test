@@ -9,6 +9,7 @@ namespace Content.Client.FlavorText
     public sealed partial class FlavorText : Control
     {
         public Action<string>? OnFlavorTextChanged;
+        public Action<string>? OnRoundstartPoseTextChanged; // collard-DetailExaminableGlowup
 
         public FlavorText()
         {
@@ -17,12 +18,21 @@ namespace Content.Client.FlavorText
 
             var loc = IoCManager.Resolve<ILocalizationManager>();
             CFlavorTextInput.Placeholder = new Rope.Leaf(loc.GetString("flavor-text-placeholder"));
-            CFlavorTextInput.OnTextChanged  += _ => FlavorTextChanged();
+            CFlavorTextInput.OnTextChanged += _ => FlavorTextChanged();
+            CRoundstartPoseInput.Placeholder = new Rope.Leaf(loc.GetString("posing-content-none")); // collard-DetailExaminableGlowup
+            CRoundstartPoseInput.OnTextChanged += _ => RoundstartPoseTextChanged(); // collard-DetailExaminableGlowup
         }
 
         public void FlavorTextChanged()
         {
             OnFlavorTextChanged?.Invoke(Rope.Collapse(CFlavorTextInput.TextRope).Trim());
         }
+
+        // collard-DetailExaminableGlowup-start
+        public void RoundstartPoseTextChanged()
+        {
+            OnRoundstartPoseTextChanged?.Invoke(Rope.Collapse(CRoundstartPoseInput.TextRope).Trim());
+        }
+        // collard-DetailExaminableGlowup-end
     }
 }

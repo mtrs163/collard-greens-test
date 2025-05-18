@@ -23,7 +23,7 @@ using System.Numerics;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Systems;
 using Content.Server.IdentityManagement;
-using Content.Shared.DetailExaminable;
+using Content.Server.DetailExaminable; // collard-DetailExaminableGlowup
 using Content.Shared.Store.Components;
 using Robust.Shared.Collections;
 using Robust.Shared.Map.Components;
@@ -221,7 +221,11 @@ public sealed class SubdermalImplantSystem : SharedSubdermalImplantSystem
             _forensicsSystem.RandomizeDNA(ent);
             _forensicsSystem.RandomizeFingerprint(ent);
 
-            RemComp<DetailExaminableComponent>(ent); // remove MRP+ custom description if one exists
+            // collard-DetailExaminableGlowup-start
+            EnsureComp<DetailExaminableComponent>(ent, out var comp);
+            comp.Content = Loc.GetString("flavor-content-none");
+            comp.PoseContent = Loc.GetString("posing-content-none");
+            // collard-DetailExaminableGlowup-end
             _identity.QueueIdentityUpdate(ent); // manually queue identity update since we don't raise the event
             _popup.PopupEntity(Loc.GetString("scramble-implant-activated-popup"), ent, ent);
         }
