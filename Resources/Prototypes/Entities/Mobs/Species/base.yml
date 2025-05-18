@@ -213,6 +213,9 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+  - type: DetailExaminable # collard-DetailExaminableGlowup
+    content: "[italic]Пользователь не установил описание для персонажа. [bolditalic]Sosite[/bolditalic].[/italic]"
+    poseContent: "[italic]Пользователь не установил позу для персонажа. [bolditalic]Sosite[/bolditalic].[/italic]"
 
 - type: entity
   save: false
@@ -347,3 +350,6 @@
     interfaces:
       enum.HumanoidMarkingModifierKey.Key: # sure, this can go here too
         type: HumanoidMarkingModifierBoundUserInterface
+  - type: DetailExaminable # collard-DetailExaminableGlowup
+    content: "[italic]Пользователь не установил описание для персонажа. [bolditalic]Sosite[/bolditalic].[/italic]"
+    poseContent: "[italic]Пользователь не установил позу для персонажа. [bolditalic]Sosite[/bolditalic].[/italic]"

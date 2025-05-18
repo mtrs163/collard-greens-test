@@ -73,6 +73,14 @@ namespace Content.Shared.Preferences
         [DataField]
         public string FlavorText { get; set; } = string.Empty;
 
+        // collard-DetailExaminableGlowup-start
+        /// <summary>
+        /// Detailed changeable character info.
+        /// </summary>
+        [DataField]
+        public string Pose { get; set; } = string.Empty;
+        // collard-DetailExaminableGlowup-end
+
         /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
         /// </summary>
@@ -138,6 +146,7 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
+            string pose, // collard-DetailExaminableGlowup
             string species,
             int age,
             Sex sex,
@@ -153,6 +162,7 @@ namespace Content.Shared.Preferences
         {
             Name = name;
             FlavorText = flavortext;
+            Pose = pose; // collard-DetailExaminableGlowup
             Species = species;
             Age = age;
             Sex = sex;
@@ -185,6 +195,7 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile(HumanoidCharacterProfile other)
             : this(other.Name,
                 other.FlavorText,
+                other.Pose, // collard-DetailExaminableGlowup
                 other.Species,
                 other.Age,
                 other.Sex,
@@ -284,6 +295,13 @@ namespace Content.Shared.Preferences
         {
             return new(this) { FlavorText = flavorText };
         }
+
+        // collard-DetailExaminableGlowup-start
+        public HumanoidCharacterProfile WithRoundstartPose(string pose)
+        {
+            return new(this) { Pose = pose };
+        }
+        // collard-DetailExaminableGlowup-end
 
         public HumanoidCharacterProfile WithAge(int age)
         {
@@ -490,6 +508,7 @@ namespace Content.Shared.Preferences
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
+            if (Pose != other.Pose) return false; // collard-DetailExaminableGlowup
             return Appearance.MemberwiseEquals(other.Appearance);
         }
 
@@ -569,6 +588,7 @@ namespace Content.Shared.Preferences
                 flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
             }
 
+            string pose = Pose; // collard-DetailExaminableGlowup
             var erpstatus = ERPStatus; // collard-ERPStatus
             var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex);
 
@@ -618,6 +638,7 @@ namespace Content.Shared.Preferences
 
             Name = name;
             FlavorText = flavortext;
+            Pose = pose; // collard-DetailExaminableGlowup
             Age = age;
             Sex = sex;
             ERPStatus = erpstatus; // collard-ERPStatus
@@ -728,6 +749,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(_loadouts);
             hashCode.Add(Name);
             hashCode.Add(FlavorText);
+            hashCode.Add(Pose); // collard-DetailExaminableGlowup
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add((int)Sex);

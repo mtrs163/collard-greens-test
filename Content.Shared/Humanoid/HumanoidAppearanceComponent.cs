@@ -114,19 +114,6 @@ public sealed partial class HumanoidAppearanceComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public ERPStatus ERPStatus = ERPStatus.No;
-
-    public string GetERPStatusName()
-    {
-        switch (ERPStatus)
-        {
-            case ERPStatus.No:
-                return Loc.GetString("humanoid-ingame-erp-status-no");
-            case ERPStatus.Yes:
-                return Loc.GetString("humanoid-ingame-erp-status-yes");
-            default:
-                return Loc.GetString("humanoid-ingame-erp-status-ask");
-        }
-    }
     // collard-ERPstatus-end
 }
 

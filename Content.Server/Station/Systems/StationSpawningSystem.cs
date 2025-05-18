@@ -8,7 +8,7 @@ using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
-using Content.Shared.DetailExaminable;
+using Content.Server.DetailExaminable; // collard-DetailExaminableGlowup
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.PDA;
@@ -148,10 +148,23 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             else
                 _chatManager.SendAdminAnnouncement(Loc.GetString("player-join-round-message", ("name", profile.Name), ("job", job.Value.ToString())));
             // collard-Admin1984-end
+            // collard-DetailExaminableGlowup-start
+            var detailExamineComp = EntityManager.EnsureComponent<DetailExaminableComponent>(entity.Value);
             if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
             {
-                AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
+                detailExamineComp.Content = profile.FlavorText;
+                detailExamineComp.PoseContent = profile.Pose;
+                if (detailExamineComp.PoseContent == string.Empty)
+                    detailExamineComp.PoseContent = Loc.GetString("posing-content-none");
             }
+            else
+            {
+                detailExamineComp.Content = Loc.GetString("flavor-content-none");
+                detailExamineComp.PoseContent = profile.Pose;
+                if (detailExamineComp.PoseContent == string.Empty)
+                    detailExamineComp.PoseContent = Loc.GetString("posing-content-none");
+            }
+            // collard-DetailExaminableGlowup-end
         }
 
         if (loadout != null)

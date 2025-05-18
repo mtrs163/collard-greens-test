@@ -113,7 +113,6 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         var age = GetAgeRepresentation(component.Species, component.Age);
 
         args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));
-        args.PushMarkup(Loc.GetString(component.GetERPStatusName()), 50); // collard-ERPStatus
     }
 
     /// <summary>

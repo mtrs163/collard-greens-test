@@ -1,0 +1,43 @@
+<ui:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:loui="clr-namespace:Content.Client.Lobby.UI"
+    Title="{Loc flavor-panel-title}" MinSize="600 400" MaxSize="600 400" SetSize="600 400" Resizable="False">
+    <BoxContainer Orientation="Horizontal">
+        <!--Character info"-->
+        <BoxContainer Name="InfoBox" Orientation="Vertical" MinWidth="120" MaxWidth="120" Margin="10 5 10 10">
+            <Label Name="CharacterName" Text="" HorizontalAlignment="Center"/>
+            <loui:HighlightedContainer Name="SpriteHighlight" MinSize="120 120" MaxSize="120 120">
+                <SpriteView Name="SpriteView" Scale="3 3" MinSize="120 120" MaxSize="120 120" SizeFlagsStretchRatio="1"/>
+            </loui:HighlightedContainer>
+            <loui:HighlightedContainer Name="StatusHighlight" Margin="0 10 0 0" MinWidth="100" VerticalExpand="True">
+                <BoxContainer Name="CharacterInfo" VerticalExpand="True" HorizontalExpand="True">
+                    <RichTextLabel Name="ErpStatus" VerticalAlignment="Top" Text="" />
+                </BoxContainer>
+            </loui:HighlightedContainer>
+        </BoxContainer>
+        <!--Flavor-->
+        <BoxContainer Name="FlavorBox" Orientation="Vertical" Margin="0 5 0 10" MaxWidth="300" VerticalExpand="True" HorizontalExpand="True">
+            <Label Name="FlavorLabel" Text="{Loc flavor-panel-flavortext}" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <loui:HighlightedContainer Name="FlavorHighlight" VerticalExpand="True">
+                <ScrollContainer HScrollEnabled="False" VerticalExpand="True" ReturnMeasure="True">
+                    <BoxContainer Orientation="Vertical" Name="FlavorContainer">
+                        <RichTextLabel Name="FlavorTextText" Text="" VerticalAlignment="Top"/>
+                    </BoxContainer>
+                </ScrollContainer>
+            </loui:HighlightedContainer>
+        </BoxContainer>
+        <!--Pose-->
+        <BoxContainer Name="PoseBox" Orientation="Vertical" MinWidth="150" MaxWidth="150" Margin="10 5 10 10" VerticalExpand="True">
+            <Label Name="PoseLabel" Text="{Loc flavor-panel-pose}" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <loui:HighlightedContainer Name="PoseHighlight" VerticalExpand="True">
+                <ScrollContainer HScrollEnabled="False" VerticalExpand="True" ReturnMeasure="True">
+                    <BoxContainer Orientation="Vertical" Name="PoseContainer">
+                            <RichTextLabel Name="PoseText" Text="" VerticalAlignment="Top"/>
+                    </BoxContainer>
+                </ScrollContainer>
+            </loui:HighlightedContainer>
+        </BoxContainer>
+    </BoxContainer>
+</ui:FancyWindow>

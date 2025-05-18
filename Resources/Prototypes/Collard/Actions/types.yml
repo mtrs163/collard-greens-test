@@ -1,0 +1,23 @@
+- type: entity
+  id: ActionChangePose
+  name: action-name-pose-change
+  description: action-description-pose-change
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon: Interface/Emotes/weh.png
+    event: !type:ChangePoseActionEvent
+    checkCanInteract: false
+
+- type: entity
+  id: ActionChangeFlavor
+  name: action-name-flavor-change
+  description: action-description-flavor-change
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon:
+      sprite: Structures/Decoration/mannequin.rsi
+      state: mannequin
+    event: !type:ChangeFlavorActionEvent
+    checkCanInteract: false
