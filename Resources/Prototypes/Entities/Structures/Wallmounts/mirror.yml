@@ -24,3 +24,5 @@
     interfaces:
       enum.MagicMirrorUiKey.Key:
         type: MagicMirrorBoundUserInterface
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."

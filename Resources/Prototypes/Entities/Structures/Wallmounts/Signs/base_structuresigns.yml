@@ -35,3 +35,5 @@
     snapCardinals: true
   - type: StaticPrice
     price: 20
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."

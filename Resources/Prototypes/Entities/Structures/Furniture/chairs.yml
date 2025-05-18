@@ -49,6 +49,8 @@
           collection: MetalBreak
   - type: StaticPrice
     price: 50
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."
 
 #Starts unanchored, cannot be rotated while anchored
 - type: entity

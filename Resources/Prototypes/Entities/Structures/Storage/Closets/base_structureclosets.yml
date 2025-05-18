@@ -200,6 +200,8 @@
     node: done
     containers:
     - entity_storage
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."
 
 #Wall locker
 - type: entity

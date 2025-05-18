@@ -72,6 +72,8 @@
     - machine_board
   - type: LightningTarget
     priority: 1
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."
 
 - type: entity
   abstract: true
