@@ -24,6 +24,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Shared.Collard.GameTicking; // collard-StationGoal
 
 namespace Content.Server.GameTicking
 {
@@ -440,6 +441,7 @@ namespace Content.Server.GameTicking
             AnnounceRound();
             UpdateInfoText();
             SendRoundStartedDiscordMessage();
+            RaiseLocalEvent(new RoundStartedEvent(RoundId)); // collard-StationGoal
 
 #if EXCEPTION_TOLERANCE
             }

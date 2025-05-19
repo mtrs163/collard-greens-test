@@ -86,6 +86,7 @@ namespace Content.Server.PDA
 
             UpdateAlertLevel(uid, pda);
             UpdateStationName(uid, pda);
+            UpdateInstructions(uid, pda); // collard-PDAInstructions
         }
 
         protected override void OnItemInserted(EntityUid uid, PdaComponent pda, EntInsertedIntoContainerMessage args)
@@ -181,6 +182,7 @@ namespace Content.Server.PDA
 
             UpdateStationName(uid, pda);
             UpdateAlertLevel(uid, pda);
+            UpdateInstructions(uid, pda); // collard-PDAInstructions
             // TODO: Update the level and name of the station with each call to UpdatePdaUi is only needed for latejoin players.
             // TODO: If someone can implement changing the level and name of the station when changing the PDA grid, this can be removed.
 
@@ -205,6 +207,7 @@ namespace Content.Server.PDA
                     StationAlertColor = pda.StationAlertColor
                 },
                 pda.StationName,
+                pda.CurrentInstructions, // collard-PDAInstructions
                 showUplink,
                 hasInstrument,
                 address);
@@ -299,6 +302,36 @@ namespace Content.Server.PDA
             if (alertComp.AlertLevels.Levels.TryGetValue(alertComp.CurrentLevel, out var details))
                 pda.StationAlertColor = details.Color;
         }
+
+        // collard-PDAInstructions-start
+        private void UpdateInstructions(EntityUid uid, PdaComponent pda)
+        {
+            var station = _station.GetOwningStation(uid);
+            if (!TryComp(station, out AlertLevelComponent? alertComp) ||
+                alertComp.AlertLevels == null)
+                return;
+            var stationName = station is null ? "None" : Name(station.Value);
+            if (stationName == "None" ||
+                stationName.Length < 4)
+            {
+                pda.CurrentInstructions = "None";
+                return;
+            }
+            pda.CurrentInstructions = stationName[..4] switch
+            {
+                "NTAD" => "administrative",
+                "NTBS" => "business",
+                "NTRN" => "research",
+                "NTEX" => "experimental",
+                "NTCO" => "commercial",
+                "NTME" => "medical",
+                "NTDE" => "defense",
+                "NTTS" => "transport",
+                "NTRT" => "resort",
+                _ => "None",
+            };
+        }
+        // collard-PDAInstructions-end
 
         private string? GetDeviceNetAddress(EntityUid uid)
         {
