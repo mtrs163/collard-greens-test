@@ -215,6 +215,16 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+  - type: Badge # collard-Badge
+    badgeSlot:
+      insertVerbText: comp-badge-insert
+      ejectVerbText: comp-badge-eject
+      whitelist:
+        tags:
+        - Badge
+  - type: ContainerContainer # collard-Badge
+    containers:
+      badge_label: !type:ContainerSlot
   - type: DetailExaminable # collard-DetailExaminableGlowup
     content: "[italic]Пользователь не установил описание для персонажа. [bolditalic]Sosite[/bolditalic].[/italic]"
     poseContent: "[italic]Пользователь не установил позу для персонажа. [bolditalic]Sosite[/bolditalic].[/italic]"
@@ -295,7 +305,16 @@
   components:
   - type: Hands
   - type: ComplexInteraction
+  - type: Badge # collard-Badge
+    labelSlot:
+      insertVerbText: comp-badge-insert
+      ejectVerbText: comp-badge-eject
+      whitelist:
+        tags:
+        - Badge
   - type: ContainerContainer
+    containers: # collard-Badge
+      badge_label: !type:ContainerSlot # collard-Badge
   - type: Icon
     sprite: Mobs/Species/Human/parts.rsi
     state: full
