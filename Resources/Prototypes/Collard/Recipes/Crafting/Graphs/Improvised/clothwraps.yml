@@ -1,0 +1,13 @@
+- type: constructionGraph
+  id: Clothwrap
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: clothwrap
+          steps:
+            - material: Cloth
+              amount: 1
+              doAfter: 3
+    - node: clothwrap
+      entity: ClothingShoesClothwraps

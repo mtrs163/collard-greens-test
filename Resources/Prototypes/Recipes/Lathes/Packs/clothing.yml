@@ -6,6 +6,7 @@
   - ClothingUniformJumpsuitColorGrey
   - ClothingUniformJumpskirtColorGrey
   - ClothingUniformJumpsuitLoungewear
+  - ClothingShoesClothwraps # collard-Clothwraps
 
 - type: latheRecipePack
   id: ClothingCargo

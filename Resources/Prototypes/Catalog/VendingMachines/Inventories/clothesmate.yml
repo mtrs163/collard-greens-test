@@ -91,6 +91,16 @@
     ClothingHandsGlovesColorGreen: 2
     ClothingHandsGlovesColorOrange: 2
     ClothingHandsGlovesColorPurple: 2
+    ClothingShoeClothwrap: 5 # collard-Clothwraps
+    ClothingShoesLeather: 3 # collard-ClothesPopulation
+    ClothingShoesSlippers: 2 # collard-ClothesPopulation
+    ClothingShoesTourist: 3 # collard-ClothesPopulation
+    ClothingShoesBootsLaceup: 2 # collard-ClothesPopulation
+    ClothingMaskNeckGaiter: 2 # collard-ClothesPopulation
+    ClothingMaskNeckGaiterRed: 2 # collard-ClothesPopulation
+    ClothingUnderwearBottomPantiesWhite: 5 # collard-ClothesPopulation
+    ClothingUnderwearTopBraWhite: 5 # collard-ClothesPopulation
+    ClothingUnderwearBottomBoxersWhite: 5 # collard-ClothesPopulation
     ClothingEyesGlassesCheapSunglasses: 3
     # DO NOT ADD MORE, USE UNIFORM DYING
   contrabandInventory:

@@ -1,0 +1,5 @@
+- type: loadout
+  id: Clothwraps
+  equipment:
+    shoes: ClothingShoesClothwraps
+
