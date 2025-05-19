@@ -287,7 +287,7 @@ public sealed class CryostorageSystem : SharedCryostorageSystem
         var locKey = CryoSleepRejoiningEnabled
             ? "cryostorage-insert-message-temp"
             : "cryostorage-insert-message-permanent";
-        if (comp.CanRejoin) locKey = locKey + "-canrejoin-" + comp.SleeperType; //skyperster
+        if (comp.CanRejoin) locKey = locKey + "-canrejoin-" + comp.SleeperType; // collard-CentComTeleporter
 
         var msg = Loc.GetString(locKey, ("time", comp.GracePeriod.TotalMinutes));
         if (TryComp<ActorComponent>(args.Entity, out var actor))
