@@ -1,0 +1,55 @@
+- type: localizedDataset
+  id: StationGoalAdministrative
+  values:
+    prefix: station-goal-administrative
+    count: 1
+
+- type: localizedDataset
+  id: StationGoalBusiness
+  values:
+    prefix: station-goal-business
+    count: 3
+
+- type: localizedDataset
+  id: StationGoalResearch
+  values:
+    prefix: station-goal-research
+    count: 5
+
+- type: localizedDataset
+  id: StationGoalExperimental
+  values:
+    prefix: station-goal-experimental
+    count: 1
+
+- type: localizedDataset
+  id: StationGoalCommercial
+  values:
+    prefix: station-goal-commercial
+    count: 11
+
+- type: localizedDataset
+  id: StationGoalMedical
+  values:
+    prefix: station-goal-medical
+    count: 1
+
+- type: localizedDataset
+  id: StationGoalDefense
+  values:
+    prefix: station-goal-defense
+    count: 1
+
+- type: localizedDataset
+  id: StationGoalTransport
+  values:
+    prefix: station-goal-transport
+    count: 1
+
+- type: localizedDataset
+  id: StationGoalGeneric
+  values:
+    prefix: station-goal-generic
+    count: 14
+
+

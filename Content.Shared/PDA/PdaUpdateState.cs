@@ -13,6 +13,7 @@ namespace Content.Shared.PDA
         public bool HasPai;
         public PdaIdInfoText PdaOwnerInfo;
         public string? StationName;
+        public string? CurrentInstructions; // collard-PDAInstructions
         public bool HasUplink;
         public bool CanPlayMusic;
         public string? Address;
@@ -25,18 +26,20 @@ namespace Content.Shared.PDA
             bool hasPai,
             PdaIdInfoText pdaOwnerInfo,
             string? stationName,
+            string? currentInstructions,
             bool hasUplink = false,
             bool canPlayMusic = false,
             string? address = null)
             : base(programs, activeUI)
         {
-            FlashlightEnabled = flashlightEnabled;
+            FlashlightEnabled = flashlightEnabled; // collard-PDAInstructions
             HasPen = hasPen;
             HasPai = hasPai;
             PdaOwnerInfo = pdaOwnerInfo;
             HasUplink = hasUplink;
             CanPlayMusic = canPlayMusic;
             StationName = stationName;
+            CurrentInstructions = currentInstructions; // collard-PDAInstructions
             Address = address;
         }
     }

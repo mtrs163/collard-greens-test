@@ -197,7 +197,24 @@ namespace Content.Client.PDA
                 ("color", alertColor),
                 ("level", _alertLevel)
             ));
-            _instructions = Loc.GetString($"{alertLevelKey}-instructions");
+            // collard-PDAInstructions-start
+            var instructions = state.CurrentInstructions;
+            if (state.PdaOwnerInfo.StationAlertLevel == "green")
+            {
+                if (instructions == "None")
+                {
+                    _instructions = Loc.GetString($"{alertLevelKey}-instructions");
+                }
+                else
+                {
+                    _instructions = Loc.GetString($"{instructions}-station-instructions");
+                }
+            }
+            else
+            {
+                _instructions = Loc.GetString($"{alertLevelKey}-instructions");
+            }
+            // collard-PDAInstructions-end
             StationAlertLevelInstructions.SetMarkup(Loc.GetString(
                 "comp-pda-ui-station-alert-level-instructions",
                 ("instructions", _instructions))

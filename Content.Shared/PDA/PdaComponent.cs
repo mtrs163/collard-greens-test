@@ -38,5 +38,6 @@ namespace Content.Shared.PDA
         [ViewVariables] public string? StationName;
         [ViewVariables] public string? StationAlertLevel;
         [ViewVariables] public Color StationAlertColor = Color.White;
+        [ViewVariables] public string? CurrentInstructions = "None"; // collard-PDAInstructions
     }
 }

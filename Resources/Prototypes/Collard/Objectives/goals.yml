@@ -1,0 +1,61 @@
+# General goals
+
+- type: stationGoal
+  id: StationGoalTechnologies
+  text: station-goal-technologies
+
+- type: stationGoal
+  id: StationGoalSeeds
+  text: station-goal-seeds
+
+- type: stationGoal
+  id: StationGoalChemistry
+  text: station-goal-chemistry
+
+- type: stationGoal
+  id: StationGoalAllDepartments
+  text: station-goal-all-departments
+
+- type: stationGoal
+  id: StationGoalPsychologist
+  text: station-goal-psychologist
+
+- type: stationGoal
+  id: StationGoalShuttle
+  text: station-goal-shuttle
+
+- type: stationGoal
+  id: Singularity
+  text: station-goal-singularity
+  minPlayers: 15
+
+- type: stationGoal
+  id: SolarPanels
+  text: station-goal-solar-panels
+
+- type: stationGoal
+  id: Artifacts
+  text: station-goal-artifacts
+  minPlayers: 15
+
+- type: stationGoal
+  id: StationGoalStorage
+  text: station-goal-storage
+
+- type: stationGoal
+  id: Zoo
+  text: station-goal-zoo
+
+- type: stationGoal
+  id: MiningOutpost
+  text: station-goal-mining-outpost
+  minPlayers: 15
+
+- type: stationGoal
+  id: StationGoalContainment
+  text: station-goal-containment
+
+- type: stationGoal
+  id: Tesla
+  text: station-goal-tesla
+  minPlayers: 15

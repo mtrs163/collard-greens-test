@@ -135,6 +135,24 @@ public sealed partial class FaxMachineComponent : Component
     /// </summary>
     [DataField]
     public EntProtoId PrintOfficePaperId = "PaperOffice";
+
+    // collard-StationGoal-start
+    /// <summary>
+    /// Should that fax receive station goal info
+    /// </summary>
+    [DataField]
+    public bool ReceiveStationGoal { get; set; }
+
+    /// <summary>
+    /// Should that fax receive station goals from other stations
+    /// </summary>
+    [DataField]
+    public bool ReceiveAllStationGoals { get; set; }
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
+    public bool CentcomFax = false;
+    // collard-StationGoal-end
 }
 
 [DataDefinition]

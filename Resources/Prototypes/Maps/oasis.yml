@@ -11,7 +11,7 @@
           mapNameTemplate: '{0} Oasis {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'B'
+            prefixCreator: 'RT' # collard-StationPrefix
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_accordia.yml
         - type: StationJobs
