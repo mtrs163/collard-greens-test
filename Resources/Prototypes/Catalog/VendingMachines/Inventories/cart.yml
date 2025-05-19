@@ -16,6 +16,7 @@
     EncryptionKeyScience: 2
     EncryptionKeySecurity: 1
     EncryptionKeyService: 3
+    Badge: 5 # collard-Badge
   contrabandInventory:
     BalloonNT: 2
     LuxuryPen: 1

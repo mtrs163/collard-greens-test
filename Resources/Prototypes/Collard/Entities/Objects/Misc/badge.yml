@@ -1,0 +1,39 @@
+- type: entity
+  name: badge
+  parent: BaseItem
+  id: Badge
+  description: 'A badge that allows anyone to know who you are.'
+  components:
+  - type: Sprite
+    sprite: Collard/Objects/Misc/badge.rsi
+    state: icon
+  - type: Paper
+    content: badge-default-message
+  - type: PaperVisuals
+    headerImagePath: "/Textures/Collard/Interface/Paper/paper_heading_badge.png"
+    headerMargin: 256.0, 0.0, 0.0, 0.0
+    contentMargin: 0.0, 0.0, 0.0, 0.0
+    maxWritableArea: 368.0, 256.0
+  - type: ActivatableUI
+    key: enum.PaperUiKey.Key
+    requiresComplex: false
+  - type: UserInterface
+    interfaces:
+      enum.PaperUiKey.Key:
+        type: PaperBoundUserInterface
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - Badge
+  - type: Damageable
+    damageModifierSet: Plastic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15
+      behaviors:
+      - !type:EmptyAllContainersBehaviour
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
