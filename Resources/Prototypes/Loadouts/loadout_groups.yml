@@ -239,6 +239,7 @@
   loadouts:
   - BlackShoes
   - WinterBoots
+  - Clothwraps # collard-Clothwraps
 
 - type: loadoutGroup
   id: BartenderHead
@@ -635,6 +636,7 @@
   loadouts:
   - BrownShoes
   - CargoWinterBoots
+  - Clothwraps # collard-Clothwraps
 
 - type: loadoutGroup
   id: CargoTechnicianHead
@@ -671,6 +673,7 @@
   loadouts:
   - BlackShoes
   - CargoWinterBoots
+  - Clothwraps # collard-Clothwraps
 
 - type: loadoutGroup
   id: SalvageSpecialistBackpack
@@ -693,6 +696,7 @@
   loadouts:
   - SalvageBoots
   - CargoWinterBoots
+  - Clothwraps # collard-Clothwraps
 
 # Engineering
 - type: loadoutGroup

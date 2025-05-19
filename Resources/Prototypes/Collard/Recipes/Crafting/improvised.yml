@@ -1,0 +1,12 @@
+- type: construction
+  name: clothwrap
+  id: clothwrap
+  graph: Clothwrap
+  startNode: start
+  targetNode: clothwrap
+  category: construction-category-clothing
+  description: A piece of cloth for your feet.
+  icon:
+    sprite: Collard/Clothing/Shoes/Misc/clothwrap.rsi
+    state: icon
+  objectType: Item

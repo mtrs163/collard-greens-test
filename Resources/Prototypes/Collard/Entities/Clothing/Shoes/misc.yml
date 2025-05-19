@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesClothwraps
+  name: clothwrap
+  description: A piece of cloth, that you are supposed to wrap around your feet.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Shoes/Misc/clothwrap.rsi
+  - type: Clothing
+    sprite: Collard/Clothing/Shoes/Misc/clothwrap.rsi
+  - type: Construction
+    graph: Clothwrap
+    node: clothwrap
