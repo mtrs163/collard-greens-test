@@ -237,8 +237,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         // Really, markings should probably be a separate component altogether.
         ClearAllMarkings(entity);
 
-        var censorNudity = _configurationManager.GetCVar(CCVars.AccessibilityClientCensorNudity) ||
-                           _configurationManager.GetCVar(CCVars.AccessibilityServerCensorNudity);
+        var censorNudity = false; // collard-NoCensor
         // The reason we're splitting this up is in case the character already has undergarment equipped in that slot.
         var applyUndergarmentTop = censorNudity;
         var applyUndergarmentBottom = censorNudity;
