@@ -398,16 +398,27 @@
   - type: Envelope
   - type: ContainerContainer
     containers:
-      letter_slot: !type:ContainerSlot
-  - type: ItemSlots
-    slots:
-      letter_slot:
-        name: envelope-letter-slot
-        insertSound: /Audio/Effects/packetrip.ogg
-        ejectSound: /Audio/Effects/packetrip.ogg
-        whitelist:
-          tags:
-            - Paper
+      storagebase: !type:Container # collard-EnvelopeGlowup
+  # collard-EnvelopeGlowup-start
+  #     letter_slot: !type:ContainerSlot
+  # - type: ItemSlots
+  #   slots:
+  #     letter_slot:
+  #       name: envelope-letter-slot
+  #       insertSound: /Audio/Effects/packetrip.ogg
+  #       ejectSound: /Audio/Effects/packetrip.ogg
+  #       whitelist:
+  #         tags:
+  #           - Paper
+  # collard-EnvelopeGlowup-start
+  - type: Storage
+    grid:
+    - 0,0,1,1
+    maxItemSize: Small
+    blacklist:
+      tags:
+      - DrinkGlass
+  # collard-EnvelopeGlowup-end
   - type: ActivatableUI
     key: enum.PaperUiKey.Key
     requiresComplex: false
@@ -415,6 +426,8 @@
     interfaces:
       enum.PaperUiKey.Key:
         type: PaperBoundUserInterface
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface # collard-EnvelopeGlowup
   - type: Item
     size: Tiny
   - type: Tag

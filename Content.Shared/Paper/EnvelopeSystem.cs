@@ -3,6 +3,8 @@ using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Examine;
+using Content.Shared.Storage; // collard-EnvelopeGlowup
+using Content.Shared.Storage.Components; // collard-EnvelopeGlowup
 
 namespace Content.Shared.Paper;
 
@@ -11,16 +13,19 @@ public sealed class EnvelopeSystem : EntitySystem
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
     [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
+    [Dependency] private readonly SharedUserInterfaceSystem _uiSystem = default!; // collard-EnvelopeGlowup
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<EnvelopeComponent, ItemSlotInsertAttemptEvent>(OnInsertAttempt);
-        SubscribeLocalEvent<EnvelopeComponent, ItemSlotEjectAttemptEvent>(OnEjectAttempt);
+        /*SubscribeLocalEvent<EnvelopeComponent, ItemSlotInsertAttemptEvent>(OnInsertAttempt); collard-EnvelopeGlowup
+        SubscribeLocalEvent<EnvelopeComponent, ItemSlotEjectAttemptEvent>(OnEjectAttempt);*/
         SubscribeLocalEvent<EnvelopeComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAltVerbs);
         SubscribeLocalEvent<EnvelopeComponent, EnvelopeDoAfterEvent>(OnDoAfter);
         SubscribeLocalEvent<EnvelopeComponent, ExaminedEvent>(OnExamine);
+        SubscribeLocalEvent<EnvelopeComponent, StorageOpenAttemptEvent>(OnStorageOpenAttempt); // collard-EnvelopeGlowup
+        SubscribeLocalEvent<EnvelopeComponent, StorageInteractAttemptEvent>(OnStorageInteractAttempt); // collard-EnvelopeGlowup
     }
 
     private void OnExamine(Entity<EnvelopeComponent> ent, ref ExaminedEvent args)
@@ -55,7 +60,8 @@ public sealed class EnvelopeSystem : EntitySystem
         });
     }
 
-    private void OnInsertAttempt(Entity<EnvelopeComponent> ent, ref ItemSlotInsertAttemptEvent args)
+    // collard-EnvelopeGlowup-start
+    /*private void OnInsertAttempt(Entity<EnvelopeComponent> ent, ref ItemSlotInsertAttemptEvent args)
     {
         args.Cancelled |= ent.Comp.State != EnvelopeComponent.EnvelopeState.Open;
     }
@@ -63,7 +69,17 @@ public sealed class EnvelopeSystem : EntitySystem
     private void OnEjectAttempt(Entity<EnvelopeComponent> ent, ref ItemSlotEjectAttemptEvent args)
     {
         args.Cancelled |= ent.Comp.State == EnvelopeComponent.EnvelopeState.Sealed;
+    }*/
+
+    private void OnStorageOpenAttempt(Entity<EnvelopeComponent> ent, ref StorageOpenAttemptEvent args)
+    {
+        args.Cancelled |= ent.Comp.State == EnvelopeComponent.EnvelopeState.Sealed;
     }
+    private void OnStorageInteractAttempt(Entity<EnvelopeComponent> ent, ref StorageInteractAttemptEvent args)
+    {
+        args.Cancelled |= ent.Comp.State == EnvelopeComponent.EnvelopeState.Sealed;
+    }
+    // collard-EnvelopeGlowup-end
 
     private void TryStartDoAfter(Entity<EnvelopeComponent> ent, EntityUid user, TimeSpan delay)
     {
@@ -94,6 +110,7 @@ public sealed class EnvelopeSystem : EntitySystem
             _audioSystem.PlayPredicted(ent.Comp.SealSound, ent.Owner, args.User);
             ent.Comp.State = EnvelopeComponent.EnvelopeState.Sealed;
             Dirty(ent.Owner, ent.Comp);
+            _uiSystem.CloseUi(ent.Owner, StorageComponent.StorageUiKey.Key); // collard-EnvelopeGlowup
         }
         else if (ent.Comp.State == EnvelopeComponent.EnvelopeState.Sealed)
         {
@@ -101,8 +118,8 @@ public sealed class EnvelopeSystem : EntitySystem
             ent.Comp.State = EnvelopeComponent.EnvelopeState.Torn;
             Dirty(ent.Owner, ent.Comp);
 
-            if (_itemSlotsSystem.TryGetSlot(ent.Owner, ent.Comp.SlotId, out var slotComp))
-                _itemSlotsSystem.TryEjectToHands(ent.Owner, slotComp, args.User);
+            /*if (_itemSlotsSystem.TryGetSlot(ent.Owner, ent.Comp.SlotId, out var slotComp)) // collard-EnvelopeGlowup
+                _itemSlotsSystem.TryEjectToHands(ent.Owner, slotComp, args.User);*/
         }
     }
 }
