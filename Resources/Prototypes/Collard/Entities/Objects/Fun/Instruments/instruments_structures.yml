@@ -1,0 +1,15 @@
+
+- type: entity
+  parent: [ BasePlaceableInstrumentRotatable]
+  id: DrumKitInstrument
+  name: Drum kit
+  description: Well, here it is! Ba-dum-tss
+  components:
+  - type: Sprite
+    sprite: Collard/Objects/Fun/Instruments/structureinstruments.rsi
+    state: drumkit
+  - type: Instrument
+    bank: 3
+    program: 0
+    allowPercussion: true
+    allowProgramChange: false

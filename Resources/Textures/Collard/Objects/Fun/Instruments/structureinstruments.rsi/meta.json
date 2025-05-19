@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Drumkit sprites made by Cilimanjaro",
+    "states": [
+        {
+            "name": "drumkit",
+            "directions": 4
+        },
+        {
+            "name": "drumkit-broken",
+            "directions": 4
+        },
+        {
+            "name": "drumkiticon"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+
+- type: cargoProduct
+  id: FunDrumKit
+  icon:
+    sprite: Collard/Objects/Fun/Instruments/structureinstruments.rsi
+    state: drumkiticon
+  product: DrumKitInstrument
+  cost: 500
+  category: cargoproduct-category-name-fun
+  group: market
