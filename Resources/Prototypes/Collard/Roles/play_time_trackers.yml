@@ -3,3 +3,6 @@
 
 - type: playTimeTracker
   id: JobGatecrasher
+
+- type: playTimeTracker
+  id: JobCook
