@@ -121,3 +121,29 @@
 
 
 #endregion underwear
+
+- type: loadoutGroup
+  id: PassengerHead
+  name: loadout-group-passenger-head
+  minLimit: 0
+  loadouts:
+  - GreenCap
+  - BlueCap
+  - PurpleCap
+  - BlackCap
+  - GreyCap
+  - RedCap
+  - CorpCap
+  - OrangeCap
+  - MimeCap
+  - YellowCap
+  - RedBand
+  - BlackBand
+  - GreenBand
+  - BlueBand
+  - SkullBand
+  - FishCap
+  - BasicBeret
+  - GreyFlatcap
+  - BrownFlatcap
+  - RastaHat
