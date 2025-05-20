@@ -30,7 +30,8 @@
             #service (9 - 11)
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 2 ]
-            Chef: [ 1, 1 ]
+            Chef: [ 1, 1 ] # collard-Cook
+            Cook: [ 2, 2 ] # collard-Cook
             Janitor: [ 1, 2 ]
             Chaplain: [ 1, 1 ]
             Librarian: [ 1, 1 ]

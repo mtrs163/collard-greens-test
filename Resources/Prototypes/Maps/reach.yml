@@ -23,7 +23,8 @@
             #service (4)
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 1 ]
-            Chef: [ 1, 1 ]
+            Chef: [ 1, 1 ] # collard-Cook
+            Cook: [ 1, 1 ] # collard-Cook
             Janitor: [ 1, 1 ]
             #engineering (2 - 3)
             AtmosphericTechnician: [ 1, 1 ]

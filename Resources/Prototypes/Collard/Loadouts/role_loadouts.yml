@@ -16,3 +16,20 @@
   - UnderwearBottom
   - UnderwearTop
   - UnderwearSocks
+
+- type: roleLoadout
+  id: JobCook
+  groups:
+  - ChefHead
+  - ChefJumpsuit
+  - CommonBackpack
+  - ChefOuterClothing
+  - Glasses
+  - Trinkets
+  - PassengerShoes
+  - UnderwearBottom
+  - UnderwearTop
+  - UnderwearSocks
+  - Survival
+  - GroupTankHarness
+  - GroupSpeciesBreathTool

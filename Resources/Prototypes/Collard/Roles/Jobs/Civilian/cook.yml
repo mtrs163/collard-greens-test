@@ -1,0 +1,20 @@
+- type: job
+  id: Cook
+  name: job-name-cook
+  description: job-description-cook
+  playTimeTracker: JobCook
+  startingGear: CookGear
+  setPreference: true
+  icon: "JobIconCook"
+  supervisors: job-supervisors-chef
+  access:
+  - Service
+  - Kitchen
+  extendedAccess:
+  - Hydroponics
+  - Bar
+
+- type: startingGear
+  id: CookGear
+  equipment:
+    ears: ClothingHeadsetService

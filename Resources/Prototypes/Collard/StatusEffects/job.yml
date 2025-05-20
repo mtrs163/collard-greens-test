@@ -1,0 +1,6 @@
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCook
+  icon:
+    sprite: Collard/Interface/Misc/job_icons.rsi
+    state: Cook
