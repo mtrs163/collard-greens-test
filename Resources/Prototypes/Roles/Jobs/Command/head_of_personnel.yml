@@ -3,27 +3,28 @@
   name: job-name-hop
   description: job-description-hop
   playTimeTracker: JobHeadOfPersonnel
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 9000 # 2.5 hours
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 9000 # 2.5 hours
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 9000 # 2.5 hrs
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 9000 # 2.5 hrs
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 9000 # 2.5 hours
+  # requirements:
+  #   - !type:DepartmentTimeRequirement
+  #     department: Engineering
+  #     time: 9000 # 2.5 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Medical
+  #     time: 9000 # 2.5 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Science
+  #     time: 9000 # 2.5 hrs
+  #   - !type:DepartmentTimeRequirement
+  #     department: Security
+  #     time: 9000 # 2.5 hrs
+  #   - !type:DepartmentTimeRequirement
+  #     department: Command
+  #     time: 9000 # 2.5 hours
   weight: 20
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"
   supervisors: job-supervisors-captain
   canBeAntag: false
+  whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Command
   - HeadOfPersonnel

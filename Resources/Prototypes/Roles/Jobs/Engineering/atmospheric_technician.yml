@@ -3,13 +3,14 @@
   name: job-name-atmostech
   description: job-description-atmostech
   playTimeTracker: JobAtmosphericTechnician
-  requirements:
-  - !type:DepartmentTimeRequirement
-    department: Engineering
-    time: 9000 #2.5 hrs
+  # requirements:
+  # - !type:DepartmentTimeRequirement
+  #   department: Engineering
+  #   time: 9000 #2.5 hrs
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-ce
+  whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Maintenance
   - Engineering

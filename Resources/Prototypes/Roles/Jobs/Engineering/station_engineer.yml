@@ -10,6 +10,7 @@
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce
+  whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Maintenance
   - Engineering

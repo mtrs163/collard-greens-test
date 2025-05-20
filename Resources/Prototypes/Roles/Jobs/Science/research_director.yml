@@ -3,18 +3,19 @@
   name: job-name-rd
   description: job-description-rd
   playTimeTracker: JobResearchDirector
-  requirements:
-  - !type:RoleTimeRequirement
-    role: JobScientist
-    time: 18000 #5 hrs
-  - !type:DepartmentTimeRequirement
-    department: Science
-    time: 36000 #10 hrs
+  # requirements:
+  # - !type:RoleTimeRequirement
+  #   role: JobScientist
+  #   time: 18000 #5 hrs
+  # - !type:DepartmentTimeRequirement
+  #   department: Science
+  #   time: 36000 #10 hrs
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"
   supervisors: job-supervisors-captain
   canBeAntag: false
+  whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Research
   - Command

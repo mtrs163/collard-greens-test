@@ -3,18 +3,19 @@
   name: job-name-warden
   description: job-description-warden
   playTimeTracker: JobWarden
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
-      time: 18000 #5 hrs
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 36000 #10 hrs
+  # requirements:
+  #   - !type:RoleTimeRequirement
+  #     role: JobSecurityOfficer
+  #     time: 18000 #5 hrs
+  #   - !type:DepartmentTimeRequirement
+  #     department: Security
+  #     time: 36000 #10 hrs
   weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos
   canBeAntag: false
+  whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Security
   - Brig
