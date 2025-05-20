@@ -14,7 +14,7 @@
   canBeAntag: false
   access:
   - Medical
-  - Maintenance
+#  - Maintenance || collard-NoMaintAccess
 
 - type: startingGear
   id: MedicalInternGear

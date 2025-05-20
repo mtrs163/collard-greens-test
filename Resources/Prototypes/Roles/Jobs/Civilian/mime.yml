@@ -11,7 +11,7 @@
   supervisors: job-supervisors-hop
   access:
   - Theatre
-  - Maintenance
+#  - Maintenance || collard-NoMaintAccess
   special:
   - !type:AddComponentSpecial
     components:

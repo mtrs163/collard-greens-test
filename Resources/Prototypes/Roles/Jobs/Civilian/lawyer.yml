@@ -13,7 +13,7 @@
   - Service
   - Lawyer
   - Brig
-  - Maintenance
+#  - Maintenance || collard-NoMaintAccess
 
 - type: startingGear
   id: LawyerGear

@@ -12,7 +12,7 @@
   supervisors: job-supervisors-hop
   access:
   - Service
-  - Maintenance
+#  - Maintenance || collard-NoMaintAccess
   - Bar
   extendedAccess:
   - Kitchen

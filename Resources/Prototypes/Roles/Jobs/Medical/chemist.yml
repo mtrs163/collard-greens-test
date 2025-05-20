@@ -13,7 +13,7 @@
   access:
   - Medical
   - Chemistry
-  - Maintenance
+#  - Maintenance || collard-NoMaintAccess
 
 - type: startingGear
   id: ChemistGear
