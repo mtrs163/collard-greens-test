@@ -50,9 +50,9 @@
   id: ChiefMedicalOfficerMantle
   equipment:
     neck: ClothingNeckMantleCMO
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCMO
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: MasterCMO
 
 - type: startingGear
   id: ChiefMedicalOfficerMantle

@@ -3,14 +3,15 @@
   name: job-name-detective
   description: job-description-detective
   playTimeTracker: JobDetective
-  requirements:
-  - !type:RoleTimeRequirement
-    role: JobSecurityOfficer
-    time: 18000 #5 hrs
+  # requirements:
+  # - !type:RoleTimeRequirement
+  #   role: JobSecurityOfficer
+  #   time: 18000 #5 hrs
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos
   canBeAntag: false
+  whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Security
   - Brig

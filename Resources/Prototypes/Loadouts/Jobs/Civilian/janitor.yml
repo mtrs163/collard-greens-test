@@ -49,9 +49,9 @@
 # Misc
 - type: loadout
   id: JanitorGoldenPlunger
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorJanitorial
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: SeniorJanitorial
   storage:
     back:
     - GoldenPlunger

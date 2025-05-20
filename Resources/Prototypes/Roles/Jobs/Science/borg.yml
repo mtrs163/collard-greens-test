@@ -5,11 +5,12 @@
   name: job-name-station-ai
   description: job-description-station-ai
   playTimeTracker: JobStationAi
-  requirements:
-  - !type:RoleTimeRequirement
-    role: JobBorg
-    time: 18000  # 5 hrs
+  # requirements:
+  # - !type:RoleTimeRequirement
+  #   role: JobBorg
+  #   time: 18000  # 5 hrs
   canBeAntag: false
+  whitelisted: true # collard-NoPlaytimeRequirements
   icon: JobIconStationAi
   joinNotifyCrew: true
   supervisors: job-supervisors-rd
@@ -22,9 +23,9 @@
   name: job-name-borg
   description: job-description-borg
   playTimeTracker: JobBorg
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hrs
+  # requirements:
+  #   - !type:OverallPlaytimeRequirement
+  #     time: 36000 # 10 hrs
   canBeAntag: false
   icon: JobIconBorg
   supervisors: job-supervisors-rd

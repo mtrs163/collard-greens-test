@@ -67,22 +67,22 @@
 
 - type: loadout
   id: TrooperUniform
-  equipment: 
+  equipment:
     jumpsuit: ClothingUniformSecurityTrooper
 
 - type: loadout
   id: SeniorOfficerJumpsuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: SeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpsuitSeniorOfficer
 
 - type: loadout
   id: SeniorOfficerJumpskirt
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: SeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpskirtSeniorOfficer
 
@@ -153,18 +153,18 @@
 
 - type: loadout
   id: SeniorOfficerPDA
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: SeniorOfficer
   equipment:
     id: SeniorOfficerPDA
 
 # Misc
 - type: loadout
   id: SecStar
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SecurityStarWorthy
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: SecurityStarWorthy
   storage:
     back:
     - Dinkystar

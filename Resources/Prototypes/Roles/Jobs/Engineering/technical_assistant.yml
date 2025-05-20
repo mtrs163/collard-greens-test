@@ -3,17 +3,18 @@
   name: job-name-technical-assistant
   description: job-description-technical-assistant
   playTimeTracker: JobTechnicalAssistant
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 3600 #1 hr
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 18000 #5 hrs
-      inverted: true # stop playing intern if you're good at engineering!
+  # requirements:
+  #   - !type:OverallPlaytimeRequirement
+  #     time: 3600 #1 hr
+  #   - !type:DepartmentTimeRequirement
+  #     department: Engineering
+  #     time: 18000 #5 hrs
+  #     inverted: true # stop playing intern if you're good at engineering!
   startingGear: TechnicalAssistantGear
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-engineering
   canBeAntag: false
+  whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Maintenance
   - Engineering
