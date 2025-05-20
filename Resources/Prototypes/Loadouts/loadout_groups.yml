@@ -62,6 +62,7 @@
   - Glasses
   - GlassesJamjar
   - GlassesJensen
+  - CheapSunGlasses # collard-Loadouts
 
 - type: loadoutGroup
   id: GroupTankHarness
@@ -178,6 +179,7 @@
   - CommonSatchel
   - CommonDuffel
   - HoPBackpackIan
+  - LeatherSatchel # collard-Loadouts
 
 - type: loadoutGroup
   id: HoPOuterClothing
@@ -195,42 +197,116 @@
   - GreyJumpskirt
   - AncientJumpsuit
   - RainbowJumpsuit
+# collard-Loadouts-start
+  - YellowJumpsuit
+  - YellowJumpskirt
+  - WhiteJumpsuit
+  - WhiteJumpskirt
+  - RedJumpsuit
+  - RedJumpskirt
+  - BlueJumpsuit
+  - BlueJumpskirt
+  - DarkBlueJumpsuit
+  - DarkBlueJumpskirt
+  - GreenJumpsuit
+  - GreenJumpskirt
+  - DarkGreenJumpsuit
+  - DarkGreenJumpskirt
+  - BlackJumpsuit
+  - BlackJumpskirt
+  - TealJumpsuit
+  - TealJumpskirt
+  - PurpleJumpsuit
+  - PurpleJumpskirt
+  - PinkJumpsuit
+  - PinkJumpskirt
+  - OrangeJumpsuit
+  - OrangeJumpskirt
+  - CasualBlueJumpsuit
+  - CasualBlueJumpskirt
+  - CasualRedJumpsuit
+  - CasualRedJumpskirt
+  - CasualPurpleJumpsuit
+  - CasualPurpleJumpskirt
+  - FlannelJumpsuit
+  - HawaiBlack
+  - HawaiRed
+  - HawaiBlue
+  - HawaiYellow
+# collard-Loadouts-end
 
 - type: loadoutGroup
   id: PassengerFace
   name: loadout-group-passenger-mask
   minLimit: 0
   loadouts:
-  - PassengerFace
+#  - PassengerFace
+  - BlackGaiter
+  - RedGaiter
+  - SterileMask # collard-Loadouts
 
 - type: loadoutGroup
   id: PassengerGloves
   name: loadout-group-passenger-gloves
   minLimit: 0
   loadouts:
-  - PassengerGloves
+# collard-Loadouts-start
+#  - PassengerGloves
+  - OrangeGloves
+  - PurpleGloves
+  - WhiteGloves
+  - GreyGloves
+  - BrownGloves
+  - RedGloves
+  - GreenGloves
+  - BlueGloves
+  - Wristwatch
+  - WristwatchGold
+# collard-Loadouts-end
 
 - type: loadoutGroup
   id: CommonBackpack
   name: loadout-group-backpack
+  minLimit: 0 # collard-Loadouts
   loadouts:
   - CommonBackpack
   - CommonSatchel
   - CommonDuffel
+  - LeatherSatchel # collard-Loadouts
 
 - type: loadoutGroup
-  id: PassengerNeck
+  id: PassengerNeck # collard-Loadouts
   name: loadout-group-passenger-neck
   minLimit: 0
   loadouts:
   - Mantle
+# collard-Loadouts-start
+  - LightBlueScarf
+  - BlueScarf
+  - PurpleScarf
+  - BlackScarf
+  - GreenScarf
+  - RedScarf
+  - BrownScarf
+  - OrangeScarf
+# collard-Loadouts-end
 
 - type: loadoutGroup
   id: PassengerOuterClothing
   name: loadout-group-passenger-outerclothing
   minLimit: 0
   loadouts:
+# collard-Loadouts-start
   - PassengerWintercoat
+  - FlannelJacketRed
+  - FlannelJacketBlue
+  - FlannelJacketGreen
+  - BomberCoat
+  - GentleCoat
+  - TrenchCoat
+  - GreyHoodie
+  - BlackHoodie
+# collard-Loadouts-end
 
 - type: loadoutGroup
   id: PassengerShoes
@@ -238,7 +314,12 @@
   loadouts:
   - BlackShoes
   - WinterBoots
+# collard-Loadouts-start
   - Clothwraps # collard-Clothwraps
+  - BlueShoes
+  - WhiteShoes
+  - BrownShoes
+# collard-Loadouts-end
 
 - type: loadoutGroup
   id: BartenderHead

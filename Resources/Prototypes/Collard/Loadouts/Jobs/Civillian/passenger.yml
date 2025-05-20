@@ -1,0 +1,461 @@
+#region jumpsuit
+
+- type: loadout
+  id: BlueJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlue
+
+- type: loadout
+  id: BlueJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorBlue
+
+- type: loadout
+  id: DarkBlueJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorDarkBlue
+
+- type: loadout
+  id: DarkBlueJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorDarkBlue
+
+- type: loadout
+  id: GreenJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+
+- type: loadout
+  id: GreenJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorGreen
+
+- type: loadout
+  id: DarkGreenJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorDarkGreen
+
+- type: loadout
+  id: DarkGreenJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorDarkGreen
+
+- type: loadout
+  id: BlackJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlack
+
+- type: loadout
+  id: BlackJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorBlack
+
+- type: loadout
+  id: TealJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorTeal
+
+- type: loadout
+  id: TealJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorTeal
+
+- type: loadout
+  id: PurpleJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorPurple
+
+- type: loadout
+  id: PurpleJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorPurple
+
+- type: loadout
+  id: PinkJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorPink
+
+- type: loadout
+  id: PinkJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorPink
+
+- type: loadout
+  id: OrangeJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorOrange
+
+- type: loadout
+  id: OrangeJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtColorOrange
+
+#endregion jumpsuit
+
+#region Casual jumpsuit
+
+- type: loadout
+  id: CasualBlueJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCasualBlue
+
+- type: loadout
+  id: CasualBlueJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCasualBlue
+
+
+
+- type: loadout
+  id: CasualPurpleJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCasualPurple
+
+- type: loadout
+  id: CasualPurpleJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCasualPurple
+
+
+
+- type: loadout
+  id: CasualRedJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCasualRed
+
+- type: loadout
+  id: CasualRedJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCasualRed
+
+
+#endregion Casual jumpsuit
+
+
+#region Other jumpsuit
+
+- type: loadout
+  id: FlannelJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitFlannel
+
+- type: loadout
+  id: HawaiBlack
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHawaiBlack
+
+- type: loadout
+  id: HawaiRed
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHawaiRed
+
+- type: loadout
+  id: HawaiYellow
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHawaiYellow
+
+- type: loadout
+  id: HawaiBlue
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHawaiBlue
+
+#endregion Other jumpsuit
+
+
+
+#region shoes
+
+- type: loadout
+  id: PurpleShoes
+  equipment:
+    shoes: ClothingShoesColorPurple
+
+- type: loadout
+  id: RedShoes
+  equipment:
+    shoes: ClothingShoesColorRed
+
+- type: loadout
+  id: YellowShoes
+  equipment:
+    shoes: ClothingShoesColorYellow
+
+- type: loadout
+  id: GreenShoes
+  equipment:
+    shoes: ClothingShoesColorGreen
+
+- type: loadout
+  id: OrangeShoes
+  equipment:
+    shoes: ClothingShoesColorOrange
+
+#endregion shoes
+
+
+#region backpack
+
+- type: loadout
+  id: LeatherSatchel
+  equipment:
+    back: ClothingBackpackSatchelLeather
+
+#endregion backpack
+
+
+
+#region outer
+
+- type: loadout
+  id: FlannelJacketRed
+  equipment:
+    outerClothing: ClothingOuterFlannelRed
+
+- type: loadout
+  id: FlannelJacketBlue
+  equipment:
+    outerClothing: ClothingOuterFlannelBlue
+
+- type: loadout
+  id: FlannelJacketGreen
+  equipment:
+    outerClothing: ClothingOuterFlannelGreen
+
+- type: loadout
+  id: BomberCoat
+  equipment:
+    outerClothing: ClothingOuterCoatBomber
+
+- type: loadout
+  id: GentleCoat
+  equipment:
+    outerClothing: ClothingOuterCoatGentle
+
+- type: loadout
+  id: TrenchCoat
+  equipment:
+    outerClothing: ClothingOuterCoatTrench
+
+- type: loadout
+  id: GreyHoodie
+  equipment:
+    outerClothing: ClothingOuterHoodieGrey
+
+- type: loadout
+  id: BlackHoodie
+  equipment:
+    outerClothing: ClothingOuterHoodieBlack
+
+#endregion outer
+
+
+#region neck
+
+- type: loadout
+  id: LightBlueScarf
+  equipment:
+    neck: ClothingNeckScarfStripedLightBlue
+
+- type: loadout
+  id: BlueScarf
+  equipment:
+    neck: ClothingNeckScarfStripedBlue
+
+- type: loadout
+  id: PurpleScarf
+  equipment:
+    neck: ClothingNeckScarfStripedPurple
+
+- type: loadout
+  id: BlackScarf
+  equipment:
+    neck: ClothingNeckScarfStripedBlack
+
+- type: loadout
+  id: GreenScarf
+  equipment:
+    neck: ClothingNeckScarfStripedGreen
+
+- type: loadout
+  id: RedScarf
+  equipment:
+    neck: ClothingNeckScarfStripedRed
+
+- type: loadout
+  id: BrownScarf
+  equipment:
+    neck: ClothingNeckScarfStripedBrown
+
+- type: loadout
+  id: OrangeScarf
+  equipment:
+    neck: ClothingNeckScarfStripedOrange
+
+#endregion neck
+
+
+#region head
+#region cap
+- type: loadout
+  id: GreenCap
+  equipment:
+    head: ClothingHeadHatGreensoft
+
+- type: loadout
+  id: BlueCap
+  equipment:
+    head: ClothingHeadHatBluesoft
+
+- type: loadout
+  id: PurpleCap
+  equipment:
+    head: ClothingHeadHatPurplesoft
+
+- type: loadout
+  id: BlackCap
+  equipment:
+    head: ClothingHeadHatBlacksoft
+
+- type: loadout
+  id: GreyCap
+  equipment:
+    head: ClothingHeadHatGreysoft
+
+- type: loadout
+  id: RedCap
+  equipment:
+    head: ClothingHeadHatRedsoft
+
+- type: loadout
+  id: OrangeCap
+  equipment:
+    head: ClothingHeadHatOrangesoft
+
+- type: loadout
+  id: YellowCap
+  equipment:
+    head: ClothingHeadHatYellowsoft
+
+- type: loadout
+  id: CorpCap
+  equipment:
+    head: ClothingHeadHatCorpsoft
+
+#endregion cap
+#region headband
+
+- type: loadout
+  id: RedBand
+  equipment:
+    head: ClothingHeadBandRed
+
+- type: loadout
+  id: BlackBand
+  equipment:
+    head: ClothingHeadBandBlack
+
+- type: loadout
+  id: GreenBand
+  equipment:
+    head: ClothingHeadBandGreen
+
+- type: loadout
+  id: BlueBand
+  equipment:
+    head: ClothingHeadBandBlue
+
+- type: loadout
+  id: SkullBand
+  equipment:
+    head: ClothingHeadBandSkull
+
+#endregion headband
+#region other
+
+- type: loadout
+  id: FishCap
+  equipment:
+    head: ClothingHeadFishCap
+
+- type: loadout
+  id: BasicBeret
+  equipment:
+    head: ClothingHeadHatBeret
+
+- type: loadout
+  id: GreyFlatcap
+  equipment:
+    head: ClothingHeadHatGreyFlatcap
+
+- type: loadout
+  id: BrownFlatcap
+  equipment:
+    head: ClothingHeadHatBrownFlatcap
+
+- type: loadout
+  id: RastaHat
+  equipment:
+    head: ClothingHeadRastaHat
+
+#endregion other
+#endregion head
+#region gloves
+
+- type: loadout
+  id: WhiteGloves
+  equipment:
+    gloves: ClothingHandsGlovesColorWhite
+
+- type: loadout
+  id: GreyGloves
+  equipment:
+    gloves: ClothingHandsGlovesColorGray
+
+- type: loadout
+  id: BrownGloves
+  equipment:
+    gloves: ClothingHandsGlovesColorBrown
+
+- type: loadout
+  id: RedGloves
+  equipment:
+    gloves: ClothingHandsGlovesColorRed
+
+- type: loadout
+  id: GreenGloves
+  equipment:
+    gloves: ClothingHandsGlovesColorGreen
+
+- type: loadout
+  id: BlueGloves
+  equipment:
+    gloves: ClothingHandsGlovesColorBlue
+
+- type: loadout
+  id: Wristwatch
+  equipment:
+    gloves: Wristwatch
+
+- type: loadout
+  id: WristwatchGold
+  equipment:
+    gloves: WristwatchGold
+
+#endregion gloves
+
+
+#region face
+
+
+- type: loadout
+  id: BlackGaiter
+  equipment:
+    mask: ClothingMaskNeckGaiter
+
+- type: loadout
+  id: RedGaiter
+  equipment:
+    mask: ClothingMaskNeckGaiterRed
+
+
+#endregion face
