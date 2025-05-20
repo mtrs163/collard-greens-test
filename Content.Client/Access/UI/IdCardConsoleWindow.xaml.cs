@@ -58,7 +58,7 @@ namespace Content.Client.Access.UI
 
             foreach (var job in jobs)
             {
-                if (!job.OverrideConsoleVisibility.GetValueOrDefault(job.SetPreference))
+                if (!job.OverrideConsoleVisibility.GetValueOrDefault(job.SetPreference) || job.SilentSpawn) // collard-Gatecrasher
                 {
                     continue;
                 }

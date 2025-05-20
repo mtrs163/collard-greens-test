@@ -59,6 +59,7 @@
             CargoTechnician: [ 3, 3 ]
             #civilian (3+)
             Passenger: [ -1, -1 ] #infinite, not counted
+            Gatecrasher: [ -1, -1 ] # collard-Gatecrasher
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]

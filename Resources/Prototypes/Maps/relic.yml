@@ -58,6 +58,7 @@
             CargoTechnician: [ 2, 2 ]
             #civilian (1+)
             Passenger: [ -1, -1 ] #infinite, not counted
+            Gatecrasher: [ -1, -1 ] # collard-Gatecrasher
             #silicon (3)
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
