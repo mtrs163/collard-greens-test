@@ -1,0 +1,8 @@
+- type: department
+  id: Miscellaneous
+  name: department-Miscellaneous
+  description: department-Miscellaneous-description
+  color: "#9FED58"
+  weight: -20
+  roles:
+  - Gatecrasher

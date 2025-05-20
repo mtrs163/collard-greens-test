@@ -153,6 +153,14 @@ namespace Content.Shared.Roles
         /// </summary>
         [DataField]
         public List<ProtoId<GuideEntryPrototype>>? Guides;
+
+        // collard-Gatecrasher-start
+        /// <summary>
+        ///     Should the player spawning be announced, or added to station crew list?
+        /// </summary>
+        [DataField("silentSpawn")]
+        public bool SilentSpawn { get; private set; } = false;
+        // collard-Gatecrasher-end
     }
 
     /// <summary>

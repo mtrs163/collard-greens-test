@@ -1,0 +1,12 @@
+- type: job
+  id: Gatecrasher
+  name: job-name-gatecrasher
+  description: job-description-gatecrasher
+  playTimeTracker: JobGatecrasher
+  startingGear: GatecrasherGear
+  icon: JobIconVisitor
+  silentSpawn: true
+  supervisors: job-supervisors-gatecrasher
+
+- type: startingGear
+  id: GatecrasherGear

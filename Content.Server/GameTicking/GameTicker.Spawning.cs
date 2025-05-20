@@ -279,7 +279,7 @@ namespace Content.Server.GameTicking
             var jobName = _jobs.MindTryGetJobName(newMind);
             _admin.UpdatePlayerList(player);
 
-            if (lateJoin && !silent)
+            if (lateJoin && !silent && !jobPrototype.SilentSpawn) // collard-Gatecrasher
             {
                 if (jobPrototype.JoinNotifyCrew)
                 {

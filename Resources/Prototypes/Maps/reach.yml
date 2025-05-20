@@ -40,4 +40,5 @@
             SalvageSpecialist: [ 1, 1 ]
             #civilian (1+)
             Passenger: [ -1, -1 ] #infinite, not counted
+            Gatecrasher: [ -1, -1 ] # collard-Gatecrasher
             Musician: [ 1, 1 ]

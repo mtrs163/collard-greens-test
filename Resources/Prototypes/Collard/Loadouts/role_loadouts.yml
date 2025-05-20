@@ -1,0 +1,18 @@
+
+# Civilian
+- type: roleLoadout
+  id: JobGatecrasher
+  groups:
+  - PassengerJumpsuit
+  - CommonBackpack
+  - PassengerNeck
+  - PassengerFace
+  - PassengerGloves
+  - PassengerOuterClothing
+  - PassengerShoes
+  - Glasses
+#  - PassengerHead #skyperster end || not yed added
+  - Trinkets
+  - UnderwearBottom
+  - UnderwearTop
+  - UnderwearSocks
