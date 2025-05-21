@@ -183,6 +183,8 @@
     # Recursive
     - id: ClosetMaintenanceFilledRandom
       prob: 0.01
+    - id: BaseJukeboxRadio # collard-Radio
+      prob: 0.2
 
 - type: entity
   id: ClosetMaintenanceFilledRandom

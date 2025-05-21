@@ -71,7 +71,33 @@ public sealed class JukeboxBoundUserInterface : BoundUserInterface
 
     public void PopulateMusic()
     {
-        _menu?.Populate(_protoManager.EnumeratePrototypes<JukeboxPrototype>());
+        // collard-Radio-start
+        var songs = _protoManager.EnumeratePrototypes<JukeboxPrototype>();
+        var jukebox = EntMan.GetComponent<JukeboxComponent>(Owner);
+        List<JukeboxPrototype> suitableSongs = new();
+        if (jukebox.Radio)
+        {
+            foreach (var song in songs)
+            {
+                if (song.RadioSong)
+                {
+                    suitableSongs.Add(song);
+                }
+            }
+        }
+        else
+        {
+            foreach (var song in songs)
+            {
+                if (song.RadioSong)
+                {
+                    continue;
+                }
+                suitableSongs.Add(song);
+            }
+        }
+        // collard-Radio-end
+        _menu?.Populate(suitableSongs); // collard-Radio
     }
 
     public void SelectSong(ProtoId<JukeboxPrototype> songid)

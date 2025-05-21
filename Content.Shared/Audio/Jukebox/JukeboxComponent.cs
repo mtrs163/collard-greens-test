@@ -37,6 +37,14 @@ public sealed partial class JukeboxComponent : Component
 
     [ViewVariables]
     public float SelectAccumulator;
+
+    // collard-Radio-start
+    /// <summary>
+    /// Determines if this is a radio or a jukebox.
+    /// </summary>
+    [DataField]
+    public bool Radio = false;
+    // collard-Radio-end
 }
 
 [Serializable, NetSerializable]
