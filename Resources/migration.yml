@@ -634,3 +634,4 @@ CigaretteBread: CigaretteBbqSauce
 # 2025-05-18
 CryogenicSleepUnitSpawner: CentComTeleporter # collard-CentComTeleporter
 CryogenicSleepUnitSpawnerLateJoin: CentComTeleporter # collard-CentComTeleporter
+BoxEnvelope: Envelope
