@@ -144,6 +144,20 @@
     - trayScanner
     - AccessConfiguratorUniversal
     - Multitool
+    # collard-AghostGear-start
+    - PowerDrill
+    - WelderExperimental
+    - JawsOfLife
+    - HandheldHealthAnalyzerUnpowered
+    - DefibrillatorOneHandedUnpowered
+    - HandheldStationMapUnpowered
+    - AnomalyLocatorUnpowered
+    - RCDExperimental
+    - AdminHypo
+    - DoorRemoteAll
+    - WeaponLauncherAdmemeMeteorLarge
+    - EmagUnlimited
+    # collard-AghostGear-end
 
 #Gladiator with spear
 - type: startingGear
