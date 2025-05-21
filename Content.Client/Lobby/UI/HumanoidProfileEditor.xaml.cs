@@ -464,7 +464,6 @@ namespace Content.Client.Lobby.UI
             };
 
             SpeciesInfoButton.OnPressed += OnSpeciesInfoButtonPressed;
-            //ERPStatusInfoButton.OnPressed += OnERPStatusInfoButtonPressed; // collard-ERPStatus-TODO: add guidebook
 
             UpdateSpeciesGuidebookIcon();
             IsDirty = false;
@@ -841,29 +840,6 @@ namespace Content.Client.Lobby.UI
             }
         }
 
-        /*private void OnERPStatusInfoButtonPressed(BaseButton.ButtonEventArgs args) collard-ERPStatus-TODO:add guidebook
-        {
-            var guidebookController = UserInterfaceManager.GetUIController<GuidebookUIController>();
-            var page = "ERPStatus";
-            switch (ERPButton.SelectedId)
-            {
-                case 0:
-                    page = "ERPStatusNo";
-                    break;
-                case 1:
-                    page = "ERPStatusAsk";
-                    break;
-                case 2:
-                    page = "ERPStatusYes";
-                    break;
-                default:
-                    page = "ERPStatus";
-                    break;
-            }
-            var dict = new Dictionary<ProtoId<GuideEntryPrototype>, GuideEntry>();
-            guidebookController.OpenGuidebook(dict, includeChildren:true, selected: page);
-        }*/
-
         /// <summary>
         /// Refreshes all job selectors.
         /// </summary>
@@ -922,7 +898,7 @@ namespace Content.Client.Lobby.UI
 
                     category.AddChild(new PanelContainer
                     {
-                        PanelOverride = new StyleBoxFlat {BackgroundColor = Color.FromHex("#464966")},
+                        PanelOverride = new StyleBoxFlat { BackgroundColor = Color.FromHex("#464966") },
                         Children =
                         {
                             new Label
@@ -977,7 +953,7 @@ namespace Content.Client.Lobby.UI
 
                     selector.OnSelected += selectedPrio =>
                     {
-                        var selectedJobPrio = (JobPriority) selectedPrio;
+                        var selectedJobPrio = (JobPriority)selectedPrio;
                         Profile = Profile?.WithJobPriority(job.ID, selectedJobPrio);
 
                         foreach (var (jobId, other) in _jobPriorities)
@@ -989,7 +965,7 @@ namespace Content.Client.Lobby.UI
                                 continue;
                             }
 
-                            if (selectedJobPrio != JobPriority.High || (JobPriority) other.Selected != JobPriority.High)
+                            if (selectedJobPrio != JobPriority.High || (JobPriority)other.Selected != JobPriority.High)
                                 continue;
 
                             // Lower any other high priorities to medium.
