@@ -1,0 +1,59 @@
+- type: entity
+  parent: OreBase
+  id: BlueSpaceCrystalOre
+  name: crude bluespace crystal
+  description: Very expensive and rare material used for bluespace technology.
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: BlueSpaceCrystalOre
+  - type: Sprite
+    sprite: Collard/Bluespace/BluespaceCrystal.rsi
+    state: bluespace_crystal_ore
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      BlueSpaceCrystal: 100
+
+- type: entity
+  parent: BlueSpaceCrystalOre
+  id: BlueSpaceCrystalOre1
+  suffix: Single
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: IngotBase
+  id: BlueSpaceCrystalCut
+  name: "bluespace crystal"
+  description: "A perfectly cut bluespace crystal. A very valuable resource"
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      BlueSpaceCrystal: 100
+  - type: Stack
+    stackType: BlueSpaceCrystalCut
+  - type: Sprite
+    sprite: Collard/Bluespace/BluespaceCrystal.rsi
+    state: bluespace_crystal
+  - type: Item
+    sprite: Collard/Bluespace/BluespaceCrystal.rsi
+  - type: Extractable
+    grindableSolutionName: bluespacecrystalcut
+  - type: SolutionContainerManager
+    solutions:
+      bluespacecrystalcut:
+        reagents:
+        - ReagentId: BlueSpaceCrystal
+          Quantity: 10
+
+- type: entity
+  parent: BlueSpaceCrystalCut
+  id: BlueSpaceCrystalCut1
+  suffix: Single
+  components:
+  - type: Stack
+    count: 1

@@ -1,0 +1,18 @@
+- type: material
+  id: BlueSpaceCrystal
+  stackEntity: BlueSpaceCrystalCut1
+  name: materials-bluespacecrystal
+  icon: { sprite: /Textures/Collard/Bluespace/BluespaceCrystal.rsi, state: bluespace_crystal }
+  color: "#2E50B7"
+  price: 2.5
+
+- type: reagent
+  id: BlueSpaceCrystal
+  name: reagent-name-bluespacecrystal
+  group: Elements
+  desc: reagent-desc-bluespacecrystal
+  physicalDesc: reagent-physical-desc-bluespacecrystal
+  flavor: bitter
+  color: "#2E50B7"
+  boilingPoint: 59000.0
+  meltingPoint: 3695.0

@@ -1,0 +1,11 @@
+- type: technology
+  id: BluespaceProcessing
+  name: technologies-bluespace-processing
+  icon:
+    sprite: Collard/Bluespace/BluespaceCrystal.rsi
+    state: bluespace_crystal_ore
+  discipline: Industrial
+  tier: 3
+  cost: 6000
+  recipeUnlocks:
+  - BlueSpaceCrystal

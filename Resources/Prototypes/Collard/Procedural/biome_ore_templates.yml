@@ -1,0 +1,14 @@
+# Bluespace crystals
+- type: biomeMarkerLayer
+  id: OreBluespace
+  entityMask:
+    AsteroidRock: WallRockBluespace
+    WallRock: WallRockBluespace
+    WallRockBasalt: WallRockBasaltBluespace
+    WallRockChromite: WallRockBluespace
+    WallRockSand: WallRockBluespace
+    WallRockSnow: WallRockSnowBluespace
+  maxCount: 10
+  minGroupSize: 1
+  maxGroupSize: 5
+  radius: 4
