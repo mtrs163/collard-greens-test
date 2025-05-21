@@ -640,3 +640,4 @@ SuitStorageBasic: SuitStorageEVA
 ClothingNeckCloakMiner: null
 CryogenicSleepUnitSpawner: CentComTeleporter # collard-CentComTeleporter
 CryogenicSleepUnitSpawnerLateJoin: CentComTeleporter # collard-CentComTeleporter
+BoxEnvelope: Envelope
