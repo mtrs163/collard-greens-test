@@ -1,0 +1,61 @@
+#region base
+
+- type: guideEntry
+  id: Collard
+  name: guide-entry-collard
+  text: "/ServerInfo/Guidebook/Collard/collard.xml"
+  children:
+  - infoCollard
+  - ERPStatus
+  - CharacterTransferingGuide
+  - StationPrefix
+
+- type: guideEntry
+  id: ERPStatus
+  name: guide-entry-ERPStatus
+  text: "/ServerInfo/Guidebook/Collard/ERP/ERPStatus.xml"
+  children:
+#  - ERPStatusNo
+  - ERPStatusAsk
+  - ERPStatusYes
+
+# - type: guideEntry
+#   id: ERPStatusNo
+#   name: guide-entry-ERPStatusNo
+#   text: "/ServerInfo/Guidebook/Collard/ERP/ERPStatusNo.xml"
+
+- type: guideEntry
+  id: ERPStatusAsk
+  name: guide-entry-ERPStatusAsk
+  text: "/ServerInfo/Guidebook/Collard/ERP/ERPStatusAsk.xml"
+
+- type: guideEntry
+  id: ERPStatusYes
+  name: guide-entry-ERPStatusYes
+  text: "/ServerInfo/Guidebook/Collard/ERP/ERPStatusYes.xml"
+
+- type: guideEntry
+  id: infoCollard
+  name: guide-entry-infocollard
+  text: "/ServerInfo/Guidebook/Collard/BasicInfo/info.xml"
+
+- type: guideEntry
+  id: StationPrefix
+  name: guide-entry-stationprefix
+  text: "/ServerInfo/Guidebook/Collard/stationprefix.xml"
+
+
+- type: guideEntry
+  id: CharacterTransferingGuide
+  name: guide-entry-charactertransfer
+  text: "/ServerInfo/Guidebook/Collard/RP/CharacterTransfering.xml"
+
+#region rules
+
+- type: guideEntry
+  id: CollardRuleset
+  name: guide-entry-collardrules
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/Collard/CollardRules.xml"
+
+#endregion rules
