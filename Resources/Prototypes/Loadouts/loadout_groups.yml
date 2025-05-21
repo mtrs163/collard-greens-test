@@ -53,6 +53,7 @@
   - TowelColorWhite
   - TowelColorYellow
   - Badge # collard-Badge
+  - OldRadio # collard-Radio
 
 - type: loadoutGroup
   id: Glasses

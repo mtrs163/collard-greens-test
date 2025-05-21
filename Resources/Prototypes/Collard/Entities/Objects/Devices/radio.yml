@@ -1,0 +1,17 @@
+- type: entity
+  parent: BaseItem
+  id: BaseJukeboxRadio
+  description: An old radio in a pretty good state. Can play a variety of music.
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: "old-radio"
+  - type: Jukebox
+    radio: true
+  - type: ActivatableUI
+    key: enum.JukeboxUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.JukeboxUiKey.Key:
+          type: JukeboxBoundUserInterface

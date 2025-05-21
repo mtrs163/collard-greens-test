@@ -3,3 +3,9 @@
   storage:
     back:
     - Badge
+
+- type: loadout
+  id: OldRadio
+  storage:
+    back:
+    - BaseJukeboxRadio

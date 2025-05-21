@@ -1,0 +1,196 @@
+- type: jukebox
+  id: PPKResurrection
+  name: ППК - Воскрешение
+  path:
+    path: /Audio/Collard/Jukebox/resurrection.ogg
+
+- type: jukebox
+  id: TonyIgyAstronomia
+  name: Tony Igy - Astronomia
+  path:
+    path: /Audio/Collard/Jukebox/astronomia.ogg
+
+- type: jukebox
+  id: Zdravstvuy
+  name: Руки Вверх - Здравствуй, это я
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/helo.ogg
+
+- type: jukebox
+  id: Happy
+  name: Григорий Лепс - Я счастливый
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/hapi.ogg
+
+- type: jukebox
+  id: Eighteen
+  name: Руки Вверх - 18 мне уже
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/etin.ogg
+
+- type: jukebox
+  id: BestDay
+  name: Григорий Лепс - Самый лучший день
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/pust.ogg
+
+- type: jukebox
+  id: OneMoreTime
+  name: Daft Punk - One More Time
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/onemoretime.ogg
+
+- type: jukebox
+  id: HarderBetterFasterStronger
+  name: Daft Punk - Harder, Better, Faster, Stronger
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/fastr.ogg
+
+- type: jukebox
+  id: MusicSoundsBetter
+  name: Stardust - Music Sounds Better With You
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/sonds.ogg
+
+- type: jukebox
+  id: Sever
+  name: Лолита - Ориентация Север
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/sever.ogg
+
+- type: jukebox
+  id: Provance
+  name: Ёлка - Прованс
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/provance.ogg
+
+- type: jukebox
+  id: Itsmylife
+  name: Dr.Alban - It's my life
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/life.ogg
+
+- type: jukebox
+  id: Gladiators
+  name: Julius Fučík - Entry of the Gladiators
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/gladiators.ogg
+
+- type: jukebox
+  id: Macarena
+  name: Los Del Rio - Macarena
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/macarena.ogg
+
+- type: jukebox
+  id: Dafunk
+  name: Daft Punk - Da Funk
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/dafunk.ogg
+
+- type: jukebox
+  id: World
+  name: Daft Punk - Around the World
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/world.ogg
+
+- type: jukebox
+  id: Bobotrock
+  name: Daft Punk - Robot Rock
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/bobotrock.ogg
+
+- type: jukebox
+  id: Technologic
+  name: Daft Punk - Technologic
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/technologic.ogg
+
+- type: jukebox
+  id: RedSun
+  name: Tu Honggang - Red Sun in the Sky
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/sun.ogg
+
+- type: jukebox
+  id: Tualet
+  name: Сектор Газа - Сельский Туалет
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/tualet.ogg
+
+- type: jukebox
+  id: Kukold
+  name: Король и Шут - Кукла Колдуна
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/kukla.ogg
+
+- type: jukebox
+  id: OutOfSpace
+  name: The Prodigy - Out Of Space
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/space.ogg
+
+- type: jukebox
+  id: Countdown
+  name: Europe - The Final Countdown
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/countdown.ogg
+
+- type: jukebox
+  id: Dogonyat
+  name: t.A.T.u. - Нас Не Догонят
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/dogonyat.ogg
+
+- type: jukebox
+  id: Firestarter
+  name: The Prodigy - Firestarter
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/firestarter.ogg
+
+- type: jukebox
+  id: Dreamscape
+  name: 009 Sound System - Dreamscape
+  path:
+    path: /Audio/Collard/Jukebox/dreamscape.ogg
+
+- type: jukebox
+  id: Welove
+  name: Tony Igy - We Love
+  path:
+    path: /Audio/Collard/Jukebox/love.ogg
+
+- type: jukebox
+  id: Pritoptat
+  name: Нейромонах Феофан - Притоптать
+  path:
+    path: /Audio/Collard/Jukebox/pritoptat.ogg
+
+- type: jukebox
+  id: Leellost
+  name: Relanium - Leel Lost
+  path:
+    path: /Audio/Collard/Jukebox/leel.ogg

@@ -20,4 +20,12 @@ public sealed partial class JukeboxPrototype : IPrototype
 
     [DataField(required: true)]
     public SoundPathSpecifier Path = default!;
+
+    // collard-Radio-start
+    /// <summary>
+    /// Determines if the song will be selectable on radio.
+    /// </summary>
+    [DataField]
+    public bool RadioSong = false;
+    // collard-Radio-end
 }

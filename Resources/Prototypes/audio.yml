@@ -204,6 +204,7 @@
     - /Audio/Ambience/spookyspace2.ogg
     - /Audio/Ambience/ambispace2.ogg
     - /Audio/Lobby/title2.ogg
+    - /Audio/Collard/Ambience/robotsoutro.ogg # collard-Ambience
 
 - type: soundCollection
   id: AmbienceSpooky
