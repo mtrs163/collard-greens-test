@@ -1,0 +1,5 @@
+- type: ore
+  id: OreBlueSpaceCrystal
+  oreEntity: BlueSpaceCrystalOre1
+  minOreYield: 2
+  maxOreYield: 5

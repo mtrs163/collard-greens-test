@@ -1,0 +1,6 @@
+- type: latheRecipe
+  id: BlueSpaceCrystal
+  result: BlueSpaceCrystalCut1
+  completetime: 1
+  materials:
+    BlueSpaceCrystal: 100

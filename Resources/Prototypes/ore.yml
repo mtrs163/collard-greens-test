@@ -106,6 +106,7 @@
     OreUranium: 1
     OreBananium: 0.5
     OreArtifactFragment: 0.5
+    OreBlueSpaceCrystal: 0.3 # collard-BluespaceCrystals
 
 - type: weightedRandomOre
   id: OreCrab

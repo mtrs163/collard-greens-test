@@ -1,0 +1,13 @@
+- type: stack
+  id: BlueSpaceCrystalOre
+  name: bluespace crystal ore
+  icon: { sprite: /Textures/Collard/Bluespace/BluespaceCrystal.rsi, state: bluespace_crystal_ore }
+  spawn: BlueSpaceCrystalOre1
+  maxCount: 30
+
+- type: stack
+  id: BlueSpaceCrystalCut
+  name: bluespace crystal
+  icon: { sprite: /Textures/Collard/Bluespace/BluespaceCrystal.rsi, state: bluespace_crystal }
+  spawn: BlueSpaceCrystalCut1
+  maxCount: 30
