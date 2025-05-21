@@ -57,9 +57,9 @@ public sealed partial class FlavorPanel : FancyWindow
         var text = Loc.GetString("flavor-panel-erp-ask");
         switch (status)
         {
-            case ERPStatus.No:
+            /*case ERPStatus.No:
                 text = Loc.GetString("flavor-panel-erp-no");
-                break;
+                break;*/
             case ERPStatus.Ask:
                 text = Loc.GetString("flavor-panel-erp-ask");
                 break;

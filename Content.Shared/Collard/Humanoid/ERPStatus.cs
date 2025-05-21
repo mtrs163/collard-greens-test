@@ -7,7 +7,7 @@ namespace Content.Shared.Collard.Humanoid;
 
 public enum ERPStatus : byte
 {
-    No,
+    //No,
     Ask,
     Yes,
 }
