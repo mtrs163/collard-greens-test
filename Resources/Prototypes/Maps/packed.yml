@@ -2,8 +2,8 @@
   id: Packed
   mapName: 'Packed'
   mapPath: /Maps/packed.yml
-  minPlayers: 7
-  maxPlayers: 35
+  minPlayers: 0 # collard-NoMapPlayerRequirements
+#  maxPlayers: 35 # collard-NoMapPlayerRequirements
   stations:
     Packed:
       stationProto: StandardNanotrasenStation

@@ -2,8 +2,8 @@
   id: Omega
   mapName: 'Omega'
   mapPath: /Maps/omega.yml
-  minPlayers: 7
-  maxPlayers: 35
+  minPlayers: 0 # collard-NoMapPlayerRequirements
+#  maxPlayers: 35 # collard-NoMapPlayerRequirements
   stations:
     Omega:
       stationProto: StandardNanotrasenStation

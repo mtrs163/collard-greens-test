@@ -2,8 +2,8 @@
   id: Plasma
   mapName: 'Plasma'
   mapPath: /Maps/plasma.yml
-  minPlayers: 30
-  maxPlayers: 80
+  minPlayers: 0 # collard-NoMapPlayerRequirements
+#  maxPlayers: 80 # collard-NoMapPlayerRequirements
   stations:
     Plasma:
       stationProto: StandardNanotrasenStation

@@ -2,8 +2,8 @@
   id: Relic
   mapName: 'Relic'
   mapPath: /Maps/relic.yml
-  minPlayers: 20
-  #maxPlayers: 55
+  minPlayers: 0 # collard-NoMapPlayerRequirements
+  #maxPlayers: 55 # collard-NoMapPlayerRequirements
   stations:
     Relic:
       stationProto: StandardNanotrasenStation

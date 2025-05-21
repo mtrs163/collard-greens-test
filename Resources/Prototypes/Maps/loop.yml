@@ -2,8 +2,8 @@
   id: Loop
   mapName: 'Loop Station'
   mapPath: /Maps/loop.yml
-  minPlayers: 35
-  maxPlayers: 70
+  minPlayers: 0 # collard-NoMapPlayerRequirements
+#  maxPlayers: 70 # collard-NoMapPlayerRequirements
   stations:
     Loop:
       stationProto: StandardNanotrasenStation
