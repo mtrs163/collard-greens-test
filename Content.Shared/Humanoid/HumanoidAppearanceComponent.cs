@@ -113,7 +113,7 @@ public sealed partial class HumanoidAppearanceComponent : Component
     ///     ERP status of a humanoid
     /// </summary>
     [DataField, AutoNetworkedField]
-    public ERPStatus ERPStatus = ERPStatus.No;
+    public ERPStatus ERPStatus = ERPStatus.Ask;
     // collard-ERPstatus-end
 }
 

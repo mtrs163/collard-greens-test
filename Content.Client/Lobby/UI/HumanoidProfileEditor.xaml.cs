@@ -1364,7 +1364,7 @@ namespace Content.Client.Lobby.UI
                 return;
 
             ERPButton.Clear();
-            ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-no"), (int)ERPStatus.No);
+            //ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-no"), (int)ERPStatus.No);
             ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-ask"), (int)ERPStatus.Ask);
             ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-yes"), (int)ERPStatus.Yes);
             ERPButton.SelectId((int) Profile.ERPStatus);
