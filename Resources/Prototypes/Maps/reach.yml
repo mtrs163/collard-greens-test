@@ -2,8 +2,8 @@
   id: Reach
   mapName: 'Reach'
   mapPath: /Maps/reach.yml
-  minPlayers: 0
-  maxPlayers: 7
+  minPlayers: 0 # collard-NoMapPlayerRequirements
+#  maxPlayers: 7 # collard-NoMapPlayerRequirements
   stations:
     Reach:
       stationProto: StandardNanotrasenStation

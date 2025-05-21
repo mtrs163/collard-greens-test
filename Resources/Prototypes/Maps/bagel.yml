@@ -2,8 +2,8 @@
   id: Bagel
   mapName: 'Bagel Station'
   mapPath: /Maps/bagel.yml
-  minPlayers: 35
-  maxPlayers: 80
+  minPlayers: 0 # collard-NoMapPlayerRequirements
+#  maxPlayers: 80 # collard-NoMapPlayerRequirements
   stations:
     Bagel:
       stationProto: StandardNanotrasenStation

@@ -2,7 +2,7 @@
   id: Gate
   mapName: 'Gate Station'
   mapPath: /Maps/gate.yml
-  minPlayers: 55
+  minPlayers: 0 # collard-NoMapPlayerRequirements
   stations:
     Gate:
       stationProto: StandardNanotrasenStation

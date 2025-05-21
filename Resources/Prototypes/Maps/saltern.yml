@@ -2,8 +2,8 @@
   id: Saltern
   mapName: 'Saltern'
   mapPath: /Maps/saltern.yml
-  minPlayers: 0
-  maxPlayers: 35
+  minPlayers: 0 # collard-NoMapPlayerRequirements
+#  maxPlayers: 35 # collard-NoMapPlayerRequirements
   fallback: true
   stations:
     Saltern:
