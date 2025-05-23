@@ -10,6 +10,9 @@ guide-entry-ERPStatusYes = Полное ERP
 
 # РП
 guide-entry-charactertransfer = Перенос персонажа с другого сервера
+guide-entry-kys-command = Команда "kys" как инструмент отыгрыша
+guide-entry-roll-command = Команда "roll" как инструмент отыгрыша
+guide-entry-posing = Позинг
 
 # правила
-guide-entry-skypersterrules = ЧИТАЙ ПРАВИЛА АЛЁ
+guide-entry-collardrules = ЧИТАЙ ПРАВИЛА АЛЁ

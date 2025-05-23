@@ -9,6 +9,9 @@
   - ERPStatus
   - CharacterTransferingGuide
   - StationPrefix
+  - RollCommand
+  - KYSCommand
+  - Posing
 
 - type: guideEntry
   id: ERPStatus
@@ -44,11 +47,25 @@
   name: guide-entry-stationprefix
   text: "/ServerInfo/Guidebook/Collard/stationprefix.xml"
 
-
 - type: guideEntry
   id: CharacterTransferingGuide
   name: guide-entry-charactertransfer
   text: "/ServerInfo/Guidebook/Collard/RP/CharacterTransfering.xml"
+
+- type: guideEntry
+  id: RollCommand
+  name: guide-entry-roll-command
+  text: "/ServerInfo/Guidebook/Collard/RP/RollCommand.xml"
+
+- type: guideEntry
+  id: KYSCommand
+  name: guide-entry-kys-command
+  text: "/ServerInfo/Guidebook/Collard/RP/KYSCommand.xml"
+
+- type: guideEntry
+  id: Posing
+  name: guide-entry-posing
+  text: "/ServerInfo/Guidebook/Collard/RP/Posing.xml"
 
 #region rules
 
