@@ -1,0 +1,37 @@
+- type: entityTable
+  id: MoreCalmEventsTable
+  table: !type:AllSelector
+    children:
+    - id: BreakerFlip
+    - id: ClosetSkeleton
+
+- type: entityTable
+  id: GreenshiftPlusGameRulesTable
+  table: !type:AllSelector
+    children:
+      - !type:NestedSelector
+        tableId: MoreCalmEventsTable
+      - !type:NestedSelector
+        tableId: CargoGiftsTable
+
+- type: entity
+  id: GreenshiftPlusStationEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    scheduledGameRules: !type:NestedSelector
+      tableId: GreenshiftPlusGameRulesTable
+
+- type: gamePreset
+  id: GreenshiftPlus
+  alias:
+  - greenshiftplus
+  - republicpidor
+  - shittersafariultradeluxeedition
+  - boringshit
+  name: greenshift-plus-title
+  showInVote: true
+  description: greenshift-plus-description
+  rules:
+  - BasicRoundstartVariation
+  - GreenshiftPlusStationEventScheduler
