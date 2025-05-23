@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: CollardTips
+  values:
+    prefix: collard-tips-dataset-
+    count: 9
