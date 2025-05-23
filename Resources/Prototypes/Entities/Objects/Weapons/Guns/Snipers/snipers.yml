@@ -77,7 +77,7 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
+    maxOffset: 7 # collard-HristovTweaks
     pvsIncrease: 0.3
 
 - type: entity

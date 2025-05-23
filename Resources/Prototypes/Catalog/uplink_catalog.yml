@@ -166,9 +166,9 @@
   productEntity: BriefcaseSyndieSniperBundleFilled
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 6
+    Telecrystal: 12 # collard-HristovTweaks
   cost:
-    Telecrystal: 12
+    Telecrystal: 15 # collard-HristovTweaks
   categories:
   - UplinkWeaponry
 
@@ -541,7 +541,7 @@
   description: uplink-sniper-ammo-desc
   productEntity: MagazineBoxAntiMateriel
   cost:
-    Telecrystal: 2
+    Telecrystal: 5 # collard-HristovTweaks
   categories:
   - UplinkAmmo
 
