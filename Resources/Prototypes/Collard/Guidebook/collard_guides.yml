@@ -5,7 +5,9 @@
   name: guide-entry-collard
   text: "/ServerInfo/Guidebook/Collard/collard.xml"
   children:
-  - infoCollard
+  - InfoCollard
+  - TimeAdd
+  - RPHelp
   - ERPStatus
   - CharacterTransferingGuide
   - StationPrefix
@@ -38,9 +40,19 @@
   text: "/ServerInfo/Guidebook/Collard/ERP/ERPStatusYes.xml"
 
 - type: guideEntry
-  id: infoCollard
+  id: InfoCollard
   name: guide-entry-infocollard
   text: "/ServerInfo/Guidebook/Collard/BasicInfo/info.xml"
+
+- type: guideEntry
+  id: RPHelp
+  name: guide-entry-rphelp
+  text: "/ServerInfo/Guidebook/Collard/BasicInfo/roleplayhelp.xml"
+
+- type: guideEntry
+  id: TimeAdd
+  name: guide-entry-timeadd
+  text: "/ServerInfo/Guidebook/Collard/BasicInfo/time.xml"
 
 - type: guideEntry
   id: StationPrefix
