@@ -814,8 +814,11 @@ namespace Content.Server.GameTicking
                 if (_webhookIdentifier == null)
                     return;
 
+                if (DiscordRoundEndRole == null) // collard-RoundStartPing
+                    return;
+
                 var mapName = _gameMapManager.GetSelectedMap()?.MapName ?? Loc.GetString("discord-round-notifications-unknown-map");
-                var content = Loc.GetString("discord-round-notifications-started", ("id", RoundId), ("map", mapName));
+                var content = Loc.GetString("discord-round-notifications-started", ("roleId", DiscordRoundEndRole), ("id", RoundId), ("map", mapName)); // collard-RoundStartPing
 
                 var payload = new WebhookPayload { Content = content };
 
