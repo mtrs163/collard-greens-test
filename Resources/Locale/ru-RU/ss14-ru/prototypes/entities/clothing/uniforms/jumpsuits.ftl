@@ -136,7 +136,6 @@ ent-ClothingUniformJumpsuitCentcomFormal = торжественный костю
     .desc = Костюм для особых случаев.
 ent-ClothingUniformJumpsuitHosFormal = торжественный костюм главы службы безопасности
     .desc = Костюм для особых случаев.
-# Corvax-HiddenDesc-Start
 ent-ClothingUniformJumpsuitOperative = комбинезон оперативника
     .desc = Униформа элитных агентов Синдиката, выполняющих тактические операции в глубоком космосе.
 ent-ClothingUniformJumpsuitTacticool = тактический комбинезон

@@ -1,6 +1,5 @@
 ent-ClothingBackpackDuffelSurgeryFilled = хирургический вещмешок
     .desc = Большой вещевой мешок для хранения дополнительного медицинского снаряжения - похоже, этот мешок предназначен для хранения хирургических инструментов.
-# Corvax-HiddenDesc-Start
 ent-ClothingBackpackDuffelSyndicateFilledMedical = { ent-ClothingBackpackDuffelSyndicate }
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
     .suffix = хирургический вещмешок Синдиката
@@ -25,11 +24,9 @@ ent-ClothingBackpackDuffelSyndicateFilledCarbine = { ent-ClothingBackpackDuffelS
 ent-ClothingBackpackDuffelSyndicateAmmoFilled = { ent-ClothingBackpackDuffelSyndicate }
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
     .suffix = набор боеприпасов
-# Corvax-HiddenDesc-End
 ent-ClothingBackpackDuffelSyndicateCostumeClown = { ent-ClothingBackpackDuffelClown }
     .desc = { ent-ClothingBackpackDuffelClown.desc }
     .suffix = Синдикат
-# Corvax-HiddenDesc-Start
 ent-ClothingBackpackDuffelSyndicateCarpSuit = { ent-ClothingBackpackDuffelSyndicate }
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
     .suffix = вещмешок костюма карпа
@@ -39,11 +36,9 @@ ent-ClothingBackpackDuffelSyndicatePyjamaBundle = { ent-ClothingBackpackDuffelSy
 ent-ClothingBackpackDuffelSyndicateC4tBundle = { ent-ClothingBackpackDuffelSyndicate }
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
     .suffix = набор C-4 Синдиката
-# Corvax-HiddenDesc-End
 ent-ClothingBackpackChameleonFill = { ent-ClothingBackpackDuffelSyndicate }
     .suffix = Заполненный, Хамелеон
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
-# Corvax-HiddenDesc-Start
 ent-ClothingBackpackDuffelSyndicateEVABundle = { ent-ClothingBackpackDuffelSyndicate }
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
     .suffix = набор EVA Синдиката

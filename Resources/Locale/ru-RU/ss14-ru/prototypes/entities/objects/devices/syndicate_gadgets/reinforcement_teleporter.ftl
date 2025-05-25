@@ -1,4 +1,3 @@
-# Corvax-HiddenDesc-Start
 ent-ReinforcementRadio = старое радио
     .desc = Винтажное радио с незнакомыми частотами.
     .suffix = радио подкрепления Синдиката
@@ -20,4 +19,3 @@ ent-ReinforcementRadioSyndicateSyndiCat = {ent-ReinforcementRadio}
 ent-ReinforcementRadioSyndicateCyborgAssault = {ent-ReinforcementRadio}
     .desc = {ent-ReinforcementRadio.desc}
     .suffix = радио подкрепления штурмового киборга Синдиката, Ядерные оперативники
-# Corvax-HiddenDesc-End

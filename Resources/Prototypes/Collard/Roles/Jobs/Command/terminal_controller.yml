@@ -6,7 +6,7 @@
   setPreference: false
   startingGear: TerminalControllerGear
   icon: "JobIconNanotrasen"
-  supervisors: job-supervisors-centcom # Corvax-JobSupervisors
+  supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
   - AllAccess

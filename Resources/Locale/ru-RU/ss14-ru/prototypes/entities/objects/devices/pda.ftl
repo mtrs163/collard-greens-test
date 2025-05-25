@@ -102,11 +102,9 @@ ent-ClearPDA = прозрачный КПК
     .desc = На 99,44% из прозрачного пластика.
 ent-VisitorPDA = { ent-ClearPDA }
     .desc = { ent-ClearPDA.desc }
-# Corvax-HiddenDesc-Start
 ent-SyndiPDA = кроваво-красный КПК
     .desc = Смотря на этот КПК, ваше сердцебиение учащается... словно его владелец совершил нечто ужасное.
     .suffix = КПК Синдиката, Ядерный Оперативник
-# Corvax-HiddenDesc-End
 ent-ERTLeaderPDA = КПК ОБР
     .desc = Красный значит мощный.
     .suffix = Лидер
@@ -152,11 +150,9 @@ ent-SeniorOfficerPDA = КПК инструктора СБ
     .desc = Побит, помят, поломан, практически не пригоден для использования.
 ent-PiratePDA = КПК пирата
     .desc = Йарр!
-# Corvax-HiddenDesc-Start
 ent-SyndiAgentPDA = медицинский кроваво-красный КПК
     .desc = Смотря на этот КПК, ваше сердцебиение учащается... словно его владелец проводил немыслимые и ужасные медицинские эксперименты.
     .suffix = КПК агента Синдиката
-# Corvax-HiddenDesc-End
 ent-ChameleonPDA = КПК пассажира
     .desc = Почему он не серый?
     .suffix = Хамелеон

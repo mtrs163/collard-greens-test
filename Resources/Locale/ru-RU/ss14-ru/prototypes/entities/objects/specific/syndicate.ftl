@@ -1,4 +1,3 @@
-# Corvax-HiddenDesc-Start
 ent-Telecrystal = красный кристалл
     .desc = Похоже, он переливается подозрительно манящей энергией.
     .suffix = 20 ТК, телекристалл
@@ -29,4 +28,3 @@ ent-BaseUplinkRadio60TC = { ent-BaseUplinkRadio }
 ent-BaseUplinkRadioDebug = { ent-BaseUplinkRadio }
     .suffix = DEBUG, аплинк синдиката
     .desc = { ent-BaseUplinkRadio.desc }
-# Corvax-HiddenDesc-End
