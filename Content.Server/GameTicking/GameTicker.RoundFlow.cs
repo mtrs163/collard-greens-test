@@ -614,12 +614,16 @@ namespace Content.Server.GameTicking
                 if (_webhookIdentifier == null)
                     return;
 
+                if (DiscordRoundEndRole == null) // collard-RoundEndPing
+                    return;
+
                 var duration = RoundDuration();
                 var content = Loc.GetString("discord-round-notifications-end",
                     ("id", RoundId),
                     ("hours", Math.Truncate(duration.TotalHours)),
                     ("minutes", duration.Minutes),
-                    ("seconds", duration.Seconds));
+                    ("seconds", duration.Seconds),
+                    ("roleId", DiscordRoundEndRole)); // collard-RoundEndPing
                 var payload = new WebhookPayload { Content = content };
 
                 await _discord.CreateMessage(_webhookIdentifier.Value, payload);
