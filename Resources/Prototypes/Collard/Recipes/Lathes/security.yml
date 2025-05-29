@@ -1,0 +1,7 @@
+- type: latheRecipe
+  parent: BaseWeaponRecipeMelee
+  id: ClothingHandsKnuckleDustersStun
+  result: ClothingHandsKnuckleDustersStun
+  materials:
+    Steel: 300
+    Plastic: 300

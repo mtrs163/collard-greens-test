@@ -70,3 +70,4 @@ research-technology-bluespace-cargo-transport = Блюспейс-транспо�
 research-technology-bluespace-time-manipulation = Блюспейс манипулирование временем
 research-technology-clowning-utilities = Инструменты для клоунады
 research-technology-kinetic-modifications = Кинетические модификации
+research-technology-thermal-weaponry = Температурное оружие
