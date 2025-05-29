@@ -2,6 +2,38 @@
 - type: inventoryTemplate
   id: diona
   slots:
+    # collard-Underwear-start
+    - name: socks
+      slotTexture: socks
+      slotFlags: SOCKS
+      stripTime: 6
+      uiWindowPos: 3,0
+      strippingWindowPos: 2,3
+      displayName: Socks
+      whitelist:
+        tags:
+          - socks
+    - name: underwearb
+      slotTexture: underwearb
+      slotFlags: UNDERWEARB
+      stripTime: 6
+      uiWindowPos: 3,1
+      strippingWindowPos: 0,3
+      displayName: Panties
+      whitelist:
+        tags:
+          - underwearb
+    - name: underweart
+      slotTexture: underweart
+      slotFlags: UNDERWEART
+      stripTime: 6
+      uiWindowPos: 3,2
+      strippingWindowPos: 2,1
+      displayName: Bra
+      whitelist:
+        tags:
+          - underweart
+    # collard-Underwear-end
     - name: jumpsuit
       slotTexture: uniform
       slotFlags: INNERCLOTHING
