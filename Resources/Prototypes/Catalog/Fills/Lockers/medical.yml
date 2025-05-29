@@ -132,6 +132,10 @@
     - id: HandheldGPSBasic
     - id: MedkitFilled
       prob: 0.3
+    - id: Tourniquet # collard-ParamedicQOL
+      amount: 2
+    - id: Tourniquet # collard-ParamedicQOL
+      prob: 0.3
 
 - type: entity
   parent: LockerParamedic
