@@ -108,7 +108,7 @@
   id: MobReptilianTorsoFemale
   baseSprite:
     sprite: Mobs/Species/Reptilian/parts.rsi
-    state: torso_f
+    state: torso_m # collard-SexualDimorphism
 
 - type: humanoidBaseSprite
   id: MobReptilianLLeg
