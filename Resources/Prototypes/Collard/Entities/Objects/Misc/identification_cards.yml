@@ -1,0 +1,11 @@
+- type: entity
+  parent: IDCardStandard
+  id: CookIDCard
+  name: cook ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcookbasic
+  - type: PresetIdCard
+    job: Cook

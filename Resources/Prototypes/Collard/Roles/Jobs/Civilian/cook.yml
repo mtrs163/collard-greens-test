@@ -18,3 +18,4 @@
   id: CookGear
   equipment:
     ears: ClothingHeadsetService
+    id: CookPDA

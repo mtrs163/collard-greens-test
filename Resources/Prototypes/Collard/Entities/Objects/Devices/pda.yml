@@ -1,0 +1,17 @@
+- type: entity
+  parent: BasePDA
+  id: CookPDA
+  name: cook PDA
+  description: Covered in grease and flour.
+  components:
+  - type: Pda
+    id: CookIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-cook
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+  - type: Icon
+    state: pda-cook
