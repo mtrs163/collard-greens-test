@@ -38,12 +38,12 @@ namespace Content.Server.Database
             ServerUnbanDef? unban,
             ServerBanExemptFlags exemptFlags = default)
         {
-            if (userId == null && address == null && hwId ==  null)
+            if (userId == null && address == null && hwId == null)
             {
                 throw new ArgumentException("Must have at least one of banned user, banned address or hardware ID");
             }
 
-            if (address is {} addr && addr.Item1.IsIPv4MappedToIPv6)
+            if (address is { } addr && addr.Item1.IsIPv4MappedToIPv6)
             {
                 // Fix IPv6-mapped IPv4 addresses
                 // So that IPv4 addresses are consistent between separate-socket and dual-stack socket modes.
@@ -68,12 +68,20 @@ namespace Content.Server.Database
         public string FormatBanMessage(IConfigurationManager cfg, ILocalizationManager loc)
         {
             string expires;
-            if (ExpirationTime is { } expireTime)
+            // collard-Bans-start
+            if (ExpirationTime is { } expireTime && !string.IsNullOrWhiteSpace(cfg.GetCVar(CCVars.InfoLinksAppeal)))
             {
                 var duration = expireTime - BanTime;
                 var utc = expireTime.ToUniversalTime();
+                expires = loc.GetString("ban-expires-appeal", ("duration", duration.TotalMinutes.ToString("N0")), ("time", utc.ToString("f")), ("link", cfg.GetCVar(CCVars.InfoLinksAppeal)));
+            }
+            else if (ExpirationTime is { } expireTimeNoappeal) // collard-Bans
+            {
+                var duration = expireTimeNoappeal - BanTime;
+                var utc = expireTimeNoappeal.ToUniversalTime();
                 expires = loc.GetString("ban-expires", ("duration", duration.TotalMinutes.ToString("N0")), ("time", utc.ToString("f")));
             }
+            // collard-Bans-end
             else
             {
                 var appeal = cfg.GetCVar(CCVars.InfoLinksAppeal);
@@ -86,8 +94,16 @@ namespace Content.Server.Database
                    {loc.GetString("ban-banned-1")}
                    {loc.GetString("ban-banned-2", ("reason", Reason))}
                    {expires}
-                   {loc.GetString("ban-banned-3")}
-                   """;
+                   {loc.GetString("ban-banned-3", ("banningadmin", AdminName), ("roundid", GetRoundId()))}
+                   """; /// collard-Bans || added round and banningadmin to message
         }
+
+        // collard-Bans-start
+        public string GetRoundId()
+        {
+            if (RoundId is null) return Loc.GetString("ban-round-unknown");
+            else return RoundId.Value.ToString();
+        }
+        // collard-Bans-end
     }
 }
