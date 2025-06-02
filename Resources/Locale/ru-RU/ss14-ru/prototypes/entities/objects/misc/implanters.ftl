@@ -66,3 +66,6 @@ ent-RadioImplanterCentcomm = { ent-BaseImplantOnlyImplanter }
 ent-DeathRattleImplanterCentcomm = { ent-BaseImplantOnlyImplanter }
     .suffix = предсмертный хрип Центком
     .desc = { ent-BaseImplantOnlyImplanter.desc }
+ent-ChameleonControllerImplanter = { ent-BaseImplantOnlyImplanterSyndi }
+    .suffix = хамелеон контроллер
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
