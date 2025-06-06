@@ -6,7 +6,7 @@
       announcement: alert-level-green-announcement
       color: Green
       emergencyLightColor: LawnGreen
-      shuttleTime: 600
+      shuttleTime: 1200 # collard-EvacTime
     blue:
       announcement: alert-level-blue-announcement
       sound: /Audio/Misc/bluealert.ogg
@@ -20,21 +20,21 @@
       color: Violet
       emergencyLightColor: Violet
       forceEnableEmergencyLights: true
-      shuttleTime: 600
+      shuttleTime: 1200 # collard-EvacTime
     yellow:
       announcement: alert-level-yellow-announcement
       sound: /Audio/Misc/notice1.ogg
       color: Yellow
       emergencyLightColor: Goldenrod
       forceEnableEmergencyLights: true
-      shuttleTime: 600
+      shuttleTime: 300 # collard-EvacTime
     red:
       announcement: alert-level-red-announcement
       sound: /Audio/Misc/redalert.ogg
       color: Red
       emergencyLightColor: Red
       forceEnableEmergencyLights: true
-      shuttleTime: 600 #No reduction in time as we don't have swiping for red alert like in /tg/. Shuttle times are intended to create friction, so having a way to brainlessly bypass that would be dumb.
+      shuttleTime: 300 # collard-EvacTime
     gamma:
       announcement: alert-level-gamma-announcement
       selectable: false
@@ -46,6 +46,7 @@
       color: PaleVioletRed
       emergencyLightColor: PaleVioletRed
       forceEnableEmergencyLights: true
+      shuttleTime: 180 # collard-EvacTime
     delta:
       announcement: alert-level-delta-announcement
       selectable: false
@@ -57,7 +58,7 @@
       color: DarkRed
       emergencyLightColor: Orange
       forceEnableEmergencyLights: true
-      shuttleTime: 1200
+      shuttleTime: 180 # collard-EvacTime
     epsilon:
       announcement: alert-level-epsilon-announcement
       selectable: false
@@ -69,4 +70,4 @@
       color: DarkViolet
       emergencyLightColor: DarkViolet
       forceEnableEmergencyLights: true
-      shuttleTime: 1200
+      shuttleTime: 12000 # collard-EvacTime
