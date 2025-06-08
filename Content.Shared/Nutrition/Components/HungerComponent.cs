@@ -34,7 +34,7 @@ public sealed partial class HungerComponent : Component
     /// </summary>
     /// <remarks>Any time this is modified, <see cref="HungerSystem.SetAuthoritativeHungerValue"/> should be called.</remarks>
     [DataField("baseDecayRate"), ViewVariables(VVAccess.ReadWrite)]
-    public float BaseDecayRate = 0.01666666666f;
+    public float BaseDecayRate = 0.01f; // collard-HungerNerf
 
     /// <summary>
     /// The actual amount at which <see cref="LastAuthoritativeHungerValue"/> decays.
@@ -109,7 +109,7 @@ public sealed partial class HungerComponent : Component
     /// </summary>
     [DataField("starvingSlowdownModifier"), ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
-    public float StarvingSlowdownModifier = 0.75f;
+    public float StarvingSlowdownModifier = 0.9f; // collard-HungerNerf
 
     /// <summary>
     /// Damage dealt when your current threshold is at HungerThreshold.Dead

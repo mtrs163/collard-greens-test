@@ -70,7 +70,7 @@ public sealed class ThirstSystem : EntitySystem
         if (_jetpack.IsUserFlying(uid))
             return;
 
-        var mod = component.CurrentThirstThreshold <= ThirstThreshold.Parched ? 0.75f : 1.0f;
+        var mod = component.CurrentThirstThreshold <= ThirstThreshold.Parched ? 0.9f : 1.0f; // collard-ThirstNerf
         args.ModifySpeed(mod, mod);
     }
 

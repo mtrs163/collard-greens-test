@@ -8,9 +8,9 @@
   - type: HumanoidAppearance
     species: Diona
   - type: Hunger
-    baseDecayRate: 0.0083
+    baseDecayRate: 0.001 # collard-HungerNerf
   - type: Thirst
-    baseDecayRate: 0.0083
+    baseDecayRate: 0.15 # collard-ThirstNerf
   - type: Icon
     sprite: Mobs/Species/Diona/parts.rsi
     state: full
