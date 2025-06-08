@@ -13,6 +13,30 @@
 - type: randomHumanoidSettings
   parent: EventHumanoidMindShielded
   id: TerminalController
+  speciesBlacklist: [ Vox ]
+  components:
+#    - type: GhostRole
+#      name: ghost-role-information-terminal-controller-name
+#      description: ghost-role-information-terminal-controller-description
+#    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ TerminalControllerGear ]
+
+- type: entity
+  name: Terminal Controller
+  suffix: Human only
+  id: RandomHumanoidSpawnerTerminalControllerOnlyHuman
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: centcom
+    - type: RandomHumanoidSpawner
+      settings: TerminalControllerOnlyHuman
+
+- type: randomHumanoidSettings
+  parent: EventHumanoidMindShielded
+  id: TerminalControllerOnlyHuman
+  speciesBlacklist: [ Arachnid, Diona, Dwarf, Moth, Reptilian, SlimePerson, Vox ]
   components:
 #    - type: GhostRole
 #      name: ghost-role-information-terminal-controller-name

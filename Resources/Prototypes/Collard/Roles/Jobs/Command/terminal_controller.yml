@@ -19,11 +19,11 @@
 - type: startingGear
   id: TerminalControllerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    jumpsuit: ClothingUniformJumpsuitCommandGeneric
     back: ClothingBackpack
     shoes: ClothingShoesBootsCombatFilled
-    head: ClothingHeadHatCentcom
-    eyes: ClothingEyesGlassesSunglasses
+    head: ClothingHeadHatBeretCommand
+    eyes: ClothingEyesGlassesCommand
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmorBulletproof
     id: CentcomPDA
