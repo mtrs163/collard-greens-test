@@ -1,4 +1,11 @@
-ent-WeaponEnergyTurretAIControlPanel = панель управления турелями ИИ
-    .desc = Настенный интерфейс, позволяющий искусственному интеллекту настроить параметры любой соединённой турели.
-ent-WeaponEnergyTurretStationControlPanel = панель управления защитными турелями
+ent-WeaponEnergyTurretStationControlPanelBase = панель управления защитными турелями
     .desc = Настенный интерфейс, позволяющий дистанционно настроить параметры любой соединённой турели.
+ent-WeaponEnergyTurretAIControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = ИИ, Синтеты
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretSecurityControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = СБ
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretCommandControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = Командование
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
