@@ -12,7 +12,7 @@
           mapNameTemplate: '{0} Elkridge Depot {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'DS'
+            prefixCreator: 'BS' # collard-StationPrefix
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_elkridge.yml
         - type: StationCargoShuttle
