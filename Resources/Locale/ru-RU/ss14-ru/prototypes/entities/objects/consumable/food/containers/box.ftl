@@ -52,3 +52,5 @@ ent-FoodMealHappyHonkClown = { ent-HappyHonk }
     .desc = { ent-HappyHonk.desc }
 ent-FoodBoxCloth = коробка ткани бренда FlutterSoft
     .desc = Волокно — это самая важная порция пищи для моли! Не пропускайте её и не используйте хлам из нижних ящиков, а покупайте высококачественную ткань бренда FlutterSoft.
+ent-FoodBoxDonkpocketMoth = коробка моль-покетов
+    .desc = { FoodBoxDonkpocket.desc }

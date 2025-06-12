@@ -40,3 +40,6 @@ ent-BoxSurvivalSyndicate = расширенный аварийный запас
 ent-BoxSurvivalSyndicateNitrogen = { ent-BoxSurvivalSyndicate }
     .suffix = Синдикат Азот N2
     .desc = { ent-BoxSurvivalSyndicate.desc }
+ent-BoxMimeMoth = { ent-BoxSurvival }
+    .desc = { ent-BoxSurvival.desc }
+    .suffix = Мим, Аварийный, Ниан
