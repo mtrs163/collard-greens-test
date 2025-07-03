@@ -215,9 +215,9 @@
         type: WiresBoundUserInterface
   - type: Computer
     board: BlockGameArcadeComputerCircuitboard
-  - type: Advertise
-    pack: BlockGameAds
-    minimumWait: 60 # Arcades are noisy
-    maximumWait: 240
+#  - type: Advertise
+#    pack: BlockGameAds
+#    minimumWait: 60 # Arcades are noisy
+#    maximumWait: 240
   - type: SpeakOnUIClosed
     pack: BlockGameGoodbyes
