@@ -26,3 +26,5 @@ ent-WeaponLauncherAdmemeMeteorLarge = пускатель метеоритов
 ent-WeaponLauncherAdmemeImmovableRodSlow = пускатель неподвижного жезла
     .desc = Стреляет неподвижными жезлами.
     .suffix = Адмемы
+ent-WeaponLauncherHydra = гидра
+    .desc = БЛУП... ПШШШШШШШШШШ

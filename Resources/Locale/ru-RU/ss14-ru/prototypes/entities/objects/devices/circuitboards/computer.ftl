@@ -90,3 +90,5 @@ ent-CargoRequestSecurityComputerCircuitboard = консоль запросов �
     .desc = Консольная плата для консоли запросов службы безопасности.
 ent-CargoRequestMedicalComputerCircuitboard = консоль запросов медицинского отдела (консольная плата)
     .desc = Консольная плата для консоли запросов медицинского отдела.
+ent-SalvageJobBoardComputerCircuitboard = консоль утилизационных работ (консольная плата)
+    .desc = Консольная плата для консоли утилизационных работ.
