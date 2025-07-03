@@ -54,14 +54,14 @@
 #  - type: SpeakOnTrigger
 #    pack: FigurinesPassenger
 
-- type: entity
-  parent: BaseFigurine
-  id: ToyFigurineGreytider
-  name: greytider figure
-  description: A figurine depicting a dubious-looking passenger. Greytide worldwide!
-  components:
-  - type: Sprite
-    state: passenger_greytide
+# - type: entity 
+#   parent: BaseFigurine
+#   id: ToyFigurineGreytider | collard-NoGreytideFigurine
+#   name: greytider figure
+#   description: A figurine depicting a dubious-looking passenger. Greytide worldwide!
+#   components:
+#   - type: Sprite
+#     state: passenger_greytide
 #  - type: SpeakOnTrigger
 #    pack: FigurinesGreytider
 
