@@ -52,3 +52,5 @@ ent-LockerWallPrisoner7 = { ent-LockerWallBasePrisoner }
 ent-LockerWallPrisoner8 = { ent-LockerWallBasePrisoner }
     .desc = { ent-LockerWallBasePrisoner.desc }
     .suffix = 8
+ent-LockerWallEvacRepair = настенный аварийный шкаф эвакуационного шаттла
+    .desc = Тут всё состоит из аварий.
