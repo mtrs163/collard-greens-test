@@ -12,7 +12,7 @@
           mapNameTemplate: '{0} Plasma {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: '14'
+            prefixCreator: 'RND' # collard-StationPrefix
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_plasma.yml
         - type: StationCargoShuttle
