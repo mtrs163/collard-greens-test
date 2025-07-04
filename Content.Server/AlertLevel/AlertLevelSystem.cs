@@ -19,6 +19,7 @@ public sealed class AlertLevelSystem : EntitySystem
 
     // Until stations are a prototype, this is how it's going to have to be.
     public const string DefaultAlertLevelSet = "stationAlerts";
+    public EntityUid? AlertSound; // collard-AlertLoops
 
     public override void Initialize()
     {
@@ -187,12 +188,20 @@ public sealed class AlertLevelSystem : EntitySystem
         var announcementFull = Loc.GetString("alert-level-announcement", ("name", name), ("announcement", announcement));
 
         var playDefault = false;
+        AlertSound = _audio.Stop(AlertSound); // collard-AlertLoops
         if (playSound)
         {
-            if (detail.Sound != null)
+            // collard-AlertLoops-start
+            if (detail.Sound != null && detail.DisableSelection)
             {
                 var filter = _stationSystem.GetInOwningStation(station);
-                _audio.PlayGlobal(detail.Sound, filter, true, detail.Sound.Params);
+                AlertSound = _audio.PlayGlobal(detail.Sound, filter, true, detail.Sound.Params.WithLoop(true))?.Entity;
+            }
+            else if (detail.Sound != null)
+            // collard-AlertLoops-end
+            {
+                var filter = _stationSystem.GetInOwningStation(station);
+                AlertSound = _audio.PlayGlobal(detail.Sound, filter, true, detail.Sound.Params)?.Entity;  // collard-AlertLoops
             }
             else
             {
