@@ -13,6 +13,7 @@ public sealed class AdminWhoCommand : LocalizedCommands
 {
     [Dependency] private readonly IAfkManager _afkManager = default!;
     [Dependency] private readonly IAdminManager _adminManager = default!;
+    [Dependency] private readonly IChatManager _chat = default!; // collard-Admin1984
 
     public override string Command => "adminwho";
 
