@@ -22,6 +22,8 @@
     UndergarmentBottom: MobHumanoidAnyMarking
     Chest: MobSlimeTorso
     Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking # collard-CatParts
+    Tail: MobHumanoidAnyMarking # collard-CatParts
     LArm: MobSlimeLArm
     RArm: MobSlimeRArm
     LHand: MobSlimeLHand
@@ -49,6 +51,14 @@
     Arms:
       points: 4
       required: false
+    # collard-CatParts-start
+    Tail:
+      points: 1
+      required: false
+    HeadTop:
+      points: 1
+      required: false
+    # collard-CatParts-end
 
 - type: humanoidBaseSprite
   id: MobSlimeMarkingFollowSkin
