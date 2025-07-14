@@ -1,0 +1,12 @@
+- type: gameMapPool
+  id: CollardMapPool
+  maps:
+  - Oasis
+  - Reach
+  - Elkridge
+  - Plasma
+  - Saltern
+  - Packed
+  - Fland
+  - Box
+  - Apollo
