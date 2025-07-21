@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
 using Robust.Shared.Random; // collard-Localization
+using Content.Shared.Speech;
 
 namespace Content.Server.Speech.EntitySystems;
 
@@ -12,7 +13,7 @@ public sealed class FrontalLispSystem : EntitySystem
     private static readonly Regex RegexUpperEcks = new(@"[E]+[Xx]+[Cc]*|[X]+");
     private static readonly Regex RegexLowerEcks = new(@"[e]+[x]+[c]*|[x]+");
     // @formatter:on
-    
+
     [Dependency] private readonly IRobustRandom _random = default!; // collard-Localization
 
     public override void Initialize()
