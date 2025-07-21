@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/21/2025 09:06:00
-  entityCount: 18144
+  time: 07/21/2025 09:16:53
+  entityCount: 18145
 maps:
 - 1
 grids:
@@ -96649,6 +96649,17 @@ entities:
       - SurveillanceCameraSecurity
       nameSet: True
       id: ИВС 1
+  - uid: 18145
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 40.5,-0.5
+      parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: Хранилище улик
 - proto: SurveillanceCameraService
   entities:
   - uid: 2264
