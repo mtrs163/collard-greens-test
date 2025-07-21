@@ -158,7 +158,7 @@
         Халатность
       </Box>
     </ColorBox>
-    <ColorBox>
+    <ColorBox Color="#3b4354">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
         Неподчинение при особых обстоятельствах
       </Box>
