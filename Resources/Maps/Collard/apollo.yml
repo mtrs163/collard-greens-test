@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/21/2025 08:44:53
+  time: 07/21/2025 09:06:00
   entityCount: 18144
 maps:
 - 1
@@ -49865,7 +49865,7 @@ entities:
       pos: 36.5,3.5
       parent: 2
     - type: FaxMachine
-      name: Изоляторы
+      name: ИВС
   - uid: 14439
     components:
     - type: Transform
@@ -96341,6 +96341,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 39.5,6.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: ИВС 2
   - uid: 2013
     components:
     - type: Transform
@@ -96639,6 +96644,11 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 37.5,6.5
       parent: 2
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSecurity
+      nameSet: True
+      id: ИВС 1
 - proto: SurveillanceCameraService
   entities:
   - uid: 2264
