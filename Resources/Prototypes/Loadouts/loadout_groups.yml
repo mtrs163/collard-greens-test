@@ -54,6 +54,8 @@
   - TowelColorYellow
   - Badge # collard-Badge
   - OldRadio # collard-Radio
+  - Wristwatch # collard-Loadouts
+  - WristwatchGold # collard-Loadouts
 
 - type: loadoutGroup
   id: Glasses
@@ -262,8 +264,6 @@
   - RedGloves
   - GreenGloves
   - BlueGloves
-  - Wristwatch
-  - WristwatchGold
 # collard-Loadouts-end
 
 - type: loadoutGroup

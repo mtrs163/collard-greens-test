@@ -431,15 +431,6 @@
   equipment:
     gloves: ClothingHandsGlovesColorBlue
 
-- type: loadout
-  id: Wristwatch
-  equipment:
-    gloves: Wristwatch
-
-- type: loadout
-  id: WristwatchGold
-  equipment:
-    gloves: WristwatchGold
 
 #endregion gloves
 
