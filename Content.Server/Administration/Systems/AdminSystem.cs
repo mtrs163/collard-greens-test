@@ -397,7 +397,7 @@ public sealed class AdminSystem : EntitySystem
             {
                 var coordinates = _transform.GetMoverCoordinates(entity, transform);
                 var name = Identity.Entity(entity, EntityManager);
-                _popup.PopupCoordinates(Loc.GetString("admin-erase-popup", ("user", name)), coordinates, PopupType.LargeCaution);
+                _chat.DispatchServerAnnouncement(Loc.GetString("admin-erase-popup", ("user", name)), Color.Yellow); // collard-AdminErase
                 var filter = Filter.Pvs(coordinates, 1, EntityManager, _playerManager);
                 var audioParams = new AudioParams().WithVolume(3);
                 _audio.PlayStatic("/Audio/Effects/pop_high.ogg", filter, coordinates, true, audioParams);
