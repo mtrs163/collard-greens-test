@@ -59,6 +59,8 @@
             - type: TradeStation
           paths:
             - /Maps/Shuttles/trading_outpost.yml
+          minimumDistance: 1000 # collard-DistantATS
+          maximumDistance: 5000 # collard-DistantATS
         # Spawn last
         ruins: !type:GridSpawnGroup
           hide: true
