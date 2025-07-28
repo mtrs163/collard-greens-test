@@ -12,6 +12,9 @@ using Content.Server.Popups;
 using Content.Shared.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared.Database;
+using Content.Server.Ghost;
+using Content.Shared.Ghost;
+using Content.Shared.Hands.Components;
 
 namespace Content.Server.Collard.DetailExaminable
 {
@@ -59,7 +62,8 @@ namespace Content.Server.Collard.DetailExaminable
             {
                 Act = () =>
                 {
-                    _quickDialog.OpenDialog(player,
+                    if (!HasComp<GhostComponent>(args.User) || HasComp<HandsComponent>(args.User))
+                        _quickDialog.OpenDialog(player,
                                 Loc.GetString("item-detail-dialog-name"),
                                 Loc.GetString("item-detail-dialog-field"),
                                 (string newDesc) =>
