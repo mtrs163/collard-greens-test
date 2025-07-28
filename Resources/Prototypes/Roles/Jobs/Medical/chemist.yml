@@ -10,6 +10,7 @@
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-cmo
+  whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Medical
   - Chemistry
