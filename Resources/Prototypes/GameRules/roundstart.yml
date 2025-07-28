@@ -450,7 +450,7 @@
     - id: SolarPanelDamageVariationPass
     - id: SolarPanelEmptyVariationPass
     - id: BasicDecalDirtVariationPass
-    - id: BasicDecalGraffitiVariationPass
+    # - id: BasicDecalGraffitiVariationPass | collard-VariationDeshittification
     - id: BasicDecalBrunsVariationPass
       prob: 0.50
       orGroup: monospaceDecals
