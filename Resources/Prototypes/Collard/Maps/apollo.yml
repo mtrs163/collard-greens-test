@@ -2,6 +2,8 @@
   id: Apollo
   mapName: 'Аполлон (остров)'
   mapPath: /Maps/Collard/apollo.yml
+  maxRandomOffset: 0
+  randomRotation: false
   minPlayers: 0
   stations:
     Apollo:
