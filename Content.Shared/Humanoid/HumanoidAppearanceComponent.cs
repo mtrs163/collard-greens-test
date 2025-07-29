@@ -94,13 +94,13 @@ public sealed partial class HumanoidAppearanceComponent : Component
     public HashSet<HumanoidVisualLayers> HideLayersOnEquip = [HumanoidVisualLayers.Hair];
 
     /// <summary>
-    ///     Which markings the humanoid defaults to when nudity is toggled off.
+    ///     Which markings the humanoid defaults to when nudity is toggled off. || collard-Underwear
     /// </summary>
-    [DataField]
+    /*[DataField]
     public ProtoId<MarkingPrototype>? UndergarmentTop = new ProtoId<MarkingPrototype>("UndergarmentTopTanktop");
 
     [DataField]
-    public ProtoId<MarkingPrototype>? UndergarmentBottom = new ProtoId<MarkingPrototype>("UndergarmentBottomBoxers");
+    public ProtoId<MarkingPrototype>? UndergarmentBottom = new ProtoId<MarkingPrototype>("UndergarmentBottomBoxers");*/
 
     /// <summary>
     ///     The displacement maps that will be applied to specific layers of the humanoid.

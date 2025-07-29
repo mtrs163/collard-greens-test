@@ -24,6 +24,7 @@
     containers:
       storagebase: !type:Container
         ents: []
+      badge_label: !type:ContainerSlot # collard-Badge
   - type: UserInterface
     interfaces:
       enum.StorageUiKey.Key:

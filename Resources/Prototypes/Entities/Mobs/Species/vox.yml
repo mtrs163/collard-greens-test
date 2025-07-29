@@ -108,8 +108,8 @@
       visible: false
   - type: HumanoidAppearance
     species: Vox
-    undergarmentTop: UndergarmentTopTanktopVox
-    undergarmentBottom: UndergarmentBottomBoxersVox
+    # undergarmentTop: UndergarmentTopTanktopVox || collard-Underwear
+    # undergarmentBottom: UndergarmentBottomBoxersVox || collard-Underwear
     markingsDisplacement:
       Hair:
         sizeMaps:
@@ -173,8 +173,8 @@
   components:
   - type: HumanoidAppearance
     species: Vox
-    undergarmentTop: UndergarmentTopTanktopVox
-    undergarmentBottom: UndergarmentBottomBoxersVox
+    # undergarmentTop: UndergarmentTopTanktopVox || collard-Underwear
+    # undergarmentBottom: UndergarmentBottomBoxersVox || collard-Underwear
     markingsDisplacement:
       Hair:
         sizeMaps:

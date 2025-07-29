@@ -27,7 +27,6 @@
     tags:
     - Badge
   - type: Damageable
-    damageModifierSet: Plastic
   - type: Destructible
     thresholds:
     - trigger:

@@ -155,7 +155,7 @@
     - id: BoxFolderYellow
     - id: NewtonCradle
     - id: Envelope # collard-EnvelopeGlowup: envelope doesn't fit
-      amount: 10
+      amount: 5
     - id: BrbSign
 
 - type: entity

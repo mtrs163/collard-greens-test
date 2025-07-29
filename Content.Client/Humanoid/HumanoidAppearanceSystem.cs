@@ -237,10 +237,10 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         // Really, markings should probably be a separate component altogether.
         ClearAllMarkings(entity);
 
-        var censorNudity = false; // collard-NoCensor
+        //var censorNudity = false; || collard-Underwear
         // The reason we're splitting this up is in case the character already has undergarment equipped in that slot.
-        var applyUndergarmentTop = censorNudity;
-        var applyUndergarmentBottom = censorNudity;
+        //var applyUndergarmentTop = censorNudity; || collard-Underwear
+        //var applyUndergarmentBottom = censorNudity; || collard-Underwear
 
         foreach (var markingList in humanoid.MarkingSet.Markings.Values)
         {
@@ -249,17 +249,17 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 if (_markingManager.TryGetMarking(marking, out var markingPrototype))
                 {
                     ApplyMarking(markingPrototype, marking.MarkingColors, marking.Visible, entity);
-                    if (markingPrototype.BodyPart == HumanoidVisualLayers.UndergarmentTop)
+                    /*if (markingPrototype.BodyPart == HumanoidVisualLayers.UndergarmentTop) || collard-Underwear
                         applyUndergarmentTop = false;
                     else if (markingPrototype.BodyPart == HumanoidVisualLayers.UndergarmentBottom)
-                        applyUndergarmentBottom = false;
+                        applyUndergarmentBottom = false;*/
                 }
             }
         }
 
         humanoid.ClientOldMarkings = new MarkingSet(humanoid.MarkingSet);
 
-        AddUndergarments(entity, applyUndergarmentTop, applyUndergarmentBottom);
+        //AddUndergarments(entity, applyUndergarmentTop, applyUndergarmentBottom); || collard-Underwear
     }
 
     private void ClearAllMarkings(Entity<HumanoidAppearanceComponent, SpriteComponent> entity)
@@ -311,7 +311,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         }
     }
 
-    private void AddUndergarments(Entity<HumanoidAppearanceComponent, SpriteComponent> entity, bool undergarmentTop, bool undergarmentBottom)
+    /*private void AddUndergarments(Entity<HumanoidAppearanceComponent, SpriteComponent> entity, bool undergarmentTop, bool undergarmentBottom) || collard-Underwear-start
     {
         var humanoid = entity.Comp1;
 
@@ -335,7 +335,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 ApplyMarking(prototype, null, true, entity);
             }
         }
-    }
+    } || collard-Underwear-end */
 
     private void ApplyMarking(MarkingPrototype markingPrototype,
         IReadOnlyList<Color>? colors,

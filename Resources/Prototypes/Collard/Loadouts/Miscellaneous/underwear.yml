@@ -226,35 +226,35 @@
   equipment:
     underweart: ClothingUnderwearTopBraWhite
 
-- type: loadout
-  id: BlueLongBra
-  equipment:
-    underweart: ClothingUnderwearTopBraBlueShild
+# - type: loadout
+#   id: BlueLongBra
+#   equipment:
+#     underweart: ClothingUnderwearTopBraBlueShild
 
-- type: loadout
-  id: ClothBra
-  equipment:
-    underweart: ClothingUnderwearTopBraSpaceNinja
+# - type: loadout
+#   id: ClothBra
+#   equipment:
+#     underweart: ClothingUnderwearTopBraSpaceNinja
 
-- type: loadout
-  id: RedWhBra
-  equipment:
-    underweart: ClothingUnderwearTopBraSeniorSec
+# - type: loadout
+#   id: RedWhBra
+#   equipment:
+#     underweart: ClothingUnderwearTopBraSeniorSec
 
-- type: loadout
-  id: ViolWhBra
-  equipment:
-    underweart: ClothingUnderwearTopBraSeniorScience
+# - type: loadout
+#   id: ViolWhBra
+#   equipment:
+#     underweart: ClothingUnderwearTopBraSeniorScience
 
-- type: loadout
-  id: OrWhBraAlt
-  equipment:
-    underweart: ClothingUnderwearTopBraSeniorEnginer
+# - type: loadout
+#   id: OrWhBraAlt
+#   equipment:
+#     underweart: ClothingUnderwearTopBraSeniorEnginer
 
-- type: loadout
-  id: OrWhBra
-  equipment:
-    underweart: ClothingUnderwearTopBraSeniorDoctor
+# - type: loadout
+#   id: OrWhBra
+#   equipment:
+#     underweart: ClothingUnderwearTopBraSeniorDoctor
 
 #region specialbra
 

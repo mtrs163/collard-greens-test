@@ -1,13 +1,8 @@
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Examine;
-using Content.Shared.Labels;
-using Content.Shared.Labels.Components;
-using Content.Shared.Labels.EntitySystems;
 using Content.Shared.Paper;
 using JetBrains.Annotations;
-using Robust.Shared.Containers;
 using Content.Server.Collard.Labels.Components;
-using Robust.Shared.Utility;
 
 namespace Content.Server.Collard.Labels
 {

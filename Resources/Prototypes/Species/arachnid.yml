@@ -20,8 +20,8 @@
   sprites:
     Head: MobArachnidHead
     Snout: MobHumanoidAnyMarking
-    UndergarmentTop: MobHumanoidAnyMarking
-    UndergarmentBottom: MobHumanoidAnyMarking
+    # UndergarmentTop: MobHumanoidAnyMarking || collard-Underwear
+    # UndergarmentBottom: MobHumanoidAnyMarking || collard-Underwear
     Chest: MobArachnidTorso
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking

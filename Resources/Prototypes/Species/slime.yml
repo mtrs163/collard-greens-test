@@ -18,8 +18,8 @@
     Head: MobSlimeHead
     Hair: MobSlimeMarkingFollowSkin
     FacialHair: MobSlimeMarkingFollowSkin
-    UndergarmentTop: MobHumanoidAnyMarking
-    UndergarmentBottom: MobHumanoidAnyMarking
+    # UndergarmentTop: MobHumanoidAnyMarking || collard-Underwear
+    # UndergarmentBottom: MobHumanoidAnyMarking || collard-Underwear
     Chest: MobSlimeTorso
     Eyes: MobHumanoidEyes
     HeadTop: MobHumanoidAnyMarking # collard-CatParts

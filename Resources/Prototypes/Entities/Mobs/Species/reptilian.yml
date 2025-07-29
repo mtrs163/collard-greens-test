@@ -11,7 +11,7 @@
     - Snout
     - HeadTop
     - HeadSide
-    undergarmentBottom: UndergarmentBottomBoxersReptilian
+    # undergarmentBottom: UndergarmentBottomBoxersReptilian || collard-Underwear
   - type: Hunger
   - type: Puller
     needsHands: false
@@ -91,7 +91,7 @@
     - Snout
     - HeadTop
     - HeadSide
-    undergarmentBottom: UndergarmentBottomBoxersReptilian
+#    undergarmentBottom: UndergarmentBottomBoxersReptilian || collard-Underwear
   - type: Inventory
     speciesId: reptilian
 #    femaleDisplacements: # collard-SexualDimorphism: not needed since lizors don't have sexual dimorphism

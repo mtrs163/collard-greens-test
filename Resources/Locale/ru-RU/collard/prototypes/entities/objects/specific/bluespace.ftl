@@ -25,3 +25,6 @@ ent-WallRockBasaltBluespace = { ent-WallRockBasalt }
 ent-WallRockSnowBluespace = { ent-WallRockSnow }
     .desc = { ent-WallRockBluespace.desc }
     .suffix = Блюспейс кристаллы
+
+bluespace-crystal-ore = неочищенный блюспейс кристалл
+bluespace-crystal = блюспейс кристалл
