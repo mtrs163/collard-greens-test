@@ -454,7 +454,7 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface # collard-EnvelopeGlowup
   - type: Item
-    size: Tiny
+    size: Small
   - type: Tag
     tags:
     - Trash

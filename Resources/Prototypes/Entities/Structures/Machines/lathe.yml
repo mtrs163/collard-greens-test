@@ -611,6 +611,8 @@
       staticPacks:
       - OreSmelting
       - RGlassSmelting
+      dynamicPacks:
+      - BluespaceSmelting # collard-BluespaceCrystals
 
 - type: entity
   parent: OreProcessor
@@ -629,6 +631,8 @@
     - OreSmelting
     - RGlassSmelting
     - AdvancedSmelting
+    dynamicPacks:
+    - BluespaceSmelting # collard-BluespaceCrystals
 
 - type: entity
   parent: BaseLathe

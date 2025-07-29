@@ -10,3 +10,14 @@
 
 - type: startingGear
   id: GatecrasherGear
+
+- type: chameleonOutfit
+  id: GatecrasherChameleonOutfit
+  job: Gatecrasher
+  equipment:
+    head: ClothingHeadHatWelding
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckMantle
+    outerClothing: ClothingOuterWinterCoat
+    gloves: ClothingHandsGlovesColorYellowBudget

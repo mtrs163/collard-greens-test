@@ -33,7 +33,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      BlueSpaceCrystal: 100
+      BlueSpaceCrystal: 75
   - type: Stack
     stackType: BlueSpaceCrystalCut
   - type: Sprite

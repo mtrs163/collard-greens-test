@@ -1,7 +1,7 @@
 - type: entity
   id: ActionChangePose
-  name: action-name-pose-change
-  description: action-description-pose-change
+  name: Change pose
+  description: Change character pose
   components:
   - type: Action
     useDelay: 1
@@ -12,8 +12,8 @@
 
 - type: entity
   id: ActionChangeFlavor
-  name: action-name-flavor-change
-  description: action-description-flavor-change
+  name: Change flavor
+  description: Change character flavor text
   components:
   - type: Action
     useDelay: 1
