@@ -1,13 +1,13 @@
 - type: entity
   categories: [ HideSpawnMenu ]
-  parent: BaseBulletAP # collard-HristovTweaks
+  parent: BaseBullet
   id: BulletAntiMateriel
   name: bullet (.60 anti-materiel)
   components:
   - type: Projectile
     damage:
       types:
-        Piercing: 95 # collard-HristovTweaks
+        Piercing: 200 # collard-HristovTweaks
         Structural: 226
     penetrationThreshold: 360
     penetrationDamageTypeRequirement:
