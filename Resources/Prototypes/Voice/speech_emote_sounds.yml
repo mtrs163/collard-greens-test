@@ -36,10 +36,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MaleDeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: MaleGasp
+    # DefaultDeathgasp:
+    #   collection: MaleDeathGasp
 
 - type: emoteSounds
   id: FemaleHuman
@@ -78,10 +78,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: FemaleGasp
+    # DefaultDeathgasp:
+    #   collection: FemaleDeathGasp
 
 - type: emoteSounds
   id: MaleReptilian
@@ -102,10 +102,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: DeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: MaleGasp
+    # DefaultDeathgasp:
+    #   collection: DeathGasp
 
 - type: emoteSounds
   id: FemaleReptilian
@@ -126,10 +126,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: FemaleGasp
+    # DefaultDeathgasp:
+    #   collection: FemaleDeathGasp
 
 - type: emoteSounds
   id: MaleSlime
@@ -168,10 +168,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MaleDeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: MaleGasp
+    # DefaultDeathgasp:
+    #   collection: MaleDeathGasp
   params:
     variation: 0.125
 
@@ -212,10 +212,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: FemaleGasp
+    # DefaultDeathgasp:
+    #   collection: FemaleDeathGasp
   params:
     variation: 0.125
 
@@ -251,10 +251,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: DeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: MaleGasp
+    # DefaultDeathgasp:
+    #   collection: DeathGasp
   params:
     variation: 0.125
 
@@ -277,10 +277,10 @@
       collection: Hew
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: DeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: MaleGasp
+    # DefaultDeathgasp:
+    #   collection: DeathGasp
 
 - type: emoteSounds
   id: UnisexDwarf
@@ -317,10 +317,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MaleDeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: MaleGasp
+    # DefaultDeathgasp:
+    #   collection: MaleDeathGasp
   params:
     variation: 0.125
     pitch: 0.75
@@ -360,10 +360,10 @@
       collection: Weh
     Hew:
       collection: Hew
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: FemaleGasp
+    # DefaultDeathgasp:
+    #   collection: FemaleDeathGasp
   params:
     variation: 0.125
     pitch: 0.75
@@ -389,10 +389,10 @@
       collection: Hew
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MothDeathGasp
+    # Gasp: | collard-NoGasps
+    #   collection: MaleGasp
+    # DefaultDeathgasp:
+    #   collection: MothDeathGasp
 
 - type: emoteSounds
   id: UnisexSilicon
@@ -619,7 +619,7 @@
       collection: Hew
     Honk:
       collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: WawaDeath
+    # Gasp: | collard-NoGasps
+    #   collection: MaleGasp
+    # DefaultDeathgasp:
+    #   collection: WawaDeath
