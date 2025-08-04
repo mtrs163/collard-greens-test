@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 264.0.0
+  engineVersion: 265.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/31/2025 04:33:37
-  entityCount: 18307
+  time: 08/04/2025 05:37:06
+  entityCount: 18335
 maps:
 - 1
 grids:
@@ -11477,6 +11477,12 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -55.5,37.5
+      parent: 2
+  - uid: 18308
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 50.5,-6.5
       parent: 2
 - proto: APCElectronics
   entities:
@@ -25105,6 +25111,81 @@ entities:
     - type: Transform
       pos: -75.5,6.5
       parent: 2
+  - uid: 18321
+    components:
+    - type: Transform
+      pos: 50.5,-6.5
+      parent: 2
+  - uid: 18322
+    components:
+    - type: Transform
+      pos: 50.5,-7.5
+      parent: 2
+  - uid: 18323
+    components:
+    - type: Transform
+      pos: 50.5,-8.5
+      parent: 2
+  - uid: 18324
+    components:
+    - type: Transform
+      pos: 49.5,-8.5
+      parent: 2
+  - uid: 18325
+    components:
+    - type: Transform
+      pos: 48.5,-8.5
+      parent: 2
+  - uid: 18326
+    components:
+    - type: Transform
+      pos: 50.5,-5.5
+      parent: 2
+  - uid: 18327
+    components:
+    - type: Transform
+      pos: 49.5,-5.5
+      parent: 2
+  - uid: 18328
+    components:
+    - type: Transform
+      pos: 48.5,-5.5
+      parent: 2
+  - uid: 18329
+    components:
+    - type: Transform
+      pos: 47.5,-5.5
+      parent: 2
+  - uid: 18330
+    components:
+    - type: Transform
+      pos: 46.5,-5.5
+      parent: 2
+  - uid: 18331
+    components:
+    - type: Transform
+      pos: 45.5,-5.5
+      parent: 2
+  - uid: 18332
+    components:
+    - type: Transform
+      pos: 45.5,-6.5
+      parent: 2
+  - uid: 18333
+    components:
+    - type: Transform
+      pos: 45.5,-7.5
+      parent: 2
+  - uid: 18334
+    components:
+    - type: Transform
+      pos: 45.5,-8.5
+      parent: 2
+  - uid: 18335
+    components:
+    - type: Transform
+      pos: 44.5,-6.5
+      parent: 2
 - proto: CableHV
   entities:
   - uid: 1412
@@ -33113,6 +33194,66 @@ entities:
     components:
     - type: Transform
       pos: -41.5,62.5
+      parent: 2
+  - uid: 18309
+    components:
+    - type: Transform
+      pos: 48.5,0.5
+      parent: 2
+  - uid: 18310
+    components:
+    - type: Transform
+      pos: 48.5,-0.5
+      parent: 2
+  - uid: 18311
+    components:
+    - type: Transform
+      pos: 48.5,-1.5
+      parent: 2
+  - uid: 18312
+    components:
+    - type: Transform
+      pos: 48.5,-2.5
+      parent: 2
+  - uid: 18313
+    components:
+    - type: Transform
+      pos: 47.5,-2.5
+      parent: 2
+  - uid: 18314
+    components:
+    - type: Transform
+      pos: 47.5,-3.5
+      parent: 2
+  - uid: 18315
+    components:
+    - type: Transform
+      pos: 47.5,-4.5
+      parent: 2
+  - uid: 18316
+    components:
+    - type: Transform
+      pos: 47.5,-5.5
+      parent: 2
+  - uid: 18317
+    components:
+    - type: Transform
+      pos: 48.5,-5.5
+      parent: 2
+  - uid: 18318
+    components:
+    - type: Transform
+      pos: 49.5,-5.5
+      parent: 2
+  - uid: 18319
+    components:
+    - type: Transform
+      pos: 50.5,-5.5
+      parent: 2
+  - uid: 18320
+    components:
+    - type: Transform
+      pos: 50.5,-6.5
       parent: 2
 - proto: CableTerminal
   entities:
@@ -81977,7 +82118,7 @@ entities:
       name: гермозатворы оружейной
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 52.606415,3
+      pos: 52.5,3.5
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
@@ -92359,7 +92500,7 @@ entities:
       name: Свет - Зал
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -22,-1.5
+      pos: -21.5,-1.5
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
@@ -93007,7 +93148,7 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 9.499194,9.710835
+      pos: 9.5,9.5
       parent: 2
 - proto: SignDirectionalBridge
   entities:
@@ -93015,13 +93156,13 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 17.50023,-2.292512
+      pos: 17.5,-2.5
       parent: 2
   - uid: 13439
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 9.5013075,4.283748
+      pos: 9.5,4.5
       parent: 2
 - proto: SignDirectionalChapel
   entities:
@@ -93029,7 +93170,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -7.4998975,17.714151
+      pos: -7.5,17.5
       parent: 2
 - proto: SignDirectionalCryo
   entities:
@@ -93037,7 +93178,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -7.498636,17.298487
+      pos: -7.5,17.5
       parent: 2
 - proto: SignDirectionalDorms
   entities:
@@ -93045,7 +93186,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -7.498636,17.922377
+      pos: -7.5,17.5
       parent: 2
   - uid: 13301
     components:
@@ -93058,7 +93199,7 @@ entities:
   - uid: 13303
     components:
     - type: Transform
-      pos: -57.500492,20.283354
+      pos: -57.5,20.5
       parent: 2
 - proto: SignDirectionalEvac
   entities:
@@ -93130,7 +93271,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 9.49822,4.716147
+      pos: 9.5,4.5
       parent: 2
 - proto: SignDirectionalHydro
   entities:
@@ -93138,7 +93279,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -16.498493,36.71039
+      pos: -16.5,36.5
       parent: 2
 - proto: SignDirectionalIcu
   entities:
@@ -93174,7 +93315,7 @@ entities:
   - uid: 13306
     components:
     - type: Transform
-      pos: -29.49854,17.71081
+      pos: -29.5,17.5
       parent: 2
 - proto: SignDirectionalSci
   entities:
