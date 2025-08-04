@@ -36,69 +36,6 @@
     content: "Описания нет."
 
 - type: entity
-  id: SignalButton
-  name: signal button
-  description: It's a button for activating something.
-  placement:
-    mode: SnapgridCenter
-    snap:
-    - Wallmount
-  components:
-  - type: StationAiWhitelist
-  - type: WallMount
-    arc: 360
-  - type: Clickable
-  - type: InteractionOutline
-  - type: Physics
-    canCollide: false
-  - type: Sprite
-    drawdepth: SmallObjects
-    sprite: Structures/Wallmounts/switch.rsi
-    state: dead
-  - type: UseDelay
-    delay: 0.5 # prevent light-toggling auto-clickers.
-  - type: SignalSwitch
-    onPort: Pressed
-    offPort: Pressed
-    statusPort: Pressed
-  - type: Rotatable
-  - type: Construction
-    graph: SignalButtonGraph
-    node: SignalButtonNode
-  - type: Fixtures
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-  - type: WirelessNetworkConnection
-    range: 200
-  - type: DeviceLinkSource
-    ports:
-      - Pressed
-  - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: Metallic
-  - type: Destructible
-    thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 80
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-      - trigger:
-          !type:DamageTrigger
-          damage: 40
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-          - !type:PlaySoundBehavior
-            sound:
-              collection: MetalBreak
-              params:
-                volume: -8
-  - type: ItemDetail # collard-ItemDetail
-    content: "Описания нет."
-
-- type: entity
   parent: BaseWallmountMetallic
   id: SignalButton
   name: signal button
@@ -147,6 +84,8 @@
               collection: MetalBreak
               params:
                 volume: -8
+  - type: ItemDetail # collard-ItemDetail
+    content: "Описания нет."
 
 - type: entity
   parent: BaseWallmountMetallic
