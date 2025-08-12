@@ -35,8 +35,8 @@
   - type: DamageOtherOnHit
     damage:
       types:
-        Slash: 8
-        Piercing: 10
+        Slash: 10 # collard-LifeValue
+        Piercing: 20 # collard-LifeValue
   - type: StaminaDamageOnCollide
     damage: 45
   - type: StaminaDamageOnEmbed

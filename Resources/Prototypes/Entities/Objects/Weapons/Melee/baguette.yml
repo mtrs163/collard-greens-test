@@ -8,7 +8,7 @@
     wideAnimationRotation: -120
     damage:
       types:
-        Slash: 16
+        Slash: 30 # collard-LifeValue
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: Reflect

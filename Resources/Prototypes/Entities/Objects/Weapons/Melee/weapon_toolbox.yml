@@ -16,6 +16,6 @@
     attackRate: 1.5
     damage:
       types:
-        Blunt: 20
+        Blunt: 50 # collard-LifeValue
     soundHit:
       path: "/Audio/Weapons/smash.ogg"

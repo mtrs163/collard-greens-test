@@ -103,6 +103,7 @@
       params:
         volume: 1.0
         variation: 0.125
+    worksOnDead: true # collard-LifeValue
   - type: Stack
     stackType: RegenerativeMesh
     count: 10
@@ -213,6 +214,7 @@
       params:
         volume: 1.0
         variation: 0.125
+    worksOnDead: true # collard-LifeValue
   - type: Stack
     stackType: MedicatedSuture
     count: 10
@@ -325,6 +327,7 @@
         params:
           volume: 1.0
           variation: 0.125
+      worksOnDead: true # collard-LifeValue
 
 - type: entity
   name: roll of gauze
@@ -348,8 +351,8 @@
       - Biological
     damage:
       types:
-        Slash: -5
-        Piercing: -10
+        Slash: -2 # collard-LifeValue
+        Piercing: -3 # collard-LifeValue
     bloodlossModifier: -10
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
@@ -361,6 +364,7 @@
       params:
         volume: 1.0
         variation: 0.125
+    worksOnDead: true # collard-LifeValue
   - type: Stack
     stackType: Gauze
     count: 10
@@ -428,6 +432,7 @@
       params:
         volume: 1.0
         variation: 0.125
+    worksOnDead: true # collard-LifeValue
 
 # Pills
 - type: entity

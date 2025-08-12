@@ -40,15 +40,15 @@
         variation: 0.125
     activatedDamage:
       types:
-        Slash: 15
-        Heat: 15
+        Slash: 30 # collard-LifeValue
+        Heat: 30 # collard-LifeValue
         Structural: 20
   - type: MeleeWeapon
     wideAnimationRotation: -135
     attackRate: 1
     damage:
       types:
-        Blunt: 4.5
+        Blunt: 10 # collard-LifeValue
   - type: Item
     size: Small
   - type: UseDelay
@@ -116,8 +116,8 @@
         variation: 0.250
     activatedDamage:
         types:
-            Slash: 10
-            Heat: 10
+            Slash: 20 # collard-LifeValue
+            Heat: 20 # collard-LifeValue
     deactivatedSecret: true
   - type: ItemToggleActiveSound
     activeSound:
@@ -186,8 +186,8 @@
         variation: 0.250
     activatedDamage:
       types:
-        Slash: 10
-        Heat: 10
+        Slash: 20 # collard-LifeValue
+        Heat: 20 # collard-LifeValue
   - type: ComponentToggler
     components:
     - type: Sharp
@@ -253,8 +253,8 @@
   - type: ItemToggleMeleeWeapon
     activatedDamage:
         types:
-            Slash: 10
-            Heat: 12
+            Slash: 20 # collard-LifeValue
+            Heat: 25 # collard-LifeValue
     deactivatedSecret: true
   - type: Sprite
     sprite: Objects/Weapons/Melee/e_cutlass.rsi
@@ -293,8 +293,8 @@
         variation: 0.250
     activatedDamage:
         types:
-            Slash: 12
-            Heat: 12
+            Slash: 25 # collard-LifeValue
+            Heat: 25 # collard-LifeValue
             Structural: 15
   - type: ItemToggleActiveSound
     activeSound:
@@ -316,7 +316,7 @@
     angle: 100
     damage:
       types:
-        Blunt: 4.5
+        Blunt: 10 # collard-LifeValue
   - type: Sprite
     sprite: Objects/Weapons/Melee/e_sword_double.rsi
     layers:
@@ -347,7 +347,7 @@
     range: 2.0
     damage:
       types:
-        Blunt: 4.5
+        Blunt: 10 # collard-LifeValue
   - type: ItemToggleMeleeWeapon
     activatedSoundOnSwing:
       path: /Audio/Weapons/eblademiss.ogg
@@ -356,8 +356,8 @@
         variation: 0.250
     activatedDamage:
       types:
-        Slash: 20
-        Heat: 20
+        Slash: 40 # collard-LifeValue
+        Heat: 40 # collard-LifeValue
         Structural: 20
   - type: MeleeRequiresWield
   - type: HeldSpeedModifier #slowdown is what balances this compared to a dsword

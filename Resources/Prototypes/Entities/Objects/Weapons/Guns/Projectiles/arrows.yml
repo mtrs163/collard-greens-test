@@ -40,7 +40,7 @@
     onlyCollideWhenShot: true
     damage:
       types:
-        Piercing: 25
+        Piercing: 50 # collard-LifeValue
   - type: SolutionContainerManager
     solutions:
       ammo:
@@ -79,7 +79,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 70 # collard-LifeValue
 
 - type: entity
   parent: BaseArrow
@@ -102,7 +102,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 40 # collard-LifeValue
   - type: Construction
     graph: ImprovisedArrow
     node: ImprovisedArrow
@@ -128,7 +128,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 60 # collard-LifeValue
   - type: Construction
     graph: ImprovisedArrowPlasma
     node: ImprovisedArrowPlasma
@@ -154,8 +154,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
-        Radiation: 5
+        Piercing: 40 # collard-LifeValue
+        Radiation: 30 # collard-LifeValue
   - type: Construction
     graph: ImprovisedArrowUranium
     node: ImprovisedArrowUranium
@@ -181,7 +181,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 65 # collard-LifeValues
   - type: Construction
     graph: ImprovisedArrowCarp
     node: ImprovisedArrowCarp

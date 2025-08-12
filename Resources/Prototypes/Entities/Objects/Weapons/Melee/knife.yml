@@ -16,7 +16,7 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Slash: 10
+        Slash: 30 # collard-LifeValue
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: Sprite
@@ -66,7 +66,7 @@
     attackRate: 1.5
     damage:
       types:
-        Slash: 13
+        Slash: 25 # collard-LifeValue
   - type: Item
     size: Normal
     sprite: Objects/Weapons/Melee/cleaver.rsi
@@ -93,7 +93,7 @@
     attackRate: 1.5
     damage:
       types:
-        Slash: 12
+        Slash: 27 # collard-LifeValue
   - type: EmbeddableProjectile
     sound: /Audio/Weapons/star_hit.ogg
     offset: -0.15,0.0
@@ -101,7 +101,7 @@
   - type: DamageOtherOnHit
     damage:
       types:
-        Slash: 10
+        Slash: 20 # collard-LifeValue
   - type: Item
     sprite: Objects/Weapons/Melee/combat_knife.rsi
     storedSprite:
@@ -155,7 +155,7 @@
     attackRate: 1.0
     damage:
       types:
-        Slash: 15
+        Slash: 30 # collard-LifeValue
   - type: Item
     sprite: Objects/Weapons/Melee/kukri_knife.rsi
     storedSprite: null
@@ -175,11 +175,11 @@
     attackRate: 1.2
     damage:
       types:
-        Slash: 5
+        Slash: 10 # collard-LifeValue
   - type: DamageOtherOnHit
     damage:
       types:
-        Slash: 10
+        Slash: 20 # collard-LifeValue
   - type: LandAtCursor
   - type: Sprite
     sprite: Clothing/Head/Hats/greyflatcap.rsi
@@ -220,7 +220,7 @@
     attackRate: 1.5
     damage:
       types:
-        Slash: 5.5
+        Slash: 15 # collard-LifeValue
   - type: Item
     sprite: Objects/Weapons/Melee/shiv.rsi
   - type: DisarmMalus
@@ -239,7 +239,7 @@
     attackRate: 1.5
     damage:
       types:
-        Slash: 7 #each "tier" grants an additional 2 damage
+        Slash: 20 #each "tier" grants an additional 2 damage || collard-LifeValue
   - type: Item
     sprite: Objects/Weapons/Melee/reinforced_shiv.rsi
   - type: Sprite
@@ -258,7 +258,7 @@
     attackRate: 1.5
     damage:
       types:
-        Slash: 9
+        Slash: 25 # collard-LifeValue
   - type: Item
     sprite: Objects/Weapons/Melee/plasma_shiv.rsi
   - type: Sprite
@@ -277,8 +277,8 @@
     attackRate: 1.5
     damage:
       types:
-        Slash: 7
-        Radiation: 4
+        Slash: 20 # collard-LifeValue
+        Radiation: 10 # collard-LifeValue
   - type: Item
     sprite: Objects/Weapons/Melee/uranium_shiv.rsi
   - type: Sprite
@@ -302,7 +302,7 @@
     attackRate: 2
     damage:
       types:
-        Slash: 5
+        Slash: 10 # collard-LifeValue
   - type: EmbeddableProjectile
     sound: /Audio/Weapons/star_hit.ogg
     offset: -0.15,0.0
@@ -311,8 +311,8 @@
     ignoreResistances: true
     damage:
       types:
-        Slash: 10
-        Piercing: 15
+        Slash: 20 # collard-LifeValue
+        Piercing: 30 # collard-LifeValue
   - type: Item
     sprite: Objects/Weapons/Melee/throwing_knife.rsi
   - type: ThrowingAngle

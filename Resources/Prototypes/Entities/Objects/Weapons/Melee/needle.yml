@@ -11,7 +11,7 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Piercing: 1
+        Piercing: 5 # collard-LifeValue
   - type: DamageOtherOnHit
     damage:
       types:

@@ -38,7 +38,7 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Piercing: 12
+        Piercing: 25 # collard-LifeValue
     angle: 0
     animation: WeaponArcThrust
     soundHit:
@@ -46,7 +46,7 @@
   - type: DamageOtherOnHit
     damage:
       types:
-        Piercing: 15
+        Piercing: 30 # collard-LifeValue
   - type: Item
     size: Ginormous
   - type: Clothing
@@ -76,7 +76,7 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Piercing: 4
+        Piercing: 10 # collard-LifeValue
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -106,7 +106,7 @@
   - type: DamageOnLand
     damage:
       types:
-        Blunt: 5
+        Blunt: 10 # collard-LifeValue
   - type: UseDelay
   - type: Appearance
   - type: SolutionContainerVisuals
@@ -130,11 +130,11 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Piercing: 15
+        Piercing: 30 # collard-LifeValue
   - type: DamageOtherOnHit
     damage:
       types:
-        Piercing: 18
+        Piercing: 35 # collard-LifeValue
   - type: Construction
     graph: SpearReinforced
 
@@ -150,11 +150,11 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Piercing: 18
+        Piercing: 35 # collard-LifeValue
   - type: DamageOtherOnHit
     damage:
       types:
-        Piercing: 21
+        Piercing: 42 # collard-LifeValue
   - type: Construction
     graph: SpearPlasma
 
@@ -170,13 +170,13 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Piercing: 10
-        Radiation: 8
+        Piercing: 20 # collard-LifeValue
+        Radiation: 15 # collard-LifeValue
   - type: DamageOtherOnHit
     damage:
       types:
-        Piercing: 12
-        Radiation: 9
+        Piercing: 25 # collard-LifeValue
+        Radiation: 20 # collard-LifeValue
   - type: Construction
     graph: SpearUranium
 
@@ -217,7 +217,7 @@
 
 - type: entity
   name: sharkminnow tooth spear
-  parent: Spear 
+  parent: Spear
   id: SpearSharkMinnow
   description: A spear with a sharkminnow tooth as a tip.
   components:
@@ -231,6 +231,6 @@
   - type: DamageOtherOnHit
     damage:
       types:
-        Piercing: 25 #throw dmg enough to two-shot carp
+        Piercing: 50 #throw dmg enough to two-shot carp || # collard-LifeValue
   - type: Construction
     graph: SpearSharkMinnow

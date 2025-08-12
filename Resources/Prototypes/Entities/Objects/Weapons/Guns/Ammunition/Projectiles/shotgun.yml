@@ -10,7 +10,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 40
+        Piercing: 80 # collard-LifeValue
         Structural: 15
 
 
@@ -28,7 +28,7 @@
       types:
         Blunt: 10
   - type: StaminaDamageOnCollide
-    damage: 40 # 3 hits to stun
+    damage: 60 # 2 hits to stun || collard-LifeValue
 
 - type: entity
   id: PelletShotgun
@@ -42,7 +42,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10
+        Piercing: 20 # collard-LifeValue
         Structural: 15
 
 
@@ -68,8 +68,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 7
+        Blunt: 5 # collard-LifeValue
+        Heat: 15 # collard-LifeValue
   - type: IgnitionSource
     ignited: true
 
@@ -119,8 +119,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 3
-        Slash: 3
+        Piercing: 7 # collard-LifeValue
+        Slash: 5 # collard-LifeValue
 
 - type: entity
   id: PelletShotgunImprovisedSpread
@@ -204,7 +204,7 @@
     deleteOnCollide: false
     damage:
       types:
-        Heat: 5
+        Heat: 20 # collard-LifeValue
 
 - type: entity
   id: PelletShotgunUranium
@@ -218,7 +218,7 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 5
+        Radiation: 10 # collard-LifeValue
         Piercing: 5
 
 - type: entity
@@ -246,7 +246,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 70 # collard-LifeValue
         Structural: 5
 
 - type: entity
@@ -277,7 +277,7 @@
     deleteOnCollide: false
     damage:
       types:
-        Slash: 25
+        Slash: 40 # collard-LifeValue
 
 - type: entity
   id: PelletGlassSpread

@@ -62,4 +62,12 @@ public sealed partial class HealingComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier? HealingEndSound = null;
+
+    // collard-LifeValue-start
+    /// <summary>
+    /// Does the item work on corpses?
+    /// </summary>
+    [DataField]
+    public bool WorksOnDead = false;
+    // collard-LifeValue-end
 }

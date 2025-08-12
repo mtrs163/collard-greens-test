@@ -20,7 +20,7 @@
     ignoreResistances: true
     damage:
       types:
-        Slash: 5
-        Piercing: 10
+        Slash: 10 # collard-LifeValue
+        Piercing: 20 # collard-LifeValue
   - type: ThrowingAngle
     angularVelocity: true # spins

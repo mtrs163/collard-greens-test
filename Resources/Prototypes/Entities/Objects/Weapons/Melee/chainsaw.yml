@@ -20,9 +20,9 @@
     attackRate: 4
     damage:
       types:
-        Slash: 2
-        Blunt: 2
-        Structural: 4
+        Slash: 10 # collard-LifeValue
+        Blunt: 5 # collard-LifeValue
+        Structural: 5 # collard-LifeValue
     soundHit:
       path: /Audio/Weapons/chainsaw.ogg
       params:

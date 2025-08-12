@@ -30,6 +30,7 @@ public sealed class HealingSystem : EntitySystem
     [Dependency] private readonly MobThresholdSystem _mobThresholdSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private readonly MobStateSystem _mobStateSystem = default!; // collard-LifeValue
 
     public override void Initialize()
     {
@@ -184,6 +185,17 @@ public sealed class HealingSystem : EntitySystem
 
         if (TryComp<StackComponent>(healing, out var stack) && stack.Count < 1)
             return false;
+
+        // collard-LifeValue-start
+        if (!TryComp<MobStateComponent>(target.Owner, out var state))
+            return false;
+
+        if (!healing.Comp.WorksOnDead && _mobStateSystem.IsDead(target.Owner, state))
+        {
+            _popupSystem.PopupClient(Loc.GetString("medical-item-cant-use-on-dead", ("item", healing.Owner)), healing, user);
+            return false;
+        }
+        // collard-LifeValue-end
 
         if (!HasDamage(healing, target!))
         {

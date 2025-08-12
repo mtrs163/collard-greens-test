@@ -19,8 +19,8 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 10
-        Structural: 10
+        Blunt: 40 # collard-LifeValue
+        Structural: 40 # collard-LifeValue
   - type: Item
     size: Large
 
@@ -48,8 +48,8 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 5
-        Structural: 5
+        Blunt: 10 # collard-LifeValue
+        Structural: 10 # collard-LifeValue
     soundHit:
       path: /Audio/Effects/tesla_consume.ogg
       params:
@@ -57,13 +57,13 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 20
-        Structural: 25
+        Blunt: 40 # collard-LifeValue
+        Structural: 50 # collard-LifeValue
   - type: DamageOtherOnHit
     damage:
       types:
-        Blunt: 15
-        Structural: 15
+        Blunt: 30 # collard-LifeValue
+        Structural: 30 # collard-LifeValue
   - type: Item
     size: Ginormous
 
@@ -94,8 +94,8 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 5
-        Structural: 5
+        Blunt: 10 # collard-LifeValue
+        Structural: 10 # collard-LifeValue
     soundHit:
       path: /Audio/Effects/radpulse5.ogg
       params:
@@ -103,7 +103,7 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 15
-        Structural: 15
+        Blunt: 30 # collard-LifeValue
+        Structural: 30 # collard-LifeValue
   - type: Item
     size: Ginormous

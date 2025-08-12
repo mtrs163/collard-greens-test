@@ -19,7 +19,7 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 5
+        Blunt: 25 # collard-LifeValue
         Structural: 10
   - type: Item
     size: Normal

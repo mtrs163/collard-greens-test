@@ -91,7 +91,7 @@
     thresholds:
       0: Alive
       100: Critical
-      200: Dead
+      500: Dead # collard-LifeValue
   - type: MobStateActions
     actions:
       Critical:

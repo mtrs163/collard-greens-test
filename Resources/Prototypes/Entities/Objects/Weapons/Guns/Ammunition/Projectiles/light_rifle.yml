@@ -7,7 +7,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 19
+        Piercing: 35 # collard-LifeValue
 
 - type: entity
   id: BulletLightRiflePractice
@@ -30,7 +30,7 @@
     damage:
       types:
         Blunt: 3
-        Heat: 16
+        Heat: 17 # collard-LifeValue
 
 - type: entity
   id: BulletLightRifleUranium
@@ -41,5 +41,5 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 9
-        Piercing: 10
+        Radiation: 10 # collard-LifeValue
+        Piercing: 15 # collard-LifeValue

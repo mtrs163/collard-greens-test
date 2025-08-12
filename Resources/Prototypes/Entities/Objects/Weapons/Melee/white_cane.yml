@@ -14,14 +14,14 @@
     wideAnimationRotation: 45
     damage:
       types:
-        Blunt: 5
+        Blunt: 10 # collard-LifeValue
   - type: StaminaDamageOnHit
     damage: 5
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 3
+        Blunt: 15 # collard-LifeValue
   - type: UseDelay
     delay: 1
 

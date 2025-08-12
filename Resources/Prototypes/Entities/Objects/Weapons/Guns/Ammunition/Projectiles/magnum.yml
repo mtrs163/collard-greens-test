@@ -7,7 +7,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 70 # collard-LifeValue
 
 - type: entity
   id: BulletMagnumPractice
@@ -29,8 +29,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 32
+        Blunt: 10 # collard-LifeValue
+        Heat: 60 # collard-LifeValue
 
 - type: entity
   id: BulletMagnumAP
@@ -41,7 +41,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 26 # 20% decrease
+        Piercing: 56 # 20% decrease || collard-LifeValue
     ignoreResistances: true
 
 - type: entity
@@ -53,5 +53,5 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 15
-        Piercing: 20
+        Radiation: 30 # collard-LifeValue
+        Piercing: 30 # collard-LifeValue

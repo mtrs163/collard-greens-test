@@ -40,7 +40,7 @@
   - type: Explosive
     explosionType: Default
     intensitySlope: 2
-    maxIntensity: 100
+    maxIntensity: 200 # collard-LifeValue
     maxTileBreak: 1
     tileBreakScale: 2
   - type: TileFrictionModifier
@@ -104,7 +104,7 @@
         - Impassable
         - BulletImpassable
   - type: Explosive
-    totalIntensity: 50
+    totalIntensity: 100 # collard-LifeValue
   - type: Destructible
     thresholds:
     - trigger:
@@ -144,7 +144,7 @@
         - Impassable
         - BulletImpassable
   - type: Explosive
-    totalIntensity: 100
+    totalIntensity: 200 # collard-LifeValue
   - type: Destructible
     thresholds:
     - trigger:
@@ -172,7 +172,7 @@
   - type: Sprite
     state: big
   - type: Explosive
-    totalIntensity: 150
+    totalIntensity: 300 # collard-LifeValue
   - type: Destructible
     thresholds:
     - trigger:
