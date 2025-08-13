@@ -23,7 +23,7 @@
   equipment:
     shoes: ClothingShoesColorBlack
     id: ChefPDA
-    ears: ClothingHeadsetService
+    # ears: ClothingHeadsetService || collard-Headset1984
     belt: ClothingBeltChefFilled
   #storage:
     #back:

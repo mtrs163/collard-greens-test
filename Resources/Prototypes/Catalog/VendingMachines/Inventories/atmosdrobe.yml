@@ -8,7 +8,7 @@
     ClothingUniformJumpskirtAtmos: 3
     ClothingUniformJumpsuitAtmosCasual: 3
     ClothingShoesColorWhite: 3
-    ClothingHeadsetEngineering: 2
+    # ClothingHeadsetEngineering: 2 || collard-Headset1984
     ClothingHeadHelmetFire: 2
     ClothingOuterSuitFire: 2
     ClothingOuterWinterAtmos: 2

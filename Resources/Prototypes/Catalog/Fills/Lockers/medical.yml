@@ -45,7 +45,7 @@
     - id: ClothingHeadMirror
       prob: 0.1
     - id: ClothingHandsGlovesLatex
-    - id: ClothingHeadsetMedical
+    # - id: ClothingHeadsetMedical || collard-Headset1984
     - id: ClothingEyesHudMedical
     - !type:GroupSelector
       children:
@@ -100,7 +100,7 @@
     - id: PlasmaChemistryVial
     - id: ChemBag
     - id: ClothingHandsGlovesLatex
-    - id: ClothingHeadsetMedical
+    # - id: ClothingHeadsetMedical || collard-Headset1984
     - id: ClothingMaskSterile
     - id: HandLabeler
       prob: 0.5
@@ -136,6 +136,7 @@
       amount: 2
     - id: Tourniquet # collard-ParamedicQOL
       prob: 0.3
+    - id: RadioHandheld # collard-Headset1984
 
 - type: entity
   parent: LockerParamedic

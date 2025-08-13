@@ -21,7 +21,7 @@
   id: CargoTechGear
   equipment:
     id: CargoPDA
-    ears: ClothingHeadsetCargo
+    # ears: ClothingHeadsetCargo || collard-Headset1984
     pocket1: AppraisalTool
   #storage:
     #back:

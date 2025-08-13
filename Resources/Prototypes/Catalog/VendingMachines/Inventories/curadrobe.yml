@@ -13,7 +13,7 @@
     ClothingUniformJumpsuitLibrarian: 3
     ClothingUniformJumpskirtLibrarian: 3
     ClothingShoesBootsLaceup: 2
-    ClothingHeadsetService: 2
+    # ClothingHeadsetService: 2 || collard-Headset1984
   contrabandInventory:
     ToyFigurineLibrarian: 1
 

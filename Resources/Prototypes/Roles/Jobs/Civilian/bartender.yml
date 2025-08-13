@@ -23,7 +23,7 @@
   equipment:
     shoes: ClothingShoesColorBlack
     id: BartenderPDA
-    ears: ClothingHeadsetService
+    # ears: ClothingHeadsetService || collard-Headset1984
   #storage:
     #back:
     #- Stuff

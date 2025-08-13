@@ -29,7 +29,7 @@
   equipment:
     eyes: ClothingEyesGlassesSecurity
     id: DetectivePDA
-    ears: ClothingHeadsetSecurity
+    # ears: ClothingHeadsetSecurity || collard-Headset1984
     belt: ClothingBeltHolsterFilled
   storage:
     back:

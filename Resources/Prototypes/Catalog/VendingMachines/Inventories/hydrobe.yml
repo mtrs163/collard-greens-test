@@ -10,7 +10,7 @@
     ClothingUniformJumpskirtHydroponics: 3
     ClothingNeckScarfStripedGreen: 3
     ClothingHeadBandBotany: 3
-    ClothingHeadsetService: 2
+    # ClothingHeadsetService: 2 || collard-Headset1984
     ClothingOuterWinterHydro: 2
   contrabandInventory:
     ToyFigurineBotanist: 1

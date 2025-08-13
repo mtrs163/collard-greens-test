@@ -26,7 +26,7 @@
     shoes: ClothingShoesBootsWork
     id: TechnicalAssistantPDA
     belt: ClothingBeltUtilityEngineering
-    ears: ClothingHeadsetEngineering
+    # ears: ClothingHeadsetEngineering || collard-Headset1984
     pocket2: BookEngineersHandbook
   #storage:
     #back:

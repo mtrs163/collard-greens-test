@@ -20,7 +20,7 @@
   equipment:
     shoes: ClothingShoesGaloshes
     id: JanitorPDA
-    ears: ClothingHeadsetService
+    # ears: ClothingHeadsetService || collard-Headset1984
     belt: ClothingBeltJanitorFilled
   #storage:
     #back:
@@ -33,7 +33,7 @@
     id: JanitorPDA
     gloves: ClothingHandsGlovesJanitor
     head: ClothingHeadHatCatEars
-    ears: ClothingHeadsetService
+    # ears: ClothingHeadsetService || collard-Headset1984
     belt: ClothingBeltJanitorFilled
 
 - type: chameleonOutfit

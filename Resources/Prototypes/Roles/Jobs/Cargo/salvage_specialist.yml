@@ -22,7 +22,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     id: SalvagePDA
-    ears: ClothingHeadsetCargo
+    # ears: ClothingHeadsetCargo || collard-Headset1984
   #storage:
     #back:
     #- Stuff

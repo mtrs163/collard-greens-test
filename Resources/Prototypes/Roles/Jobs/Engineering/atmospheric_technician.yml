@@ -27,7 +27,7 @@
     eyes: ClothingEyesGlassesMeson
     id: AtmosPDA
     belt: ClothingBeltUtilityEngineering
-    ears: ClothingHeadsetEngineering
+    # ears: ClothingHeadsetEngineering || collard-Headset1984
   #storage:
     #back:
     #- Stuff

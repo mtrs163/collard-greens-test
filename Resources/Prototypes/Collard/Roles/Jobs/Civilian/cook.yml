@@ -17,7 +17,7 @@
 - type: startingGear
   id: CookGear
   equipment:
-    ears: ClothingHeadsetService
+    # ears: ClothingHeadsetService || collard-Headset1984
     id: CookPDA
 
 - type: chameleonOutfit
