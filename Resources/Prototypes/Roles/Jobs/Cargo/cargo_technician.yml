@@ -10,6 +10,7 @@
   access:
   - Cargo
 #  - Maintenance || collard-NoMaintAccess
+  - External # collard-CargoExternal
   extendedAccess:
   - Salvage
   special:
