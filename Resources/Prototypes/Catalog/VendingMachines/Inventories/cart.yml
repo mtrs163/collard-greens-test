@@ -16,7 +16,7 @@
     EncryptionKeyScience: 2
     EncryptionKeySecurity: 1
     EncryptionKeyService: 3
-    RadioHandheldSecurity: 5 # collard-Headset1984
+    RadioHandheld: 5 # collard-Headset1984
     Badge: 5 # collard-Badge
   contrabandInventory:
     BalloonNT: 2
