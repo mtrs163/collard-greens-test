@@ -348,9 +348,6 @@
   id: ComputerTelevisionCircuitboard
 
 - type: Tag
-  id: ConstructionMaterial
-
-- type: Tag
   id: ConveyorAssembly
 
 - type: Tag
@@ -1201,9 +1198,6 @@
 
 - type: Tag
   id: RollingPin
-
-- type: Tag
-  id: Ruminant
 
 - type: Tag
   id: SaltShaker

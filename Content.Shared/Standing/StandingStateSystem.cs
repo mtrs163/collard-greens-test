@@ -1,4 +1,3 @@
-using Content.Shared.Climbing.Events;
 using Content.Shared.Hands.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Systems;
@@ -24,9 +23,9 @@ public sealed class StandingStateSystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<StandingStateComponent, AttemptMobCollideEvent>(OnMobCollide);
         SubscribeLocalEvent<StandingStateComponent, AttemptMobTargetCollideEvent>(OnMobTargetCollide);
+        SubscribeLocalEvent<StandingStateComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeedModifiers);
         SubscribeLocalEvent<StandingStateComponent, RefreshFrictionModifiersEvent>(OnRefreshFrictionModifiers);
         SubscribeLocalEvent<StandingStateComponent, TileFrictionEvent>(OnTileFriction);
-        SubscribeLocalEvent<StandingStateComponent, EndClimbEvent>(OnEndClimb);
     }
 
     private void OnMobTargetCollide(Entity<StandingStateComponent> ent, ref AttemptMobTargetCollideEvent args)
@@ -45,28 +44,25 @@ public sealed class StandingStateSystem : EntitySystem
         }
     }
 
+    private void OnRefreshMovementSpeedModifiers(Entity<StandingStateComponent> entity, ref RefreshMovementSpeedModifiersEvent args)
+    {
+        if (!entity.Comp.Standing)
+            args.ModifySpeed(entity.Comp.FrictionModifier);
+    }
+
     private void OnRefreshFrictionModifiers(Entity<StandingStateComponent> entity, ref RefreshFrictionModifiersEvent args)
     {
         if (entity.Comp.Standing)
             return;
 
-        args.ModifyFriction(entity.Comp.DownFrictionMod);
-        args.ModifyAcceleration(entity.Comp.DownFrictionMod);
+        args.ModifyFriction(entity.Comp.FrictionModifier);
+        args.ModifyAcceleration(entity.Comp.FrictionModifier);
     }
 
     private void OnTileFriction(Entity<StandingStateComponent> entity, ref TileFrictionEvent args)
     {
         if (!entity.Comp.Standing)
-            args.Modifier *= entity.Comp.DownFrictionMod;
-    }
-
-    private void OnEndClimb(Entity<StandingStateComponent> entity, ref EndClimbEvent args)
-    {
-        if (entity.Comp.Standing)
-            return;
-
-        // Currently only Climbing also edits fixtures layers like this so this is fine for now.
-        ChangeLayers(entity);
+            args.Modifier *= entity.Comp.FrictionModifier;
     }
 
     public bool IsDown(EntityUid uid, StandingStateComponent? standingState = null)
@@ -122,7 +118,17 @@ public sealed class StandingStateSystem : EntitySystem
         _appearance.SetData(uid, RotationVisuals.RotationState, RotationState.Horizontal, appearance);
 
         // Change collision masks to allow going under certain entities like flaps and tables
-        ChangeLayers((uid, standingState));
+        if (TryComp(uid, out FixturesComponent? fixtureComponent))
+        {
+            foreach (var (key, fixture) in fixtureComponent.Fixtures)
+            {
+                if ((fixture.CollisionMask & StandingCollisionLayer) == 0)
+                    continue;
+
+                standingState.ChangedFixtures.Add(key);
+                _physics.SetCollisionMask(uid, key, fixture, fixture.CollisionMask & ~StandingCollisionLayer, manager: fixtureComponent);
+            }
+        }
 
         // check if component was just added or streamed to client
         // if true, no need to play sound - mob was down before player could seen that
@@ -167,43 +173,17 @@ public sealed class StandingStateSystem : EntitySystem
 
         _appearance.SetData(uid, RotationVisuals.RotationState, RotationState.Vertical, appearance);
 
-        RevertLayers((uid, standingState));
+        if (TryComp(uid, out FixturesComponent? fixtureComponent))
+        {
+            foreach (var key in standingState.ChangedFixtures)
+            {
+                if (fixtureComponent.Fixtures.TryGetValue(key, out var fixture))
+                    _physics.SetCollisionMask(uid, key, fixture, fixture.CollisionMask | StandingCollisionLayer, fixtureComponent);
+            }
+        }
+        standingState.ChangedFixtures.Clear();
 
         return true;
-    }
-
-    // TODO: This should be moved to a PhysicsModifierSystem which raises events so multiple systems can modify fixtures at once
-    private void ChangeLayers(Entity<StandingStateComponent, FixturesComponent?> entity)
-    {
-        if (!Resolve(entity, ref entity.Comp2, false))
-            return;
-
-        foreach (var (key, fixture) in entity.Comp2.Fixtures)
-        {
-            if ((fixture.CollisionMask & StandingCollisionLayer) == 0 || !fixture.Hard)
-                continue;
-
-            entity.Comp1.ChangedFixtures.Add(key);
-            _physics.SetCollisionMask(entity, key, fixture, fixture.CollisionMask & ~StandingCollisionLayer, manager: entity.Comp2);
-        }
-    }
-
-    // TODO: This should be moved to a PhysicsModifierSystem which raises events so multiple systems can modify fixtures at once
-    private void RevertLayers(Entity<StandingStateComponent, FixturesComponent?> entity)
-    {
-        if (!Resolve(entity, ref entity.Comp2, false))
-        {
-            entity.Comp1.ChangedFixtures.Clear();
-            return;
-        }
-
-        foreach (var key in entity.Comp1.ChangedFixtures)
-        {
-            if (entity.Comp2.Fixtures.TryGetValue(key, out var fixture) && fixture.Hard)
-                _physics.SetCollisionMask(entity, key, fixture, fixture.CollisionMask | StandingCollisionLayer, entity.Comp2);
-        }
-
-        entity.Comp1.ChangedFixtures.Clear();
     }
 }
 
