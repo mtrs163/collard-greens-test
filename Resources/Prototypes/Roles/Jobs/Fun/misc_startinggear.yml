@@ -160,11 +160,11 @@
     - WelderExperimental
     - Omnitool
     - HandTeleporterAdmeme
-    - ChemistryBottleNocturine
     - RegenerativeMesh
     - MedicatedSuture
     - PinpointerUniversal
     - AnomalyLocatorWideUnpowered
+    - AnomalyLocatorUnpowered
     - AdvancedMineralScannerUnpowered
     - SpectralLocatorUnpowered
     - AnomalyScanner
@@ -174,8 +174,8 @@
     - RCDExperimental
     - AdminHypo
     - DoorRemoteAll
-    - WeaponLauncherAdmemeMeteorLarge
     - EmagUnlimited
+    - AccessBreakerUnlimited
     # collard-AghostGear-end
 
 #Gladiator with spear
