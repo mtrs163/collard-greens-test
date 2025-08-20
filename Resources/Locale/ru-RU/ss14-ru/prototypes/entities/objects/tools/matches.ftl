@@ -7,3 +7,7 @@ ent-MatchstickSpent = { ent-Matchstick }
     .desc = { ent-Matchstick.desc }
 ent-Matchbox = спичечный коробок
     .desc = Небольшой коробок Почти-Но-Не-Совсем-Плазменных-Премиум-Спичек.
+ent-GorlexMatchbox = спичечный коробок Горлекса
+    .desc = Пневматический спичечный коробок, стилизованный под экипировку Мародёров Горлекса. Содержит 24 спички.
+ent-GorlexMatchstick = спичка Горлекса
+    .desc = A military grade match stick, used for lighting fine smokables and noncombatants alike. Спичка военного класса, используемая для поджигания хороших курительных смесей или гражданских.

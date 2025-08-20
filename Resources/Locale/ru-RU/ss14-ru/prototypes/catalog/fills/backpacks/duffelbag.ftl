@@ -63,3 +63,6 @@ ent-ClothingBackpackDuffelSyndicateMedicalBundleFilled = { ent-ClothingBackpackD
 ent-ClothingBackpackDuffelSyndicateDecoyKitFilled = { ent-ClothingBackpackDuffelSyndicate }
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
     .suffix = набор обманок
+ent-ClothingBackpackDuffelSyndicateFilledRifle = { ent-ClothingBackpackDuffelSyndicate }
+    .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
+    .suffix = набор Estoc DMR
