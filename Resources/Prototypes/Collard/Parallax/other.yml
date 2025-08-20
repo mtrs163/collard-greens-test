@@ -8,6 +8,7 @@
       scrolling: "0.1, 0"
       tiled: true
       shader: ""
+      useMapLighting: true
     - texture:
         !type:ImageParallaxTextureSource
         path: "/Textures/Collard/Parallaxes/water.png"
@@ -15,6 +16,7 @@
       scrolling: "-0.1, 0"
       tiled: true
       shader: ""
+      useMapLighting: true
   layersLQ:
     - texture:
         !type:ImageParallaxTextureSource
@@ -23,4 +25,5 @@
       scrolling: "-0.1, 0"
       tiled: true
       shader: ""
+      useMapLighting: true
   layersLQUseHQ: false
