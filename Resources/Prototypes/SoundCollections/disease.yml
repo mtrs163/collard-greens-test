@@ -66,4 +66,4 @@
 - type: soundCollection
   id: Vomit
   files:
-  - /Audio/Effects/Fluids/splat.ogg
+  - /Audio/Collard/Voice/Misc/vomit.ogg # collard-NewVomitSound
