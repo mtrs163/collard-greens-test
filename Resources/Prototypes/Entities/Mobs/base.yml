@@ -100,6 +100,12 @@
         damage: 40
       behaviors:
       - !type:VomitBehavior
+    - trigger: # collard-BloodVomit
+        !type:DamageTypeTrigger
+        damageType: Radiation
+        damage: 70
+      behaviors:
+      - !type:BloodVomitBehavior
   - type: RadiationReceiver
   - type: Stamina
   - type: MobState
