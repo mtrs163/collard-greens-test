@@ -1,5 +1,5 @@
 - files:
   - "vomit.ogg"
-  license: "GNU Lesser General Public License version 3"
-  copyright: "Taken from HBM Nuclear Tech mod"
+  license: "Custom"
+  copyright: "Taken from HBM Nuclear Tech mod. Licensed under GNU General Public License version 3"
   source: "https://github.com/HbmMods/Hbm-s-Nuclear-Tech-GIT/blob/master/src/main/resources/assets/hbm/sounds/player/vomit.ogg"

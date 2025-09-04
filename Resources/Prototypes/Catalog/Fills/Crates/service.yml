@@ -144,9 +144,9 @@
   - type: StorageFill
     contents:
     - id: Paper
-      amount: 12
+      amount: 10 # collard-EnvelopeGlowup: envelope doesn't fit
     - id: PaperOffice
-      amount: 6
+      amount: 5 # collard-EnvelopeGlowup: envelope doesn't fit
     - id: Pen
       amount: 2
     - id: BoxFolderClipboardEmpty
