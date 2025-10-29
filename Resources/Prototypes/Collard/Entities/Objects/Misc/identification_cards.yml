@@ -6,6 +6,12 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idcookbasic
+    - state: stripe_top
+      color: &color-service-top "#639137"
+    - state: stripe_bottom
+      color: &color-service-bottom "#446326"
+    - sprite: &icon-rsi Collard/Interface/Misc/job_icons.rsi
+      offset: &icon-offset -0.09375, 0.0625 #3 pixels left, 2 pixels up
+      state: Cook
   - type: PresetIdCard
     job: Cook
