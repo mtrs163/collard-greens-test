@@ -39,7 +39,9 @@ public sealed class DetailExaminableSystem : EntitySystem
     private void OnMapInit(EntityUid uid, DetailExaminableComponent component, MapInitEvent args)
     {
         // try to add posing action when posing comp added
+        component.PoseActionEntity = null;
         _actions.AddAction(uid, ref component.PoseActionEntity, component.ChangePoseAction);
+        component.FlavorActionEntity = null;
         _actions.AddAction(uid, ref component.FlavorActionEntity, component.ChangeFlavorAction);
     }
 

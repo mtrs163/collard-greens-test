@@ -42,7 +42,7 @@ public sealed partial class GhostGui : UIWidget
         GhostWarpButton.OnPressed += _ => RequestWarpsPressed?.Invoke();
         ReturnToBodyButton.OnPressed += _ => ReturnToBodyPressed?.Invoke();
         GhostRolesButton.OnPressed += _ => GhostRolesPressed?.Invoke();
-        GhostRolesButton.OnPressed += _ => GhostRolesButton.StyleClasses.Remove(StyleBase.ButtonCaution);
+        GhostRolesButton.OnPressed += _ => GhostRolesButton.StyleClasses.Remove(StyleClass.Negative);
         GhostRespawnButton.OnPressed += _ => RespawnRulesWindow.OpenCentered(); // collard-GhostRespawn
         RespawnRulesWindow.RespawnButton.OnPressed += _ => GhostRespawnPressed?.Invoke(); // collard-GhostRespawn
     }
@@ -77,7 +77,7 @@ public sealed partial class GhostGui : UIWidget
 
             if (roles > _prevNumberRoles)
             {
-                GhostRolesButton.StyleClasses.Add(StyleBase.ButtonCaution);
+                GhostRolesButton.StyleClasses.Add(StyleClass.Negative);
             }
 
             _prevNumberRoles = (int)roles;

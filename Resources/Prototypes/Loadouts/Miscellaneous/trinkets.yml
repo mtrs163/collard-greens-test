@@ -6,7 +6,7 @@
     requirement:
       !type:DepartmentTimeRequirement
       department: Command
-      time: 3600 # 1 hour
+      time: 1h
 
 # Flowers
 - type: loadout
@@ -105,6 +105,31 @@
     back:
     - CigarGold
   groupBy: "smokeables"
+
+# Folders
+- type: loadout
+  id: BoxFolderBaseThreePapers
+  storage:
+    back:
+    - BoxFolderBaseThreePapers
+  groupBy: "folders"
+
+- type: loadout
+  id: BoxFolderPlasticClipboardThreePapers
+  storage:
+    back:
+    - BoxFolderPlasticClipboardThreePapers
+  groupBy: "folders"
+
+- type: loadout
+  id: BoxFolderClipboardThreePapers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: Command
+  storage:
+    back:
+    - BoxFolderClipboardThreePapers
+  groupBy: "folders"
 
 # Pins
 - type: loadout
