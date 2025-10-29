@@ -1,4 +1,4 @@
-using Content.Server.Medical;
+using Content.Shared.Medical;
 using Content.Server.Destructible.Thresholds.Behaviors;
 using Content.Server.Destructible;
 using Content.Server.Body.Systems;
