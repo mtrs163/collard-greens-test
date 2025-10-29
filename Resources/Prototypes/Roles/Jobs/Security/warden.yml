@@ -3,13 +3,13 @@
   name: job-name-warden
   description: job-description-warden
   playTimeTracker: JobWarden
-  # requirements:
-  #   - !type:RoleTimeRequirement
-  #     role: JobSecurityOfficer
-  #     time: 18000 #5 hrs
-  #   - !type:DepartmentTimeRequirement
-  #     department: Security
-  #     time: 36000 #10 hrs
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10h
   weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"
@@ -25,6 +25,8 @@
   - External
   - Detective
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

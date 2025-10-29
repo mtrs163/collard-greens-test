@@ -3,13 +3,13 @@
   name: job-name-rd
   description: job-description-rd
   playTimeTracker: JobResearchDirector
-  # requirements:
-  # - !type:RoleTimeRequirement
-  #   role: JobScientist
-  #   time: 18000 #5 hrs
-  # - !type:DepartmentTimeRequirement
-  #   department: Science
-  #   time: 36000 #10 hrs
+  requirements:
+  - !type:RoleTimeRequirement
+    role: JobScientist
+    time: 5h
+  - !type:DepartmentTimeRequirement
+    department: Science
+    time: 10h
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"

@@ -12,6 +12,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - CaptainJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -29,6 +30,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - HoPJobTrinkets
   - GroupSpeciesBreathTool
 
 # Silicons
@@ -61,6 +63,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - PassengerJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -77,6 +80,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - BartenderJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -91,6 +95,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ServiceWorkerJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -108,6 +113,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ChefJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -122,6 +128,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - LibrarianJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -137,6 +144,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - LawyerJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -156,6 +164,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ChaplainJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -173,6 +182,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - JanitorJobTrinkets
   - JanitorPlunger
   - GroupSpeciesBreathTool
 
@@ -190,6 +200,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - BotanistJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -208,6 +219,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ClownJobTrinkets
 
 - type: roleLoadout
   id: JobMime
@@ -226,9 +238,11 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - MimeJobTrinkets
 
 - type: roleLoadout
   id: JobMusician
+  canCustomizeName: true
   groups:
   - GroupTankHarness
   - MusicianJumpsuit
@@ -240,6 +254,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - MusicianJobTrinkets
   - Instruments
   - GroupSpeciesBreathTool
 
@@ -260,6 +275,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - QuartermasterJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -271,12 +287,14 @@
   - CargoTechnicianBackpack
   - CargoTechnicianOuterClothing
   - CargoTechnicianShoes
+  - CargoTechnicianID
   - Glasses
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - CargoTechnicianJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -292,6 +310,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - SalvageSpecialistJobTrinkets
   - GroupSpeciesBreathTool
 
 # Engineering
@@ -310,6 +329,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ChiefEngineerJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -323,6 +343,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - TechnicalAssistantJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -340,6 +361,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - StationEngineerJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -355,6 +377,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - AtmosphericTechnicianJobTrinkets
   - GroupSpeciesBreathTool
 
 # Science
@@ -375,6 +398,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ResearchDirectorJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -395,6 +419,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ScientistJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -409,6 +434,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ResearchAssistantJobTrinkets
   - GroupSpeciesBreathTool
 
 # Security
@@ -427,6 +453,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - HeadofSecurityJobTrinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
@@ -444,6 +471,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - WardenJobTrinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
@@ -462,6 +490,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - SecurityJobTrinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
@@ -479,6 +508,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - DetectiveJobTrinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
@@ -492,6 +522,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - SecurityCadetJobTrinkets
   - GroupSpeciesBreathToolSecurity
 
 # Medical
@@ -513,6 +544,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ChiefMedicalOfficerJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -533,6 +565,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - MedicalDoctorJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -547,6 +580,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - MedicalInternJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -564,6 +598,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ChemistJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
@@ -583,6 +618,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ParamedicJobTrinkets
   - GroupSpeciesBreathToolMedical
 
 # Wildcards
@@ -597,6 +633,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ZookeeperJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -611,6 +648,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - ReporterJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -625,6 +663,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - PsychologistJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -640,6 +679,7 @@
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
+  - BoxerJobTrinkets
   - GroupSpeciesBreathTool
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs

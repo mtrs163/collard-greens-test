@@ -11,6 +11,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    - Tail
     # undergarmentBottom: UndergarmentBottomBoxersReptilian || collard-Underwear
   - type: Hunger
   - type: Puller
@@ -71,13 +72,33 @@
   - type: Wagging
   - type: Inventory
     speciesId: reptilian
-#    femaleDisplacements: # collard-SexualDimorphism: not needed since lizors don't have sexual dimorphism
-#      jumpsuit:
-#        sizeMaps:
-#          32:
-#            sprite: Mobs/Species/Human/displacement.rsi
-#            state: jumpsuit-female
-
+    # femaleDisplacements: # collard-SexualDimorphism: not needed since lizors don't have sexual dimorphism
+    #   jumpsuit:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Human/displacement.rsi
+    #         state: jumpsuit-female
+    #   head:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: head
+    #   mask:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: mask
+    # displacements:
+    #   head:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: head
+    #   mask:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: mask
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -94,11 +115,32 @@
 #    undergarmentBottom: UndergarmentBottomBoxersReptilian || collard-Underwear
   - type: Inventory
     speciesId: reptilian
-#    femaleDisplacements: # collard-SexualDimorphism: not needed since lizors don't have sexual dimorphism
-#      jumpsuit:
-#        sizeMaps:
-#          32:
-#            sprite: Mobs/Species/Human/displacement.rsi
-#            state: jumpsuit-female
+    # femaleDisplacements: # collard-SexualDimorphism: not needed since lizors don't have sexual dimorphism
+    #   jumpsuit:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: jumpsuit-female
+    #   head:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: head
+    #   mask:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: mask
+    # displacements:
+    #   head:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: head
+    #   mask:
+    #     sizeMaps:
+    #       32:
+    #         sprite: Mobs/Species/Reptilian/displacement.rsi
+    #         state: mask
 
 #Weh
