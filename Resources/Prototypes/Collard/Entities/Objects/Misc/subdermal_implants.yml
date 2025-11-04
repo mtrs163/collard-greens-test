@@ -1,0 +1,30 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: DistressFlareImplant
+  name: distress flare implant
+  description: This implant will shoot a few distress flares should the user fall into critical condition or die.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      permanent: true
+      whitelist:
+        components:
+        - MobState # admeme implanting a chair with rattle implant needs to give the chair mobstate so it can die first
+    - type: TriggerOnMobstateChange
+      mobState:
+      - Critical
+      - Dead
+      keyOut: distress
+    - type: ProjectileGrenade
+      fillPrototype: BulletDistressFlare
+      capacity: 4
+      triggerKey: distress
+    - type: EmitSoundOnTrigger
+      sound:
+        path: "/Audio/Weapons/Guns/Gunshots/flaregun.ogg"
+      oneTime: true
+      keysIn:
+      - distress
+    - type: ContainerContainer
+      containers:
+        cluster-payload: !type:Container

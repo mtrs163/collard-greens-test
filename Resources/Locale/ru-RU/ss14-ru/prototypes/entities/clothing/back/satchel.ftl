@@ -31,6 +31,6 @@ ent-ClothingBackpackSatchelHydroponics = сумка ботаника
 ent-ClothingBackpackSatchelCargo = сумка грузчика
     .desc = Прочная сумка для воровства добычи.
 ent-ClothingBackpackSatchelSalvage = сумка утилизатора
-    .desc = Прочная сумка для хранения добычи.
+    .desc = Прочная сумка для хранения добычи. Имеет встроеный пускатель сигнала бедствия.
 ent-ClothingBackpackSatchelHolding = бездонная сумка
     .desc = Сумка, открывающаяся в локальный карман блюспейса.

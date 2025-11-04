@@ -34,6 +34,9 @@ public sealed class EmitSoundOnTriggerSystem : EntitySystem
         if (ent.Comp.Sound == null)
             return false;
 
+        if (ent.Comp.OneTime && ent.Comp.Triggered) // collard-DistressFlare
+            return false;
+
         if (ent.Comp.Positional)
         {
             var coords = Transform(target).Coordinates;
@@ -49,6 +52,7 @@ public sealed class EmitSoundOnTriggerSystem : EntitySystem
             else if (_netMan.IsServer)
                 _audio.PlayPvs(ent.Comp.Sound, target);
         }
+        ent.Comp.Triggered = true; // collard-DistressFlare
 
         return true;
     }
