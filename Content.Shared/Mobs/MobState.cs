@@ -1,6 +1,5 @@
 ﻿using Content.Shared.Mobs.Components;
 using Robust.Shared.Serialization;
-using Content.Shared.Inventory; // collard-DistressFlare
 
 namespace Content.Shared.Mobs;
 
@@ -29,10 +28,7 @@ public enum MobState : byte
 /// <param name="NewMobState">The new MobState</param>
 /// <param name="Origin">The Entity that caused this state change</param>
 public record struct MobStateChangedEvent(EntityUid Target, MobStateComponent Component, MobState OldMobState,
-    MobState NewMobState, EntityUid? Origin = null) : IInventoryRelayEvent // collard-DistressFlare
-{
-    SlotFlags IInventoryRelayEvent.TargetSlots => SlotFlags.WITHOUT_POCKET; // collard-DistressFlare
-}
+    MobState NewMobState, EntityUid? Origin = null);
 
 public static class A
 {

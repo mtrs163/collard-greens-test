@@ -186,7 +186,7 @@
       sprite: Clothing/Back/Backpacks/cargo.rsi
 
 - type: entity
-  parent: ClothingBackpackDistressFlare # collard-DistressFlare
+  parent: ClothingBackpack
   id: ClothingBackpackSalvage
   name: salvage bag
   description: A robust backpack for stashing your loot.
@@ -205,7 +205,7 @@
 
 #ERT
 - type: entity
-  parent: [ ClothingBackpackDistressFlare, BaseCentcommContraband ] # collard-DistressFlare
+  parent: [ ClothingBackpack, BaseCentcommContraband ]
   id: ClothingBackpackERTLeader
   name: ERT leader backpack
   description: A spacious backpack with lots of pockets, worn by the Commander of an Emergency Response Team.
