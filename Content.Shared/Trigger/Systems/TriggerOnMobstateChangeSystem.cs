@@ -3,6 +3,7 @@ using Content.Shared.Interaction.Events;
 using Content.Shared.Mobs;
 using Content.Shared.Popups;
 using Content.Shared.Trigger.Components.Triggers;
+using Content.Shared.Inventory; // collard-DistressFlare
 
 namespace Content.Shared.Trigger.Systems;
 
@@ -20,6 +21,7 @@ public sealed partial class TriggerOnMobstateChangeSystem : EntitySystem
 
         SubscribeLocalEvent<TriggerOnMobstateChangeComponent, ImplantRelayEvent<MobStateChangedEvent>>(OnMobStateRelay);
         SubscribeLocalEvent<TriggerOnMobstateChangeComponent, ImplantRelayEvent<SuicideEvent>>(OnSuicideRelay);
+        SubscribeLocalEvent<TriggerOnMobstateChangeComponent, InventoryRelayedEvent<MobStateChangedEvent>>(OnMobStateInventoryRelay); // collard-DistressFlare
     }
 
     private void OnMobStateChanged(EntityUid uid, TriggerOnMobstateChangeComponent component, MobStateChangedEvent args)
@@ -37,6 +39,16 @@ public sealed partial class TriggerOnMobstateChangeSystem : EntitySystem
 
         _trigger.Trigger(uid, component.TargetMobstateEntity ? args.ImplantedEntity : args.Event.Origin, component.KeyOut);
     }
+
+    // collard-DistressFlare-start
+    private void OnMobStateInventoryRelay(EntityUid uid, TriggerOnMobstateChangeComponent component, InventoryRelayedEvent<MobStateChangedEvent> args)
+    {
+        if (!component.MobState.Contains(args.Args.NewMobState))
+            return;
+
+        _trigger.Trigger(uid, component.TargetMobstateEntity ? args.Owner : args.Args.Origin, component.KeyOut);
+    }
+    // collard-DistressFlare-end
 
     /// <summary>
     /// Checks if the user has any implants that prevent suicide to avoid some cheesy strategies

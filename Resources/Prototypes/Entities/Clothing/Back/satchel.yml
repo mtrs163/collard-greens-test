@@ -160,7 +160,7 @@
       sprite: Clothing/Back/Satchels/cargo.rsi
 
 - type: entity
-  parent: ClothingBackpackSatchel
+  parent: ClothingBackpackSatchelDistressFlare # collard-DistressFlare
   id: ClothingBackpackSatchelSalvage
   name: salvage satchel
   description: A robust satchel for stashing your loot.
