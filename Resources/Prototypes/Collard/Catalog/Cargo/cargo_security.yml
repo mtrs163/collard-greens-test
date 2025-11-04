@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: DistressFlareImplant
+  icon:
+    sprite: Objects/Specific/Medical/implanter.rsi
+    state: implanter0
+  product: CrateDistressFlareImplants
+  cost: 4000
+  category: cargoproduct-category-name-armory
+  group: market

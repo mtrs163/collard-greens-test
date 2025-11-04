@@ -30,6 +30,7 @@ using Content.Shared.Verbs;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Wieldable;
 using Content.Shared.Zombies;
+using Content.Shared.Mobs; // collard-DistressFlare
 
 namespace Content.Shared.Inventory;
 
@@ -59,6 +60,7 @@ public partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, BeforeEmoteEvent>(RelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, StoodEvent>(RelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, DownedEvent>(RelayInventoryEvent);
+        SubscribeLocalEvent<InventoryComponent, MobStateChangedEvent>(RelayInventoryEvent); // collard-DistressFlare
 
         // by-ref events
         SubscribeLocalEvent<InventoryComponent, RefreshFrictionModifiersEvent>(RefRelayInventoryEvent);

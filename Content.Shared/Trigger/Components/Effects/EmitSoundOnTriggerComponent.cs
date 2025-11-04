@@ -16,6 +16,20 @@ public sealed partial class EmitSoundOnTriggerComponent : BaseXOnTriggerComponen
     [DataField(required: true), AutoNetworkedField]
     public SoundSpecifier? Sound;
 
+    // collard-DistressFlare-start
+    /// <summary>
+    /// Should the sound be one-time only, or can be activated numerous times.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool OneTime = false;
+
+    /// <summary>
+    /// Was this sound triggered before.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool Triggered = false;
+    // collard-DistressFlare-end
+
     /// <summary>
     /// Play the sound at the position instead of parented to the source entity.
     /// Useful if the entity is deleted after.

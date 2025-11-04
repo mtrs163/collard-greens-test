@@ -1,0 +1,7 @@
+- type: entity
+  id: DistressFlareImplanter
+  name: distress flare implanter
+  parent: BaseImplantOnlyImplanter
+  components:
+  - type: Implanter
+    implant: DistressFlareImplant
