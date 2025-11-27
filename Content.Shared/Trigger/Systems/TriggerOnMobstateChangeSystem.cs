@@ -45,7 +45,7 @@ public sealed partial class TriggerOnMobstateChangeSystem : TriggerOnXSystem
         if (!component.MobState.Contains(args.Args.NewMobState))
             return;
 
-        _trigger.Trigger(uid, component.TargetMobstateEntity ? args.Owner : args.Args.Origin, component.KeyOut);
+        Trigger.Trigger(uid, component.TargetMobstateEntity ? args.Owner : args.Args.Origin, component.KeyOut);
     }
     // collard-DistressFlare-end
 
