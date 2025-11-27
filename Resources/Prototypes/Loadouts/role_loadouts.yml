@@ -183,7 +183,6 @@
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
   - JanitorJobTrinkets
-  - JanitorPlunger
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -454,7 +453,6 @@
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
   - HeadofSecurityJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
@@ -472,7 +470,6 @@
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
   - WardenJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
@@ -491,7 +488,6 @@
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
   - SecurityJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
@@ -509,7 +505,6 @@
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
   - DetectiveJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
