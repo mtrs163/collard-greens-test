@@ -7,9 +7,8 @@ using Content.Shared.Inventory; // collard-DistressFlare
 
 namespace Content.Shared.Trigger.Systems;
 
-public sealed partial class TriggerOnMobstateChangeSystem : EntitySystem
+public sealed partial class TriggerOnMobstateChangeSystem : TriggerOnXSystem
 {
-    [Dependency] private readonly TriggerSystem _trigger = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     public override void Initialize()
@@ -29,7 +28,7 @@ public sealed partial class TriggerOnMobstateChangeSystem : EntitySystem
         if (!component.MobState.Contains(args.NewMobState))
             return;
 
-        _trigger.Trigger(uid, component.TargetMobstateEntity ? uid : args.Origin, component.KeyOut);
+        Trigger.Trigger(uid, component.TargetMobstateEntity ? uid : args.Origin, component.KeyOut);
     }
 
     private void OnMobStateRelay(EntityUid uid, TriggerOnMobstateChangeComponent component, ImplantRelayEvent<MobStateChangedEvent> args)
@@ -37,7 +36,7 @@ public sealed partial class TriggerOnMobstateChangeSystem : EntitySystem
         if (!component.MobState.Contains(args.Event.NewMobState))
             return;
 
-        _trigger.Trigger(uid, component.TargetMobstateEntity ? args.ImplantedEntity : args.Event.Origin, component.KeyOut);
+        Trigger.Trigger(uid, component.TargetMobstateEntity ? args.ImplantedEntity : args.Event.Origin, component.KeyOut);
     }
 
     // collard-DistressFlare-start
@@ -46,7 +45,7 @@ public sealed partial class TriggerOnMobstateChangeSystem : EntitySystem
         if (!component.MobState.Contains(args.Args.NewMobState))
             return;
 
-        _trigger.Trigger(uid, component.TargetMobstateEntity ? args.Owner : args.Args.Origin, component.KeyOut);
+        Trigger.Trigger(uid, component.TargetMobstateEntity ? args.Owner : args.Args.Origin, component.KeyOut);
     }
     // collard-DistressFlare-end
 

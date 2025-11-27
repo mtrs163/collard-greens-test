@@ -7,6 +7,7 @@ using Robust.Shared.Console;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Damage.Prototypes;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
