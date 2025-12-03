@@ -15,7 +15,7 @@ RELEASE_DIR = "release"
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "http://collard.neomatress.xyz/builds/"
+ROBUST_CDN_URL = "https://collard.neomatress.xyz/builds/"
 FORK_ID = "collardgreenssuperserver"
 
 def main():
