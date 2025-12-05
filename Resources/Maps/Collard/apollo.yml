@@ -4,7 +4,7 @@ meta:
   engineVersion: 268.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/05/2025 11:10:18
+  time: 12/05/2025 12:00:02
   entityCount: 18435
 maps:
 - 1
@@ -20393,7 +20393,7 @@ entities:
   - uid: 8065
     components:
     - type: Transform
-      pos: -45.5,-1.5
+      pos: -45.5,-2.5
       parent: 2
   - uid: 8066
     components:
