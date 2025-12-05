@@ -1,6 +1,5 @@
 ﻿using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
-using Robust.Shared.Random; // collard-Localization
 using Content.Shared.Speech;
 
 namespace Content.Server.Speech.EntitySystems;
@@ -12,8 +11,22 @@ public sealed class LizardAccentSystem : EntitySystem
     private static readonly Regex RegexInternalX = new(@"(\w)x");
     private static readonly Regex RegexLowerEndX = new(@"\bx([\-|r|R]|\b)");
     private static readonly Regex RegexUpperEndX = new(@"\bX([\-|r|R]|\b)");
-
-    [Dependency] private readonly IRobustRandom _random = default!; // collard-Localization
+    // collard-Localization-start
+    private static readonly Regex RegexLowerSCyr = new("с+");
+    private static readonly Regex RegexUpperSCyr = new("С+");
+    private static readonly Regex RegexLowerZCyr = new("з+");
+    private static readonly Regex RegexUpperZCyr = new("З+");
+    private static readonly Regex RegexLowerShCyr = new("ш+");
+    private static readonly Regex RegexUpperShCyr = new("Ш+");
+    private static readonly Regex RegexLowerChCyr = new("ч+");
+    private static readonly Regex RegexUpperChCyr = new("Ч+");
+    private static readonly Regex RegexLowerSchCyr = new("щ+");
+    private static readonly Regex RegexUpperSchCyr = new("Щ+");
+    private static readonly Regex RegexLowerTsCyr = new("ц+");
+    private static readonly Regex RegexUpperTsCyr = new("Ц+");
+    private static readonly Regex RegexLowerZhCyr = new("ж+");
+    private static readonly Regex RegexUpperZhCyr = new("Ж+");
+    // collard-Localization-end
 
     public override void Initialize()
     {
@@ -37,83 +50,33 @@ public sealed class LizardAccentSystem : EntitySystem
         message = RegexUpperEndX.Replace(message, "ECKS$1");
         // collard-Localization-start
         // c => ссс
-        message = Regex.Replace(
-            message,
-            "с+",
-            _random.Pick(new List<string>() { "сс", "ссс" })
-        );
+        message = RegexLowerSCyr.Replace(message, "ссс");
         // С => CCC
-        message = Regex.Replace(
-            message,
-            "С+",
-            _random.Pick(new List<string>() { "СС", "ССС" })
-        );
+        message = RegexUpperSCyr.Replace(message, "ССС");
         // з => ссс
-        message = Regex.Replace(
-            message,
-            "з+",
-            _random.Pick(new List<string>() { "сс", "ссс" })
-        );
+        message = RegexLowerZCyr.Replace(message, "ссс");
         // З => CCC
-        message = Regex.Replace(
-            message,
-            "З+",
-            _random.Pick(new List<string>() { "СС", "ССС" })
-        );
+        message = RegexUpperZCyr.Replace(message, "ССС");
         // ш => шшш
-        message = Regex.Replace(
-            message,
-            "ш+",
-            _random.Pick(new List<string>() { "шш", "шшш" })
-        );
+        message = RegexLowerShCyr.Replace(message, "шшш");
         // Ш => ШШШ
-        message = Regex.Replace(
-            message,
-            "Ш+",
-            _random.Pick(new List<string>() { "ШШ", "ШШШ" })
-        );
+        message = RegexUpperShCyr.Replace(message, "ШШШ");
         // ч => щщщ
-        message = Regex.Replace(
-            message,
-            "ч+",
-            _random.Pick(new List<string>() { "щщ", "щщщ" })
-        );
+        message = RegexLowerChCyr.Replace(message, "щщщ");
         // Ч => ЩЩЩ
-        message = Regex.Replace(
-            message,
-            "Ч+",
-            _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ" })
-        );
-        message = Regex.Replace(
-            message,
-            "Щ+",
-            _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ" })
-        );
-        message = Regex.Replace(
-            message,
-            "щ+",
-            _random.Pick(new List<string>() { "щщ", "щщщ" })
-        );
-        message = Regex.Replace(
-            message,
-            "ц+",
-            _random.Pick(new List<string>() { "тсс", "тссс" })
-        );
-        message = Regex.Replace(
-            message,
-            "Ц+",
-            _random.Pick(new List<string>() { "ТСС", "ТССС" })
-        );
-        message = Regex.Replace(
-            message,
-            "Ж+",
-            _random.Pick(new List<string>() { "ШШ", "ШШШ" })
-        );
-        message = Regex.Replace(
-            message,
-            "ж+",
-            _random.Pick(new List<string>() { "шш", "шшш" })
-        );
+        message = RegexUpperChCyr.Replace(message, "ЩЩЩ");
+        // щ => щщщ
+        message = RegexLowerSchCyr.Replace(message, "щщщ");
+        // Щ => ЩЩЩ
+        message = RegexUpperSchCyr.Replace(message, "ЩЩЩ");
+        // ц => тссс
+        message = RegexLowerTsCyr.Replace(message, "тссс");
+        // Ц => ТССС
+        message = RegexUpperTsCyr.Replace(message, "ТССС");
+        // ж => шшш
+        message = RegexLowerZhCyr.Replace(message, "шшш");
+        // Ж => ШШШ
+        message = RegexUpperZhCyr.Replace(message, "ШШШ");
         // collard-Localization-end
         args.Message = message;
     }

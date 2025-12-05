@@ -12,11 +12,11 @@ zzzz-fmt-pressure = { TOSTRING($divided, "F1") } { $places ->
 
 # Used internally by the POWERWATTS() function.
 zzzz-fmt-power-watts = { TOSTRING($divided, "F1") } { $places ->
-    [0] В
-    [1] кВ
-    [2] МВ
-    [3] ГВ
-    [4] ТВ
+    [0] Вт
+    [1] кВт
+    [2] МВт
+    [3] ГВт
+    [4] ТВт
     *[5] ???
 }
 
@@ -34,11 +34,11 @@ zzzz-fmt-power-joules = { TOSTRING($divided, "F1") } { $places ->
 
 # Used internally by the ENERGYWATTHOURS() function.
 zzzz-fmt-energy-watt-hours = { TOSTRING($divided, "F1") } { $places ->
-    [0] Вч
-    [1] кВч
-    [2] МВч
-    [3] ГВч
-    [4] ТВч
+    [0] Втч
+    [1] кВтч
+    [2] МВтч
+    [3] ГВтч
+    [4] ТВтч
     *[5] ???
 }
 

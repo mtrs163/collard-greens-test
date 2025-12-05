@@ -57,6 +57,15 @@ namespace Content.Shared.Localizations
             _loc.AddFunction(cultureEn, "MANY", FormatMany);
             _loc.AddFunction(cultureEn, "LOC", FormatLoc);
             _loc.AddFunction(cultureEn, "NATURALFIXED", FormatNaturalFixed);
+            // collard-Localization-start
+            _loc.AddFunction(cultureEn, "POWERWATTS", FormatPowerWatts);
+            _loc.AddFunction(cultureEn, "POWERJOULES", FormatPowerJoules);
+            _loc.AddFunction(cultureEn, "ENERGYWATTHOURS", FormatEnergyWattHours);
+            _loc.AddFunction(cultureEn, "UNITS", FormatUnits);
+            _loc.AddFunction(cultureEn, "TOSTRING", args => FormatToString(culture, args));
+            _loc.AddFunction(cultureEn, "NATURALPERCENT", FormatNaturalPercent);
+            _loc.AddFunction(cultureEn, "PLAYTIME", FormatPlaytime);
+            // collard-Localization-end
         }
 
         private ILocValue FormatMany(LocArgs args)
