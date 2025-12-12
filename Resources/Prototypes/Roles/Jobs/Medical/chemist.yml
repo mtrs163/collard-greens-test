@@ -20,7 +20,7 @@
   id: ChemistGear
   equipment:
     id: ChemistryPDA
-    # ears: ClothingHeadsetMedical || collard-Headset1984
+    ears: ClothingHeadsetMedical
     belt: ChemBag
     pocket1: HandLabeler
     eyes: ClothingEyesGlassesChemical

@@ -23,7 +23,7 @@
   equipment:
     shoes: ClothingShoesColorBrown
     id: BotanistPDA
-    # ears: ClothingHeadsetService || collard-Headset1984
+    ears: ClothingHeadsetService
     belt: ClothingBeltPlantFilled
   #storage:
     #back:

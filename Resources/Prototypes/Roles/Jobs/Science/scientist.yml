@@ -16,8 +16,8 @@
 
 - type: startingGear
   id: ScientistGear
-  # equipment:
-  #   ears: ClothingHeadsetScience || collard-Headset1984
+  equipment:
+    ears: ClothingHeadsetScience
   #storage:
     #back:
     #- Stuff

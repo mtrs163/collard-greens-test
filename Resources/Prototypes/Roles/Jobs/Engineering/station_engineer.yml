@@ -23,7 +23,7 @@
   equipment:
     eyes: ClothingEyesGlassesMeson
     belt: ClothingBeltUtilityEngineering
-    # ears: ClothingHeadsetEngineering || collard-Headset1984
+    ears: ClothingHeadsetEngineering
   #storage:
     #back:
     #- Stuff

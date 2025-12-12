@@ -34,7 +34,7 @@
     pocket1: BikeHorn
     pocket2: ClownRecorder
     id: ClownPDA
-    # ears: ClothingHeadsetService || collard-Headset1984
+    ears: ClothingHeadsetService
   storage:
     back:
     - RubberStampClown

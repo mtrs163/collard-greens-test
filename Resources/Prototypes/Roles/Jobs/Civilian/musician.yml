@@ -20,7 +20,7 @@
     eyes: ClothingEyesGlassesSunglasses
     shoes: ClothingShoesBootsLaceup
     id: MusicianPDA
-    # ears: ClothingHeadsetService || collard-Headset1984
+    ears: ClothingHeadsetService
   #storage:
     #back:
     #- Stuff

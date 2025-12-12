@@ -21,7 +21,7 @@
 - type: startingGear
   id: CargoTechGear
   equipment:
-    # ears: ClothingHeadsetCargo || collard-Headset1984
+    ears: ClothingHeadsetCargo
     pocket1: AppraisalTool
   #storage:
     #back:

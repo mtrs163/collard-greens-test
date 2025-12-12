@@ -13,7 +13,7 @@
   id: PassengerGear
   equipment:
     id: PassengerPDA
-    # ears: ClothingHeadsetGrey || collard-Headset1984
+    ears: ClothingHeadsetGrey
   #storage:
     #back:
     #- Stuff

@@ -19,7 +19,7 @@
   equipment:
     shoes: ClothingShoesColorBlack
     id: ChaplainPDA
-    # ears: ClothingHeadsetService || collard-Headset1984
+    ears: ClothingHeadsetService
   storage:
     back:
     - RubberStampChaplain

@@ -21,7 +21,7 @@
   equipment:
     shoes: ClothingShoesColorWhite
     id: MedicalInternPDA
-    # ears: ClothingHeadsetMedical || collard-Headset1984
+    ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
     pocket2: BookMedicalReferenceBook
   #storage:

@@ -23,7 +23,7 @@
 - type: startingGear
   id: DoctorGear
   equipment:
-    # ears: ClothingHeadsetMedical || collard-Headset1984
+    ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
   #storage:
     #back:
