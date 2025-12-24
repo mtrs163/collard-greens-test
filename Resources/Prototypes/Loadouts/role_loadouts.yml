@@ -618,20 +618,6 @@
 
 # Wildcards
 - type: roleLoadout
-  id: JobZookeeper
-  groups:
-  - GroupTankHarness
-  - CommonBackpack
-  - Glasses
-  - Survival
-  - Trinkets
-  - UnderwearBottom # collard-Underwear
-  - UnderwearTop # collard-Underwear
-  - UnderwearSocks # collard-Underwear
-  - ZookeeperJobTrinkets
-  - GroupSpeciesBreathTool
-
-- type: roleLoadout
   id: JobReporter
   groups:
   - GroupTankHarness
@@ -659,22 +645,6 @@
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
   - PsychologistJobTrinkets
-  - GroupSpeciesBreathTool
-
-- type: roleLoadout
-  id: JobBoxer
-  groups:
-  - GroupTankHarness
-  - BoxerJumpsuit
-  - BoxerGloves
-  - CommonBackpack
-  - Glasses
-  - Survival
-  - Trinkets
-  - UnderwearBottom # collard-Underwear
-  - UnderwearTop # collard-Underwear
-  - UnderwearSocks # collard-Underwear
-  - BoxerJobTrinkets
   - GroupSpeciesBreathTool
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
@@ -735,6 +705,11 @@
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalMilitaryDouble
+  groups:
+  - SurvivalMilitaryDouble
 
 - type: roleLoadout
   id: RoleSurvivalNukie
