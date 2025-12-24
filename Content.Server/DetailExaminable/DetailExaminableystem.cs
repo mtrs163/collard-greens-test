@@ -9,6 +9,9 @@ using Content.Server.Administration;
 using Content.Shared.Collard.DetailExaminable;
 using Content.Server.Collard.DetailExaminable;
 using Robust.Shared.Player;
+using Content.Server.Popups;
+using Content.Shared.IdentityManagement;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 // collard-DetailExaminableGlowup-end
 
 namespace Content.Server.DetailExaminable;
@@ -20,6 +23,7 @@ public sealed class DetailExaminableSystem : EntitySystem
     [Dependency] private readonly EuiManager _euis = default!;
     [Dependency] private readonly ActionsSystem _actions = default!;
     [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
     // collard-DetailExaminableGlowup-end
 
     public override void Initialize()
@@ -106,10 +110,19 @@ public sealed class DetailExaminableSystem : EntitySystem
                 if (newPose.String == string.Empty)
                 {
                     component.PoseContent = Loc.GetString("posing-content-none");
+                    _popup.PopupEntity(Loc.GetString("posing-pose-erased",
+                                        ("user", Identity.Name(args.Performer, EntityManager))),
+                                        args.Performer,
+                                        Shared.Popups.PopupType.Medium);
                 }
                 else
                 {
                     component.PoseContent = newPose.String;
+                    _popup.PopupEntity(Loc.GetString("posing-pose-changed",
+                                        ("pose", newPose.String),
+                                        ("user", Identity.Name(args.Performer, EntityManager))),
+                                        args.Performer,
+                                        Shared.Popups.PopupType.Medium);
                 }
             });
         args.Handled = true;
