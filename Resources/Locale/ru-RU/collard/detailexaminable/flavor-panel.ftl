@@ -12,3 +12,5 @@ posing-dialog-field-pose = Новая поза:
 flavor-dialog-name = Изменить описание
 flavor-dialog-field-flavor = Новое описание:
 posing-verb-text = Поза персонажа
+posing-pose-erased = { $user } стёр свою текущую позу.
+posing-pose-changed = { $user } изменил позу. Теперь она выглядит так: { $pose }

@@ -11,7 +11,7 @@
   - ERPStatus
   - CharacterTransferingGuide
   - StationPrefix
-  - RollCommand
+  - CheckCommand
   - KYSCommand
   - Posing
 
@@ -65,9 +65,9 @@
   text: "/ServerInfo/Guidebook/Collard/RP/CharacterTransfering.xml"
 
 - type: guideEntry
-  id: RollCommand
-  name: guide-entry-roll-command
-  text: "/ServerInfo/Guidebook/Collard/RP/RollCommand.xml"
+  id: CheckCommand
+  name: guide-entry-check-command
+  text: "/ServerInfo/Guidebook/Collard/RP/CheckCommand.xml"
 
 - type: guideEntry
   id: KYSCommand
