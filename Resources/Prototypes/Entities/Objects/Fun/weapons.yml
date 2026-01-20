@@ -320,10 +320,10 @@
   - type: Sprite
     sprite: Objects/Fun/rubber_hammer.rsi
     state: icon
-  - type: WeaponRandom # 1 in 100,000 to "win" the "fight"
-    damageBonus:
-      types:
-        Blunt: 1000
+  # - type: WeaponRandom # 1 in 100,000 to "win" the "fight" || collard-NO-THE-FUCK-NOT
+  #   damageBonus:
+  #     types:
+  #       Blunt: 1000
   - type: Item
     size: Small
     sprite: Objects/Fun/rubber_hammer.rsi
