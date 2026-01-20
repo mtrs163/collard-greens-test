@@ -168,7 +168,7 @@
     - AdvancedMineralScannerUnpowered
     - SpectralLocatorUnpowered
     - AnomalyScanner
-    - HandheldHealthAnalyzerUnpowered
+    - HandheldHealthAnalyzer
     - DefibrillatorOneHandedUnpowered
     - HandheldStationMapUnpowered
     - RCDExperimental

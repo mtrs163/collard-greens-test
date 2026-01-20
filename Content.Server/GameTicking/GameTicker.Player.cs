@@ -1,5 +1,6 @@
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
+using Content.Shared.Database;
 using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
 using Content.Shared.Players;
@@ -86,6 +87,7 @@ namespace Content.Server.GameTicking
                             _roundStartTime = _gameTiming.CurTime + LobbyDuration;
                         }
 
+                        _adminLogger.Add(LogType.Connection, LogImpact.Low, $"User {args.Session:Player} attached to {(args.Session.AttachedEntity != null ? ToPrettyString(args.Session.AttachedEntity) : "nothing"):entity} connected to the game.");
                         break;
                     }
 
@@ -126,8 +128,10 @@ namespace Content.Server.GameTicking
                             }
                         }
 
-                        break;
-                    }
+                    _adminLogger.Add(LogType.Connection, LogImpact.Low, $"User {args.Session:Player} attached to {(args.Session.AttachedEntity != null ? ToPrettyString(args.Session.AttachedEntity) : "nothing"):entity} connected to the game.");
+
+                    break;
+                }
 
                 case SessionStatus.Disconnected:
                     {
@@ -143,9 +147,11 @@ namespace Content.Server.GameTicking
                             _pvsOverride.RemoveSessionOverride(mindId.Value, session);
                         }
 
-                        _userDb.ClientDisconnected(session);
-                        break;
-                    }
+                    _userDb.ClientDisconnected(session);
+
+                    _adminLogger.Add(LogType.Connection, LogImpact.Low, $"User {args.Session:Player} attached to {(args.Session.AttachedEntity != null ? ToPrettyString(args.Session.AttachedEntity) : "nothing"):entity} disconnected from the game.");
+                    break;
+                }
             }
             //When the status of a player changes, update the server info text
             UpdateInfoText();

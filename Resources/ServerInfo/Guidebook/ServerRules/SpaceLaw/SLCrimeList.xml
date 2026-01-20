@@ -93,7 +93,7 @@
         Приченение крупных убытков NT
       </Box>
     </ColorBox>
-    <ColorBox>
+    <ColorBox Color="#453a59">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
         x-2 - Нарушение неприкосновенности
       </Box>

@@ -64,6 +64,7 @@
       - id: UniformScrubsColorPurple
         weight: 0.05
     - id: ClothingMaskSterile
+    - id: JetInjector
 
 - type: entity
   parent: LockerMedical
@@ -136,6 +137,7 @@
       amount: 2
     - id: Tourniquet # collard-ParamedicQOL
       prob: 0.3
+    - id: JetInjector
 
 - type: entity
   parent: LockerParamedic
