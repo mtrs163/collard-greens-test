@@ -15,6 +15,9 @@ using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Physics.Events;
+using Content.Shared.Collard.Dice; //collard-SavingThrows
+using Content.Shared.Collard.Slippery; //collard-SavingThrows
+using Robust.Shared.Timing; //collard-SavingThrows
 
 namespace Content.Shared.Slippery;
 
@@ -30,6 +33,9 @@ public sealed class SlipperySystem : EntitySystem
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SpeedModifierContactsSystem _speedModifier = default!;
+    [Dependency] private readonly SavingThrowSystem _savingThrow = default!; //collard-SavingThrows
+    [Dependency] private readonly IGameTiming _gameTiming = default!; //collard-SavingThrows
+    [Dependency] private readonly EntityManager _entMan = default!; //collard-SavingThrows
 
     private EntityQuery<KnockedDownComponent> _knockedDownQuery;
     private EntityQuery<PhysicsComponent> _physicsQuery;
@@ -46,6 +52,7 @@ public sealed class SlipperySystem : EntitySystem
         SubscribeLocalEvent<SlipperyComponent, StepTriggerAttemptEvent>(HandleAttemptCollide);
         SubscribeLocalEvent<SlipperyComponent, StepTriggeredOffEvent>(HandleStepTrigger);
         SubscribeLocalEvent<NoSlipComponent, SlipAttemptEvent>(OnNoSlipAttempt);
+        SubscribeLocalEvent<TemporaryNoSlipComponent, SlipAttemptEvent>(OnTempNoSlipAttempt); //collard-SavingThrows
         SubscribeLocalEvent<SlowedOverSlipperyComponent, SlipAttemptEvent>(OnSlowedOverSlipAttempt);
         SubscribeLocalEvent<ThrownItemComponent, SlipCausingAttemptEvent>(OnThrownSlipAttempt);
         SubscribeLocalEvent<NoSlipComponent, InventoryRelayedEvent<SlipAttemptEvent>>((e, c, ev) => OnNoSlipAttempt(e, c, ev.Args));
@@ -64,6 +71,12 @@ public sealed class SlipperySystem : EntitySystem
         SlipperyComponent component,
         ref StepTriggerAttemptEvent args)
     {
+        if (!_gameTiming.IsFirstTimePredicted)
+        {
+            args.Continue = false;
+            args.Cancelled = true;
+            return;
+        }
         args.Continue |= CanSlip(uid, args.Tripper);
     }
 
@@ -71,6 +84,13 @@ public sealed class SlipperySystem : EntitySystem
     {
         args.NoSlip = true;
     }
+
+    //collard-SavingThrows-start
+    private static void OnTempNoSlipAttempt(EntityUid uid, TemporaryNoSlipComponent component, SlipAttemptEvent args)
+    {
+        args.NoSlip = true;
+    }
+    //collard-SavingThrows-end
 
     private void OnSlowedOverSlipAttempt(EntityUid uid, SlowedOverSlipperyComponent component, SlipAttemptEvent args)
     {
@@ -101,6 +121,17 @@ public sealed class SlipperySystem : EntitySystem
 
     public void TrySlip(EntityUid uid, SlipperyComponent component, EntityUid other, bool requiresContact = true)
     {
+        //collard-SavingThrows-start
+        if (_entMan.TryGetComponent<TemporaryNoSlipComponent>(other, out var temporaryNoSlip) && temporaryNoSlip.EndTime > _gameTiming.CurTime)
+        {
+            return;
+        }
+        else
+        {
+            RemComp<TemporaryNoSlipComponent>(other);
+        }
+        //collard-SavingThrows-end
+
         var knockedDown = _knockedDownQuery.HasComp(other);
         if (knockedDown && !component.SlipData.SuperSlippery)
             return;
@@ -112,6 +143,14 @@ public sealed class SlipperySystem : EntitySystem
 
         if (attemptEv.NoSlip)
             return;
+
+        //collard-SavingThrows-start
+        EnsureComp<TemporaryNoSlipComponent>(other, out var tempNoSlipComp);
+        tempNoSlipComp.EndTime = _gameTiming.CurTime.Add(TimeSpan.FromSeconds(1));
+
+        if (_savingThrow.InitiateSavingThrow(other, 10))
+            return;
+        //collard-SavingThrows-end
 
         var attemptCausingEv = new SlipCausingAttemptEvent();
         RaiseLocalEvent(uid, ref attemptCausingEv);

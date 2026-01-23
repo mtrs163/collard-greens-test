@@ -98,4 +98,12 @@ public sealed partial class ProjectileComponent : Component
     /// </summary>
     [DataField]
     public FixedPoint2 PenetrationAmount = FixedPoint2.Zero;
+
+    //collard-SavingThrows-start
+    /// <summary>
+    ///     Minimum value hit mob needs to roll on a saving throw to not be damaged.
+    /// </summary>
+    [DataField]
+    public int SavingDifficulty = 15;
+    //collard-SavingThrows-end
 }

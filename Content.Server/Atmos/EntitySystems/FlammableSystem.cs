@@ -29,6 +29,8 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Random;
+using Content.Shared.Mobs.Components; //collard-SavingThrows
+using Content.Shared.Collard.Dice; //collard-SavingThrows
 
 namespace Content.Server.Atmos.EntitySystems
 {
@@ -49,6 +51,7 @@ namespace Content.Server.Atmos.EntitySystems
         [Dependency] private readonly UseDelaySystem _useDelay = default!;
         [Dependency] private readonly AudioSystem _audio = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
+        [Dependency] private readonly SavingThrowSystem _savingThrow = default!; //collard-SavingThrows
 
         private EntityQuery<InventoryComponent> _inventoryQuery;
         private EntityQuery<PhysicsComponent> _physicsQuery;
@@ -330,6 +333,9 @@ namespace Content.Server.Atmos.EntitySystems
         {
             if (!Resolve(uid, ref flammable))
                 return;
+
+            if (HasComp<MobStateComponent>(uid)) //collard-SavingThrows
+                if (_savingThrow.InitiateSavingThrowPredicted(uid, 15)) return; //collard-SavingThrows
 
             if (flammable.AlwaysCombustible)
             {

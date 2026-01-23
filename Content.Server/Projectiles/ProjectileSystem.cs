@@ -3,11 +3,13 @@ using Content.Server.Destructible;
 using Content.Server.Effects;
 using Content.Server.Weapons.Ranged.Systems;
 using Content.Shared.Camera;
+using Content.Shared.Collard.Dice; //collard-SavingThrows
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
+using Content.Shared.Mobs.Components; //collard-SavingThrows
 using Content.Shared.Projectiles;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
@@ -22,6 +24,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
     [Dependency] private readonly DestructibleSystem _destructibleSystem = default!;
     [Dependency] private readonly GunSystem _guns = default!;
     [Dependency] private readonly SharedCameraRecoilSystem _sharedCameraRecoil = default!;
+    [Dependency] private readonly SavingThrowSystem _savingThrow = default!; //collard-SavingThrows
 
     public override void Initialize()
     {
@@ -35,6 +38,9 @@ public sealed class ProjectileSystem : SharedProjectileSystem
         if (args.OurFixtureId != ProjectileFixture || !args.OtherFixture.Hard
             || component.ProjectileSpent || component is { Weapon: null, OnlyCollideWhenShot: true })
             return;
+
+        if (HasComp<MobStateComponent>(args.OtherEntity)) //collard-SavingThrows
+            if (_savingThrow.InitiateSilentSavingThrowPredicted(args.OtherEntity, component.SavingDifficulty)) return; //collard-SavingThrows
 
         var target = args.OtherEntity;
         // it's here so this check is only done once before possible hit
