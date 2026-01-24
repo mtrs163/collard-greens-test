@@ -168,3 +168,5 @@ ent-ClothingHeadHatBeretMedic = берет врача
     .desc = Белый берет, призывающий вас к чистоте.
 ent-ClothingHeadPropellerHat = кепка с пропеллером
     .desc = Ты - самый лучший мальчик.
+ent-ClothingHeadHatCanadaBeanie = шапка с помпоном
+    .desc = Красная, белая и уютная. Она излучает чувство дома, если ваш дом прохладен и заполнен кофейнями.
