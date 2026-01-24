@@ -14,4 +14,12 @@ public sealed partial class HitscanBasicDamageComponent : Component
     /// </summary>
     [DataField(required: true)]
     public DamageSpecifier Damage;
+
+    //collard-SavingThrows-start
+    /// <summary>
+    /// What value does the target need to roll on a d20 to succeed a saving throw against the hitscan.
+    /// </summary>
+    [DataField]
+    public int SavingDifficulty = 15;
+    //collard-SavingThrows-end
 }
