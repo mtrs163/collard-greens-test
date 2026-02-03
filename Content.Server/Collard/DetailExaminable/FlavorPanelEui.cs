@@ -54,11 +54,11 @@ namespace Content.Server.Collard.DetailExaminable
 
         private ERPStatus GetERPStatus()
         {
-            if (!_entityManager.TryGetComponent<HumanoidAppearanceComponent>(_targetUid, out var appearance))
+            if (!_entityManager.TryGetComponent<HumanoidProfileComponent>(_targetUid, out var profile))
                 return ERPStatus.Ask;
-            if (appearance is null)
+            if (profile is null)
                 return ERPStatus.Ask;
-            return appearance.ERPStatus;
+            return profile.ERPStatus;
         }
 
         public override void Opened()

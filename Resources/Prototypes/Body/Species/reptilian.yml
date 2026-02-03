@@ -63,7 +63,7 @@
         sizeMaps:
           32:
             sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit-female
+            state: jumpsuit # collard-SexualDimorphism
       head:
         sizeMaps:
           32:

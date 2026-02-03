@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared.Collard.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
@@ -59,6 +60,9 @@ public sealed partial class HumanoidCharacterProfileV1
     public string FlavorText;
 
     [DataField]
+    public string Pose; // collard-DetailExaminableGlowup
+
+    [DataField]
     public ProtoId<SpeciesPrototype> Species;
 
     [DataField]
@@ -66,6 +70,9 @@ public sealed partial class HumanoidCharacterProfileV1
 
     [DataField]
     public Sex Sex;
+
+    [DataField]
+    public ERPStatus ERPStatus; // collard-ERPStatus
 
     [DataField]
     public Gender Gender;
@@ -81,7 +88,7 @@ public sealed partial class HumanoidCharacterProfileV1
 
     public HumanoidCharacterProfile ToV2()
     {
-        return new(Name, FlavorText, Species, Age, Sex, Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts);
+        return new(Name, FlavorText, Pose, Species, Age, Sex, ERPStatus, Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts); // collard-ERPStatus
     }
 }
 

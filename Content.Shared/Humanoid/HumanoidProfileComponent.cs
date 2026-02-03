@@ -1,3 +1,4 @@
+using Content.Shared.Collard.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
 using Robust.Shared.Enums;
@@ -18,6 +19,9 @@ public sealed partial class HumanoidProfileComponent : Component
 
     [DataField, AutoNetworkedField]
     public Sex Sex;
+
+    [DataField, AutoNetworkedField]
+    public ERPStatus ERPStatus; // collard-ERPStatus
 
     [DataField, AutoNetworkedField]
     public int Age = 18;

@@ -6,11 +6,11 @@
   id: Undergarments
   limits:
     enum.HumanoidVisualLayers.UndergarmentTop:
-      limit: 1
+      limit: 0 # collard-Underwear
       required: false
       nudityDefault: [ UndergarmentTopTanktop ]
     enum.HumanoidVisualLayers.UndergarmentBottom:
-      limit: 1
+      limit: 0 # collard-Underwear
       required: false
       nudityDefault: [ UndergarmentBottomBoxers ]
 

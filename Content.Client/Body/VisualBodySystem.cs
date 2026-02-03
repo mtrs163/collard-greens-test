@@ -143,7 +143,7 @@ public sealed class VisualBodySystem : SharedVisualBodySystem
             }
         }
 
-        var censorNudity = _cfg.GetCVar(CCVars.AccessibilityClientCensorNudity) || _cfg.GetCVar(CCVars.AccessibilityServerCensorNudity);
+        var censorNudity = false; //_cfg.GetCVar(CCVars.AccessibilityClientCensorNudity) || _cfg.GetCVar(CCVars.AccessibilityServerCensorNudity); || collard-NoCensor
         if (!censorNudity)
             yield break;
 

@@ -21,6 +21,9 @@
     # Underwear & clothing
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: [ "underwearb" ] # collard-Underwear
+    - map: [ "underweart" ] # collard-Underwear
+    - map: [ "socks" ] # collard-Underwear
     - map: ["jumpsuit"]
 
     # Extremities
