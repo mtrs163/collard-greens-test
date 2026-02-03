@@ -210,8 +210,14 @@
       group: Slime
 
 - type: entity
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganSlimePersonExternal ]
+  parent: [ OrganBaseTorso, OrganSlimePersonExternal ] # collard-SexualDimorphism
   id: OrganSlimePersonTorso
+  components:
+    - type: Sprite # collard-SexualDimorphism
+      state: torso_m
+    - type: VisualOrgan # collard-SexualDimorphism
+      data:
+        state: torso_m
 
 - type: entity
   parent: [ OrganBaseHead, OrganSlimePersonExternal ]

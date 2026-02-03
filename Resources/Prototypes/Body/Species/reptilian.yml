@@ -203,12 +203,17 @@
       group: Reptilian
 
 - type: entity
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganReptilianExternal ]
+  parent: [ OrganBaseTorso, OrganReptilianExternal ] # collard-SexualDimorphism
   id: OrganReptilianTorso
   components:
   - type: VisualOrganMarkings
     hideableLayers:
     - enum.HumanoidVisualLayers.Tail
+  - type: Sprite # collard-SexualDimorphism
+    state: torso_m
+  - type: VisualOrgan # collard-SexualDimorphism
+    data:
+      state: torso_m
 
 - type: entity
   parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganReptilianExternal ]
