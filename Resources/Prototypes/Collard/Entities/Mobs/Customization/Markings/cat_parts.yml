@@ -1,7 +1,6 @@
 - type: marking
   id: CatEarsStubby
   bodyPart: HeadTop
-  markingCategory: HeadTop
   groupWhitelist: [Human]
   coloring:
     default:
@@ -24,7 +23,6 @@
 - type: marking
   id: CatEarsCurled
   bodyPart: HeadTop
-  markingCategory: HeadTop
   groupWhitelist: [Human]
   coloring:
     default:
@@ -47,7 +45,6 @@
 - type: marking
   id: CatEarsTorn
   bodyPart: HeadTop
-  markingCategory: HeadTop
   groupWhitelist: [Human]
   coloring:
     default:
@@ -70,7 +67,6 @@
 - type: marking
   id: CatTailStripes
   bodyPart: Tail
-  markingCategory: Tail
   groupWhitelist: [Human]
   coloring:
     default:
