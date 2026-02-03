@@ -2,7 +2,7 @@
   id: FoxEars
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Human]
+  groupWhitelist: [Human]
   sprites:
   - sprite: Collard/Mobs/Customization/fox_parts.rsi
     state: ears_fox_outer
