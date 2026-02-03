@@ -59,11 +59,11 @@
   - type: Inventory
     speciesId: reptilian
     femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Human/displacement.rsi
-            state: jumpsuit # collard-SexualDimorphism
+      # jumpsuit: # collard-SexualDimorphism
+      #   sizeMaps:
+      #     32:
+      #       sprite: Mobs/Species/Human/displacement.rsi
+      #       state: jumpsuit-female
       head:
         sizeMaps:
           32:

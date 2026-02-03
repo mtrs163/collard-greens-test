@@ -101,7 +101,6 @@ namespace Content.IntegrationTests.Tests
             "Relic",
             "dm01-entryway",
             "Exo",
-            "Apollo", // collard
             "Snowball",
         };
 
