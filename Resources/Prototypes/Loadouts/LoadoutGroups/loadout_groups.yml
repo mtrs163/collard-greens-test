@@ -50,7 +50,6 @@
   - OldRadio # collard-Radio
   - Wristwatch # collard-Loadouts
   - WristwatchGold # collard-Loadouts
-  - TowelColorGold
 
 - type: loadoutGroup
   id: Glasses

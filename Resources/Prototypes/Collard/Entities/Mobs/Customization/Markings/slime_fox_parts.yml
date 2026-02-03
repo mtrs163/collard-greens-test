@@ -1,7 +1,6 @@
 - type: marking
   id: SlimeFoxEars # if cat ears from slime can exist, then why fox ears cannot?
   bodyPart: HeadTop
-  markingCategory: HeadTop
   groupWhitelist: [SlimePerson]
   sprites:
   - sprite: Collard/Mobs/Customization/slime_fox_parts.rsi
