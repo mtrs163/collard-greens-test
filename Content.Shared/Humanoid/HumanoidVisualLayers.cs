@@ -10,8 +10,8 @@ namespace Content.Shared.Humanoid
         Tail,
         Hair,
         FacialHair,
-        //UndergarmentTop, || collard-Underwear
-        //UndergarmentBottom, || collard-Underwear
+        UndergarmentTop,
+        UndergarmentBottom,
         Chest,
         Head,
         Snout,
@@ -27,6 +27,7 @@ namespace Content.Shared.Humanoid
         LLeg,
         RFoot,
         LFoot,
+        Overlay,
         Handcuffs,
         StencilMask,
         Ensnare,
