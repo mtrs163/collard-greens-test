@@ -16,6 +16,9 @@
   - Trinkets
 #  - ChiefMedicalOfficerJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
 
 - type: roleLoadout
   id: JobMedicalDoctor
@@ -33,6 +36,9 @@
   - Trinkets
 #  - MedicalDoctorJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
 
 - type: roleLoadout
   id: JobMedicalIntern
@@ -45,6 +51,9 @@
   - Trinkets
 #  - MedicalInternJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
 
 - type: roleLoadout
   id: JobChemist
@@ -60,6 +69,9 @@
   - Trinkets
 #  - ChemistJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
 
 - type: roleLoadout
   id: JobParamedic
@@ -76,3 +88,6 @@
   - Trinkets
 #  - ParamedicJobTrinkets
   - GroupSpeciesBreathToolMedical
+  - UnderwearBottom # collard-Underwear
+  - UnderwearTop # collard-Underwear
+  - UnderwearSocks # collard-Underwear
