@@ -21,6 +21,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using System.Linq;
+using Robust.Server.Audio; //collard-Ringtones
+using Robust.Shared.Audio; //collard-Ringtones
+using Robust.Shared.Audio.Components; //collard-Ringtones
 
 namespace Content.Server.Telephone;
 
@@ -39,6 +42,8 @@ public sealed class TelephoneSystem : SharedTelephoneSystem
 
     // Has set used to prevent telephone feedback loops
     private HashSet<(EntityUid, string, Entity<TelephoneComponent>)> _recentChatMessages = new();
+    private ResolvedSoundSpecifier _selectedRingtone = String.Empty; //collard-Ringtones
+    private EntityUid? _ringtoneAudio = EntityUid.Invalid; //collard-Ringtones
 
     public override void Initialize()
     {
@@ -150,8 +155,9 @@ public sealed class TelephoneSystem : SharedTelephoneSystem
                     else if (telephone.RingTone != null &&
                         _timing.CurTime > telephone.NextRingToneTime)
                     {
-                        _audio.PlayPvs(telephone.RingTone, uid);
-                        telephone.NextRingToneTime = _timing.CurTime + TimeSpan.FromSeconds(telephone.RingInterval);
+                        _ringtoneAudio = _audio.PlayPvs(_selectedRingtone, uid)?.Entity; //collard-Ringtones
+                        var length = EntityManager.System<AudioSystem>().GetAudioLength(_selectedRingtone); //collard-Ringtones
+                        telephone.NextRingToneTime = _timing.CurTime + length + TimeSpan.FromSeconds(1); //collard-Ringtones
                     }
 
                     break;
@@ -241,6 +247,7 @@ public sealed class TelephoneSystem : SharedTelephoneSystem
 
         // Otherwise start ringing the receiver
         SetTelephoneState(source, TelephoneState.Calling);
+        _selectedRingtone = _audio.ResolveSound(receiver.Comp.RingTone); //collard-Ringtones
         SetTelephoneState(receiver, TelephoneState.Ringing);
 
         return true;
@@ -265,6 +272,8 @@ public sealed class TelephoneSystem : SharedTelephoneSystem
     {
         SetTelephoneState(source, TelephoneState.InCall);
         SetTelephoneState(receiver, TelephoneState.InCall);
+        _audio.Stop(_ringtoneAudio); //collard-Ringtones
+        receiver.Comp.NextRingToneTime = _timing.CurTime; //collard-Ringtones
 
         SetTelephoneMicrophoneState(source, true);
         SetTelephoneMicrophoneState(receiver, true);
@@ -319,7 +328,8 @@ public sealed class TelephoneSystem : SharedTelephoneSystem
             if (!IsTelephoneEngaged(linkedTelephone))
                 EndTelephoneCalls(linkedTelephone);
         }
-
+        _audio.Stop(_ringtoneAudio); //collard-Ringtones
+        entity.Comp.NextRingToneTime = _timing.CurTime; //collard-Ringtones
         entity.Comp.LinkedTelephones.Clear();
         entity.Comp.Muted = false;
 

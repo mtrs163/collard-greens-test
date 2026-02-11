@@ -1,9 +1,10 @@
 - type: soundCollection
   id: RoundEnd
   files:
-  - /Audio/Announcements/RoundEnd/apc_destroyed.ogg
-  - /Audio/Announcements/RoundEnd/disappointed.ogg
-  - /Audio/Announcements/RoundEnd/notevenpaidforthis.ogg
+  # - /Audio/Announcements/RoundEnd/apc_destroyed.ogg
+  # - /Audio/Announcements/RoundEnd/disappointed.ogg
+  # - /Audio/Announcements/RoundEnd/notevenpaidforthis.ogg
+  - /Audio/Collard/Announcements/RoundEnd/codz.ogg # collard
 
 - type: soundCollection
   id: PowerOn

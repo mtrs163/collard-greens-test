@@ -2,6 +2,7 @@ using Content.Shared.Chat;
 using Content.Shared.Speech;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes; //collard-Ringtones
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Telephone;
@@ -28,11 +29,12 @@ public sealed partial class TelephoneComponent : Component
     [DataField]
     public float HangingUpTimeout = 2;
 
+    private static readonly ProtoId<SoundCollectionPrototype> DefaultHoloRingtones = new("HoloRingtones"); //collard-Ringtones
     /// <summary>
     /// Tone played while the phone is ringing
     /// </summary>
     [DataField]
-    public SoundSpecifier? RingTone = null;
+    public SoundSpecifier RingTone = new SoundCollectionSpecifier(DefaultHoloRingtones, AudioParams.Default.WithVolume(-4f)); //collard-Ringtones
 
     /// <summary>
     /// Sets the number of seconds before the next ring tone is played

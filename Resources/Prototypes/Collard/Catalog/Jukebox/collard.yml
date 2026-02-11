@@ -184,13 +184,98 @@
     path: /Audio/Collard/Jukebox/love.ogg
 
 - type: jukebox
-  id: Pritoptat
-  name: Нейромонах Феофан - Притоптать
+  id: Aerodynamic
+  name: Daft Punk - Aerodynamic
   path:
-    path: /Audio/Collard/Jukebox/pritoptat.ogg
+    path: /Audio/Collard/Jukebox/aerodynamic.ogg
 
 - type: jukebox
-  id: Leellost
-  name: Relanium - Leel Lost
+  id: Veridis
+  name: Daft Punk - Veridis Quo
   path:
-    path: /Audio/Collard/Jukebox/leel.ogg
+    path: /Audio/Collard/Jukebox/veridis_quo.ogg
+
+- type: jukebox
+  id: Nightvision
+  name: Daft Punk - Nightvision
+  path:
+    path: /Audio/Collard/Jukebox/nightvision.ogg
+
+- type: jukebox
+  id: Fresh
+  name: Daft Punk - Fresh
+  path:
+    path: /Audio/Collard/Jukebox/fresh.ogg
+
+- type: jukebox
+  id: Indo
+  name: Daft Punk - Indo Silver Club
+  path:
+    path: /Audio/Collard/Jukebox/indo_silver_club.ogg
+
+- type: jukebox
+  id: Alive
+  name: Daft Punk - Alive
+  path:
+    path: /Audio/Collard/Jukebox/alive.ogg
+
+- type: jukebox
+  id: Contact
+  name: Daft Punk - Contact
+  path:
+    path: /Audio/Collard/Jukebox/contact.ogg
+
+- type: jukebox
+  id: Landing
+  name: HOME - We're Finally Landing
+  path:
+    path: /Audio/Collard/Jukebox/landing.ogg
+
+- type: jukebox
+  id: Blank
+  name: Disfigure - Blank
+  path:
+    path: /Audio/Collard/Jukebox/blank.ogg
+
+- type: jukebox
+  id: Creepypasta
+  name: The Porcelain Pal Collective - The Creepypasta Song
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/creepypasta.ogg
+
+- type: jukebox
+  id: Svetlana
+  name: NEXTIME - Светлана
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/svetlana.ogg
+
+- type: jukebox
+  id: Fade
+  name: Alan Walker - Fade
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/fade.ogg
+
+- type: jukebox
+  id: Jackie
+  name: XTRATUNA - Jackie's Box
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/jackie_box.ogg
+
+- type: jukebox
+  id: Melancholy
+  name: Gorillaz - On Melancholy Hill
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/melancholy_hill.ogg
+
+- type: jukebox
+  id: Diffusion
+  name: Kobaryo - Cosmic Diffusion
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/cosmic_diffusion.ogg
+

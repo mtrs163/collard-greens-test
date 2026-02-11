@@ -124,6 +124,25 @@
     - /Audio/Ambience/ambigen12.ogg
     - /Audio/Ambience/ambigen14.ogg
     - /Audio/Ambience/ambigen15.ogg
+    - /Audio/Collard/Ambience/ambigen1.ogg
+    - /Audio/Collard/Ambience/ambigen2.ogg
+    - /Audio/Collard/Ambience/ambigen3.ogg
+    - /Audio/Collard/Ambience/ambigen4.ogg
+    - /Audio/Collard/Ambience/ambigen5.ogg
+    - /Audio/Collard/Ambience/ambigen6.ogg
+    - /Audio/Collard/Ambience/ambigen7.ogg
+    - /Audio/Collard/Ambience/ambigen8.ogg
+    - /Audio/Collard/Ambience/ambigen9.ogg
+    - /Audio/Collard/Ambience/ambigen10.ogg
+    - /Audio/Collard/Ambience/ambigen11.ogg
+    - /Audio/Collard/Ambience/ambigen12.ogg
+    - /Audio/Collard/Ambience/ambigen13.ogg
+    - /Audio/Collard/Ambience/ambigen14.ogg
+    - /Audio/Collard/Ambience/ambigen15.ogg
+    - /Audio/Collard/Ambience/ambigen16.ogg
+    - /Audio/Collard/Ambience/ambigen17.ogg
+    - /Audio/Collard/Ambience/ambigen18.ogg
+    - /Audio/Collard/Ambience/ambigen19.ogg
 
 - type: soundCollection
   id: AmbienceHoly
