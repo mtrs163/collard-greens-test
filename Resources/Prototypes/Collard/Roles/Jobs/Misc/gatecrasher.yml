@@ -6,6 +6,7 @@
   startingGear: GatecrasherGear
   icon: JobIconVisitor
   silentSpawn: true
+  whitelisted: true
   supervisors: job-supervisors-gatecrasher
 
 - type: startingGear
