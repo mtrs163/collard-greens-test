@@ -247,7 +247,7 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Slash: 5 # Reduce?
+        Slash: 10 # Reduce? # collard-LifeValue
 
 - type: entity
   parent: OrganBase

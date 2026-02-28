@@ -1375,7 +1375,7 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 30
+        Heat: 70  # collard-LifeValue
 
 - type: entity
   name: magnum window-piercing bolt
@@ -1395,7 +1395,7 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 20
+        Heat: 56 # collard-LifeValue
   - type: Fixtures
     fixtures:
       projectile:
