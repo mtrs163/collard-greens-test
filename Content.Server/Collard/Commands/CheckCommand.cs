@@ -1,26 +1,19 @@
-using System.Linq;
-using System.Numerics;
 using Robust.Shared.Console;
-using Robust.Server.Player;
 using Robust.Shared.Player;
 using Content.Shared.Administration;
 using Robust.Shared.Random;
-using Content.Server.Popups;
-using Content.Shared.IdentityManagement;
-using Content.Server.Access.Systems;
 using System.Diagnostics.CodeAnalysis;
-using Content.Shared.Objectives.Components;
-using Robust.Shared.Utility;
+using Content.Server.Chat.Systems;
+using Content.Shared.Chat;
 
 namespace Content.Server.Collard.Commands;
 
 [AnyCommand]
-public sealed class RollCommand : LocalizedEntityCommands
+public sealed class CheckCommand : LocalizedEntityCommands
 {
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly ChatSystem _chat = default!;
     public override string Command => "check";
     public override async void Execute(IConsoleShell shell, string argStr, string[] args)
     {
@@ -75,46 +68,40 @@ public sealed class RollCommand : LocalizedEntityCommands
 
         if (roll == maxVal)
         {
-            _popup.PopupEntity(Loc.GetString("cmd-check-popup-success-critical",
+            var message = Loc.GetString("cmd-check-popup-success-critical",
                                         ("value", roll),
-                                        ("user", Identity.Entity(entityUid.Value, _entManager)),
                                         ("maxval", maxVal),
                                         ("checkname", check),
-                                        ("requirement", requirement)),
-                                        entityUid.Value,
-                                        Shared.Popups.PopupType.MediumCaution);
+                                        ("requirement", requirement));
+            _chat.TrySendInGameICMessage(entityUid.Value, message, InGameICChatType.Emote, false);
         }
         else if (roll >= requirement)
         {
-            _popup.PopupEntity(Loc.GetString("cmd-check-popup-success",
+            var message = Loc.GetString("cmd-check-popup-success",
                                         ("value", roll),
-                                        ("user", Identity.Entity(entityUid.Value, _entManager)),
                                         ("maxval", maxVal),
                                         ("checkname", check),
-                                        ("requirement", requirement)),
-                                        entityUid.Value,
-                                        Shared.Popups.PopupType.Medium);
+                                        ("requirement", requirement));
+            _chat.TrySendInGameICMessage(entityUid.Value, message, InGameICChatType.Emote, false);
         }
         else if (roll > 1)
         {
-            _popup.PopupEntity(Loc.GetString("cmd-check-popup-failure",
+            var message = Loc.GetString("cmd-check-popup-failure",
                                         ("value", roll),
-                                        ("user", Identity.Entity(entityUid.Value, _entManager)),
                                         ("maxval", maxVal),
                                         ("checkname", check),
-                                        ("requirement", requirement)),
-                                        entityUid.Value,
-                                        Shared.Popups.PopupType.Medium);
+                                        ("requirement", requirement));
+            _chat.TrySendInGameICMessage(entityUid.Value, message, InGameICChatType.Emote, false);
         }
         else
-            _popup.PopupEntity(Loc.GetString("cmd-check-popup-failure-critical",
+        {
+            var message = Loc.GetString("cmd-check-popup-failure-critical",
                                         ("value", roll),
-                                        ("user", Identity.Entity(entityUid.Value, _entManager)),
                                         ("maxval", maxVal),
                                         ("checkname", check),
-                                        ("requirement", requirement)),
-                                        entityUid.Value,
-                                        Shared.Popups.PopupType.MediumCaution);
+                                        ("requirement", requirement));
+            _chat.TrySendInGameICMessage(entityUid.Value, message, InGameICChatType.Emote, false);
+        }
     }
     private bool TryParseUid(ICommonSession session, IConsoleShell shell,
         IEntityManager entMan, [NotNullWhen(true)] out EntityUid? entityUid)
