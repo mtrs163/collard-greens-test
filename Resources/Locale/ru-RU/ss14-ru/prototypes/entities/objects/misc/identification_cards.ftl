@@ -129,3 +129,5 @@ ent-UniversalIDCard = универсальная ID-карта
     .suffix = Админ
 ent-PrisonerIDCard = ID-карта заключённого
     .desc = Стандартная ID-карта для гнилых преступников.
+ent-SyndiCommanderIDCard = ID-карта командира синдиката
+    .desc = { ent-IDCardStandard.desc }

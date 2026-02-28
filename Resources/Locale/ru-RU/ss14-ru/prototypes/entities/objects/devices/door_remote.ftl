@@ -21,3 +21,5 @@ ent-DoorRemoteAll = пульт от шлюзов Центком
     .desc = { ent-DoorRemoteDefault.desc }
 ent-DoorRemoteXenoborg = пульт от шлюзов ксеноборгов
     .desc = { ent-DoorRemoteDefault.desc }
+ent-DoorRemoteCustom = кастомный пульт от шлюзов
+    .desc = { ent-DoorRemoteDefault.desc } Этот продвинутый вариант не имеет встроенного доступа, вместо этого наследуя доступ ID-карты пользователя.

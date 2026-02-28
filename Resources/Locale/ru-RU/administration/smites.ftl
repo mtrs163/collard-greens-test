@@ -35,6 +35,7 @@ admin-smite-buffering-name = Буферизация
 admin-smite-become-instrument-name = Сделать инструментом
 admin-smite-remove-gravity-name = Антиграв
 admin-smite-reptilian-species-swap-name = Сделать унатхом
+admin-smite-vulpkanin-species-swap-name = Сделать вульпой
 admin-smite-locker-stuff-name = Сунуть в шкаф
 admin-smite-headstand-name = Стойка на голове
 admin-smite-become-mouse-name = Сделать мышью

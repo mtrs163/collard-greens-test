@@ -66,3 +66,6 @@ ent-ClothingBackpackDuffelSyndicateDecoyKitFilled = { ent-ClothingBackpackDuffel
 ent-ClothingBackpackDuffelSyndicateFilledRifle = { ent-ClothingBackpackDuffelSyndicate }
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
     .suffix = набор Estoc DMR
+ent-ClothingBackpackDuffelSyndicateFilledHushpup = { ent-ClothingBackpackDuffelSyndicate }
+    .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
+    .suffix = набор хашпап

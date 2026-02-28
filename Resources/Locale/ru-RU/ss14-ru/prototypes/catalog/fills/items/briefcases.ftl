@@ -10,3 +10,7 @@ ent-BriefcaseSyndieLobbyingBundleFilled = коричневый чемодан
 ent-BriefcaseThiefBribingBundleFilled = коричневый чемодан
     .suffix = Вор, Кредиты
     .desc = { ent-BriefcaseSyndie.desc }
+ent-BriefcaseWeaponC20Filled = защищённый кейс с C-20r
+ent-BriefcaseWeaponBulldogFilled = защищённый кейс с бульдогом
+ent-BriefcaseWeaponChinaLakeFilled = защищённый кейс с china lake
+ent-BriefcaseWeaponHushpupFilled = защищённый кейс с хашпапом

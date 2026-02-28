@@ -177,7 +177,7 @@ uplink-super-surplus-bundle-desc = Содержит случайное снар�
 # Tools
 uplink-toolbox-name = Ящик инструментов
 uplink-toolbox-desc = Полный набор инструментов для предателя с тягой к механике. Включает пару изолированных боевых перчаток и противогаз Синдиката.
-uplink-syndicate-jaws-of-life-name = Челюсти жизни
+uplink-syndicate-jaws-of-life-name = Гидравлический резак
 uplink-syndicate-jaws-of-life-desc = Комбинация лома и кусачек. Используется для проникновения на станцию или в её отделы.
 uplink-duffel-surgery-name = Хирургический вещмешок
 uplink-duffel-surgery-desc = Большой вещмешок с полным набором хирургических инструментов.

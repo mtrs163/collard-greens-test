@@ -70,3 +70,5 @@ ent-PlayerBorgDerelictGhostRole = { ent-PlayerBorgDerelict }
     .desc = { ent-PlayerBorgDerelict.desc }
 ent-PlayerBorgSyndicateInvasionGhostRoleSpawner = спавнер киборга вторжения синдиката
     .desc = { ent-MarkerBase.desc }
+ent-PlayerStationAiAssembly = каркас ядра ИИ
+    .desc = Незавершённый компьютер для дома искуственного интеллекта.

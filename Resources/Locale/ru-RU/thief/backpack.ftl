@@ -23,7 +23,7 @@ thief-backpack-category-tools-name = Набор вломщика
 thief-backpack-category-tools-description =
     Что это за звук? Малышка C4 стучится в дверь.
     Ни одна преграда не остановит вас!
-    В комплект входят: два C4, мультитул, передатчик сигналов, челюсти жизни,
+    В комплект входят: два C4, мультитул, передатчик сигналов, гидравлический резак,
     продвинутый сварочный аппарат, инженерные очки и изолированные перчатки.
 thief-backpack-category-chemistry-name = Набор анатома
 thief-backpack-category-chemistry-description =

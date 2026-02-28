@@ -1,5 +1,8 @@
 ## UI
+
 cargo-console-menu-title = Консоль запросов снабжения
+cargo-console-menu-flavor-left = Закажите ещё больше пиццы!
+cargo-console-menu-flavor-right = v2.1
 cargo-console-menu-account-name-label = Счёт:{" "}
 cargo-console-menu-account-name-none-text = Нет
 cargo-console-menu-account-name-format = [bold][color={$color}]{$name}[/color][/bold] [font="Monospace"]\[{$code}\][/font]
@@ -12,44 +15,47 @@ cargo-console-menu-shuttle-status-away-text = Удалён
 cargo-console-menu-order-capacity-label = Вместимость заказов:{" "}
 cargo-console-menu-call-shuttle-button = Активировать телепад
 cargo-console-menu-permissions-button = Разрешения
-cargo-console-menu-categories-label = Категория:{" "}
+cargo-console-menu-categories-label = Категории:{" "}
 cargo-console-menu-search-bar-placeholder = Поиск
 cargo-console-menu-requests-label = Запросы
 cargo-console-menu-orders-label = Заказы
-cargo-console-menu-order-reason-description = Причины: {$reason}
 cargo-console-menu-populate-categories-all-text = Все
-cargo-console-menu-populate-orders-cargo-order-row-product-name-text = {$productName} (x{$orderAmount}) от {$orderRequester} из [color={$accountColor}]{$account}[/color]
-cargo-console-menu-cargo-order-row-approve-button = Одобрить
-cargo-console-menu-cargo-order-row-cancel-button = Отменить
+cargo-console-menu-order-row-title = {$productName} (x{$orderAmount} за {$orderPrice}$)
+cargo-console-menu-populate-orders-cargo-order-row-product-name-text = Запрошено: {$orderRequester} из [color={$accountColor}]{$account}[/color]
+cargo-console-menu-order-row-product-description = Причина: {$orderReason}
+cargo-console-menu-order-row-button-approve = Одобрить
+cargo-console-menu-order-row-button-cancel = Отменить
+cargo-console-menu-order-row-alerts-reason-absent = Причина не указано
+cargo-console-menu-order-row-alerts-requester-unknown = Неизвестно
 cargo-console-menu-tab-title-orders = Заказы
 cargo-console-menu-tab-title-funds = Переводы
-cargo-console-menu-account-action-transfer-limit = [bold]Лимит переводов:[/bold] ${$limit}
-cargo-console-menu-account-action-transfer-limit-unlimited-notifier = [color=gold](Безлимитный)[/color]
-cargo-console-menu-account-action-select = [bold]Действие со счётом:[/bold]
+cargo-console-menu-account-action-transfer-limit = [bold]Лимит Перевода:[/bold] ${$limit}
+cargo-console-menu-account-action-transfer-limit-unlimited-notifier = [color=gold](Неограничен)[/color]
+cargo-console-menu-account-action-select = [bold]Действие со Счётом:[/bold]
 cargo-console-menu-account-action-amount = [bold]Количество:[/bold] $
 cargo-console-menu-account-action-button = Перевести
-cargo-console-menu-toggle-account-lock-button = Переключить Лимит Переводов
-cargo-console-menu-account-action-option-withdraw = Вывести Средства
-cargo-console-menu-account-action-option-transfer = Перевести Средства {$code}
+cargo-console-menu-toggle-account-lock-button = Переключить Лимит Перевода
+cargo-console-menu-account-action-option-withdraw = Снять Наличные
+cargo-console-menu-account-action-option-transfer = Перевести {$code}
 
 # Orders
 cargo-console-order-not-allowed = Доступ запрещён
 cargo-console-station-not-found = Нет доступной станции
 cargo-console-invalid-product = Неверный ID продукта
 cargo-console-too-many = Слишком много одобренных заказов
-cargo-console-snip-snip = Заказ обрезан до вместимости
+cargo-console-snip-snip = Заказ урезан под вместимость
 cargo-console-insufficient-funds = Недостаточно средств (требуется {$cost})
 cargo-console-unfulfilled = Нет места для выполнения заказа
-cargo-console-trade-station = Отправлено в {$destination}
+cargo-console-trade-station = Отправлено на {$destination}
 cargo-console-unlock-approved-order-broadcast = Заказ на [bold]{$productName} x{$orderAmount}[/bold], стоимостью [bold]{$cost}[/bold], одобрен [bold]{$approver}[/bold]
 cargo-console-fund-withdraw-broadcast = [bold]{$name} вывел {$amount} кредитов из {$name1} \[{$code1}\]
-cargo-console-fund-transfer-broadcast = [bold]{$name} перевёл {$amount} кредитов {$name1} \[{$code1}\] в {$name2} \[{$code2}\][/bold]
-cargo-console-fund-transfer-user-unknown = Неизвестный
+cargo-console-fund-transfer-broadcast = [bold]{$name} перевёл {$amount} кредитов из {$name1} \[{$code1}\] в {$name2} \[{$code2}\][/bold]
+cargo-console-fund-transfer-user-unknown = Неизвестно
 
 cargo-console-paper-reason-default = Нет
 cargo-console-paper-approver-default = Сам
-cargo-console-paper-print-name = Заказ #{$orderNumber}
-cargo-console-paper-print-text = [head=2]Заказ #{$orderNumber}[/head]
+cargo-console-paper-print-name = Заказ №{$orderNumber}
+cargo-console-paper-print-text = [head=2]Заказ №{$orderNumber}[/head]
     {"[bold]Предмет:[/bold]"} {$itemName} (x{$orderQuantity})
     {"[bold]Запрошено:[/bold]"} {$requester}
 
