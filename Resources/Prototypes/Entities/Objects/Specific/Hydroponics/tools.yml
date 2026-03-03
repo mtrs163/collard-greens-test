@@ -16,7 +16,7 @@
     swingLeft: true
     damage:
       types:
-        Slash: 6
+        Slash: 15 #collard-LifeValue
   - type: Item
     sprite: Objects/Tools/Hydroponics/hoe.rsi
     storedSprite:
@@ -64,7 +64,7 @@
     wideAnimationRotation: 135
     damage:
       types:
-        Slash: 10
+        Slash: 25 #collard-LifeValue
   - type: Item
     size: Normal
   - type: Clothing
@@ -96,8 +96,8 @@
     swingLeft: true
     damage:
       types:
-        Slash: 8
-        Piercing: 2
+        Slash: 20 #collard-LifeValue
+        Piercing: 5 #collard-LifeValue
   - type: Item
     sprite: Objects/Tools/Hydroponics/hatchet.rsi
     storedSprite:

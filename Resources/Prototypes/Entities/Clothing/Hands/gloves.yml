@@ -93,7 +93,7 @@
   - type: MeleeWeapon
     damage:
       types:
-        Blunt: 8
+        Blunt: 18 #collard-LifeValue
     bluntStaminaDamageFactor: 2
 
 - type: entity
@@ -439,7 +439,7 @@
     attackRate: 4
     damage:
       types:
-       Blunt: 8
+       Blunt: 18 #collard-LifeValue
     soundHit:
       collection: Punch
     animation: WeaponArcFist

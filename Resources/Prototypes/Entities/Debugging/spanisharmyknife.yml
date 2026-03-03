@@ -16,7 +16,7 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 10
+        Slash: 30 #collard-LifeValue
   - type: ToolTileCompatible
   - type: Tool
   - type: Prying

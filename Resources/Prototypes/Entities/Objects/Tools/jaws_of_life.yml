@@ -46,7 +46,7 @@
     wideAnimationRotation: 90
     damage:
       types:
-        Blunt: 10
+        Blunt: 20 #collard-LifeValue
     soundHit:
       collection: MetalThud
 
@@ -86,6 +86,6 @@
   - type: MeleeWeapon
     damage:
       types:
-        Blunt: 14
+        Blunt: 14 #collard-LifeValue
   - type: StaticPrice
     price: 1000

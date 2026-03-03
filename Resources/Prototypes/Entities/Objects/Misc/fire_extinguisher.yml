@@ -54,7 +54,7 @@
     wideAnimationRotation: 180
     damage:
       types:
-        Blunt: 10
+        Blunt: 20 #collard-LifeValue
     soundHit:
       path: /Audio/Weapons/smash.ogg
   - type: Tool
