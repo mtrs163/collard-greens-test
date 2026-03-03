@@ -13,7 +13,6 @@ namespace Content.Server.Collard.Labels
     public sealed class BadgeSystem : EntitySystem
     {
         [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
-        [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
 
         public const string ContainerName = "badge_label";
 

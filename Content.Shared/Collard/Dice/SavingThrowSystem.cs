@@ -1,16 +1,13 @@
 using Content.Shared.Popups;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Player;
 using Robust.Shared.Random;
-using Robust.Shared.Utility;
 
 namespace Content.Shared.Collard.Dice;
 
 public sealed partial class SavingThrowSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 

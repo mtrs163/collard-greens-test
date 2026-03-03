@@ -22,6 +22,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Utility;
+using Content.Shared.Collard.Humanoid; // collard-ERPStatus
 
 namespace Content.Server.Preferences.Managers
 {
@@ -99,6 +100,12 @@ namespace Content.Server.Preferences.Managers
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
                 sex = sexVal;
 
+            // collard-ERPStatus-start
+            var erpstatus = ERPStatus.Ask;
+            if (Enum.TryParse<ERPStatus>(profile.ERPStatus, true, out var erpVal))
+                erpstatus = erpVal;
+            // collard-ERPStatus-end
+
             var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
 
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
@@ -170,9 +177,11 @@ namespace Content.Server.Preferences.Managers
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
+                profile.Pose, // collard-DetailExaminableGlowup
                 species,
                 profile.Age,
                 sex,
+                erpstatus, // collard-ERPStatus
                 gender,
                 new HumanoidCharacterAppearance
                 (

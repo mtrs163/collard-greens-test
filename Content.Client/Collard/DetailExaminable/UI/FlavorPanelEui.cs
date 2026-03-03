@@ -2,31 +2,17 @@ using Content.Client.Eui;
 using Content.Shared.Collard.DetailExaminable;
 using Content.Shared.Eui;
 using JetBrains.Annotations;
-using Robust.Client.GameObjects;
-using Robust.Client.UserInterface;
-using Robust.Client.Player;
-using Content.Client.CharacterInfo;
-using Content.Client.Stylesheets;
-using Content.Client.UserInterface.Systems.Character.Controls;
-using Content.Client.UserInterface.Systems.Objectives.Controls;
-using Robust.Client.UserInterface.Controls;
-using Robust.Shared.Utility;
-using System.Linq;
 
 namespace Content.Client.Collard.DetailExaminable.UI
 {
     [UsedImplicitly]
     public sealed class FlavorPanelEui : BaseEui
     {
-        [Dependency] private readonly IPlayerManager _player = default!;
-
         private readonly FlavorPanel _window;
-        private IEntityManager _entManager;
 
         public FlavorPanelEui()
         {
             IoCManager.InjectDependencies(this);
-            _entManager = IoCManager.Resolve<IEntityManager>();
             _window = new FlavorPanel();
             _window.OnClose += OnClosed;
         }

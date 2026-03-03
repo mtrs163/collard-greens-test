@@ -7,6 +7,7 @@ using Content.Shared.Preferences;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
+using Content.Shared.Collard.Humanoid; // collard-ERPStatus
 
 namespace Content.Client.Lobby.UI;
 
@@ -86,6 +87,21 @@ public sealed partial class HumanoidProfileEditor
             SexButton.SelectId((int)sexes[0]);
     }
 
+    // collard-ERPStatus-start
+        private void UpdateERPStatusControls()
+        {
+            if (Profile == null)
+                return;
+
+            ERPButton.Clear();
+            //ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-no"), (int)ERPStatus.No);
+            ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-ask"), (int)ERPStatus.Ask);
+            ERPButton.AddItem(Loc.GetString("humanoid-editor-erp-status-yes"), (int)ERPStatus.Yes);
+            ERPButton.SelectId((int) Profile.ERPStatus);
+
+        }
+        // collard-ERPStatus-end
+
     private void UpdateEyePickers()
     {
         if (Profile == null)
@@ -141,7 +157,7 @@ public sealed partial class HumanoidProfileEditor
             return;
         }
 
-        SpawnPriorityButton.SelectId((int)Profile.SpawnPriority);
+        //SpawnPriorityButton.SelectId((int)Profile.SpawnPriority);
     }
 
     /// <summary>
@@ -219,6 +235,15 @@ public sealed partial class HumanoidProfileEditor
         _markingsModel.SetOrganSexes(newSex);
         ReloadPreview();
     }
+
+    // collard-ERPStatus-start
+    private void SetERPStatus(ERPStatus newERPStatus)
+    {
+        Profile = Profile?.WithERPStatus(newERPStatus);
+        ReloadPreview();
+        SetDirty();
+    }
+    // collard-ERPStatus-en
 
     private void SetGender(Gender newGender)
     {

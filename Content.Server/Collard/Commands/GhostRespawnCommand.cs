@@ -3,18 +3,10 @@ using Content.Server.Mind;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Ghost;
-using Content.Shared.Mind;
-using Content.Shared.Roles;
-using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
-using Robust.Shared.Player;
 using Robust.Shared.Timing;
-using Content.Shared.Chat;
 using Content.Server.Chat.Managers;
-using Content.Server.Administration;
-using Content.Server.Administration.Managers;
-using Robust.Shared;
 
 namespace Content.Server.Collard.Commands;
 
@@ -25,7 +17,6 @@ public sealed class GhostRespawnCommand : IConsoleCommand
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IChatManager _chat = default!;
-    [Dependency] private readonly IAdminManager _adminManager = default!;
 
     public string Command => "ghostrespawn";
     public string Description => "Allows the player to return to the lobby if they've been dead long enough, allowing re-entering the round AS ANOTHER CHARACTER.";

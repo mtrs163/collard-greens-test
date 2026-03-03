@@ -1,16 +1,19 @@
 ﻿using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
-using Robust.Shared.Random; // collard-Localization
 using Content.Shared.Speech;
 
 namespace Content.Server.Speech.EntitySystems;
 
 public sealed class MothAccentSystem : EntitySystem
 {
-    [Dependency] private readonly IRobustRandom _random = default!; // collard-Localization
-
     private static readonly Regex RegexLowerBuzz = new Regex("z{1,3}");
     private static readonly Regex RegexUpperBuzz = new Regex("Z{1,3}");
+    // collard-Localization-start
+    private static readonly Regex RegexLowerBuzzCyr = new Regex("з{1,3}");
+    private static readonly Regex RegexUpperBuzzCyr = new Regex("З{1,3}");
+    private static readonly Regex RegexLowerBuzzZhCyr = new Regex("ж{1,3}");
+    private static readonly Regex RegexUpperBuzzZhCyr = new Regex("Ж{1,3}");
+    // collard-Localization-end
 
     public override void Initialize()
     {
@@ -29,29 +32,13 @@ public sealed class MothAccentSystem : EntitySystem
 
         // collard-Localization-start
         // ж => жжж
-        message = Regex.Replace(
-            message,
-            "ж+",
-            _random.Pick(new List<string>() { "жж", "жжж" })
-        );
+        message = RegexLowerBuzzZhCyr.Replace(message, "жжж");
         // Ж => ЖЖЖ
-        message = Regex.Replace(
-            message,
-            "Ж+",
-            _random.Pick(new List<string>() { "ЖЖ", "ЖЖЖ" })
-        );
-        // з => ссс
-        message = Regex.Replace(
-            message,
-            "з+",
-            _random.Pick(new List<string>() { "зз", "ззз" })
-        );
-        // З => CCC
-        message = Regex.Replace(
-            message,
-            "З+",
-            _random.Pick(new List<string>() { "ЗЗ", "ЗЗЗ" })
-        );
+        message = RegexUpperBuzzZhCyr.Replace(message, "ЖЖЖ");
+        // з => ззз
+        message = RegexLowerBuzzCyr.Replace(message, "ззз");
+        // З => ЗЗЗ
+        message = RegexUpperBuzzCyr.Replace(message, "ЗЗЗ");
         // collard-Localization-end
 
         args.Message = message;
