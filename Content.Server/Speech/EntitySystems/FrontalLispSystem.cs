@@ -12,6 +12,18 @@ public sealed class FrontalLispSystem : EntitySystem
     private static readonly Regex RegexLowerTh = new(@"[t]+[s]+|[s]+[c]+(?=[iey]+)|[c]+(?=[iey]+)|[p][s]+|([s]+[t]+|[t]+)(?=[i]+[o]+[u]*[n]*)|[c]+[h]+(?=[i]*[e]*)|[z]+|[s]+|[x]+(?=[e]+)");
     private static readonly Regex RegexUpperEcks = new(@"[E]+[Xx]+[Cc]*|[X]+");
     private static readonly Regex RegexLowerEcks = new(@"[e]+[x]+[c]*|[x]+");
+    // collard-Localization-start (velikiy naser)
+    private static readonly Regex RegexLowerSCyr = new(@"с+");
+    private static readonly Regex RegexUpperSCyr = new(@"С+");
+    private static readonly Regex RegexLowerChCyr = new(@"ч+");
+    private static readonly Regex RegexUpperChCyr = new(@"Ч+");
+    private static readonly Regex RegexLowerCCyr = new(@"ц+");
+    private static readonly Regex RegexUpperCCyr = new(@"Ц+");
+    private static readonly Regex RegexLowerTCyr = new(@"\B[т](?![АЕЁИОУЫЭЮЯаеёиоуыэюя])");
+    private static readonly Regex RegexUpperTCyr = new(@"\B[Т](?![АЕЁИОУЫЭЮЯаеёиоуыэюя])");
+    private static readonly Regex RegexLowerZCyr = new(@"з+");
+    private static readonly Regex RegexUpperZCyr = new(@"З+");
+    // collard-Localization-end
     // @formatter:on
 
     [Dependency] private readonly IRobustRandom _random = default!; // collard-Localization
@@ -35,20 +47,20 @@ public sealed class FrontalLispSystem : EntitySystem
 
         // collard-Localization-start
         // с - ш
-        message = Regex.Replace(message, @"с", _random.Prob(0.90f) ? "ш" : "с");
-        message = Regex.Replace(message, @"С", _random.Prob(0.90f) ? "Ш" : "С");
+        message = RegexLowerSCyr.Replace(message, _random.Prob(0.90f) ? "ш" : "с");
+        message = RegexUpperSCyr.Replace(message, _random.Prob(0.90f) ? "Ш" : "С");
         // ч - ш
-        message = Regex.Replace(message, @"ч", _random.Prob(0.90f) ? "ш" : "ч");
-        message = Regex.Replace(message, @"Ч", _random.Prob(0.90f) ? "Ш" : "Ч");
+        message = RegexLowerChCyr.Replace(message, _random.Prob(0.90f) ? "ш" : "ч");
+        message = RegexUpperChCyr.Replace(message, _random.Prob(0.90f) ? "Ш" : "Ч");
         // ц - ч
-        message = Regex.Replace(message, @"ц", _random.Prob(0.90f) ? "ч" : "ц");
-        message = Regex.Replace(message, @"Ц", _random.Prob(0.90f) ? "Ч" : "Ц");
+        message = RegexLowerCCyr.Replace(message, _random.Prob(0.90f) ? "ч" : "ц");
+        message = RegexUpperCCyr.Replace(message, _random.Prob(0.90f) ? "Ч" : "Ц");
         // т - ч
-        message = Regex.Replace(message, @"\B[т](?![АЕЁИОУЫЭЮЯаеёиоуыэюя])", _random.Prob(0.90f) ? "ч" : "т");
-        message = Regex.Replace(message, @"\B[Т](?![АЕЁИОУЫЭЮЯаеёиоуыэюя])", _random.Prob(0.90f) ? "Ч" : "Т");
+        message = RegexLowerTCyr.Replace(message, _random.Prob(0.90f) ? "ч" : "т");
+        message = RegexUpperTCyr.Replace(message, _random.Prob(0.90f) ? "Ч" : "Т");
         // з - ж
-        message = Regex.Replace(message, @"з", _random.Prob(0.90f) ? "ж" : "з");
-        message = Regex.Replace(message, @"З", _random.Prob(0.90f) ? "Ж" : "З");
+        message = RegexLowerZCyr.Replace(message, _random.Prob(0.90f) ? "ж" : "з");
+        message = RegexUpperZCyr.Replace(message, _random.Prob(0.90f) ? "Ж" : "З");
         // collard-Localization-end
 
         args.Message = message;

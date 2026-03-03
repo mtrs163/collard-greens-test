@@ -10,8 +10,6 @@ using Content.Shared.Collard.DetailExaminable;
 using Content.Server.Collard.DetailExaminable;
 using Robust.Shared.Player;
 using Content.Server.Popups;
-using Content.Shared.IdentityManagement;
-using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 // collard-DetailExaminableGlowup-end
 
 namespace Content.Server.DetailExaminable;

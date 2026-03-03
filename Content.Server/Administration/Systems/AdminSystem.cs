@@ -46,7 +46,7 @@ public sealed class AdminSystem : EntitySystem
     [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly MindSystem _minds = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
+    // [Dependency] private readonly PopupSystem _popup = default!; //collard
     [Dependency] private readonly PhysicsSystem _physics = default!;
     [Dependency] private readonly PlayTimeTrackingManager _playTime = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;

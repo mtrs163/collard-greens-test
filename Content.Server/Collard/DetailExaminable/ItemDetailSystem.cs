@@ -2,17 +2,11 @@ using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
-using Content.Server.EUI;
-using Content.Server.Collard.DetailExaminable;
-using Content.Shared.Collard.DetailExaminable;
 using Robust.Shared.Player;
-using Content.Server.Actions;
 using Content.Server.Administration;
 using Content.Server.Popups;
 using Content.Shared.Administration.Logs;
-using Content.Server.Administration.Managers;
 using Content.Shared.Database;
-using Content.Server.Ghost;
 using Content.Shared.Ghost;
 using Content.Shared.Hands.Components;
 
@@ -21,7 +15,6 @@ namespace Content.Server.Collard.DetailExaminable
     public sealed class ItemDetailSystem : EntitySystem
     {
         [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
-        [Dependency] private readonly ActionsSystem _actions = default!;
         [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
