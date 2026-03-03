@@ -117,7 +117,7 @@ namespace Content.Client.PDA
             StationTimeButton.OnPressed += _ =>
             {
                 var stationTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
-                _clipboard.SetText((stationTime.ToString("dd\\:hh\\:mm\\:ss"))); // collard-long-shifts
+                _clipboard.SetText(stationTime.ToString("dd\\:hh\\:mm\\:ss")); // collard-long-shifts
             };
 
             // collard-ICDateTime-start
@@ -125,7 +125,7 @@ namespace Content.Client.PDA
             {
                 var worldTime = _gameTicker.ICDateTime;
                 var stationTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
-                _clipboard.SetText((worldTime.AddSeconds(stationTime.TotalSeconds).ToString("dd.MM.yyyy; HH\\:mm\\:ss")));
+                _clipboard.SetText(worldTime.AddSeconds(stationTime.TotalSeconds).ToString("dd.MM.yyyy; HH\\:mm\\:ss"));
             };
             // collard-ICDateTime-end
 

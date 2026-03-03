@@ -534,8 +534,8 @@ public sealed class FaxSystem : EntitySystem
             ? deviceNetworkComponent.Address
             : Loc.GetString("device-address-unknown");
 
-            var time = _gameTicker.RoundDuration();
-            var timeString = TimeSpan.FromSeconds(Math.Truncate(time.TotalSeconds)).ToString();
+            var time = _gameTicker.ICDateTime; // collard-ICDateTime
+            var timeString = time.AddSeconds(_gameTicker.RoundDuration().TotalSeconds).ToString("dddd, dd.MM.yyyy; hh:mm"); // collard-ICDateTime
 
             content += "\n";
             content += Loc.GetString(component.SenderInfo,
