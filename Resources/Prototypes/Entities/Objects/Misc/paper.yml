@@ -89,6 +89,7 @@
         type: PaperBoundUserInterface
   - type: FaxableObject
   - type: PaperVisuals
+  - type: StationAiWhitelist
 # collard-Printer-start
   - type: Material
   - type: PhysicalComposition
@@ -484,3 +485,4 @@
       - !type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: StationAiWhitelist
