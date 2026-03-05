@@ -1,0 +1,5 @@
+- type: lobbyBackground
+  id: BlankWall
+  background: /Textures/Collard/LobbyScreens/background.webp
+  title: Default
+  artist: nmtrs
