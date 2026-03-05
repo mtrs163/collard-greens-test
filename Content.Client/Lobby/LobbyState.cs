@@ -252,7 +252,7 @@ namespace Content.Client.Lobby
 
         private void UpdateLobbyBackground()
         {
-            if (_protoMan.TryIndex(_gameTicker.LobbyBackground, out var proto))
+            /*if (_protoMan.TryIndex(_gameTicker.LobbyBackground, out var proto))
             {
                 Lobby!.Background.Texture = _resourceCache.GetResource<TextureResource>(proto.Background);
 
@@ -267,7 +267,7 @@ namespace Content.Client.Lobby
                 Lobby!.Background.Texture = null;
 
                 Lobby!.LobbyBackground.SetMarkup(Loc.GetString("lobby-state-background-no-background-text"));
-            }
+            }*/
         }
 
         private void SetReady(bool newReady)
