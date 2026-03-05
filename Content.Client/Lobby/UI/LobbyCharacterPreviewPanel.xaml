@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:profile="clr-namespace:Content.Client.Lobby.UI.ProfileEditorControls">
+    <!--Nanoheading removed (collard-ui)-->
     <BoxContainer Name="VBox" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
         <BoxContainer Name="Loaded" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True"
                       Visible="False" Margin="0 200 0 0">
