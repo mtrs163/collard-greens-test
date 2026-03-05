@@ -3,25 +3,30 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:profile="clr-namespace:Content.Client.Lobby.UI.ProfileEditorControls">
-    <BoxContainer Name="VBox" Orientation="Vertical">
+    <BoxContainer Name="VBox" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
         <controls:NanoHeading Name="Header" Text="{Loc 'lobby-character-preview-panel-header'}">
 
         </controls:NanoHeading>
-        <BoxContainer Name="Loaded" Orientation="Vertical"
-                      Visible="False">
+        <BoxContainer Name="Loaded" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True"
+                      Visible="False" Margin="0 200 0 0">
             <Label Name="Summary" HorizontalAlignment="Center" Margin="3 3"/>
-            <BoxContainer Name="ViewBox" Orientation="Horizontal" HorizontalAlignment="Center">
-                <profile:ProfilePreviewSpriteView Name="ProfilePreviewSpriteView"
-                                                  OverrideDirection="South"
-                                                  Scale="4 4"
-                                                  MaxSize="112 112"
-                                                  Stretch="Fill"
-                                                  Access="Public" />
-            </BoxContainer>
             <controls:VSpacer/>
             <Button Name="CharacterSetup" Text="{Loc 'lobby-character-preview-panel-character-setup-button'}"
                     HorizontalAlignment="Center"
-                    Margin="0 5 0 0"/>
+                    Margin="0 10 0 0"/>
+            <controls:VSpacer/>
+            <BoxContainer Name="ViewBox" Orientation="Horizontal" HorizontalAlignment="Center" VerticalExpand="True" HorizontalExpand="True" Margin="0 0 0 200">
+                <profile:ProfilePreviewSpriteView Name="ProfilePreviewSpriteView"
+                                                  OverrideDirection="South"
+                                                  Scale="50 50"
+                                                  MinSize="112 112"
+                                                  Stretch="Fill"
+                                                  VerticalExpand="True"
+                                                  HorizontalExpand="True"
+                                                  VerticalAlignment="Bottom"
+                                                  HorizontalAlignment="Center"
+                                                  Access="Public" />
+            </BoxContainer>
         </BoxContainer>
         <Label Name="Unloaded" Text="{Loc 'lobby-character-preview-panel-unloaded-preferences-label'}"/>
     </BoxContainer>
