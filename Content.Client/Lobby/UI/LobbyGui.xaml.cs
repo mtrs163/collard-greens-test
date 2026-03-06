@@ -18,6 +18,7 @@ namespace Content.Client.Lobby.UI
             IoCManager.InjectDependencies(this);
             SetAnchorPreset(MainContainer, LayoutPreset.Wide);
             SetAnchorPreset(Background, LayoutPreset.Wide);
+            SetAnchorPreset(CharBox, LayoutPreset.Wide);
 
             LobbySong.SetMarkup(Loc.GetString("lobby-state-song-no-song-text"));
 
@@ -37,7 +38,7 @@ namespace Content.Client.Lobby.UI
             {
                 case LobbyGuiState.Default:
                     DefaultState.Visible = true;
-                    RightSide.Visible = true;
+                    RightSideBox.Visible = true;  //collard-ui
                     break;
                 case LobbyGuiState.CharacterSetup:
                     CharacterSetupState.Visible = true;
@@ -47,7 +48,7 @@ namespace Content.Client.Lobby.UI
 
                     if (1 - (setupWidth / actualWidth) > 0.30)
                     {
-                        RightSide.Visible = false;
+                        RightSideBox.Visible = false;  //collard-ui
                     }
 
                     UserInterfaceManager.GetUIController<LobbyUIController>().ReloadCharacterSetup();
@@ -58,7 +59,7 @@ namespace Content.Client.Lobby.UI
 
         private void TogglePanel(bool value)
         {
-            RightSide.Visible = value;
+            RightSideBox.Visible = value; //collard-ui
             ExpandPanel.Visible = !value;
         }
 

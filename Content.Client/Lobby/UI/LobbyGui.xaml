@@ -12,38 +12,16 @@
     <!-- Background -->
     <TextureRect Access="Public" VerticalExpand="True" HorizontalExpand="True" Name="Background"
                  Stretch="KeepAspectCovered" />
+    <!-- Character preview (collard-ui) -->
+    <BoxContainer Name="CharBox" VerticalExpand="True" HorizontalExpand="True">
+        <lobbyUi:LobbyCharacterPreviewPanel Name="CharacterPreview" VerticalExpand="True" HorizontalExpand="True" Access="Public"/>
+    </BoxContainer>
     <BoxContainer Name="MainContainer" VerticalExpand="True" HorizontalExpand="True" Orientation="Horizontal"
                   Margin="10 10 10 10" SeparationOverride="2">
-        <SplitContainer State="Auto" ResizeMode="NotResizable" HorizontalExpand="True">
             <!-- LHS Controls -->
             <BoxContainer Name="LeftSide" Orientation="Vertical" SeparationOverride="4" HorizontalExpand="True">
                 <Control Name="DefaultState" VerticalExpand="True">
                     <BoxContainer Name="TopLeft" Orientation="Vertical">
-                        <!-- Left Top Panel -->
-                        <PanelContainer StyleClasses="BackgroundPanel" HorizontalAlignment="Left" Name="LeftSideTop"
-                                        VerticalAlignment="Top">
-                            <BoxContainer Orientation="Vertical" HorizontalAlignment="Center" MaxWidth="800">
-                                <info:LinkBanner Name="LinkBanner" VerticalExpand="false" HorizontalAlignment="Center"
-                                                 Margin="3 3 3 3" />
-                                <controls:StripeBack>
-                                    <BoxContainer Orientation="Horizontal" SeparationOverride="6" Margin="3 3 3 3">
-                                        <cc:UICommandButton Command="observe" Name="ObserveButton" Access="Public"
-                                                            Text="{Loc 'ui-lobby-observe-button'}"
-                                                            StyleClasses="ButtonBig"
-                                                            WindowType="{x:Type lobbyUi:ObserveWarningWindow}" />
-                                        <Label Name="StartTime"
-                                               Access="Public"
-                                               Align="Left"
-                                               FontColorOverride="{x:Static maths:Color.DarkGray}"
-                                               StyleClasses="LabelBig" HorizontalExpand="True" />
-                                        <Button Name="ReadyButton" Access="Public" ToggleMode="True"
-                                                Text="{Loc 'ui-lobby-ready-up-button'}"
-                                                StyleClasses="ButtonBig" MinWidth="137" />
-                                    </BoxContainer>
-                                </controls:StripeBack>
-                                <RichTextLabel Name="PlaytimeComment" Visible="False" Access="Public" HorizontalAlignment="Center" />
-                            </BoxContainer>
-                        </PanelContainer>
                         <!-- Voting Popups -->
                         <BoxContainer Orientation="Vertical" SeparationOverride="4" Name="VoteContainer"
                                       Access="Public" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 8" />
@@ -66,6 +44,7 @@
                 <Control Access="Public" Visible="False" Name="CharacterSetupState" VerticalExpand="True" />
             </BoxContainer>
             <!-- Right Panel -->
+            <BoxContainer Name="RightSideBox" Orientation="Vertical" SeparationOverride="4" HorizontalExpand="False" VerticalExpand="True">
             <PanelContainer Name="RightSide" Access="Public" StyleClasses="BackgroundPanel" HorizontalAlignment="Right" VerticalExpand="True"
                             VerticalAlignment="Stretch">
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
@@ -96,7 +75,7 @@
                     <Label Name="StationTime" Access="Public" FontColorOverride="{x:Static maths:Color.LightGray}"
                            Margin="3 3 3 3" HorizontalAlignment="Left" />
                     <controls:HSpacer Spacing="5" />
-                    <lobbyUi:LobbyCharacterPreviewPanel Name="CharacterPreview" Access="Public" />
+
                     <controls:HSpacer Spacing="5" />
                     <BoxContainer MinHeight="10" />
                     <!-- Gold line -->
@@ -112,7 +91,32 @@
                                 ModulateSelfOverride="#DEDEDE"
                                 Scale="0.5 0.5"/>
             </PanelContainer>
-        </SplitContainer>
+            <!-- Left Top Panel (collard-ui) -->
+            <PanelContainer StyleClasses="BackgroundPanel" HorizontalAlignment="Stretch" Name="LeftSideTop"
+                            VerticalAlignment="Top" HorizontalExpand="True">
+                <BoxContainer Orientation="Vertical" HorizontalAlignment="Stretch" HorizontalExpand="True">
+                    <info:LinkBanner Name="LinkBanner" VerticalExpand="false" HorizontalAlignment="Center"
+                                    Margin="3 3 3 3" HorizontalExpand="True"/>
+                    <controls:StripeBack HorizontalExpand="True" HorizontalAlignment="Stretch">
+                        <BoxContainer Orientation="Horizontal" SeparationOverride="6" Margin="3 3 3 3" HorizontalExpand="True">
+                            <cc:UICommandButton Command="observe" Name="ObserveButton" Access="Public"
+                                                Text="{Loc 'ui-lobby-observe-button'}"
+                                                StyleClasses="ButtonBig"
+                                                WindowType="{x:Type lobbyUi:ObserveWarningWindow}" />
+                            <Label Name="StartTime"
+                                    Access="Public"
+                                    Align="Left"
+                                    FontColorOverride="{x:Static maths:Color.DarkGray}"
+                                    StyleClasses="LabelBig" HorizontalExpand="True" />
+                            <Button Name="ReadyButton" Access="Public" ToggleMode="True"
+                                    Text="{Loc 'ui-lobby-ready-up-button'}"
+                                    StyleClasses="ButtonBig" MinWidth="137" />
+                        </BoxContainer>
+                    </controls:StripeBack>
+                    <RichTextLabel Name="PlaytimeComment" Visible="False" Access="Public" HorizontalAlignment="Center" />
+                </BoxContainer>
+            </PanelContainer>
+                </BoxContainer>
         <PanelContainer Name="ExpandPanel"
                         StyleClasses="BackgroundPanel"
                         HorizontalAlignment="Right"

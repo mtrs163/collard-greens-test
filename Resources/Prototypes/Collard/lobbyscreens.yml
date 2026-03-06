@@ -1,0 +1,5 @@
+- type: lobbyBackground
+  id: BlankWall
+  background: /Textures/Collard/LobbyScreens/background.webp
+  title: lobby-state-background-collarddefault-title
+  artist: lobby-state-background-collarddefault-artist
