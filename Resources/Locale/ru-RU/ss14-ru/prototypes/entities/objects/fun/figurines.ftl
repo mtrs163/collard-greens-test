@@ -98,3 +98,5 @@ ent-ToySkeleton = фигурка скелета
     .desc = Буу, испугал!
 ent-ToyFigurineThief = фигурка вора
     .desc = Скрываясь в тени...
+ent-ToyFigurineSkeleton = фигурка скелета
+    .desc = Фигурка, изображающая страшного жуткого скелета.

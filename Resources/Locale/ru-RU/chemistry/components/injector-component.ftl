@@ -8,8 +8,8 @@ injector-toggle-verb-text = Переключить Режим Инъектора
 
 ## Entity
 
-injector-component-inject-mode-name = набор
-injector-component-draw-mode-name = введение
+injector-component-inject-mode-name = введение
+injector-component-draw-mode-name = набор
 injector-component-dynamic-mode-name = динамический
 injector-component-mode-changed-text = Теперь {$mode}
 injector-component-transfer-success-message = Вы переводите {$amount}ед в {$target}.
