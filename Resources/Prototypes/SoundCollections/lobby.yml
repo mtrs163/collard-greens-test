@@ -1,18 +1,36 @@
 - type: soundCollection
   id: LobbyMusic
   files:
-    - /Audio/Lobby/thunderdome.ogg
-    - /Audio/Lobby/absconditus.ogg
+    # - /Audio/Lobby/thunderdome.ogg
+    # - /Audio/Lobby/absconditus.ogg
     - /Audio/Lobby/space_asshole.ogg
     - /Audio/Lobby/the_wizard.ogg
-    - /Audio/Lobby/endless_space.ogg
-    - /Audio/Lobby/singuloose.ogg
+    # - /Audio/Lobby/endless_space.ogg
+    # - /Audio/Lobby/singuloose.ogg
     - /Audio/Lobby/comet_haley.ogg
-    - /Audio/Lobby/title2.ogg
-    - /Audio/Lobby/title3.ogg
-    - /Audio/Lobby/mod.flip-flap.ogg
-    - /Audio/Lobby/Spac_Stac.ogg
-    - /Audio/Lobby/pwmur.ogg
+    # - /Audio/Lobby/title2.ogg
+    # - /Audio/Lobby/title3.ogg
+    # - /Audio/Lobby/mod.flip-flap.ogg
+    # - /Audio/Lobby/Spac_Stac.ogg
+    # - /Audio/Lobby/pwmur.ogg
     - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg
     - /Audio/Lobby/every_light_is_blinking_at_once.ogg
-    - /Audio/Lobby/atomicamnesiammx.ogg
+    # - /Audio/Lobby/atomicamnesiammx.ogg
+    # collard-start
+    - /Audio/Collard/Lobby/ARC_Raiders.ogg
+    - /Audio/Collard/Lobby/Astronomia.ogg
+    - /Audio/Collard/Lobby/baobab.ogg
+    - /Audio/Collard/Lobby/Contact.ogg
+    - /Audio/Collard/Lobby/Dreamscape.ogg
+    - /Audio/Collard/Lobby/Finally_Alive.ogg
+    - /Audio/Collard/Lobby/Jackies_Box.ogg
+    - /Audio/Collard/Lobby/Klyushka.ogg
+    - /Audio/Collard/Lobby/Let_it_Breathe.ogg
+    - /Audio/Collard/Lobby/Red_Lagoon.ogg
+    - /Audio/Collard/Lobby/Resurrection.ogg
+    - /Audio/Collard/Lobby/Speranza.ogg
+    - /Audio/Collard/Lobby/Strobe.ogg
+    - /Audio/Collard/Lobby/The_Creepypasta_Song.ogg
+    - /Audio/Collard/Lobby/The_Rust_Belt.ogg
+    - /Audio/Collard/Lobby/Were_Finally_Landing.ogg
+    - /Audio/Collard/Lobby/Ya_Iz_Doma_Vse_Prodal.ogg
