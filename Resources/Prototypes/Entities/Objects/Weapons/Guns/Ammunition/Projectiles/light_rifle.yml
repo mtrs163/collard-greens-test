@@ -7,7 +7,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35 # collard-LifeValue
+        Piercing: 45 # collard-LifeValue
 
 - type: entity
   parent: BaseBulletPractice
@@ -29,8 +29,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20 # collard-LifeValue
-        Heat: 5
+        Piercing: 30 # collard-LifeValue
+        Heat: 10 # collard-LifeValue
 
 - type: entity
   parent: BaseBulletUranium
@@ -41,5 +41,5 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 10 # collard-LifeValue
-        Piercing: 15 # collard-LifeValue
+        Radiation: 20 # collard-LifeValue
+        Piercing: 20 # collard-LifeValue

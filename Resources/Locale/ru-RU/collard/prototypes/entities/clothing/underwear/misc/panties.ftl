@@ -1,7 +1,7 @@
 ent-ClothingUnderwearBottomPantiesWhite = трусики
     .desc = Стандартное нижнее бельё Nanotrasen для сотрудниц станции. Они слишком стандартные для слишком стандартной сотрудницы станции, как вы.
 
-#etc
+# etc
 ent-ClothingUnderwearBottomPantiesBlueShild = сине-белые трусики
     .desc = Самые обычные трусики, только синие. И белые.
 
@@ -50,7 +50,7 @@ ent-ClothingUnderwearBottomPantiesSeniorScience = бело-фиолетовые 
 ent-ClothingUnderwearBottomPantiesSeniorEnginer = цветные сине-оранжевые трусики (альт)
     .desc = Красивые разноцветные трусики.
 
-#for jobs
+# for jobs
 
 ent-ClothingUnderwearBottomPantiesSeniorDoctor = цветные сине-оранжевые трусики
     .desc = Красивые разноцветные трусики.

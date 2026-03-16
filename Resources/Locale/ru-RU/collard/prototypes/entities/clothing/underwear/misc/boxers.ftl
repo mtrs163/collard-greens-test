@@ -1,7 +1,7 @@
 ent-ClothingUnderwearBottomBoxersWhite = боксеры
     .desc = Самые обычные трусы-боксеры. Удобно.
 
-#etc
+# etc
 ent-ClothingUnderwearBottomBoxersBlueShild = синие длинные боксеры
     .desc = Как боксеры, но только длинные. И синие.
 
@@ -41,7 +41,7 @@ ent-ClothingUnderwearBottomBoxersSeniorScience = бело-фиолетовые �
 ent-ClothingUnderwearBottomBoxersSeniorEnginer = цветные сине-оранжевые боксеры (альт)
     .desc = Красивые разноцветные боксеры.
 
-#for jobs
+# for jobs
 ent-ClothingUnderwearBottomBoxersSeniorDoctor = цветные сине-оранжевые боксеры
     .desc = Красивые разноцветные боксеры.
 

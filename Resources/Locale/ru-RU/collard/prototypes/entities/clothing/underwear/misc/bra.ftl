@@ -7,7 +7,7 @@ ent-ClothingUnderwearTopBraSports = спортивное бра
 ent-ClothingUnderwearTopBraSportsAlternative = альтернативное спортивное бра
     .desc = Лифчик для занятий спортом.
 
-#etc
+# etc
 ent-ClothingUnderwearTopBlueShild = сине-белое бра
     .desc = Как обычное бра, только синее. И белое.
 
@@ -52,7 +52,7 @@ ent-ClothingUnderwearTopSeniorScience = бело-фиолетовое бра
 ent-ClothingUnderwearTopSeniorEnginer = цветное сине-оранжевое бра (альт)
     .desc = Красивое разноцветное бра.
 
-#for jobs
+# for jobs
 ent-ClothingUnderwearTopSeniorSec = красно-белое спортивное бра
     .desc = Красивое разноцветное бра.
 
