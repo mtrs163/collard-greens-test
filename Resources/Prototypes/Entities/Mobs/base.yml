@@ -167,8 +167,8 @@
     soundHit:
       collection: MetalThud
     damage:
-      groups:
-        Brute: 10 #collard-LifeValue
+      types:
+        Blunt: 10 #collard-LifeValue
 
 # Used for mobs that are affected by atmospherics, pressure, and heat
 - type: entity
