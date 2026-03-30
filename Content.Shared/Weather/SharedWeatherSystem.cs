@@ -47,13 +47,14 @@ public abstract class SharedWeatherSystem : EntitySystem
         if (Resolve(ent, ref ent.Comp2, false) && _roof.IsRooved((ent, ent.Comp1, ent.Comp2), tileRef.GridIndices))
             return false;
 
-        // var tileDef = (ContentTileDefinition)_tileDefManager[tileRef.Tile.TypeId]; // collard-WeatherChanges-start
+        // collard-WeatherChanges-start
+        //var tileDef = (ContentTileDefinition)_tileDefManager[tileRef.Tile.TypeId];
 
-        // if (!tileDef.Weather)
+        //if (!tileDef.Weather)
         if (HasComp<ImplicitRoofComponent>(ent))
-            return false;
-        // collard-WeatherChanges-end
 
+        // collard-WeatherChanges-end
+            return false;
 
         var anchoredEntities = _mapSystem.GetAnchoredEntitiesEnumerator(ent, ent.Comp1, tileRef.GridIndices);
 
