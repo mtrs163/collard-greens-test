@@ -67,7 +67,7 @@ public sealed class DetailExaminableSystem : EntitySystem
         var user = args.User;
 
         // collard-DetailExaminableGlowup-start
-        if (!EntityManager.TryGetComponent(args.User, out ActorComponent? actor))
+        if (!TryComp(args.User, out ActorComponent? actor))
             return;
         var player = actor.PlayerSession;
         var target = GetNetEntity(args.Target);
@@ -95,7 +95,7 @@ public sealed class DetailExaminableSystem : EntitySystem
         if (args.Handled)
             return;
 
-        if (!EntityManager.TryGetComponent(args.Performer, out ActorComponent? actor))
+        if (!TryComp(args.Performer, out ActorComponent? actor))
             return;
 
         var player = actor.PlayerSession;
@@ -131,7 +131,7 @@ public sealed class DetailExaminableSystem : EntitySystem
         if (args.Handled)
             return;
 
-        if (!EntityManager.TryGetComponent(args.Performer, out ActorComponent? actor))
+        if (!TryComp(args.Performer, out ActorComponent? actor))
             return;
 
         var player = actor.PlayerSession;

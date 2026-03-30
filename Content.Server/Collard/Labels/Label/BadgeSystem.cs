@@ -45,7 +45,7 @@ namespace Content.Server.Collard.Labels
 
         private void OnExamined(EntityUid uid, BadgeComponent comp, ExaminedEvent args)
         {
-            if (comp.BadgeSlot.Item is not {Valid: true} item)
+            if (comp.BadgeSlot.Item is not { Valid: true } item)
                 return;
 
             using (args.PushGroup(nameof(BadgeComponent)))
@@ -56,7 +56,7 @@ namespace Content.Server.Collard.Labels
                     return;
                 }
 
-                if (!EntityManager.TryGetComponent(item, out PaperComponent? paper))
+                if (!TryComp(item, out PaperComponent? paper))
                     // Assuming yaml has the correct entity whitelist, this should not happen.
                     return;
 

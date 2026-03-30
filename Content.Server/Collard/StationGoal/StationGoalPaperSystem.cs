@@ -89,7 +89,7 @@ namespace Content.Server.Collard.StationGoal
         public bool SendStationGoal()
         {
             if (!_cfg.GetCVar(CCVars.StationGoal)) return false;
-            var enumerator = EntityManager.EntityQueryEnumerator<FaxMachineComponent>();
+            var enumerator = EntityQueryEnumerator<FaxMachineComponent>();
             var wasSent = false;
             while (enumerator.MoveNext(out var uid, out var fax))
             {
@@ -127,7 +127,7 @@ namespace Content.Server.Collard.StationGoal
                         new() { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#006600") },
                     });
                 _faxSystem.Receive(uid, printout, Loc.GetString("fax-component-sender-name-centcom"), fax);
-                var ccFaxes = EntityManager.EntityQueryEnumerator<FaxMachineComponent>();
+                var ccFaxes = EntityQueryEnumerator<FaxMachineComponent>();
                 while (ccFaxes.MoveNext(out var ccFaxUid, out var ccFax))
                 {
                     if (!ccFax.CentcomFax) continue;
@@ -142,7 +142,7 @@ namespace Content.Server.Collard.StationGoal
 
         public bool SendProtoStationGoal(StationGoalPrototype goal)
         {
-            var faxes = EntityManager.EntityQueryEnumerator<FaxMachineComponent>();
+            var faxes = EntityQueryEnumerator<FaxMachineComponent>();
             var wasSent = false;
             //foreach (var fax in faxes)
             while (faxes.MoveNext(out var uid, out var fax))
@@ -176,7 +176,7 @@ namespace Content.Server.Collard.StationGoal
                         new() { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#006600") },
                     });
                 _faxSystem.Receive(uid, printout, Loc.GetString("fax-component-sender-name-centcom"), fax);
-                var ccFaxes = EntityManager.EntityQueryEnumerator<FaxMachineComponent>();
+                var ccFaxes = EntityQueryEnumerator<FaxMachineComponent>();
                 while (ccFaxes.MoveNext(out var ccFaxUid, out var ccFax))
                 {
                     if (!ccFax.CentcomFax) continue;

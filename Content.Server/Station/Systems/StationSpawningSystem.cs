@@ -153,7 +153,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 _chatManager.SendAdminAnnouncement(Loc.GetString("player-join-round-message", ("name", profile.Name), ("job", job.Value.ToString())));
             // collard-Admin1984-end
             // collard-DetailExaminableGlowup-start
-            var detailExamineComp = EntityManager.EnsureComponent<DetailExaminableComponent>(entity.Value);
+            var detailExamineComp = EnsureComp<DetailExaminableComponent>(entity.Value);
             if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
             {
                 detailExamineComp.Content = profile.FlavorText;
