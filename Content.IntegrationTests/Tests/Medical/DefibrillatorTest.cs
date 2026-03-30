@@ -82,7 +82,7 @@ public sealed class DefibrillatorTest : InteractionTest
         Assert.Multiple(() =>
         {
             Assert.That(targetMobState.CurrentState, Is.EqualTo(MobState.Dead), "Target mob was revived despite being over the death damage threshold.");
-            // Assert.That(damageableSystem.GetTotalDamage(STarget!.Value), Is.GreaterThan(deathThreshold), "Target mob did not take damage from being defibrillated."); | collard-SavingThrows
+            // Assert.That(damageableSystem.GetTotalDamage(STarget!.Value), Is.GreaterThan(deathThreshold), "Target mob did not take damage from being defibrillated."); || collard-SavingThrows
         });
 
         // Set the damage halfway between the crit and death thresholds so that the target can be revived.

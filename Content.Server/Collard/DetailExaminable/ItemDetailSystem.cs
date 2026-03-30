@@ -31,7 +31,7 @@ namespace Content.Server.Collard.DetailExaminable
             if (Identity.Name(args.Target, EntityManager) != MetaData(args.Target).EntityName)
                 return;
 
-            if (!EntityManager.TryGetComponent(args.User, out ActorComponent? actor))
+            if (!TryComp(args.User, out ActorComponent? actor))
                 return;
 
             var player = actor.PlayerSession;

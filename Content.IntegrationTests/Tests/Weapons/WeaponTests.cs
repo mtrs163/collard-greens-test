@@ -59,8 +59,8 @@ public sealed class WeaponTests : InteractionTest
         updatedAmmo = gunSystem.GetAmmoCount(mosinEnt);
 
         Assert.That(updatedAmmo, Is.EqualTo(startAmmo - 1), "Mosin failed to discharge appropriate amount of ammo!");
-        // Assert.That(damageSystem.GetTotalDamage(ToServer(urist)), || collard-SavingThrows
-        //     Is.GreaterThan(FixedPoint2.Zero),
-        //     "Mosin was fired but urist sustained no damage!");
+        //Assert.That(damageSystem.GetTotalDamage(ToServer(urist)), || collard-SavingThrows
+        //    Is.GreaterThan(FixedPoint2.Zero),
+        //    "Mosin was fired but urist sustained no damage!");
     }
 }
