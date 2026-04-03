@@ -11,7 +11,9 @@ guide-entry-ERPStatusYes = Полное ERP
 # РП
 guide-entry-charactertransfer = Перенос персонажа с другого сервера
 guide-entry-kys-command = Команда "kys" как инструмент отыгрыша
+guide-entry-casino = Казино-гейминг или как придать вкуса отыгрышу
 guide-entry-check-command = Команда "check" как инструмент отыгрыша
+guide-entry-roll-command = Команда "roll" как инструмент отыгрыша
 guide-entry-posing = Позинг
 guide-entry-rphelp = Помощь с отыгрышем
 guide-entry-timeadd = Время и вайтлисты

@@ -11,7 +11,7 @@
   - ERPStatus
   - CharacterTransferingGuide
   - StationPrefix
-  - CheckCommand
+  - CasinoGaming
   - KYSCommand
   - Posing
 
@@ -65,9 +65,22 @@
   text: "/ServerInfo/Guidebook/Collard/RP/CharacterTransfering.xml"
 
 - type: guideEntry
+  id: CasinoGaming
+  name: guide-entry-casino
+  text: "/ServerInfo/Guidebook/Collard/RP/CasinoGaming.xml"
+  children:
+  - CheckCommand
+  - RollCommand
+
+- type: guideEntry
   id: CheckCommand
   name: guide-entry-check-command
   text: "/ServerInfo/Guidebook/Collard/RP/CheckCommand.xml"
+
+- type: guideEntry
+  id: RollCommand
+  name: guide-entry-roll-command
+  text: "/ServerInfo/Guidebook/Collard/RP/RollCommand.xml"
 
 - type: guideEntry
   id: KYSCommand
