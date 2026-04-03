@@ -20,8 +20,6 @@ namespace Content.Server.Collard.DetailExaminable
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
 
-        private ISawmill _sawmill = default!;
-
         public override void Initialize()
         {
             base.Initialize();
