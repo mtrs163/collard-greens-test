@@ -7,8 +7,8 @@ namespace Content.Server.Collard.DetailExaminable
     [RegisterComponent]
     public sealed partial class ItemDetailComponent : Component
     {
-        [DataField("content", required: true)] [ViewVariables(VVAccess.ReadWrite)]
-        public string Content = string.Empty;
+        [DataField]
+        public string Content = "Никто не установил описание для данного предмета.";
 
     }
 }

@@ -156,7 +156,6 @@
     - VoltageNetworks
     - Power
   - type: ItemDetail # collard-ItemDetail
-    content: "Описания нет."
 
 # APC under construction
 - type: entity
@@ -197,7 +196,6 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: ItemDetail # collard-ItemDetail
-    content: "Описания нет."
 
 # Constructed APC
 - type: entity
