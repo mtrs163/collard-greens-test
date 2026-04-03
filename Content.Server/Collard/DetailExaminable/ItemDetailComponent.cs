@@ -8,7 +8,7 @@ namespace Content.Server.Collard.DetailExaminable
     public sealed partial class ItemDetailComponent : Component
     {
         [DataField]
-        public string Content = string.Empty;
+        public string Content = Loc.GetString("item-detail-content-none");
 
     }
 }

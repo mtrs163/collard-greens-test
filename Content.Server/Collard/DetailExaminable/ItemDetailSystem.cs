@@ -26,14 +26,7 @@ namespace Content.Server.Collard.DetailExaminable
 
             SubscribeLocalEvent<ItemDetailComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
             SubscribeLocalEvent<ItemDetailComponent, ExaminedEvent>(HandleExamined);
-            SubscribeLocalEvent<ItemDetailComponent, ComponentInit>(OnComponentInit);
         }
-
-        private void OnComponentInit(EntityUid uid, ItemDetailComponent component, ComponentInit args)
-        {
-            component.Content = Loc.GetString("item-detail-content-none");
-        }
-
         private void OnGetExamineVerbs(EntityUid uid, ItemDetailComponent component, GetVerbsEvent<ExamineVerb> args)
         {
             if (Identity.Name(args.Target, EntityManager) != MetaData(args.Target).EntityName)
