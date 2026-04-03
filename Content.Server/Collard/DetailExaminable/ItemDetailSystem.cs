@@ -27,6 +27,7 @@ namespace Content.Server.Collard.DetailExaminable
             SubscribeLocalEvent<ItemDetailComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
             SubscribeLocalEvent<ItemDetailComponent, ExaminedEvent>(HandleExamined);
         }
+
         private void OnGetExamineVerbs(EntityUid uid, ItemDetailComponent component, GetVerbsEvent<ExamineVerb> args)
         {
             if (Identity.Name(args.Target, EntityManager) != MetaData(args.Target).EntityName)
