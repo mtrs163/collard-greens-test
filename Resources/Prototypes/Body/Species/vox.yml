@@ -185,7 +185,7 @@
     - trigger:
         !type:DamageTypeTrigger
         damageType: Blunt
-        damage: 400
+        damage: 1000 # collard-LifeValue
       behaviors:
       - !type:GibBehavior { }
     - trigger:

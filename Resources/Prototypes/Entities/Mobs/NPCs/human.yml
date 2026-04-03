@@ -83,7 +83,7 @@
     damage:
       types:
         Bloodloss: 49
-        Asphyxiation: 76
+        Asphyxiation: 376 # collard-LifeValue
         Slash: 56
         Blunt: 19
   - type: Inventory
