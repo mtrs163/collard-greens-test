@@ -76,7 +76,6 @@
   - type: StaticPrice
     price: 200
   - type: ItemDetail # collard-ItemDetail
-    content: "Описания нет."
   - type: Destructible
     thresholds:
       - trigger:

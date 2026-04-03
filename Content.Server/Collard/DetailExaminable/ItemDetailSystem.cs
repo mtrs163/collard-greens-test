@@ -9,6 +9,7 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Ghost;
 using Content.Shared.Hands.Components;
+using YamlDotNet.Core;
 
 namespace Content.Server.Collard.DetailExaminable
 {
@@ -19,11 +20,20 @@ namespace Content.Server.Collard.DetailExaminable
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
 
+        private ISawmill _sawmill = default!;
+
         public override void Initialize()
         {
             base.Initialize();
 
             SubscribeLocalEvent<ItemDetailComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
+            SubscribeLocalEvent<ItemDetailComponent, ExaminedEvent>(HandleExamined);
+            SubscribeLocalEvent<ItemDetailComponent, ComponentInit>(OnComponentInit);
+        }
+
+        private void OnComponentInit(EntityUid uid, ItemDetailComponent component, ComponentInit args)
+        {
+            component.Content = Loc.GetString("item-detail-content-none");
         }
 
         private void OnGetExamineVerbs(EntityUid uid, ItemDetailComponent component, GetVerbsEvent<ExamineVerb> args)
@@ -36,21 +46,6 @@ namespace Content.Server.Collard.DetailExaminable
 
             var player = actor.PlayerSession;
             var detailsRange = _examineSystem.IsInDetailsRange(args.User, uid);
-            var checkDetailVerb = new ExamineVerb()
-            {
-                Act = () =>
-                {
-                    var markup = new FormattedMessage();
-                    markup.AddMarkupOrThrow(component.Content);
-                    _examineSystem.SendExamineTooltip(args.User, uid, markup, false, false);
-                },
-                Text = Loc.GetString("item-detail-verb-check"),
-                Category = VerbCategory.Examine,
-                Disabled = !detailsRange,
-                Message = detailsRange ? null : Loc.GetString("detail-examinable-verb-disabled"),
-                Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/examine.svg.192dpi.png"))
-            };
-
             var editDetailVerb = new ExamineVerb()
             {
                 Act = () =>
@@ -61,9 +56,10 @@ namespace Content.Server.Collard.DetailExaminable
                                 Loc.GetString("item-detail-dialog-field"),
                                 (string newDesc) =>
                                 {
-                                    if (string.IsNullOrWhiteSpace(newDesc) || string.IsNullOrEmpty(newDesc))
+                                    if (string.IsNullOrWhiteSpace(newDesc) || string.IsNullOrEmpty(newDesc) || newDesc == string.Empty)
                                     {
                                         component.Content = Loc.GetString("item-detail-content-none");
+                                        return;
                                     }
                                     if (newDesc.Length > 128)
                                     {
@@ -83,8 +79,15 @@ namespace Content.Server.Collard.DetailExaminable
                 Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/insert.svg.192dpi.png"))
             };
 
-            args.Verbs.Add(checkDetailVerb);
             args.Verbs.Add(editDetailVerb);
+        }
+
+        private void HandleExamined(EntityUid examinedUid, ItemDetailComponent component, ExaminedEvent args)
+        {
+            using (args.PushGroup(nameof(ItemDetailComponent)))
+            {
+                args.PushText(component.Content);
+            }
         }
     }
 }

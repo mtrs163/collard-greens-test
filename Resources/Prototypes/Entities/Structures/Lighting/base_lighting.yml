@@ -47,7 +47,6 @@
   - type: Physics
     bodyType: Static
   - type: ItemDetail # collard-ItemDetail
-    content: "Описания нет."
   - type: Fixtures
     fixtures:
       fix1:

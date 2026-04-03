@@ -7,27 +7,26 @@ namespace Content.Server.DetailExaminable;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class DetailExaminableComponent : Component
 {
-    [DataField(required: true), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public string Content = string.Empty;
 
     // collard-DetailExaminableGlowup-start
-    [DataField("poseContent")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string PoseContent = string.Empty;
 
-    [DataField("changePoseAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     [AutoNetworkedField]
     public string ChangePoseAction = "ActionChangePose";
 
-    [DataField("changeFlavorAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     [AutoNetworkedField]
     public string ChangeFlavorAction = "ActionChangeFlavor";
 
-    [DataField("poseActionEntity")]
+    [DataField]
     [AutoNetworkedField]
     public EntityUid? PoseActionEntity;
 
-    [DataField("flavorActionEntity")]
+    [DataField]
     [AutoNetworkedField]
     public EntityUid? FlavorActionEntity;
     // collard-DetailExaminableGlowup-end
