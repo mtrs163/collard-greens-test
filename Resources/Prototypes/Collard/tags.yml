@@ -9,3 +9,6 @@
 
 - type: Tag
   id: Badge
+
+- type: Tag
+  id: BarMicron

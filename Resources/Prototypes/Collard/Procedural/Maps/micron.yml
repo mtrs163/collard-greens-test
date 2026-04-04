@@ -1,0 +1,59 @@
+- type: dungeonRoom
+  id: MicronBarWeh
+  size: 13,9
+  atlas: /Maps/Collard/Dungeon/RandomMap/Micronrandom.yml
+  offset: 14,0
+  tags:
+  - BarMicron
+
+- type: dungeonRoom
+  id: MicronBarGeneric
+  size: 13,9
+  atlas: /Maps/Collard/Dungeon/RandomMap/Micronrandom.yml
+  offset: 28,0
+  tags:
+  - BarMicron
+
+- type: dungeonRoom
+  id: MicronBarRatvar
+  size: 13,9
+  atlas: /Maps/Collard/Dungeon/RandomMap/Micronrandom.yml
+  offset: 42,0
+  tags:
+  - BarMicron
+
+- type: dungeonRoom
+  id: MicronBarCarp
+  size: 13,9
+  atlas: /Maps/Collard/Dungeon/RandomMap/Micronrandom.yml
+  offset: 56,0
+  tags:
+  - BarMicron
+
+- type: dungeonRoom
+  id: MicronBarAquamarine
+  size: 13,9
+  atlas: /Maps/Collard/Dungeon/RandomMap/Micronrandom.yml
+  offset: 70,0
+  tags:
+  - BarMicron
+
+# - type: dungeonRoom
+#   id: BagelTheater3
+#   size: 11,8
+#   atlas: /Maps/Dungeon/RandomMap/bagelrandom.yml
+#   offset: -1,9
+#   tags:
+#   - TheaterBagel
+
+- type: entity
+  id: MicronBarRoomMarker
+  parent: BaseRoomMarker
+  name: Micron Bar interior marker
+  components:
+  - type: RoomFill
+    rotation: false
+    maxSize: 13, 9
+    roomWhitelist:
+      tags:
+      - BarMicron

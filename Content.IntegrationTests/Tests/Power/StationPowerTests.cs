@@ -34,6 +34,7 @@ public sealed class StationPowerTests
         "Snowball",
         "Reach",
         "Exo",
+        "Micron", // collard-Micron
     ];
 
     [Explicit]

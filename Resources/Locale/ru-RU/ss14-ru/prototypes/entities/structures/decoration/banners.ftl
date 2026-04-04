@@ -22,5 +22,5 @@ ent-BannerRed = красное знамя
     .desc = Это знамя в красных цветах. Типа крутое.
 ent-BannerYellow = жёлтое знамя
     .desc = Это знамя в жёлтых цветах. Напоминает об уточках и лимонах.
-ent-BannerGreen = зелёное знамя
-    .desc = Это знамя в зелёных цветах. Трава, листья, гуакамоле.
+ent-BannerGreen = знамя Collard Entertainment
+    .desc = Это знамя в зелёных цветах. На нём изображён логотип компании Collard Entertainment.
