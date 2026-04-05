@@ -4,8 +4,8 @@ meta:
   engineVersion: 275.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/04/2026 09:30:26
-  entityCount: 7855
+  time: 04/05/2026 02:02:17
+  entityCount: 7872
 maps:
 - 1
 grids:
@@ -4295,12 +4295,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 4.5,22.5
       parent: 2
-  - uid: 7198
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 9.5,19.5
-      parent: 2
   - uid: 7295
     components:
     - type: Transform
@@ -4645,6 +4639,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 34.5,14.5
+      parent: 2
+- proto: AirlockHeadOfPersonnelLocked
+  entities:
+  - uid: 998
+    components:
+    - type: Transform
+      pos: 9.5,19.5
       parent: 2
 - proto: AirlockHeadOfSecurityLocked
   entities:
@@ -19221,6 +19222,11 @@ entities:
       parent: 2
 - proto: CrateEmptySpawner
   entities:
+  - uid: 1057
+    components:
+    - type: Transform
+      pos: 45.5,41.5
+      parent: 2
   - uid: 7839
     components:
     - type: Transform
@@ -23160,6 +23166,8 @@ entities:
     - type: Transform
       pos: 46.5,36.5
       parent: 2
+    - type: FaxMachine
+      name: Кабинет ГСБ
   - uid: 7324
     components:
     - type: Transform
@@ -38956,6 +38964,14 @@ entities:
     - type: Transform
       pos: 20.627125,27.008558
       parent: 2
+- proto: HandheldStationMap
+  entities:
+  - uid: 7858
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 15.455735,23.152388
+      parent: 2
 - proto: HighSecArmoryLocked
   entities:
   - uid: 7236
@@ -39820,11 +39836,6 @@ entities:
       parent: 2
 - proto: LootSpawnerRandomCrateEngineering
   entities:
-  - uid: 5985
-    components:
-    - type: Transform
-      pos: 45.5,41.5
-      parent: 2
   - uid: 7838
     components:
     - type: Transform
@@ -40469,7 +40480,7 @@ entities:
       pos: 9.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -10986.856
+      secondsUntilStateChange: -11336.875
       state: Opening
   - uid: 7305
     components:
@@ -40477,7 +40488,7 @@ entities:
       pos: 7.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -10987.457
+      secondsUntilStateChange: -11337.476
       state: Opening
 - proto: PaperOffice
   entities:
@@ -41309,6 +41320,11 @@ entities:
       rot: 3.141592653589793 rad
       pos: 35.5,5.5
       parent: 2
+  - uid: 7857
+    components:
+    - type: Transform
+      pos: -11.5,35.5
+      parent: 2
 - proto: PoweredLEDSmallLight
   entities:
   - uid: 1333
@@ -41540,6 +41556,12 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 41.5,29.5
+      parent: 2
+  - uid: 7856
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,6.5
       parent: 2
 - proto: PoweredlightGreen
   entities:
@@ -44725,6 +44747,119 @@ entities:
     - type: Transform
       pos: -13.5,41.5
       parent: 2
+- proto: StationMap
+  entities:
+  - uid: 7859
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,14.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7860
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,24.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7861
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 11.5,31.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7862
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 25.5,35.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7863
+    components:
+    - type: Transform
+      pos: 38.5,32.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7864
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 39.5,22.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7865
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 31.5,14.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7866
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 21.5,18.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7867
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 22.5,13.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7868
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 18.5,6.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7869
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -9.5,36.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7870
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 30.5,28.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7871
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 59.5,8.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7872
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -16.5,21.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
 - proto: StationRecordsComputerCircuitboard
   entities:
   - uid: 3130
@@ -46339,6 +46474,18 @@ entities:
     - type: Transform
       pos: 47.027336,17.513065
       parent: 2
+- proto: TurnstileGenpopEnter
+  entities:
+  - uid: 1065
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 54.5,27.5
+      parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - GenpopEnter
+      - - Security
 - proto: TurnstileGenpopLeave
   entities:
   - uid: 7424
@@ -46357,16 +46504,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 54.5,25.5
       parent: 2
-  - uid: 7465
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 54.5,27.5
-      parent: 2
-    - type: AccessReader
-      accessListsOriginal:
-      - - GenpopLeave
-      - - Security
 - proto: TwoWayLever
   entities:
   - uid: 7163
@@ -47790,6 +47927,24 @@ entities:
     components:
     - type: Transform
       pos: -5.5,33.5
+      parent: 2
+  - uid: 1066
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -12.5,26.5
+      parent: 2
+  - uid: 1067
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -7.5,26.5
+      parent: 2
+  - uid: 1068
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -8.5,26.5
       parent: 2
   - uid: 1075
     components:
@@ -50450,6 +50605,12 @@ entities:
     - type: Transform
       pos: 18.5,3.5
       parent: 2
+  - uid: 5985
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -9.5,26.5
+      parent: 2
   - uid: 6969
     components:
     - type: Transform
@@ -50461,10 +50622,22 @@ entities:
       rot: 3.141592653589793 rad
       pos: 61.5,23.5
       parent: 2
+  - uid: 7198
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -10.5,26.5
+      parent: 2
   - uid: 7427
     components:
     - type: Transform
       pos: 64.5,26.5
+      parent: 2
+  - uid: 7465
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -11.5,26.5
       parent: 2
   - uid: 7534
     components:
@@ -50956,11 +51129,6 @@ entities:
     - type: Transform
       pos: -2.5,27.5
       parent: 2
-  - uid: 998
-    components:
-    - type: Transform
-      pos: -12.5,26.5
-      parent: 2
   - uid: 999
     components:
     - type: Transform
@@ -51020,31 +51188,6 @@ entities:
     components:
     - type: Transform
       pos: 6.5,14.5
-      parent: 2
-  - uid: 1057
-    components:
-    - type: Transform
-      pos: -7.5,26.5
-      parent: 2
-  - uid: 1065
-    components:
-    - type: Transform
-      pos: -8.5,26.5
-      parent: 2
-  - uid: 1066
-    components:
-    - type: Transform
-      pos: -9.5,26.5
-      parent: 2
-  - uid: 1067
-    components:
-    - type: Transform
-      pos: -10.5,26.5
-      parent: 2
-  - uid: 1068
-    components:
-    - type: Transform
-      pos: -11.5,26.5
       parent: 2
   - uid: 1069
     components:

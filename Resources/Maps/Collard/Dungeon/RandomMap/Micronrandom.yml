@@ -4,8 +4,8 @@ meta:
   engineVersion: 275.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/04/2026 09:31:47
-  entityCount: 953
+  time: 04/05/2026 02:22:44
+  entityCount: 958
 maps:
 - 1
 grids:
@@ -4202,16 +4202,16 @@ entities:
       parent: 1
 - proto: PoweredlightCyan
   entities:
-  - uid: 910
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 81.5,2.5
-      parent: 1
   - uid: 911
     components:
     - type: Transform
       pos: 76.5,7.5
+      parent: 1
+  - uid: 958
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 81.5,4.5
       parent: 1
 - proto: PoweredlightGreen
   entities:
@@ -4587,6 +4587,38 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 28.49777,6.764382
+      parent: 1
+- proto: SinkStemlessWater
+  entities:
+  - uid: 910
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.5,2.5
+      parent: 1
+  - uid: 954
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 39.5,2.5
+      parent: 1
+  - uid: 955
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 53.5,2.5
+      parent: 1
+  - uid: 956
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 67.5,2.5
+      parent: 1
+  - uid: 957
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 81.5,2.5
       parent: 1
 - proto: SodaDispenser
   entities:
@@ -6148,7 +6180,7 @@ entities:
       access:
       - - Bar
     - type: Door
-      secondsUntilStateChange: -12689.514
+      secondsUntilStateChange: -12760.235
       state: Opening
     - type: Airlock
       autoClose: False
