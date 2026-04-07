@@ -4,8 +4,8 @@ meta:
   engineVersion: 275.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/05/2026 02:22:44
-  entityCount: 958
+  time: 04/07/2026 08:46:58
+  entityCount: 964
 maps:
 - 1
 grids:
@@ -2438,6 +2438,38 @@ entities:
     components:
     - type: Transform
       pos: 82.5,5.5
+      parent: 1
+- proto: DefaultStationBeaconBar
+  entities:
+  - uid: 959
+    components:
+    - type: Transform
+      pos: 76.5,4.5
+      parent: 1
+  - uid: 960
+    components:
+    - type: Transform
+      pos: 20.5,4.5
+      parent: 1
+  - uid: 961
+    components:
+    - type: Transform
+      pos: 34.5,4.5
+      parent: 1
+  - uid: 962
+    components:
+    - type: Transform
+      pos: 62.5,4.5
+      parent: 1
+  - uid: 963
+    components:
+    - type: Transform
+      pos: 48.5,4.5
+      parent: 1
+  - uid: 964
+    components:
+    - type: Transform
+      pos: 6.5,4.5
       parent: 1
 - proto: DehydratedSpaceCarp
   entities:
@@ -6180,7 +6212,7 @@ entities:
       access:
       - - Bar
     - type: Door
-      secondsUntilStateChange: -12760.235
+      secondsUntilStateChange: -12824.175
       state: Opening
     - type: Airlock
       autoClose: False
