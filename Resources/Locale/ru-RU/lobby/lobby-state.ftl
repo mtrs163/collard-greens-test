@@ -39,12 +39,12 @@ lobby-state-playtime-comment-concerning = Сегодня вы играли {$hou
     *[other]часов
     }. Пожалуйста, отдохните.
 lobby-state-playtime-comment-grasstouchless = {$hours} {$hours ->
-    [1]час
-    [few]часа
-    *[other]часов
-    } часов. Выйди из игры и исполни свои нужды.
+    [1]час.
+    [few]часа.
+    *[other]часов.
+    }. Выйди из игры и потрогай траву.
 lobby-state-playtime-comment-selfdestructive = {$hours} {$hours ->
-    [1]час
-    [few]часа
-    *[other]часов
-    } часов. Внатуре?
+    [1]час.
+    [few]часа.
+    *[other]часов.
+    }. Внатуре?
