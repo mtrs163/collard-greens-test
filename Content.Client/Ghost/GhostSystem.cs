@@ -22,7 +22,6 @@ namespace Content.Client.Ghost
         [Dependency] private readonly SpriteSystem _sprite = default!;
         // collard-GhostRespawn-start
         [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
-        [Dependency] private readonly IGameTiming _gameTiming = default!;
         public override void Update(float frameTime)
         {
             foreach (var ghost in EntityQuery<GhostComponent, MindComponent>(true))
