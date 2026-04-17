@@ -28,11 +28,5 @@ public sealed partial class CCVars
     /// </summary>
     public static readonly CVarDef<bool> RespawnEnabled =
         CVarDef.Create("ghost.respawn_enabled", true, CVar.REPLICATED | CVar.SERVER);
-
-    /// <summary>
-    ///     Determines the minimum time ghosts should wait before respawning.
-    /// </summary>
-    public static readonly CVarDef<float> RespawnTime =
-        CVarDef.Create("ghost.respawn_time", 300.0f, CVar.REPLICATED | CVar.SERVER);
     // collard-GhostRespawn-end
 }

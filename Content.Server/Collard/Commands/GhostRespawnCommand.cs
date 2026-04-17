@@ -5,15 +5,14 @@ using Content.Shared.CCVar;
 using Content.Shared.Ghost;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
-using Robust.Shared.Timing;
 using Content.Server.Chat.Managers;
+using Robust.Shared.Audio;
 
 namespace Content.Server.Collard.Commands;
 
 [AnyCommand()]
 public sealed class GhostRespawnCommand : IConsoleCommand
 {
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IChatManager _chat = default!;
@@ -54,19 +53,11 @@ public sealed class GhostRespawnCommand : IConsoleCommand
             shell.WriteLine("You have no mind.");
             return;
         }
-        var time = (_gameTiming.CurTime - ghost.TimeOfDeath);
-        var respawnTime = _configurationManager.GetCVar(CCVars.RespawnTime);
-
-        if (respawnTime > time.TotalSeconds)
-        {
-            shell.WriteLine($"You haven't been dead long enough. You have been dead {time.TotalSeconds} seconds of the required {respawnTime}.");
-            return;
-        }
 
         var gameTicker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
         gameTicker.Respawn(shell.Player);
         var plrname = shell.Player;
         _chat.SendAdminAnnouncement(Loc.GetString("ghost-respawn-admin-notification", ("plrname", plrname)));
-        //_audioSystem.PlayGlobal("/Audio/Machines/high_tech_confirm.ogg", Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false, AudioParams.Default.WithVolume(-8f));
+        var audio = new SoundPathSpecifier("/Audio/Machines/high_tech_confirm.ogg");
     }
 }

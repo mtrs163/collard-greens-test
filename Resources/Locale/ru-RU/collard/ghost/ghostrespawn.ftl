@@ -1,8 +1,7 @@
 ## Интерфейс
 ghost-respawn-rules-window-title = Правила возврата в лобби
 ghost-respawn-rules-window-confirm-button = Я понимаю, верните меня в лобби
-ghost-gui-respawn-button-denied = В лобби ({$time}s)
-ghost-gui-respawn-button-allowed = В лобби!
+ghost-gui-respawn-button = Респавн
 ghost-respawn-rules-window-rules = При возвращении в лобби, помните:
     Вам категорически запрещено заходить за того же персонажа.
     Ваш новый персонаж не знает о том, что происходило на станции до его появления.

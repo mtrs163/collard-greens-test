@@ -6,22 +6,13 @@ using Robust.Client.UserInterface.XAML;
 using Content.Client.Collard.UserInterface.Systems.Ghost.Controls;
 using Robust.Shared.Timing;
 using Robust.Shared.Configuration;
-using Content.Shared.CCVar;
 
 namespace Content.Client.UserInterface.Systems.Ghost.Widgets;
 
 [GenerateTypedNameReferences]
 public sealed partial class GhostGui : UIWidget
 {
-
-    // collard-GhostRespawn-start
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
-
-    private TimeSpan? _timeOfDeath;
-    private float _minTimeToRespawn;
-    public GhostRespawnRulesWindow RespawnRulesWindow { get; }
-    // collard-GhostRespawn-end
+    public GhostRespawnRulesWindow RespawnRulesWindow { get; } // collard-GhostRespawn
     public GhostTargetWindow TargetWindow { get; }
 
     public event Action? RequestWarpsPressed;
@@ -54,22 +45,9 @@ public sealed partial class GhostGui : UIWidget
         Visible = false;
     }
 
-    // collard-GhostRespawn-start
-    public void UpdateRespawn(TimeSpan? todd)
-    {
-        if (todd != null)
-        {
-            _timeOfDeath = todd;
-            _minTimeToRespawn = _configurationManager.GetCVar(CCVars.RespawnTime);
-        }
-    }
-    // collard-GhostRespawn-start
-
-    public void Update(int? roles, bool? canReturnToBody, TimeSpan? timeOfDeath, float minTimeToRespawn)
+    public void Update(int? roles, bool? canReturnToBody)
     {
         ReturnToBodyButton.Disabled = !canReturnToBody ?? true;
-        _timeOfDeath = timeOfDeath; // collard-GhostRespawn
-        _minTimeToRespawn = minTimeToRespawn; // collard-GhostRespawn
 
         if (roles != null)
         {
@@ -85,29 +63,6 @@ public sealed partial class GhostGui : UIWidget
 
         TargetWindow.Populate();
     }
-
-    // collard-GhostRespawn-start
-    protected override void FrameUpdate(FrameEventArgs args)
-    {
-        if (_timeOfDeath is null)
-        {
-            GhostRespawnButton.Text = Loc.GetString("ghost-gui-respawn-button-denied", ("time", "disabled"));
-            GhostRespawnButton.Disabled = true;
-            return;
-        }
-        var delta = (_minTimeToRespawn - _gameTiming.CurTime.Subtract(_timeOfDeath.Value).TotalSeconds);
-        if (delta <= 0)
-        {
-            GhostRespawnButton.Text = Loc.GetString("ghost-gui-respawn-button-allowed");
-            GhostRespawnButton.Disabled = false;
-        }
-        else
-        {
-            GhostRespawnButton.Text = Loc.GetString("ghost-gui-respawn-button-denied", ("time", $"{delta:f1}"));
-            GhostRespawnButton.Disabled = true;
-        }
-    }
-    // collard-GhostRespawn-end
 
     protected override void Dispose(bool disposing)
     {
