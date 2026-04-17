@@ -177,7 +177,7 @@ namespace Content.Server.Preferences.Managers
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
-                profile.Pose, // collard-DetailExaminableGlowup
+                "", // collard-DetailExaminableGlowup
                 species,
                 profile.Age,
                 sex,

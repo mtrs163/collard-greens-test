@@ -1032,11 +1032,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("jsonb")
                         .HasColumnName("markings");
 
-                    b.Property<string>("Pose")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("pose");
-
                     b.Property<byte[]>("OrganMarkings")
                         .HasColumnType("jsonb")
                         .HasColumnName("organ_markings");
