@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 275.0.0
+  engineVersion: 275.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/13/2026 02:32:18
-  entityCount: 7931
+  time: 05/09/2026 04:58:11
+  entityCount: 7930
 maps:
 - 1
 grids:
@@ -20412,12 +20412,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -15.5,19.5
       parent: 2
-  - uid: 4295
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -5.5,9.5
-      parent: 2
   - uid: 4299
     components:
     - type: Transform
@@ -20443,6 +20437,12 @@ entities:
       parent: 2
 - proto: DisposalPipe
   entities:
+  - uid: 15
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -5.5,9.5
+      parent: 2
   - uid: 1716
     components:
     - type: Transform
@@ -22102,12 +22102,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 37.5,28.5
       parent: 2
-  - uid: 4238
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -5.5,8.5
-      parent: 2
   - uid: 4239
     components:
     - type: Transform
@@ -22148,11 +22142,6 @@ entities:
     components:
     - type: Transform
       pos: -1.5,9.5
-      parent: 2
-  - uid: 15
-    components:
-    - type: Transform
-      pos: -5.5,8.5
       parent: 2
   - uid: 16
     components:
@@ -40656,7 +40645,7 @@ entities:
       pos: 9.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14108.002
+      secondsUntilStateChange: -14632.362
       state: Opening
   - uid: 7305
     components:
@@ -40664,7 +40653,7 @@ entities:
       pos: 7.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14108.603
+      secondsUntilStateChange: -14632.963
       state: Opening
 - proto: PaperOffice
   entities:
@@ -44780,6 +44769,12 @@ entities:
     components:
     - type: Transform
       pos: 13.5,24.5
+      parent: 2
+  - uid: 4238
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -5.5,8.5
       parent: 2
 - proto: SmartFridge
   entities:
