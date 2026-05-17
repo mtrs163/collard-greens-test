@@ -62,5 +62,11 @@ public sealed partial class StunOnCollideComponent : Component
     /// Fixture we track for the collision.
     /// </summary>
     [DataField("fixture")] public string FixtureID = "projectile";
+
+    /// <summary>
+    /// The least amount you need to roll on a saving throw not to be knocked down
+    /// </summary>
+    [DataField]
+    public int SaveDifficulty = 18; // collard-SavingThrows
 }
 

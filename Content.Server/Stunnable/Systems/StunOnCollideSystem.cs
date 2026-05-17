@@ -3,6 +3,7 @@ using Content.Shared.Movement.Systems;
 using JetBrains.Annotations;
 using Content.Shared.Throwing;
 using Robust.Shared.Physics.Events;
+using Content.Shared.Collard.Dice;
 
 namespace Content.Server.Stunnable.Systems;
 
@@ -11,6 +12,7 @@ internal sealed class StunOnCollideSystem : EntitySystem
 {
     [Dependency] private readonly StunSystem _stunSystem = default!;
     [Dependency] private readonly MovementModStatusSystem _movementMod = default!;
+    [Dependency] private readonly SavingThrowSystem _savingThrow = default!;
 
     public override void Initialize()
     {
@@ -22,6 +24,9 @@ internal sealed class StunOnCollideSystem : EntitySystem
 
     private void TryDoCollideStun(Entity<StunOnCollideComponent> ent, EntityUid target)
     {
+        if (_savingThrow.InitiateSilentSavingThrow(ent, ent.Comp.SaveDifficulty)) // collard-SavingThrows
+            return;
+
         _stunSystem.TryKnockdown(target, ent.Comp.KnockdownAmount, ent.Comp.Refresh, ent.Comp.AutoStand, ent.Comp.Drop, true);
 
         if (ent.Comp.Refresh)
