@@ -37,3 +37,4 @@
         whitelist:
           components:
           - BatteryAmmoProvider
+          - PoweredArmor # collard-PoweredArmor

@@ -175,6 +175,7 @@
           - BatteryAmmoProvider
           - Stunbaton
           - PowerCell
+          - PoweredArmor # collard-PoweredArmor
         blacklist:
           tags:
           - PotatoBattery
@@ -203,6 +204,7 @@
           - BatteryAmmoProvider
           - Stunbaton
           - PowerCell
+          - PoweredArmor # collard-PoweredArmor
         blacklist:
           tags:
           - PotatoBattery
@@ -234,6 +236,7 @@
           components:
           - BatteryAmmoProvider
           - Stunbaton
+          - PoweredArmor # collard-PoweredArmor
         blacklist:
           tags:
           - PotatoBattery

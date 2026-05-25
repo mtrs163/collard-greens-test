@@ -1,0 +1,77 @@
+- type: entity
+  parent: Clothing
+  id: ClothingNeckShieldBase
+  name: neck shield
+  description: A shield that protects the wearer while charged.
+  components:
+  - type: Sprite
+    sprite: Collard/Clothing/Neck/neckshield.rsi
+    state: icon
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - neck
+    sprite: Collard/Clothing/Neck/neckshield.rsi
+  - type: PoweredArmor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Caustic: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: GroupExamine
+  - type: Item
+    heldPrefix: off
+    sprite: Clothing/Collard/Neck/neckshield.rsi
+    size: Normal
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: ExaminableBattery
+  - type: GenericVisualizer
+    visuals:
+     enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: stunbaton_on}
+          False: {state: stunbaton_off}
+  - type: Riggable
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Explosive
+    explosionType: Default
+    intensitySlope: 1.5
+    maxIntensity: 200
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Plastic: 100
+      Glass: 100
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    predictable: false
+    soundActivate:
+      path: /Audio/Collard/Effects/shield_activation.ogg
+    soundDeactivate:
+      path: /Audio/Collard/Effects/shield_break.ogg
+    soundFailToActivate:
+      collection: sparks
+      params:
+        variation: 0.250
+  - type: ItemTogglePrefix
+    prefixOn: on
+    prefixOff: off
+  - type: Tag
+    tags:
+    - Recyclable
+  - type: StaticPrice
+    price: 500
