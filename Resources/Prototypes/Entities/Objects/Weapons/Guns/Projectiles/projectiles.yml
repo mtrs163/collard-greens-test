@@ -54,6 +54,7 @@
   components:
   - type: Reflective
   - type: FlyBySound
+    prob: 1 # collard-Soundworks
   - type: Clickable
   - type: Sprite
     noRot: false

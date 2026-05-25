@@ -279,3 +279,16 @@
   path:
     path: /Audio/Collard/Jukebox/Radio/cosmic_diffusion.ogg
 
+- type: jukebox
+  id: CKirk
+  name: Spalexma - We Are Charlie Kirk (Aggressive Phonk Remix)
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/kirk.ogg
+
+- type: jukebox
+  id: Jonkler
+  name: Jonkler - Why So Serious (AGRESSIVE JOKER PHONK REMIX)
+  radioSong: true
+  path:
+    path: /Audio/Collard/Jukebox/Radio/joklr.ogg

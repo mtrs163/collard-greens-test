@@ -1,0 +1,31 @@
+- type: roundAnnouncement
+  id: TFstart
+  sound: /Audio/Collard/Announcements/RoundStart/tf2_start.ogg
+
+- type: roundAnnouncement
+  id: HLstart
+  sound: /Audio/Collard/Announcements/RoundStart/hl2_intro.ogg
+
+- type: roundAnnouncement
+  id: GMODstart
+  sound: /Audio/Collard/Announcements/RoundStart/hl2_drown.ogg
+
+- type: roundAnnouncement
+  id: FINALSstart
+  sound: /Audio/Collard/Announcements/RoundStart/finals_intro.ogg
+
+- type: roundAnnouncement
+  id: FINALSdestroyer
+  sound: /Audio/Collard/Announcements/RoundStart/finals_destroyer.ogg
+
+- type: roundAnnouncement
+  id: FINALSplugged
+  sound: /Audio/Collard/Announcements/RoundStart/finals_plugged.ogg
+
+- type: roundAnnouncement
+  id: Battlebus
+  sound: /Audio/Collard/Announcements/RoundStart/battlebus.ogg
+
+- type: roundAnnouncement
+  id: Baldi
+  sound: /Audio/Collard/Announcements/RoundStart/baldi_intro.ogg

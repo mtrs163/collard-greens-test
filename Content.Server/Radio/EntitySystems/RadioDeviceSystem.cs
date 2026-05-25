@@ -12,6 +12,8 @@ using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
 using Content.Shared.Speech;
 using Content.Shared.Speech.Components;
+using Robust.Server.Audio; // collard-Soundworks
+using Robust.Shared.Audio; // collard-Soundworks
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Radio.EntitySystems;
@@ -27,6 +29,7 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
     [Dependency] private readonly RadioSystem _radio = default!;
     [Dependency] private readonly InteractionSystem _interaction = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly AudioSystem _audio = default!; // collard-Soundworks
 
     // Used to prevent a shitter from using a bunch of radios to spam chat.
     private HashSet<(string, EntityUid, RadioChannelPrototype)> _recentlySent = new();
@@ -181,6 +184,7 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
             ("originalName", nameEv.VoiceName));
 
         // log to chat so people can identity the speaker/source, but avoid clogging ghost chat if there are many radios
+        _audio.PlayPvs(args.Channel.MessageSound, uid, AudioParams.Default.AddVolume(-3)); // collard-Soundworks
         _chat.TrySendInGameICMessage(uid, args.Message, InGameICChatType.Whisper, ChatTransmitRange.GhostRangeLimit, nameOverride: name, checkRadioPrefix: false);
     }
 

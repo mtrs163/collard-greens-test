@@ -4,6 +4,7 @@
   keycode: ";"
   frequency: 1459
   color: "#2cdb2c"
+  messageSound: "/Audio/Collard/Radio/common.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: CentCom
@@ -12,6 +13,7 @@
   frequency: 1337
   color: "#2681a5"
   longRange: true
+  messageSound: "/Audio/Collard/Radio/centcom.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Command
@@ -19,6 +21,7 @@
   keycode: 'к' # collard-Localization
   frequency: 1353
   color: "#fcdf03"
+  messageSound: "/Audio/Collard/Radio/command.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Engineering
@@ -26,6 +29,7 @@
   keycode: 'и' # collard-Localization
   frequency: 1357
   color: "#ff733c"
+  messageSound: "/Audio/Collard/Radio/engineering.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Medical
@@ -33,6 +37,7 @@
   keycode: 'м' # collard-Localization
   frequency: 1355
   color: "#57b8f0"
+  messageSound: "/Audio/Collard/Radio/medical.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Science
@@ -40,6 +45,7 @@
   keycode: 'н' # collard-Localization
   frequency: 1351
   color: "#cd7ccd"
+  messageSound: "/Audio/Collard/Radio/science.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Security
@@ -47,6 +53,7 @@
   keycode: 'о' # collard-Localization
   frequency: 1359
   color: "#ff4242"
+  messageSound: "/Audio/Collard/Radio/security.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Service
@@ -54,6 +61,7 @@
   keycode: 'с' # collard-Localization
   frequency: 1349
   color: "#539c00"
+  messageSound: "/Audio/Collard/Radio/service.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Supply
@@ -61,6 +69,7 @@
   keycode: 'п' # collard-Localization
   frequency: 1347
   color: "#b48b57"
+  messageSound: "/Audio/Collard/Radio/supply.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Syndicate
@@ -69,6 +78,7 @@
   frequency: 1213
   color: "#8f4a4b"
   longRange: true
+  messageSound: "/Audio/Collard/Radio/syndicate.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Handheld
@@ -77,6 +87,7 @@
   color: "#967101"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+  messageSound: "/Audio/Collard/Radio/handheld.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Binary
@@ -86,6 +97,7 @@
   color: "#5ed7aa"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+  messageSound: "/Audio/Collard/Radio/binary.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Freelance
@@ -95,6 +107,7 @@
   color: "#f6ce64"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+  messageSound: "/Audio/Collard/Radio/freelance.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Xenoborg
@@ -104,6 +117,7 @@
   color: "#2288ff"
   # long range since I don't wanna make a special xenoborg telecomm server
   longRange: true
+  messageSound: "/Audio/Collard/Radio/xenoborg.ogg" # collard-Soundworks
 
 - type: radioChannel
   id: Mothership
@@ -113,3 +127,4 @@
   color: "#ff2222"
   # long range since I don't wanna make a special xenoborg telecomm server
   longRange: true
+  messageSound: "/Audio/Collard/Radio/mothership.ogg" # collard-Soundworks

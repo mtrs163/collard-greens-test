@@ -3,6 +3,8 @@ using Content.Shared.Inventory.Events;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
+using Robust.Server.Audio;
+using Robust.Shared.Audio;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 
@@ -12,6 +14,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly AudioSystem _audio = default!;
 
     public override void Initialize()
     {
@@ -102,6 +105,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
         // to have an ActiveRadioComponent
 
         var parent = Transform(uid).ParentUid;
+        var sound = args.Channel.MessageSound; // collard-Soundworks
 
         if (parent.IsValid())
         {
@@ -110,6 +114,9 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
         }
 
         if (TryComp(parent, out ActorComponent? actor))
+        {
             _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+            _audio.PlayEntity(sound, Filter.SinglePlayer(actor.PlayerSession), parent, false, AudioParams.Default.AddVolume(-3)); // collard-Soundworks
+        }
     }
 }

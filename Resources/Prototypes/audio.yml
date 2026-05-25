@@ -124,6 +124,7 @@
     - /Audio/Ambience/ambigen12.ogg
     - /Audio/Ambience/ambigen14.ogg
     - /Audio/Ambience/ambigen15.ogg
+    # collard-Soundworks-start
     - /Audio/Collard/Ambience/ambigen1.ogg
     - /Audio/Collard/Ambience/ambigen2.ogg
     - /Audio/Collard/Ambience/ambigen3.ogg
@@ -143,6 +144,15 @@
     - /Audio/Collard/Ambience/ambigen17.ogg
     - /Audio/Collard/Ambience/ambigen18.ogg
     - /Audio/Collard/Ambience/ambigen19.ogg
+    - /Audio/Collard/Ambience/ambigen_distorted.ogg
+    - /Audio/Collard/Ambience/ambi_to.ogg
+    - /Audio/Collard/Ambience/ambi_scanner_pass.ogg
+    - /Audio/Collard/Ambience/ambi_manhack_pass.ogg
+    - /Audio/Collard/Ambience/ambi_train.ogg
+    - /Audio/Collard/Ambience/ambi_apc.ogg
+    - /Audio/Collard/Ambience/ambi_hl2.ogg
+    - /Audio/Collard/Ambience/ambi_computer.ogg
+    # collard-Soundworks-end
 
 - type: soundCollection
   id: AmbienceHoly
@@ -154,6 +164,7 @@
     - /Audio/Ambience/ambiholy.ogg
     - /Audio/Ambience/ambiholy2.ogg
     - /Audio/Ambience/ambiholy3.ogg
+    - /Audio/Collard/Ambience/ambi_ravenholm.ogg # collard-Soundworks
 
 - type: soundCollection
   id: AmbienceMaintenance
@@ -169,6 +180,7 @@
     - /Audio/Voice/Misc/lowHiss3.ogg
     - /Audio/Voice/Misc/lowHiss4.ogg
     - /Audio/Ambience/maintambience.ogg
+    - /Audio/Collard/Ambience/ambi_quiet.ogg # collard-Soundworks
 
 - type: soundCollection
   id: AmbienceMedical
@@ -223,7 +235,7 @@
     - /Audio/Ambience/spookyspace2.ogg
     - /Audio/Ambience/ambispace2.ogg
     - /Audio/Lobby/title2.ogg
-    - /Audio/Collard/Ambience/robotsoutro.ogg # collard-Ambience
+    - /Audio/Collard/Ambience/robotsoutro.ogg # collard-Soundworks
 
 - type: soundCollection
   id: AmbienceSpooky

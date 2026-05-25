@@ -56,7 +56,7 @@ namespace Content.Client.Voting
 
         public void Initialize()
         {
-            const string sound = "/Audio/Effects/voteding.ogg";
+            const string sound = "/Audio/Collard/Effects/vote.ogg"; // collard-Soundworks
             _voteSource = _audio.CreateAudioSource(_res.GetResource<AudioResource>(sound));
 
             if (_voteSource != null)

@@ -2,8 +2,10 @@ using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Client.Player;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics.Events;
+using Robust.Shared.Player;
 using Robust.Shared.Random;
 
 namespace Content.Client.Weapons.Ranged.Systems;
@@ -40,6 +42,6 @@ public sealed class FlyBySoundSystem : SharedFlyBySoundSystem
         }
 
         // Play attached to our entity because the projectile may immediately delete or the likes.
-        _audio.PlayPredicted(ent.Comp.Sound, attachedEnt.Value, attachedEnt.Value);
+        _audio.PlayEntity(ent.Comp.Sound, Filter.Entities(attachedEnt.Value), attachedEnt.Value, false, AudioParams.Default.AddVolume(-9)); // collard-Soundworks
     }
 }

@@ -1,3 +1,4 @@
+using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Radio;
@@ -35,4 +36,12 @@ public sealed partial class RadioChannelPrototype : IPrototype
     /// </summary>
     [DataField("longRange"), ViewVariables]
     public bool LongRange = false;
+
+    // collard-Soundworks-start
+    /// <summary>
+    /// Specifies a channel's sound effect played when receiving a message
+    /// </summary>
+    [DataField, ViewVariables]
+    public SoundSpecifier MessageSound = new SoundPathSpecifier("/Audio/Collard/Radio/common.ogg");
+    // collard-Soundworks-end
 }

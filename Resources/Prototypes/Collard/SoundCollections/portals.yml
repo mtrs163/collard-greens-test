@@ -1,0 +1,12 @@
+- type: soundCollection
+  id: PortalArrival
+  files:
+    - /Audio/Collard/Effects/Portals/portal_exit_01.ogg
+    - /Audio/Collard/Effects/Portals/portal_exit_02.ogg
+
+- type: soundCollection
+  id: PortalDeparture
+  files:
+    - /Audio/Collard/Effects/Portals/portal_enter_01.ogg
+    - /Audio/Collard/Effects/Portals/portal_enter_02.ogg
+    - /Audio/Collard/Effects/Portals/portal_enter_03.ogg

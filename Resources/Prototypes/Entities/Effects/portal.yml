@@ -24,6 +24,14 @@
         - WallLayer
         hard: false
   - type: Portal
+  - type: AmbientSound # collard-Soundworks
+    range: 6
+    volume: -3
+    sound:
+      path: /Audio/Collard/Effects/Portals/portal_ambient.ogg
+  - type: EmitSoundOnSpawn # collard-Soundworks
+    sound:
+      path: /Audio/Collard/Effects/Portals/portal_open.ogg
 
 - type: entity
   id: PortalRed
@@ -51,7 +59,7 @@
     radius: 3
     energy: 1
     netsync: false
-    
+
 - type: entity
   id: PortalArtifact
   parent: BasePortal
