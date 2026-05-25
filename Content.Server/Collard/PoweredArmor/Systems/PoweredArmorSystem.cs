@@ -21,20 +21,20 @@ using Robust.Shared.Network;
 
 namespace Content.Server.Collard.PoweredArmor.Systems
 {
-    public sealed class PoweredArmorSystem : EntitySystem
+    public sealed partial class PoweredArmorSystem : EntitySystem
     {
-        [Dependency] private readonly RiggableSystem _riggableSystem = default!;
-        [Dependency] private readonly SharedBatterySystem _battery = default!;
-        [Dependency] private readonly ItemToggleSystem _itemToggle = default!;
-        [Dependency] private readonly ExamineSystemShared _examine = default!;
-        [Dependency] private readonly AudioSystem _audio = default!;
-        [Dependency] private readonly INetManager _net = default!;
+        [Dependency] private RiggableSystem _riggableSystem = default!;
+        [Dependency] private SharedBatterySystem _battery = default!;
+        [Dependency] private ItemToggleSystem _itemToggle = default!;
+        [Dependency] private ExamineSystemShared _examine = default!;
+        [Dependency] private AudioSystem _audio = default!;
+        [Dependency] private INetManager _net = default!;
 
         public override void Initialize()
         {
             base.Initialize();
 
-            SubscribeLocalEvent<PoweredArmorComponent, SolutionContainerChangedEvent>(OnSolutionChange);
+            SubscribeLocalEvent<PoweredArmorComponent, SolutionChangedEvent>(OnSolutionChange);
             SubscribeLocalEvent<PoweredArmorComponent, ChargeChangedEvent>(OnChargeChanged);
             SubscribeLocalEvent<PoweredArmorComponent, InventoryRelayedEvent<DamageModifyEvent>>(OnDamageModify);
             SubscribeLocalEvent<PoweredArmorComponent, GetVerbsEvent<ExamineVerb>>(OnArmorVerbExamine);
@@ -77,7 +77,7 @@ namespace Content.Server.Collard.PoweredArmor.Systems
                 Spawn(ShieldHitEffectPrototype, Transform(uid).Coordinates);
         }
 
-        private void OnSolutionChange(Entity<PoweredArmorComponent> entity, ref SolutionContainerChangedEvent args)
+        private void OnSolutionChange(Entity<PoweredArmorComponent> entity, ref SolutionChangedEvent args)
         {
             if (!TryComp<RiggableComponent>(entity, out var riggable) ||
                 !TryComp<BatteryComponent>(entity, out var battery))

@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [SolutionFood, SolutionToolSmall, Clothing]
   id: ClothingUnderwearBottomBase
   name: based underwearb
   description: "baseunderwear"
@@ -10,29 +10,32 @@
   - type: Item
     size: Tiny
   - type: Clothing
+    quickEquip: true
     slots: [underwearb]
   - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: MaterialCloth1
       amount: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
   - type: Edible
     requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 10
   - type: Tag
     tags:
       - underwearb
       - ClothMade
+      - Recyclable
 
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [SolutionFood, SolutionToolSmall, Clothing]
   id: ClothingUnderwearTopBase
   name: based underweart
   description: "baseunderwear"
@@ -42,29 +45,32 @@
   - type: Item
     size: Tiny
   - type: Clothing
+    quickEquip: true
     slots: [underweart]
   - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: MaterialCloth1
       amount: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
   - type: Edible
     requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 10
   - type: Tag
     tags:
       - underweart
       - ClothMade
+      - Recyclable
 
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [SolutionFood, SolutionToolSmall, Clothing]
   id: ClothingUnderwearSocksBase
   name: based socks
   description: "baseunderwear"
@@ -74,22 +80,25 @@
   - type: Item
     size: Tiny
   - type: Clothing
+    quickEquip: true
     slots: [socks]
   - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: MaterialCloth1
       amount: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
   - type: Edible
     requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 10
   - type: Tag
     tags:
       - socks
       - ClothMade
+      - Recyclable

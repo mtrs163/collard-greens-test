@@ -8,12 +8,12 @@ using Content.Server.Chat.Managers; // collard-Admin1984
 
 namespace Content.Server.Administration.Commands;
 
-[AnyCommand] // collard-Admin1984
-public sealed class AdminWhoCommand : LocalizedCommands
+[AdminCommand(AdminFlags.AdminWho)]
+public sealed partial class AdminWhoCommand : LocalizedCommands
 {
-    [Dependency] private readonly IAfkManager _afkManager = default!;
-    [Dependency] private readonly IAdminManager _adminManager = default!;
-    [Dependency] private readonly IChatManager _chat = default!; // collard-Admin1984
+    [Dependency] private IAfkManager _afkManager = default!;
+    [Dependency] private IAdminManager _adminManager = default!;
+    [Dependency] private IChatManager _chat = default!; // collard-Admin1984
 
     public override string Command => "adminwho";
 

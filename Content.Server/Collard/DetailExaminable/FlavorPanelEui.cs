@@ -13,9 +13,9 @@ using Content.Shared.IdentityManagement;
 namespace Content.Server.Collard.DetailExaminable
 {
     [UsedImplicitly]
-    public sealed class FlavorPanelEui : BaseEui
+    public sealed partial class FlavorPanelEui : BaseEui
     {
-        [Dependency] private readonly EntityManager _entityManager = default!;
+        [Dependency] private EntityManager _entityManager = default!;
         private readonly NetEntity _target;
         private readonly EntityUid _targetUid;
         private string _flavor;

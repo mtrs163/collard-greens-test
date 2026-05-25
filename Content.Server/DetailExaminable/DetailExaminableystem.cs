@@ -14,14 +14,14 @@ using Content.Server.Popups;
 
 namespace Content.Server.DetailExaminable;
 
-public sealed class DetailExaminableSystem : EntitySystem
+public sealed partial class DetailExaminableSystem : EntitySystem
 {
-    [Dependency] private readonly ExamineSystemShared _examine = default!;
+    [Dependency] private ExamineSystemShared _examine = default!;
     // collard-DetailExaminableGlowup-start
-    [Dependency] private readonly EuiManager _euis = default!;
-    [Dependency] private readonly ActionsSystem _actions = default!;
-    [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private EuiManager _euis = default!;
+    [Dependency] private ActionsSystem _actions = default!;
+    [Dependency] private QuickDialogSystem _quickDialog = default!;
+    [Dependency] private PopupSystem _popup = default!;
     // collard-DetailExaminableGlowup-end
 
     public override void Initialize()

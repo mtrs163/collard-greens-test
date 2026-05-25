@@ -188,6 +188,7 @@
       types:
         Slash: 20 # collard-LifeValue
         Heat: 20 # collard-LifeValue
+    deactivatedSecret: true
   - type: ComponentToggler
     components:
     - type: Sharp

@@ -26,8 +26,6 @@ public sealed class FrontalLispSystem : EntitySystem
     // collard-Localization-end
     // @formatter:on
 
-    [Dependency] private readonly IRobustRandom _random = default!; // collard-Localization
-
     public override void Initialize()
     {
         base.Initialize();
@@ -47,20 +45,20 @@ public sealed class FrontalLispSystem : EntitySystem
 
         // collard-Localization-start
         // с - ш
-        message = RegexLowerSCyr.Replace(message, _random.Prob(0.90f) ? "ш" : "с");
-        message = RegexUpperSCyr.Replace(message, _random.Prob(0.90f) ? "Ш" : "С");
+        message = RegexLowerSCyr.Replace(message, "ш");
+        message = RegexUpperSCyr.Replace(message, "Ш");
         // ч - ш
-        message = RegexLowerChCyr.Replace(message, _random.Prob(0.90f) ? "ш" : "ч");
-        message = RegexUpperChCyr.Replace(message, _random.Prob(0.90f) ? "Ш" : "Ч");
+        message = RegexLowerChCyr.Replace(message, "ш");
+        message = RegexUpperChCyr.Replace(message, "Ш");
         // ц - ч
-        message = RegexLowerCCyr.Replace(message, _random.Prob(0.90f) ? "ч" : "ц");
-        message = RegexUpperCCyr.Replace(message, _random.Prob(0.90f) ? "Ч" : "Ц");
+        message = RegexLowerCCyr.Replace(message, "ч");
+        message = RegexUpperCCyr.Replace(message, "Ч");
         // т - ч
-        message = RegexLowerTCyr.Replace(message, _random.Prob(0.90f) ? "ч" : "т");
-        message = RegexUpperTCyr.Replace(message, _random.Prob(0.90f) ? "Ч" : "Т");
+        message = RegexLowerTCyr.Replace(message, "ч");
+        message = RegexUpperTCyr.Replace(message, "Ч");
         // з - ж
-        message = RegexLowerZCyr.Replace(message, _random.Prob(0.90f) ? "ж" : "з");
-        message = RegexUpperZCyr.Replace(message, _random.Prob(0.90f) ? "Ж" : "З");
+        message = RegexLowerZCyr.Replace(message, "ж");
+        message = RegexUpperZCyr.Replace(message, "Ж");
         // collard-Localization-end
 
         args.Message = message;

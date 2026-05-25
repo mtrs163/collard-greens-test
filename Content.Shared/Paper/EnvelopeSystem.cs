@@ -8,12 +8,12 @@ using Content.Shared.Storage.Components; // collard-EnvelopeGlowup
 
 namespace Content.Shared.Paper;
 
-public sealed class EnvelopeSystem : EntitySystem
+public sealed partial class EnvelopeSystem : EntitySystem
 {
-    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
-    [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    // [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!; // collard-EnvelopeGlowup
-    [Dependency] private readonly SharedUserInterfaceSystem _uiSystem = default!; // collard-EnvelopeGlowup
+    [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
+    [Dependency] private SharedAudioSystem _audioSystem = default!;
+    // [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!; // collard-EnvelopeGlowup
+    [Dependency] private SharedUserInterfaceSystem _uiSystem = default!; // collard-EnvelopeGlowup
 
     public override void Initialize()
     {

@@ -9,13 +9,13 @@ using Content.Server.Chat.Managers; // collard-Admin1984
 
 namespace Content.Server.GameTicking.Commands
 {
-    sealed class RespawnCommand : LocalizedEntityCommands
+    sealed partial class RespawnCommand : LocalizedEntityCommands
     {
-        [Dependency] private readonly IPlayerManager _player = default!;
-        [Dependency] private readonly IPlayerLocator _locator = default!;
-        [Dependency] private readonly GameTicker _gameTicker = default!;
-        [Dependency] private readonly MindSystem _mind = default!;
-        [Dependency] private readonly IChatManager _chat = default!; // collard-Admin1984
+        [Dependency] private IPlayerManager _player = default!;
+        [Dependency] private IPlayerLocator _locator = default!;
+        [Dependency] private GameTicker _gameTicker = default!;
+        [Dependency] private MindSystem _mind = default!;
+        [Dependency] private IChatManager _chat = default!; // collard-Admin1984
 
         public override string Command => "respawn";
 

@@ -13,12 +13,12 @@ using YamlDotNet.Core;
 
 namespace Content.Server.Collard.DetailExaminable
 {
-    public sealed class ItemDetailSystem : EntitySystem
+    public sealed partial class ItemDetailSystem : EntitySystem
     {
-        [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
-        [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
-        [Dependency] private readonly PopupSystem _popupSystem = default!;
-        [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+        [Dependency] private ExamineSystemShared _examineSystem = default!;
+        [Dependency] private QuickDialogSystem _quickDialog = default!;
+        [Dependency] private PopupSystem _popupSystem = default!;
+        [Dependency] private ISharedAdminLogManager _adminLogger = default!;
 
         public override void Initialize()
         {

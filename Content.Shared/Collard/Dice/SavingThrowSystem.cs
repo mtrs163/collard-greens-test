@@ -7,9 +7,9 @@ namespace Content.Shared.Collard.Dice;
 
 public sealed partial class SavingThrowSystem : EntitySystem
 {
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
     public bool InitiateSavingThrow(EntityUid uid, int difficulty)
     {

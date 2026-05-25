@@ -6,10 +6,10 @@ using Content.Shared.Weapons.Hitscan.Events;
 
 namespace Content.Shared.Weapons.Hitscan.Systems;
 
-public sealed class HitscanBasicDamageSystem : EntitySystem
+public sealed partial class HitscanBasicDamageSystem : EntitySystem
 {
-    [Dependency] private readonly DamageableSystem _damage = default!;
-    [Dependency] private readonly SavingThrowSystem _savingThrow = default!; //collard-SavingThrows
+    [Dependency] private DamageableSystem _damage = default!;
+    [Dependency] private SavingThrowSystem _savingThrow = default!; //collard-SavingThrows
 
     public override void Initialize()
     {

@@ -13,7 +13,6 @@
   startingGear: SecurityCadetGear
   icon: "JobIconSecurityCadet"
   supervisors: job-supervisors-security
-  canBeAntag: false
   whitelisted: true # collard-NoPlaytimeRequirements
   access:
   - Security
