@@ -11,14 +11,14 @@ using Content.Server.Chat.Managers; // collard-Admin1984
 
 namespace Content.Server.Info;
 
-public sealed class RulesManager
+public sealed partial class RulesManager
 {
-    [Dependency] private readonly IServerDbManager _dbManager = default!;
-    [Dependency] private readonly INetManager _netManager = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IChatManager _chat = default!; // collard-Admin1984
-    [Dependency] private readonly IAdminLogManager _adminLog = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private IServerDbManager _dbManager = default!;
+    [Dependency] private INetManager _netManager = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IAdminLogManager _adminLog = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private IChatManager _chat = default!; // collard-Admin1984
 
     private static DateTime LastValidReadTime => DateTime.UtcNow - TimeSpan.FromDays(60);
 

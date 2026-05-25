@@ -133,7 +133,7 @@
         Взятие индивида в рабство
       </Box>
     </ColorBox>
-    <ColorBox>
+    <ColorBox Color="#4d2e2e">
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
         Нанесение репутационных потерь NT
       </Box>

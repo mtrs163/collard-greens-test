@@ -201,6 +201,7 @@
         - id: Envelope # collard-EnvelopeGlowup: envelope doesn't fit
           amount: 3
         - id: BrbSign
+        - id: DeskBell
 
 - type: entity
   parent: CrateGenericSteel
