@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [SolutionFood, SolutionToolSmall, Clothing]
   id: ClothingUnderwearBottomBase
   name: based underwearb
   description: "baseunderwear"
@@ -23,12 +23,10 @@
   - type: Edible
     requiresSpecialDigestion: true
   - type: Solution
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 10
   - type: Tag
     tags:
       - underwearb
@@ -37,7 +35,7 @@
 
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [SolutionFood, SolutionToolSmall, Clothing]
   id: ClothingUnderwearTopBase
   name: based underweart
   description: "baseunderwear"
@@ -60,12 +58,10 @@
   - type: Edible
     requiresSpecialDigestion: true
   - type: Solution
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 10
   - type: Tag
     tags:
       - underweart
@@ -74,7 +70,7 @@
 
 - type: entity
   abstract: true
-  parent: Clothing
+  parent: [SolutionFood, SolutionToolSmall, Clothing]
   id: ClothingUnderwearSocksBase
   name: based socks
   description: "baseunderwear"
@@ -97,12 +93,10 @@
   - type: Edible
     requiresSpecialDigestion: true
   - type: Solution
-    solutions:
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 10
   - type: Tag
     tags:
       - socks
