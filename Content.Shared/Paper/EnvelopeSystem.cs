@@ -13,7 +13,7 @@ public sealed partial class EnvelopeSystem : EntitySystem
     [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private SharedAudioSystem _audioSystem = default!;
     // [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!; // collard-EnvelopeGlowup
-    [Dependency] private readonly SharedUserInterfaceSystem _uiSystem = default!; // collard-EnvelopeGlowup
+    [Dependency] private SharedUserInterfaceSystem _uiSystem = default!; // collard-EnvelopeGlowup
 
     public override void Initialize()
     {

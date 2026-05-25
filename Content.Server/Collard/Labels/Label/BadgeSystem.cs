@@ -10,9 +10,9 @@ namespace Content.Server.Collard.Labels
     /// A system that lets players see the contents of a label on an object.
     /// </summary>
     [UsedImplicitly]
-    public sealed class BadgeSystem : EntitySystem
+    public sealed partial class BadgeSystem : EntitySystem
     {
-        [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
+        [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!;
 
         public const string ContainerName = "badge_label";
 

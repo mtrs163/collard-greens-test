@@ -9,11 +9,11 @@ using Content.Shared.Chat;
 namespace Content.Server.Collard.Commands;
 
 [AnyCommand]
-public sealed class CheckCommand : LocalizedEntityCommands
+public sealed partial class CheckCommand : LocalizedEntityCommands
 {
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private IEntityManager _entManager = default!;
+    [Dependency] private ChatSystem _chat = default!;
     public override string Command => "check";
 
     public override string Help => LocalizationManager.GetString($"cmd-{Command}-help", ("command", Command));

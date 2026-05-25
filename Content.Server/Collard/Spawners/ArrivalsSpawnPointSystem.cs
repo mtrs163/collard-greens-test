@@ -9,13 +9,12 @@ using Robust.Shared.Random;
 
 namespace Content.Server.Collard.Spawners;
 
-public sealed class ArrivalsSpawnPointSystem : EntitySystem
+public sealed partial class ArrivalsSpawnPointSystem : EntitySystem
 {
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
 
-    [ValidatePrototypeId<DatasetPrototype>]
     private const string BlacklistedRoles = "ArrivalsSpawnBlacklistedRoles";
     public override void Initialize()
     {

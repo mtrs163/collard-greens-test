@@ -26,7 +26,7 @@ public sealed class FrontalLispSystem : EntitySystem
     // collard-Localization-end
     // @formatter:on
 
-    [Dependency] private readonly IRobustRandom _random = default!; // collard-Localization
+    [Dependency] private IRobustRandom _random = default!; // collard-Localization
 
     public override void Initialize()
     {

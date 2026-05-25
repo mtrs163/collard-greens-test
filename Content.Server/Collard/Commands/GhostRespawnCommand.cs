@@ -11,11 +11,11 @@ using Robust.Shared.Audio;
 namespace Content.Server.Collard.Commands;
 
 [AnyCommand()]
-public sealed class GhostRespawnCommand : IConsoleCommand
+public sealed partial class GhostRespawnCommand : IConsoleCommand
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
-    [Dependency] private readonly IChatManager _chat = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private IConfigurationManager _configurationManager = default!;
+    [Dependency] private IChatManager _chat = default!;
 
     public string Command => "ghostrespawn";
     public string Description => "Allows the player to return to the lobby if they've been dead long enough, allowing re-entering the round AS ANOTHER CHARACTER.";

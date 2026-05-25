@@ -10,15 +10,19 @@
   - type: Item
     size: Tiny
   - type: Clothing
+    quickEquip: true
     slots: [underwearb]
   - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: MaterialCloth1
       amount: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
   - type: Edible
     requiresSpecialDigestion: true
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
       food:
         maxVol: 10
@@ -29,6 +33,7 @@
     tags:
       - underwearb
       - ClothMade
+      - Recyclable
 
 - type: entity
   abstract: true
@@ -42,15 +47,19 @@
   - type: Item
     size: Tiny
   - type: Clothing
+    quickEquip: true
     slots: [underweart]
   - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: MaterialCloth1
       amount: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
   - type: Edible
     requiresSpecialDigestion: true
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
       food:
         maxVol: 10
@@ -61,6 +70,7 @@
     tags:
       - underweart
       - ClothMade
+      - Recyclable
 
 - type: entity
   abstract: true
@@ -74,15 +84,19 @@
   - type: Item
     size: Tiny
   - type: Clothing
+    quickEquip: true
     slots: [socks]
   - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: MaterialCloth1
       amount: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 50
   - type: Edible
     requiresSpecialDigestion: true
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
       food:
         maxVol: 10
@@ -93,3 +107,4 @@
     tags:
       - socks
       - ClothMade
+      - Recyclable

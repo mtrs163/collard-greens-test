@@ -17,10 +17,10 @@ using Content.Shared.FixedPoint;
 namespace Content.Server.Collard.Commands
 {
     [AnyCommand]
-    internal sealed class KysCommand : IConsoleCommand
+    internal sealed partial class KysCommand : IConsoleCommand
     {
-        [Dependency] private readonly IEntityManager _e = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private IEntityManager _e = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
 
         public string Command => "kys";
 
