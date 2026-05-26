@@ -11,18 +11,6 @@
   sound: /Audio/Collard/Announcements/RoundStart/hl2_drown.ogg
 
 - type: roundAnnouncement
-  id: FINALSstart
-  sound: /Audio/Collard/Announcements/RoundStart/finals_intro.ogg
-
-- type: roundAnnouncement
-  id: FINALSdestroyer
-  sound: /Audio/Collard/Announcements/RoundStart/finals_destroyer.ogg
-
-- type: roundAnnouncement
-  id: FINALSplugged
-  sound: /Audio/Collard/Announcements/RoundStart/finals_plugged.ogg
-
-- type: roundAnnouncement
   id: Battlebus
   sound: /Audio/Collard/Announcements/RoundStart/battlebus.ogg
 

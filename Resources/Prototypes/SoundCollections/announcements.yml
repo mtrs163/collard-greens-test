@@ -1,20 +1,17 @@
 - type: soundCollection
   id: RoundEnd
   files:
-  # collard-Soundworks-start
+  - /Audio/Collard/Announcements/RoundEnd/codz.ogg # collard-Soundworks
+  - /Audio/Collard/Announcements/RoundEnd/wipe.ogg # collard-Soundworks
+  - /Audio/Collard/Announcements/RoundEnd/win.ogg # collard-Soundworks
+  - /Audio/Collard/Announcements/RoundEnd/greatjob.ogg # collard-Soundworks
+  - /Audio/Collard/Announcements/RoundEnd/baldi_jerk.ogg # collard-Soundworks
+  - /Audio/Collard/Announcements/RoundEnd/arc_001.ogg # collard-Soundworks
+  - /Audio/Collard/Announcements/RoundEnd/arc_002.ogg # collard-Soundworks
+  - /Audio/Collard/Announcements/RoundEnd/arc_003.ogg # collard-Soundworks
   # - /Audio/Announcements/RoundEnd/apc_destroyed.ogg
   # - /Audio/Announcements/RoundEnd/disappointed.ogg
   # - /Audio/Announcements/RoundEnd/notevenpaidforthis.ogg
-  - /Audio/Collard/Announcements/RoundEnd/codz.ogg
-  - /Audio/Collard/Announcements/RoundEnd/wipe.ogg
-  - /Audio/Collard/Announcements/RoundEnd/win.ogg
-  - /Audio/Collard/Announcements/RoundEnd/greatjob.ogg
-  - /Audio/Collard/Announcements/RoundEnd/baldi_jerk.ogg
-  - /Audio/Collard/Announcements/RoundEnd/arc_001.ogg
-  - /Audio/Collard/Announcements/RoundEnd/arc_002.ogg
-  - /Audio/Collard/Announcements/RoundEnd/arc_003.ogg
-  # collard-Soundworks-end
-
 
 - type: soundCollection
   id: PowerOn
