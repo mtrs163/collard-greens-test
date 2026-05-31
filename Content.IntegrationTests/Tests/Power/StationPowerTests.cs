@@ -36,6 +36,7 @@ public sealed class StationPowerTests : GameTest
         "Reach",
         "Exo",
         "Micron", // collard-Micron
+        "Silly", // collard-Silly
     ];
 
     public override PoolSettings PoolSettings => new ()
