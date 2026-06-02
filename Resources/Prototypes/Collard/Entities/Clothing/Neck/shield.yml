@@ -24,8 +24,12 @@
     damageCoefficient: 0.5
   - type: GroupExamine
   - type: Item
-    heldPrefix: off
-    sprite: Clothing/Collard/Neck/neckshield.rsi
+    sprite: Collard/Clothing/Neck/neckshield.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
     size: Normal
   - type: Battery
     maxCharge: 2000
