@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/31/2026 07:35:12
-  entityCount: 7983
+  time: 06/02/2026 09:03:34
+  entityCount: 7979
 maps:
 - 1
 grids:
@@ -133,7 +133,7 @@ entities:
       maxLightLevel: 2
       minLightLevel: 0.2
       offset: 720
-      duration: 2073600
+      duration: 86400
       originalColor: '#E0A0C0FF'
   - uid: 2
     components:
@@ -6631,7 +6631,7 @@ entities:
   - uid: 8264
     components:
     - type: MetaData
-      name: Заебали отсрова.
+      name: Остров
     - type: Transform
       pos: 37.66452,-47.713627
       parent: 1
@@ -14027,6 +14027,16 @@ entities:
     components:
     - type: Transform
       pos: -0.5,24.5
+      parent: 2
+  - uid: 3702
+    components:
+    - type: Transform
+      pos: -34.5,-12.5
+      parent: 2
+  - uid: 3705
+    components:
+    - type: Transform
+      pos: -34.5,-11.5
       parent: 2
   - uid: 6392
     components:
@@ -32439,24 +32449,6 @@ entities:
       parent: 2
 - proto: GrilleDiagonal
   entities:
-  - uid: 3727
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 17.5,29.5
-      parent: 2
-  - uid: 3738
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 14.5,24.5
-      parent: 2
-  - uid: 3739
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 18.5,27.5
-      parent: 2
   - uid: 3740
     components:
     - type: Transform
@@ -38610,30 +38602,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 27.5,-13.5
       parent: 2
-  - uid: 4515
-    components:
-    - type: MetaData
-      name: спавнер хлебака
-    - type: Transform
-      pos: 2.5,-13.5
-      parent: 2
-    - type: RandomSpawner
-      prototypes:
-      - MobBreadDog
-      rarePrototypes: []
-      gameRules: []
-  - uid: 4516
-    components:
-    - type: MetaData
-      name: спавнер корт
-    - type: Transform
-      pos: 7.5,-13.5
-      parent: 2
-    - type: RandomSpawner
-      prototypes:
-      - MobCatCake
-      rarePrototypes: []
-      gameRules: []
 - proto: RandomFloraTree
   entities:
   - uid: 4517
@@ -38749,12 +38717,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -21.5,6.5
-      parent: 2
-  - uid: 4535
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -18.5,12.5
       parent: 2
   - uid: 8137
     components:
@@ -39452,19 +39414,19 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 19.5,17.5
       parent: 2
-  - uid: 4680
+  - uid: 3703
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 14.5,24.5
       parent: 2
-  - uid: 4681
+  - uid: 3704
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 17.5,29.5
       parent: 2
-  - uid: 4682
+  - uid: 3706
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
