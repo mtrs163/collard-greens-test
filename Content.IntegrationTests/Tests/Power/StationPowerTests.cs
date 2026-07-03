@@ -37,6 +37,7 @@ public sealed class StationPowerTests : GameTest
         "Exo",
         "Micron", // collard-Micron
         "Silly", // collard-Silly
+        "Agroterminal", // collard-Agroterminal
     ];
 
     public override PoolSettings PoolSettings => new ()

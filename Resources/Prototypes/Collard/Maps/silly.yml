@@ -12,7 +12,7 @@
         - type: StationNameSetup
           mapNameTemplate: '{0} Силли {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:CollardNameGenerator
             prefixCreator: 'ABK'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Collard/Shuttles/emergency_silly.yml
