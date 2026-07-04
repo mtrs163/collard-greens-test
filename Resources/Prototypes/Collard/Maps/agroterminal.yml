@@ -1,6 +1,6 @@
 - type: gameMap
   id: Agroterminal
-  mapName: 'Агротерминал Мини'
+  mapName: '(NT) Агротерминал'
   mapPath: /Maps/Collard/agroterminal.yml
   minPlayers: 0
   stations:

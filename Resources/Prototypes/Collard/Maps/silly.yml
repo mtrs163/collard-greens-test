@@ -1,6 +1,6 @@
 - type: gameMap
   id: Silly
-  mapName: 'Silly Island'
+  mapName: '(CG) Silly Island'
   mapPath: /Maps/Collard/silly.yml
   maxRandomOffset: 0
   randomRotation: false
@@ -10,7 +10,7 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Силли {1}'
+          mapNameTemplate: '{0} Смешной остров {1}'
           nameGenerator:
             !type:CollardNameGenerator
             prefixCreator: 'ABK'

@@ -1,6 +1,6 @@
 - type: gameMap
   id: Micron
-  mapName: 'Micron Station'
+  mapName: '(CG) Micron'
   mapPath: /Maps/Collard/micron.yml
   minPlayers: 0
   stations:
@@ -8,7 +8,7 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Micron Station {1}'
+          mapNameTemplate: '{0} Микрон {1}'
           nameGenerator:
             !type:CollardNameGenerator
             prefixCreator: 'RT'
