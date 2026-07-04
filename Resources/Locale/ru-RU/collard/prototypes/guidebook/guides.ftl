@@ -1,4 +1,4 @@
-guide-entry-collard = Collard
+guide-entry-collard = Green
 guide-entry-infocollard = Дополнительная информация
 guide-entry-stationprefix = Префиксы станций
 

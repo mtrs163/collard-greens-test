@@ -1,6 +1,6 @@
 ### Connecting dialog when you start up the game
 
-connecting-title = Collard
+connecting-title = Green
 connecting-exit = Выйти
 connecting-retry = Повторить
 connecting-reconnect = Переподключиться

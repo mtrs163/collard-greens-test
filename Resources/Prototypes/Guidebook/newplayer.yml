@@ -3,9 +3,9 @@
   name: guide-entry-newplayer
   priority: 0
   text: "/ServerInfo/Guidebook/NewPlayer/NewPlayer.xml"
-  children:
-  - Controls
-  - CharacterCreation
+  # children: || collard
+  # - Controls
+  # - CharacterCreation
 
 - type: guideEntry
   id: Controls
