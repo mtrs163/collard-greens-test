@@ -53,3 +53,8 @@
             #civilian
             Passenger: [ -1, -1 ]
             Gatecrasher: [ -1, -1 ]
+        - type: StationGoal
+          goals:
+          - Money1M
+          - Money25M
+          - Seeds

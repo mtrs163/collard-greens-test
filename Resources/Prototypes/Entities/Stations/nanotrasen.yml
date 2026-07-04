@@ -27,6 +27,7 @@
     - BaseStationAllEventsEligible
     - BaseStationNanotrasen
     - BaseStationDeliveries
+    - BaseStationGoal # collard-goals
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform

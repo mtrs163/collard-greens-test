@@ -1,0 +1,22 @@
+- type: entity
+  id: BaseStationGoal
+  abstract: true
+  components:
+    - type: StationGoal
+      goals:
+      - Technologies
+      - Seeds
+      - Chemistry
+      - AllDepartments
+      - Psychologist
+      - Shuttle
+      - Singularity
+      - SolarPanels
+      - Artifacts
+      - Storage
+      - Zoo
+      - MiningOutpost
+      - Containment
+      - Tesla
+      - Money1M
+      - Money25M

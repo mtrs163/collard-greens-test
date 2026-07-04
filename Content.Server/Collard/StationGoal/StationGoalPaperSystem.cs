@@ -1,17 +1,13 @@
 using Content.Server.Fax;
+using Content.Server.MassMedia.Systems;
 using Content.Server.Station.Systems;
-using Content.Shared.Collard.CCVars;
 using Content.Shared.Fax.Components;
-using Content.Shared.GameTicking;
 using Content.Shared.Collard.GameTicking;
-using Content.Shared.Paper;
-using Content.Shared.Random.Helpers;
+using Content.Server.Collard.StationGoal;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using System.Linq;
-using Content.Shared.Dataset;
 
 namespace Content.Server.Collard.StationGoal
 {
@@ -20,124 +16,111 @@ namespace Content.Server.Collard.StationGoal
     /// </summary>
     public sealed partial class StationGoalPaperSystem : EntitySystem
     {
-        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private IPrototypeManager _proto = default!;
         [Dependency] private IRobustRandom _random = default!;
-        [Dependency] private FaxSystem _faxSystem = default!;
+        [Dependency] private FaxSystem _fax = default!;
+        [Dependency] private NewsSystem _news = default!;
         [Dependency] private StationSystem _station = default!;
-        [Dependency] private SharedGameTicker _ticker = default!;
-        [Dependency] private IConfigurationManager _cfg = default!;
 
         public override void Initialize()
         {
-            base.Initialize();
             SubscribeLocalEvent<RoundStartedEvent>(OnRoundStarted);
         }
 
         private void OnRoundStarted(RoundStartedEvent ev)
         {
-            SendStationGoal();
+
+            var query = EntityQueryEnumerator<StationGoalComponent>();
+            while (query.MoveNext(out var uid, out var station))
+            {
+                var tempGoals = new List<ProtoId<StationGoalPrototype>>(station.Goals);
+                var goalId = _random.Pick(tempGoals);
+                var goalProto = _proto.Index(goalId);
+
+                if (goalProto is null)
+                    return;
+
+                if (SendStationGoal(uid, goalProto))
+                {
+                    Log.Info($"Goal {goalProto.ID} has been sent to station {MetaData(uid).EntityName}");
+                }
+            }
         }
 
-        public string ChooseRandomPrefixGoal(string stationName)
+        public bool SendStationGoal(EntityUid ent, ProtoId<StationGoalPrototype> goal)
         {
-            if (stationName.Length < 4)
-                return "weh";
-            var goalPool = "Generic";
-            switch (stationName[..4])
-            {
-                case "NTAD":
-                    goalPool = "Generic"; //"Administrative"; // placeholder
-                    break;
-                case "NTBS":
-                    goalPool = "Business";
-                    break;
-                case "NTRN":
-                    goalPool = "Research";
-                    break;
-                case "NTEX":
-                    goalPool = "Experimental";
-                    break;
-                case "NTCO":
-                    goalPool = "Commercial";
-                    break;
-                case "NTME":
-                    goalPool = "Generic"; //"Medical"; // placeholder
-                    break;
-                case "NTDE":
-                    goalPool = "Generic"; //"Defense"; // placeholder
-                    break;
-                case "NTTS":
-                    goalPool = "Transport";
-                    break;
-                case "NTRT":
-                    goalPool = "Transport";
-                    break;
-                default:
-                    goalPool = "Generic";
-                    break;
-            }
-            var availableGoals = _prototypeManager.EnumeratePrototypes<StationGoalPrototype>().ToList();
-            ProtoId<LocalizedDatasetPrototype> stationGoal = "StationGoal" + goalPool;
-            var goal = _random.Pick(_prototypeManager.Index(stationGoal).Values);
-            return goal;
+            return SendStationGoal(ent, _proto.Index(goal));
         }
 
         /// <summary>
-        ///     Send a station goal to all faxes which are authorized to receive it.
+        ///     Send a station goal on selected station to all faxes which are authorized to receive it.
         /// </summary>
         /// <returns>True if at least one fax received paper</returns>
-        public bool SendStationGoal()
+        public bool SendStationGoal(EntityUid ent, StationGoalPrototype goal)
         {
-            if (!_cfg.GetCVar(CCVars.StationGoal)) return false;
-            var enumerator = EntityQueryEnumerator<FaxMachineComponent>();
-            var wasSent = false;
-            while (enumerator.MoveNext(out var uid, out var fax))
-            {
-                if (!fax.ReceiveStationGoal) continue;
+            var printout = new FaxPrintout(
+                Loc.GetString(goal.Text, ("station", MetaData(ent).EntityName),
+                                        ("date", DateTime.Now.AddYears(1000).ToString("dd.MM.yyyy"))),
+                Loc.GetString("station-goal-fax-paper-name"),
+                null,
+                null,
+                "paper_stamp-centcom",
+                [new() { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#006600") }]
+            );
 
-                if (!TryComp<MetaDataComponent>(_station.GetOwningStation(uid), out var meta))
+            var wasSent = false;
+            var query = EntityQueryEnumerator<FaxMachineComponent>();
+            while (query.MoveNext(out var faxUid, out var fax))
+            {
+                if (!fax.ReceiveAllStationGoals && !(fax.ReceiveStationGoal && _station.GetOwningStation(faxUid) == ent))
                     continue;
 
-                var goal = ChooseRandomPrefixGoal(meta.EntityName);
-                var stationShortName = "ERR12";
-                if (meta.EntityName.Length < 4)
-                {
-                    stationShortName = "ERR12. Ошибка автоматической системы рассылки целей станции.";
-                }
-                else if (meta.EntityName[..4] == "NTDE" || meta.EntityName[..4] == "NTAD" || meta.EntityName[..4] == "NTRN" || meta.EntityName[..4] == "NTCO" || meta.EntityName[..4] == "NTME")
-                {
-                    stationShortName = meta.EntityName.Substring(6);
-                }
-                else
-                {
-                    stationShortName = meta.EntityName.Substring(5);
-                }
-                var printout = new FaxPrintout(
+                _fax.Receive(faxUid, printout, null, fax);
 
-                    Loc.GetString(
-                            goal,
-                            ("date", _ticker.ICDateTime.ToString("dd.MM.yyyy")),
-                            ("station", stationShortName)),
-                    Loc.GetString("station-goal-fax-paper-name"),
-                    null,
-                    null,
-                    "paper_stamp-centcom",
-                    new List<StampDisplayInfo>
-                    {
-                        new() { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#006600") },
-                    });
-                _faxSystem.Receive(uid, printout, Loc.GetString("fax-component-sender-name-centcom"), fax);
-                var ccFaxes = EntityQueryEnumerator<FaxMachineComponent>();
-                while (ccFaxes.MoveNext(out var ccFaxUid, out var ccFax))
-                {
-                    if (!ccFax.CentcomFax) continue;
-                    _faxSystem.Receive(ccFaxUid, printout, Loc.GetString("fax-component-sender-name-centcom"), ccFax);
-                }
+                foreach (var spawnEnt in goal.Spawns)
+                    SpawnAtPosition(spawnEnt, Transform(faxUid).Coordinates);
 
-                wasSent = true;
+                wasSent |= fax.ReceiveStationGoal;
+            }
+
+            var ccFaxes = EntityQueryEnumerator<FaxMachineComponent>();
+            while (ccFaxes.MoveNext(out var ccFaxUid, out var ccFax))
+            {
+                if (!ccFax.CentcomFax) continue;
+                _fax.Receive(ccFaxUid, printout, null, ccFax);
+            }
+
+            // Publish news if at least one fax received the goal.
+            if (wasSent)
+            {
+                PublishStationGoalNews(ent, goal);
             }
 
             return wasSent;
+        }
+
+        /// <summary>
+        ///     Publishes a news article about the station goal in the mass media.
+        /// </summary>
+        private void PublishStationGoalNews(EntityUid ent, StationGoalPrototype goal)
+        {
+            var stationName = MetaData(ent).EntityName;
+
+            var title = Loc.GetString("station-goal-news-title", ("station", stationName));
+
+
+            var content = Loc.GetString(goal.Text, ("station", stationName),
+                                            ("date", DateTime.Now.AddYears(1000).ToString("dd.MM.yyyy")));
+
+            var endPattern = Loc.GetString("station-goal-end");
+
+            if (content.EndsWith(endPattern))
+            {
+                content = content[..^endPattern.Length];
+                content = content.TrimEnd();
+            }
+
+            _news.TryAddNews(ent, title, content, out _, Loc.GetString("station-goal-news-author"));
         }
 
         public bool SendProtoStationGoal(StationGoalPrototype goal)
@@ -152,35 +135,23 @@ namespace Content.Server.Collard.StationGoal
                 if (!TryComp<MetaDataComponent>(_station.GetOwningStation(uid), out var meta))
                     continue;
 
-                var stationShortName = "ERR12. Ошибка автоматической системы рассылки целей станции. Пожалуйста, обратитесь к Центральному Командованию.";
-                if (meta.EntityName[..4] == "NTBS" || meta.EntityName[..4] == "NTEX" || meta.EntityName[..4] == "NTTS" || meta.EntityName[..4] == "NTRT")
-                {
-                    stationShortName = meta.EntityName.Substring(5);
-                }
-                else
-                {
-                    stationShortName = meta.EntityName.Substring(6);
-                }
+                var stationName = meta.EntityName;
 
                 var printout = new FaxPrintout(
-                    Loc.GetString(
-                            goal.Text,
-                            ("date", DateTime.Now.AddYears(1000).ToString("dd.MM.yyyy")),
-                            ("station", stationShortName)),
-                    Loc.GetString("station-goal-fax-paper-name"),
-                    null,
-                    null,
-                    "paper_stamp-centcom",
-                    new List<StampDisplayInfo>
-                    {
-                        new() { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#006600") },
-                    });
-                _faxSystem.Receive(uid, printout, Loc.GetString("fax-component-sender-name-centcom"), fax);
+                Loc.GetString(goal.Text, ("station", stationName),
+                                        ("date", DateTime.Now.AddYears(1000).ToString("dd.MM.yyyy"))),
+                Loc.GetString("station-goal-fax-paper-name"),
+                null,
+                null,
+                "paper_stamp-centcom",
+                [new() { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#006600") }]
+            );
+                _fax.Receive(uid, printout, Loc.GetString("fax-component-sender-name-centcom"), fax);
                 var ccFaxes = EntityQueryEnumerator<FaxMachineComponent>();
                 while (ccFaxes.MoveNext(out var ccFaxUid, out var ccFax))
                 {
                     if (!ccFax.CentcomFax) continue;
-                    _faxSystem.Receive(ccFaxUid, printout, Loc.GetString("fax-component-sender-name-centcom"), ccFax);
+                    _fax.Receive(ccFaxUid, printout, Loc.GetString("fax-component-sender-name-centcom"), ccFax);
                 }
 
                 wasSent = true;
