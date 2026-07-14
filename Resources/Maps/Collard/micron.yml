@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 275.2.0
+  engineVersion: 277.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/09/2026 04:58:11
-  entityCount: 7930
+  time: 07/14/2026 04:28:58
+  entityCount: 7936
 maps:
 - 1
 grids:
@@ -5806,6 +5806,12 @@ entities:
     - type: Transform
       pos: 52.5,18.5
       parent: 2
+  - uid: 4295
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 27.5,50.5
+      parent: 2
   - uid: 6044
     components:
     - type: Transform
@@ -5833,6 +5839,18 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -16.5,31.5
+      parent: 2
+  - uid: 7932
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 28.5,50.5
+      parent: 2
+  - uid: 7933
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 43.5,47.5
       parent: 2
 - proto: AtmosFixFreezerMarker
   entities:
@@ -20032,6 +20050,23 @@ entities:
     components:
     - type: Transform
       pos: 59.5,33.5
+      parent: 2
+- proto: DeskBell
+  entities:
+  - uid: 7934
+    components:
+    - type: Transform
+      pos: 43.19744,30.487116
+      parent: 2
+  - uid: 7935
+    components:
+    - type: Transform
+      pos: 32.677456,29.416323
+      parent: 2
+  - uid: 7936
+    components:
+    - type: Transform
+      pos: 7.3181615,17.747667
       parent: 2
 - proto: DisposalBend
   entities:
@@ -40645,7 +40680,7 @@ entities:
       pos: 9.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14632.362
+      secondsUntilStateChange: -14751.482
       state: Opening
   - uid: 7305
     components:
@@ -40653,7 +40688,7 @@ entities:
       pos: 7.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14632.963
+      secondsUntilStateChange: -14752.083
       state: Opening
 - proto: PaperOffice
   entities:
