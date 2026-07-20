@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
@@ -37,6 +38,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillStartedMessage>(OnIdConfigured);
+        SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillProgramCreatedMessage>(OnProgramCreated);
         SubscribeLocalEvent<ClamshellGrillComponent, StorageCloseAttemptEvent>(OnCloseAttempt);
         SubscribeLocalEvent<ClamshellGrillComponent, LockToggleAttemptEvent>(OnLockToggleAttempt);
         SubscribeLocalEvent<ClamshellGrillComponent, LockToggledEvent>(OnLockToggled);
@@ -50,8 +52,8 @@ public abstract partial class SharedGrillSystem : EntitySystem
     {
         // validation.
         if (string.IsNullOrWhiteSpace(args.Name) || // args.Name.Length > _maxIdJobLength ||
-            args.Sentence < 0 ||
-            args.Crime < 0)
+            args.Time < 0 ||
+            args.Temp < 0)
         {
             return;
         }
@@ -66,7 +68,12 @@ public abstract partial class SharedGrillSystem : EntitySystem
         _lock.Lock(ent.Owner, args.Actor);
         _entityStorage.CloseStorage(ent);
 
-        ClosePlaten(ent, args.Name, args.Sentence, args.Crime);
+        ClosePlaten(ent, args.Name, args.Time, args.Temp);
+    }
+
+    private void OnProgramCreated(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillProgramCreatedMessage args)
+    {
+        ent.Comp.SavedPrograms.Add(new GrillProgram(args.Name, args.Time, args.Time));
     }
 
     private void OnCloseAttempt(Entity<ClamshellGrillComponent> ent, ref StorageCloseAttemptEvent args)
@@ -76,12 +83,12 @@ public abstract partial class SharedGrillSystem : EntitySystem
 
         args.Cancelled = true;
 
-        // if (args.User is not { } user)
-        //     return;
+        if (args.User is not { } user)
+            return;
 
-        // // my heart yearns for this to be predicted but for some reason opening an entitystorage via
-        // // verb does not predict it properly.
-        // _userInterface.TryOpenUi(ent.Owner, ClamshellGrillUiKey.Key, user);
+        // my heart yearns for this to be predicted but for some reason opening an entitystorage via
+        // verb does not predict it properly.
+        _userInterface.TryOpenUi(ent.Owner, ClamshellGrillUiKey.Key, user);
     }
 
     private void OnLockToggleAttempt(Entity<ClamshellGrillComponent> ent, ref LockToggleAttemptEvent args)
@@ -90,6 +97,10 @@ public abstract partial class SharedGrillSystem : EntitySystem
             return;
 
         args.Cancelled = true;
+
+        // my heart yearns for this to be predicted but for some reason opening an entitystorage via
+        // verb does not predict it properly.
+        _userInterface.TryOpenUi(ent.Owner, ClamshellGrillUiKey.Key, args.User);
     }
 
     private void OnLockToggled(Entity<ClamshellGrillComponent> ent, ref LockToggledEvent args)

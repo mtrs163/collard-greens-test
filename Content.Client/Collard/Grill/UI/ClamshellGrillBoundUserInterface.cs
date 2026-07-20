@@ -17,14 +17,20 @@ public sealed class ClamshellGrillBoundUserInterface(EntityUid owner, Enum uiKey
 
         _menu = new(Owner, EntMan);
 
-        _menu.OnConfigurationComplete += (name, time, temp) =>
+        _menu.OnProgramConfigurationComplete += (name, time, temp) =>
         {
-            SendPredictedMessage(new ClamshellGrillStartedMessage(name, time, temp));
-            Close();
+            SendPredictedMessage(new ClamshellGrillProgramCreatedMessage(name, time, temp));
         };
 
+        _menu.OnPopulatePrograms += PopulatePrograms;
         _menu.OnClose += Close;
         _menu.OpenCentered();
+    }
+
+    public void PopulatePrograms()
+    {
+        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
+        _menu?.Populate(grill.SavedPrograms);
     }
 
     protected override void Dispose(bool disposing)

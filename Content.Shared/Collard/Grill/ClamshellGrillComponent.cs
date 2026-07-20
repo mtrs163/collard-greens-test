@@ -67,20 +67,38 @@ public sealed partial class ClamshellGrillComponent : Component
 
     [DataField]
     public SoundSpecifier DoneSound = new SoundPathSpecifier("/Audio/Collard/Effects/Grill/grill_done.ogg");
+
+    [DataField]
+    public HashSet<GrillProgram> SavedPrograms = new();
 }
 
 [Serializable, NetSerializable]
 public sealed class ClamshellGrillStartedMessage : BoundUserInterfaceMessage
 {
     public string Name;
-    public float Sentence;
-    public float Crime;
+    public float Time;
+    public float Temp;
 
-    public ClamshellGrillStartedMessage(string name, float sentence, float crime)
+    public ClamshellGrillStartedMessage(string name, float time, float temp)
     {
         Name = name;
-        Sentence = sentence;
-        Crime = crime;
+        Time = time;
+        Temp = temp;
+    }
+}
+
+[Serializable, NetSerializable]
+public sealed class ClamshellGrillProgramCreatedMessage : BoundUserInterfaceMessage
+{
+    public string Name;
+    public float Time;
+    public float Temp;
+
+    public ClamshellGrillProgramCreatedMessage(string name, float time, float temp)
+    {
+        Name = name;
+        Time = time;
+        Temp = temp;
     }
 }
 
@@ -101,4 +119,22 @@ public enum GrillState : byte
     Error,
     OpeningError,
     ClosingError
+}
+
+[DataDefinition, NetSerializable, Serializable]
+public readonly partial record struct GrillProgram
+{
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public string Name { get; init; } = string.Empty;
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float Time { get; init; } = 60f;
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float Temperature { get; init; } = 120f;
+
+    public GrillProgram(string name, float time, float temp)
+    {
+        Name = name;
+        Time = time;
+        Temperature = temp;
+    }
 }

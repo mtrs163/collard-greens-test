@@ -1,0 +1,10 @@
+grill-ui-button-pressandgo = Press & Go
+grill-ui-button-back = Назад
+grill-ui-button-programeditor = Менеджер программ
+grill-ui-button-standby = Режим бездействия
+grill-ui-button-done = Готово
+grill-ui-button-delete = Удалить
+grill-ui-button-start = Пуск
+grill-ui-label-name = Название (макс. 8 симв.)
+grill-ui-label-time = Время (0-9999)
+grill-ui-label-temp = Температура (65-230)
