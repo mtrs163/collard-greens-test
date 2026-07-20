@@ -93,6 +93,7 @@
                                     <Label Text="{Loc 'humanoid-profile-editor-erpstatus-label'}" />
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="ERPButton" HorizontalAlignment="Right" />
+                                </BoxContainer>
                                 <!-- Voice -->
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-voice-label'}" />
