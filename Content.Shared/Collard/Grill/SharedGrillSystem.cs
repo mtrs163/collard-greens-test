@@ -76,12 +76,12 @@ public abstract partial class SharedGrillSystem : EntitySystem
 
         args.Cancelled = true;
 
-        if (args.User is not { } user)
-            return;
+        // if (args.User is not { } user)
+        //     return;
 
-        // my heart yearns for this to be predicted but for some reason opening an entitystorage via
-        // verb does not predict it properly.
-        _userInterface.TryOpenUi(ent.Owner, ClamshellGrillUiKey.Key, user);
+        // // my heart yearns for this to be predicted but for some reason opening an entitystorage via
+        // // verb does not predict it properly.
+        // _userInterface.TryOpenUi(ent.Owner, ClamshellGrillUiKey.Key, user);
     }
 
     private void OnLockToggleAttempt(Entity<ClamshellGrillComponent> ent, ref LockToggleAttemptEvent args)

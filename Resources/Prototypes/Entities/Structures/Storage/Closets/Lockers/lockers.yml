@@ -439,8 +439,10 @@
     interfaces:
       enum.ClamshellGrillUiKey.Key:
         type: ClamshellGrillBoundUserInterface
-  - type: AccessReader # note! this access is for the UI, not the door. door access is handled on GenpopLocker
-    access: [["Service"]]
+  - type: ActivatableUI
+    key: enum.ClamshellGrillUiKey.Key
+  # - type: AccessReader # note! this access is for the UI, not the door. door access is handled on GenpopLocker
+  #   access: [["Service"]]
     examinationText: access-reader-examination-functionality-restricted
   - type: Lock
     locked: false
