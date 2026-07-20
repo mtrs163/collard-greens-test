@@ -7,6 +7,7 @@
   - CaptainJumpsuit
   - CaptainBackpack
   - CaptainOuterClothing
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -25,6 +26,7 @@
   - HoPBackpack
   - HoPOuterClothing
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -58,6 +60,7 @@
   - PassengerOuterClothing
   - PassengerShoes
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -75,6 +78,7 @@
   - CommonBackpack
   - BartenderOuterClothing
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -90,6 +94,7 @@
   - BartenderJumpsuit
   - CommonBackpack
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -108,6 +113,7 @@
   - CommonBackpack
   - ChefOuterClothing
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -123,6 +129,7 @@
   - LibrarianJumpsuit
   - CommonBackpack
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -139,6 +146,7 @@
   - LawyerJumpsuit
   - CommonBackpack
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -160,6 +168,7 @@
   - ChaplainOuterClothing
   - ChaplainBible
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -178,6 +187,7 @@
   - CommonBackpack
   - JanitorOuterClothing
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -195,6 +205,7 @@
   - BotanistBackpack
   - BotanistOuterClothing
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -214,6 +225,7 @@
   - ClownOuterClothing
   - ClownShoes
   - Glasses
+  - AssistiveItems
   - SurvivalClown
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -233,7 +245,8 @@
   - MimeOuterClothing
   - MimeBelt
   - Glasses
-  - SurvivalMime
+  - AssistiveItems
+  - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
@@ -248,14 +261,15 @@
   - MusicianJumpsuit
   - CommonBackpack
   - MusicianOuterClothing
+  - Instruments
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
   - UnderwearTop # collard-Underwear
   - UnderwearSocks # collard-Underwear
   #- MusicianJobTrinkets
-  - Instruments
   - GroupSpeciesBreathTool
 
 # Cargo
@@ -270,6 +284,7 @@
   - QuartermasterOuterClothing
   - QuartermasterShoes
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -289,6 +304,7 @@
   - CargoTechnicianShoes
   - CargoTechnicianID
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -305,6 +321,7 @@
   - SalvageSpecialistOuterClothing
   - SalvageSpecialistShoes
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -324,6 +341,7 @@
   - ChiefEngineerNeck
   - ChiefEngineerOuterClothing
   - ChiefEngineerShoes
+  - AssistiveItems
   - SurvivalExtended
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -338,6 +356,7 @@
   - GroupTankHarness
   - TechnicalAssistantJumpsuit
   - StationEngineerBackpack
+  - AssistiveItems
   - SurvivalExtended
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -356,6 +375,7 @@
   - StationEngineerOuterClothing
   - StationEngineerShoes
   - StationEngineerID
+  - AssistiveItems
   - SurvivalExtended
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -372,6 +392,7 @@
   - AtmosphericTechnicianBackpack
   - AtmosphericTechnicianOuterClothing
   - AtmosphericTechnicianShoes
+  - AssistiveItems
   - SurvivalExtended
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -393,6 +414,7 @@
   - ScientistGloves
   - ResearchDirectorShoes
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -414,6 +436,7 @@
   - ScientistShoes
   - ScientistPDA
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -429,6 +452,7 @@
   - ResearchAssistantJumpsuit
   - ScientistBackpack
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -448,6 +472,7 @@
   - SecurityBelt
   - HeadofSecurityOuterClothing
   - SecurityShoes
+  - AssistiveItems
   - SurvivalSecurity
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -465,6 +490,7 @@
   - SecurityBelt
   - WardenOuterClothing
   - SecurityShoes
+  - AssistiveItems
   - SurvivalSecurity
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -483,6 +509,7 @@
   - SecurityShoes
   - SecurityPDA
   - SecurityBelt
+  - AssistiveItems
   - SurvivalSecurity
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -500,6 +527,7 @@
   - SecurityBackpack
   - DetectiveOuterClothing
   - SecurityShoes
+  - AssistiveItems
   - SurvivalSecurity
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -513,6 +541,7 @@
   groups:
   - SecurityCadetJumpsuit
   - SecurityBackpack
+  - AssistiveItems
   - SurvivalSecurity
   - Trinkets
   #- SecurityCadetJobTrinkets
@@ -531,6 +560,7 @@
   - ReporterOuterClothing
   - CommonBackpack
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -546,6 +576,7 @@
   - PsychologistJumpsuit
   - MedicalBackpack
   - Glasses
+  - AssistiveItems
   - Survival
   - Trinkets
   - UnderwearBottom # collard-Underwear
@@ -593,6 +624,13 @@
   - GroupTankHarness
 
 - type: roleLoadout
+  id: RoleSurvivalExtendedAntag # Used by antagonists that spawn off-station (e.g wizards)
+  groups:
+  - SurvivalExtendedAntag
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
+
+- type: roleLoadout
   id: RoleSurvivalMedical
   groups:
   - SurvivalMedical
@@ -630,6 +668,12 @@
   groups:
   - GroupEVATank
   - SurvivalExtended
+
+- type: roleLoadout
+  id: RoleSurvivalEVAAntag # Used by antagonists that spawn off-station AND in space (e.g ninjas)
+  groups:
+  - GroupEVATank
+  - SurvivalExtendedAntag
 
 - type: roleLoadout
   id: RoleSurvivalSpaceNinja

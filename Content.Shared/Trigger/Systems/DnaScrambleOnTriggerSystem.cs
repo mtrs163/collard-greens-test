@@ -50,7 +50,6 @@ public sealed partial class DnaScrambleOnTriggerSystem : XOnTriggerSystem<DnaScr
         // collard-DetailExaminableGlowup-end
         _identity.QueueIdentityUpdate(target); // manually queue identity update since we don't raise the event
 
-        // Can't use PopupClient or PopupPredicted because the trigger might be unpredicted.
         _popup.PopupEntity(Loc.GetString("scramble-on-trigger-popup"), target, target);
 
         var ev = new DnaScrambledEvent(target);

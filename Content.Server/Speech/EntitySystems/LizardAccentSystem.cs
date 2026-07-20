@@ -1,10 +1,10 @@
 ﻿using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
-using Content.Shared.Speech;
+using Content.Shared.Speech.EntitySystems;
 
 namespace Content.Server.Speech.EntitySystems;
 
-public sealed class LizardAccentSystem : EntitySystem
+public sealed class LizardAccentSystem : RelayAccentSystem<LizardAccentComponent>
 {
     private static readonly Regex RegexLowerS = new("s+");
     private static readonly Regex RegexUpperS = new("S+");
@@ -28,16 +28,8 @@ public sealed class LizardAccentSystem : EntitySystem
     private static readonly Regex RegexUpperZhCyr = new("Ж+");
     // collard-Localization-end
 
-    public override void Initialize()
+    public override string Accentuate(string message, Entity<LizardAccentComponent>? ent = null)
     {
-        base.Initialize();
-        SubscribeLocalEvent<LizardAccentComponent, AccentGetEvent>(OnAccent);
-    }
-
-    private void OnAccent(EntityUid uid, LizardAccentComponent component, AccentGetEvent args)
-    {
-        var message = args.Message;
-
         // hissss
         message = RegexLowerS.Replace(message, "sss");
         // hiSSS
@@ -78,6 +70,7 @@ public sealed class LizardAccentSystem : EntitySystem
         // Ж => ШШШ
         message = RegexUpperZhCyr.Replace(message, "ШШШ");
         // collard-Localization-end
-        args.Message = message;
+
+        return message;
     }
 }

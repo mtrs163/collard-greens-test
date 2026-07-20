@@ -13,3 +13,9 @@
   sexes:
   - Unsexed
   sexualDimorphism: false # collard-SexualDimorphism
+  defaultSoundsBySex:
+  - UnisexDiona
+  - UnisexDiona
+  - UnisexDiona
+  voices:
+  - UnisexDiona

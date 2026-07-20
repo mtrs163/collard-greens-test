@@ -9,3 +9,10 @@
   sexualDimorphism: false # collard-SexualDimorphism
   sexes:  # collard-SexualDimorphism || i mean it's a pile of goop
   - Unsexed
+  defaultSoundsBySex:
+  - MaleSlime
+  - FemaleSlime
+  - MaleSlime
+  voices:
+  - MaleSlime
+  - FemaleSlime
