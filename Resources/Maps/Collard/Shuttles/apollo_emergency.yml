@@ -4956,37 +4956,31 @@ entities:
   - uid: 925
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 11.5,18.5
       parent: 1
   - uid: 926
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 13.5,18.5
       parent: 1
   - uid: 927
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -8.5,17.5
       parent: 1
   - uid: 928
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -8.5,16.5
       parent: 1
   - uid: 929
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -6.5,13.5
       parent: 1
   - uid: 930
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -5.5,13.5
       parent: 1
   - uid: 931
