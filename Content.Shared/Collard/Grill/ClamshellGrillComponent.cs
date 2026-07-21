@@ -70,21 +70,9 @@ public sealed partial class ClamshellGrillComponent : Component
 
     [DataField]
     public HashSet<GrillProgram> SavedPrograms = new();
-}
 
-[Serializable, NetSerializable]
-public sealed class ClamshellGrillStartedMessage : BoundUserInterfaceMessage
-{
-    public string Name;
-    public float Time;
-    public float Temp;
-
-    public ClamshellGrillStartedMessage(string name, float time, float temp)
-    {
-        Name = name;
-        Time = time;
-        Temp = temp;
-    }
+    [DataField, AutoNetworkedField]
+    public GrillProgram? SelectedProgram = null;
 }
 
 [Serializable, NetSerializable]
@@ -103,6 +91,33 @@ public sealed class ClamshellGrillProgramCreatedMessage : BoundUserInterfaceMess
 }
 
 [Serializable, NetSerializable]
+public sealed class ClamshellGrillPlatenCloseMessage : BoundUserInterfaceMessage
+{
+    public GrillProgram Program;
+
+    public ClamshellGrillPlatenCloseMessage(GrillProgram program)
+    {
+        Program = program;
+    }
+}
+
+[Serializable, NetSerializable]
+public sealed class ClamshellGrillPlatenOpenMessage : BoundUserInterfaceMessage
+{
+    public bool Error;
+    public bool Silent;
+
+    public ClamshellGrillPlatenOpenMessage(bool error, bool silent)
+    {
+        Error = error;
+        Silent = silent;
+    }
+}
+
+[Serializable, NetSerializable]
+public sealed class ClamshellGrillStopSoundsMessage : BoundUserInterfaceMessage { }
+
+[Serializable, NetSerializable]
 public enum ClamshellGrillUiKey : byte
 {
     Key
@@ -114,7 +129,7 @@ public enum GrillState : byte
     Opening,
     Closing,
     Cooking,
-    Resting,
+    Standby,
     Ready,
     Error,
     OpeningError,

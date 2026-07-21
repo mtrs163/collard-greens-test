@@ -5,12 +5,38 @@ namespace Content.Server.Collard.Grill;
 
 public sealed partial class GrillSystem : SharedGrillSystem
 {
-    protected override void ClosePlaten(Entity<ClamshellGrillComponent> ent, string name, float sentence, float crime)
+    protected override void ClosePlaten(Entity<ClamshellGrillComponent> ent, GrillProgram program, bool isStandby)
     {
-        // Default to prisoner locker coordinates for ID spawn
-        ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.PlatenMovingSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
-        ent.Comp.NextState = GrillState.Cooking;
         ent.Comp.OperationEndTime = Timing.CurTime + TimeSpan.FromSeconds(ent.Comp.PlatenMoveDuration);
+        ent.Comp.CurrentState = GrillState.Closing;
+        ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.PlatenMovingSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
+        if (isStandby) ent.Comp.NextState = GrillState.Standby;
+        else ent.Comp.NextState = GrillState.Cooking;
         Dirty(ent);
+    }
+
+    protected override void OpenPlaten(Entity<ClamshellGrillComponent> ent, bool error, bool silent)
+    {
+        ent.Comp.OperationEndTime = Timing.CurTime + TimeSpan.FromSeconds(ent.Comp.PlatenMoveDuration);
+        ent.Comp.CurrentState = GrillState.Opening;
+        ent.Comp.NextState = GrillState.Ready;
+        Dirty(ent);
+        if (silent) return;
+        else if (error)
+        {
+            ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.ErrorSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
+            return;
+        }
+        else ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.PlatenMovingSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
+    }
+
+    protected override void PlayTimeoutSound(Entity<ClamshellGrillComponent> ent)
+    {
+        ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.TimeSound, ent, AudioParams.Default.WithMaxDistance(10f))?.Entity;
+    }
+
+    protected override void PlayDoneSound(Entity<ClamshellGrillComponent> ent)
+    {
+        ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.DoneSound, ent, AudioParams.Default.WithMaxDistance(10f))?.Entity;
     }
 }

@@ -8,3 +8,7 @@ grill-ui-button-start = Пуск
 grill-ui-label-name = Название (макс. 8 симв.)
 grill-ui-label-time = Время (0-9999)
 grill-ui-label-temp = Температура (65-230)
+grill-ui-standby = Режим бездействия
+grill-ui-button-exit-standby = Выйти из режима бездействия
+grill-ui-button-exit-abort = Отмена
+grill-ui-button-exit-gotit = ОК

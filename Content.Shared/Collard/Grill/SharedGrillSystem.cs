@@ -9,11 +9,13 @@ using Content.Shared.Popups;
 using Content.Shared.Security.Components;
 using Content.Shared.Storage.Components;
 using Content.Shared.Storage.EntitySystems;
+using Content.Shared.Tools.Components;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
+using Robust.Shared.Serialization.TypeSerializers.Implementations;
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Collard.Grill;
@@ -31,29 +33,24 @@ public abstract partial class SharedGrillSystem : EntitySystem
     [Dependency] private SharedUserInterfaceSystem _userInterface = default!;
     [Dependency] protected SharedAudioSystem Audio = default!;
 
-    // CCvar.
-    // private int _maxIdJobLength;
-
     /// <inheritdoc/>
     public override void Initialize()
     {
-        SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillStartedMessage>(OnIdConfigured);
+        SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillPlatenCloseMessage>(OnPlatenCloseRequest);
+        SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillPlatenOpenMessage>(OnPlatenOpenRequest);
+        SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillStopSoundsMessage>(OnStopSounds);
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillProgramCreatedMessage>(OnProgramCreated);
         SubscribeLocalEvent<ClamshellGrillComponent, StorageCloseAttemptEvent>(OnCloseAttempt);
         SubscribeLocalEvent<ClamshellGrillComponent, LockToggleAttemptEvent>(OnLockToggleAttempt);
         SubscribeLocalEvent<ClamshellGrillComponent, LockToggledEvent>(OnLockToggled);
-        SubscribeLocalEvent<ClamshellGrillComponent, GetVerbsEvent<Verb>>(OnGetVerbs);
-        // SubscribeLocalEvent<GenpopIdCardComponent, ExaminedEvent>(OnExamine);
-
-        //Subs.CVar(_cfgManager, CCVars.MaxIdJobLength, value => _maxIdJobLength = value, true);
     }
 
-    private void OnIdConfigured(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillStartedMessage args)
+    private void OnPlatenCloseRequest(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillPlatenCloseMessage args)
     {
         // validation.
-        if (string.IsNullOrWhiteSpace(args.Name) || // args.Name.Length > _maxIdJobLength ||
-            args.Time < 0 ||
-            args.Temp < 0)
+        if (string.IsNullOrWhiteSpace(args.Program.Name) ||
+            args.Program.Time <= 0 ||
+            args.Program.Temperature < 0)
         {
             return;
         }
@@ -61,19 +58,35 @@ public abstract partial class SharedGrillSystem : EntitySystem
         if (!_accessReader.IsAllowed(args.Actor, ent))
             return;
 
-        // We don't spawn the actual ID now because then the locker would eat it.
-        // Instead, we just fill in the spot temporarily til the checks pass.
-        ent.Comp.LinkedId = EntityUid.Invalid;
-
         _lock.Lock(ent.Owner, args.Actor);
         _entityStorage.CloseStorage(ent);
 
-        ClosePlaten(ent, args.Name, args.Time, args.Temp);
+        var isStandby = false;
+        if (args.Program.Time == 0) isStandby = true;
+        ent.Comp.SelectedProgram = args.Program;
+
+        ClosePlaten(ent, args.Program, isStandby);
+    }
+
+    private void OnPlatenOpenRequest(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillPlatenOpenMessage args)
+    {
+        if (!_accessReader.IsAllowed(args.Actor, ent))
+            return;
+
+        _lock.Unlock(ent.Owner, args.Actor);
+        _entityStorage.OpenStorage(ent);
+
+        OpenPlaten(ent, args.Error, args.Silent);
     }
 
     private void OnProgramCreated(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillProgramCreatedMessage args)
     {
         ent.Comp.SavedPrograms.Add(new GrillProgram(args.Name, args.Time, args.Time));
+    }
+
+    private void OnStopSounds(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillStopSoundsMessage args)
+    {
+        ent.Comp.AudioStream = Audio.Stop(ent.Comp.AudioStream);
     }
 
     private void OnCloseAttempt(Entity<ClamshellGrillComponent> ent, ref StorageCloseAttemptEvent args)
@@ -112,66 +125,6 @@ public abstract partial class SharedGrillSystem : EntitySystem
         CancelIdCard(ent);
     }
 
-    private void OnGetVerbs(Entity<ClamshellGrillComponent> ent, ref GetVerbsEvent<Verb> args)
-    {
-        if (ent.Comp.LinkedId == null)
-            return;
-
-        if (!args.CanAccess || !args.CanComplexInteract || !args.CanInteract)
-            return;
-
-        if (!TryComp<ExpireIdCardComponent>(ent.Comp.LinkedId, out var expire) ||
-            !TryComp<GenpopIdCardComponent>(ent.Comp.LinkedId, out var genpopId))
-            return;
-
-        var user = args.User;
-        var hasAccess = _accessReader.IsAllowed(args.User, ent);
-        args.Verbs.Add(new Verb // End sentence early.
-        {
-            Act = () =>
-            {
-                IdCard.ExpireId((ent.Comp.LinkedId.Value, expire));
-            },
-            Priority = 13,
-            Text = Loc.GetString("genpop-locker-action-end-early"),
-            Impact = LogImpact.Medium,
-            DoContactInteraction = true,
-            Disabled = !hasAccess,
-        });
-
-        args.Verbs.Add(new Verb // Cancel Sentence.
-        {
-            Act = () =>
-            {
-                CancelIdCard(ent, user);
-            },
-            Priority = 12,
-            Text = Loc.GetString("genpop-locker-action-clear-id"),
-            Impact = LogImpact.Medium,
-            DoContactInteraction = true,
-            Disabled = !hasAccess,
-        });
-
-        var servedTime = 1 - (expire.ExpireTime - Timing.CurTime).TotalSeconds / genpopId.SentenceDuration.TotalSeconds;
-
-        // Can't reset it after its expired.
-        if (expire.Expired)
-            return;
-
-        args.Verbs.Add(new Verb // Reset Sentence.
-        {
-            Act = () =>
-            {
-                IdCard.SetExpireTime((ent.Comp.LinkedId.Value, expire), Timing.CurTime + genpopId.SentenceDuration);
-            },
-            Priority = 11,
-            Text = Loc.GetString("genpop-locker-action-reset-sentence", ("percent", Math.Clamp(servedTime, 0, 1) * 100)),
-            Impact = LogImpact.Medium,
-            DoContactInteraction = true,
-            Disabled = !hasAccess,
-        });
-    }
-
     private void CancelIdCard(Entity<ClamshellGrillComponent> ent, EntityUid? user = null)
     {
         if (ent.Comp.LinkedId == null)
@@ -198,11 +151,12 @@ public abstract partial class SharedGrillSystem : EntitySystem
         var query = EntityQueryEnumerator<ClamshellGrillComponent, EntityStorageComponent>();
         while (query.MoveNext(out var uid, out var grill, out var storage))
         {
-            if (grill.CurrentState == grill.NextState)
-            {
-                grill.AudioStream = Audio.Stop(grill.AudioStream);
-                continue;
-            }
+            // if (grill.CurrentState == grill.NextState)
+            // {
+            //     continue;
+            // }
+
+            // if (grill.CurrentState == GrillState.Standby) continue;
 
             // if (grill.NextSecond < Timing.CurTime)
             // {
@@ -214,16 +168,57 @@ public abstract partial class SharedGrillSystem : EntitySystem
             //     grill.NextSecond += TimeSpan.FromSeconds(1);
             //     Dirty(uid, grill);
             // }
-
-            if (grill.OperationEndTime < Timing.CurTime)
+            if (grill.OperationEndTime < Timing.CurTime && grill.NextState == GrillState.Cooking)
             {
-                grill.CurrentState = grill.NextState;
+                if (grill.SelectedProgram is null) continue;
+                grill.OperationEndTime = Timing.CurTime + TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time);
+                grill.CurrentState = GrillState.Cooking;
+                grill.NextState = GrillState.Opening;
                 grill.AudioStream = Audio.Stop(grill.AudioStream);
             }
+
+            if (grill.OperationEndTime.Subtract(TimeSpan.FromSeconds(5)) < Timing.CurTime && grill.CurrentState == GrillState.Cooking)
+            {
+                PlayTimeoutSound((uid, grill));
+            }
+
+            if (grill.OperationEndTime < Timing.CurTime && grill.CurrentState == GrillState.Cooking)
+            {
+                grill.CurrentState = GrillState.Cooking;
+                grill.NextState = GrillState.Opening;
+                _lock.Unlock(uid, uid);
+                _entityStorage.OpenStorage(uid);
+                PlayDoneSound((uid, grill));
+                OpenPlaten((uid, grill), false, false);
+            }
+
+            if (grill.OperationEndTime < Timing.CurTime && grill.NextState == GrillState.Ready)
+            {
+                grill.CurrentState = GrillState.Ready;
+                grill.NextState = GrillState.Ready;
+                grill.AudioStream = Audio.Stop(grill.AudioStream);
+            }
+
+            if (grill.CurrentState == GrillState.Cooking || grill.CurrentState == GrillState.Standby) grill.AudioStream = Audio.Stop(grill.AudioStream);
         }
     }
 
-    protected virtual void ClosePlaten(Entity<ClamshellGrillComponent> ent, string name, float sentence, float crime)
+    protected virtual void ClosePlaten(Entity<ClamshellGrillComponent> ent, GrillProgram program, bool isStandby)
+    {
+
+    }
+
+    protected virtual void OpenPlaten(Entity<ClamshellGrillComponent> ent, bool error, bool silent)
+    {
+
+    }
+
+    protected virtual void PlayTimeoutSound(Entity<ClamshellGrillComponent> ent)
+    {
+
+    }
+
+    protected virtual void PlayDoneSound(Entity<ClamshellGrillComponent> ent)
     {
 
     }
