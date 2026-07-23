@@ -25,10 +25,17 @@ public sealed partial class ClamshellGrillBoundUserInterface(EntityUid owner, En
             SendPredictedMessage(new ClamshellGrillProgramCreatedMessage(name, time, temp));
         };
 
+        _menu.OnDeleteProgram += (program) =>
+        {
+            SendPredictedMessage(new ClamshellGrillProgramDeletedMessage(program));
+        };
+
         _menu.OnCookingStarted += (program) =>
         {
             SendPredictedMessage(new ClamshellGrillPlatenCloseMessage(program));
         };
+
+        _menu.OnCookingCancelled += CancelCooking;
 
         _menu.OnOpenPlaten += (error, silent) =>
         {
@@ -37,8 +44,14 @@ public sealed partial class ClamshellGrillBoundUserInterface(EntityUid owner, En
 
         _menu.StopSounds += () => SendPredictedMessage(new ClamshellGrillStopSoundsMessage());
 
+        _menu.OnMainMenuOpened += OpenMainMenu;
+        _menu.OnEditorOpened += OpenEditor;
+        _menu.OnSelectorOpened += OpenSelector;
         _menu.OnPopulatePrograms += PopulatePrograms;
+        _menu.OnOpen += SelectTab;
         _menu.OnUpdateTime += UpdateTime;
+        _menu.OnUpdateOverlay += UpdateOverlay;
+        _menu.OnUpdatePower += UpdatePower;
         _menu.OnClose += Close;
         _menu.OpenCentered();
     }
@@ -53,11 +66,94 @@ public sealed partial class ClamshellGrillBoundUserInterface(EntityUid owner, En
     {
         var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
         if (grill.SelectedProgram is null) return;
-        if (grill.CurrentState is not GrillState.Cooking)
+        if (grill.CurrentState is not GrillState.Cooking && grill.CurrentState is not GrillState.Standby)
         {
-            _menu?.UpdateTimer(TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time), (float)TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time).TotalSeconds);
+            _menu?.UpdateTimer(TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time), (float)TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time).TotalSeconds, grill.StartTime);
         }
-        else _menu?.UpdateTimer(grill.OperationEndTime.Subtract(_timing.CurTime), (float)TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time).TotalSeconds);
+        else _menu?.UpdateTimer(grill.OperationEndTime.Subtract(_timing.CurTime), (float)TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time).TotalSeconds, grill.StartTime);
+    }
+
+    public void UpdateOverlay()
+    {
+        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
+        if (grill.CurrentState == GrillState.Closing || grill.CurrentState == GrillState.Opening || grill.CurrentState == GrillState.OpeningError)
+        {
+            _menu?.UpdateOverlay(true);
+        }
+        else _menu?.UpdateOverlay(false);
+    }
+
+    public void UpdatePower()
+    {
+        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
+        if (grill.CurrentState == GrillState.Unpowered)
+        {
+            _menu?.UpdatePower(false);
+        }
+        else _menu?.UpdatePower(true);
+    }
+
+    public void SelectTab()
+    {
+        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
+        if (grill.CurrentState == GrillState.SelectingProgram || grill.CurrentState == GrillState.Opening)
+        {
+            _menu?.EnterProgramSelector();
+            return;
+        }
+        if (grill.NextState == GrillState.Cooking || grill.CurrentState == GrillState.Cooking)
+        {
+            _menu?.EnterCooking();
+            return;
+        }
+        if (grill.NextState == GrillState.Standby || grill.CurrentState == GrillState.Standby)
+        {
+            _menu?.EnterStandbyWindow();
+            return;
+        }
+        if (grill.CurrentState == GrillState.MainMenu)
+        {
+            _menu?.EnterMainMenu();
+            return;
+        }
+        if (grill.CurrentState == GrillState.EditingProgram)
+        {
+            _menu?.EnterProgramEditor();
+            return;
+        }
+        if (grill.CurrentState == GrillState.Cancelling)
+        {
+            _menu?.EnterCancellation();
+            return;
+        }
+    }
+
+    public void OpenMainMenu()
+    {
+        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
+        grill.CurrentState = GrillState.MainMenu;
+        grill.NextState = GrillState.MainMenu;
+    }
+
+    public void OpenEditor()
+    {
+        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
+        grill.CurrentState = GrillState.EditingProgram;
+        grill.NextState = GrillState.EditingProgram;
+    }
+
+    public void OpenSelector()
+    {
+        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
+        grill.CurrentState = GrillState.SelectingProgram;
+        grill.NextState = GrillState.SelectingProgram;
+    }
+
+    public void CancelCooking()
+    {
+        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
+        grill.CurrentState = GrillState.Cancelling;
+        grill.NextState = GrillState.Cancelling;
     }
 
     protected override void Dispose(bool disposing)

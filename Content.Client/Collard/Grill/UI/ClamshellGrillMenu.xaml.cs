@@ -24,14 +24,24 @@ public sealed partial class ClamshellGrillMenu : FancyWindow
     public event Action<string, float, float>? OnProgramConfigurationComplete;
 
     public event Action<GrillProgram>? OnCookingStarted;
+    public event Action? OnCookingCancelled;
+
+    public event Action<GrillProgram>? OnDeleteProgram;
     public event Action<bool, bool>? OnOpenPlaten;
     public event Action? OnPopulatePrograms;
+    public event Action? OnMainMenuOpened;
+    public event Action? OnEditorOpened;
+    public event Action? OnSelectorOpened;
 
     public event Action? OnUpdateTime;
+
+    public event Action? OnUpdateOverlay;
+    public event Action? OnUpdatePower;
 
     public event Action? StopSounds;
 
     private GrillProgram? _selectedProgram;
+    private bool _programCancelled;
 
     public ClamshellGrillMenu(EntityUid owner, IEntityManager entMan)
     {
@@ -43,70 +53,66 @@ public sealed partial class ClamshellGrillMenu : FancyWindow
 
         ProgramEditor.OnPressed += _ =>
         {
-            ProgramCreator.Visible = true;
-            MainMenu.Visible = false;
+            EnterProgramEditor();
+            OnEditorOpened?.Invoke();
         };
 
         PressAndGo.OnPressed += _ =>
         {
+            EnterProgramSelector();
+            OnSelectorOpened?.Invoke();
+        };
+
+        DeleteProgram.OnPressed += _ =>
+        {
+            if (_selectedProgram is null) return;
+            OnDeleteProgram?.Invoke(_selectedProgram.Value);
             OnPopulatePrograms?.Invoke();
-            ProgramSelector.Visible = true;
-            MainMenu.Visible = false;
         };
 
         ProgBackButton.OnPressed += _ =>
         {
-            ProgramCreator.Visible = false;
-            MainMenu.Visible = true;
+            OnMainMenuOpened?.Invoke();
+            EnterMainMenu();
         };
 
         SelBackButton.OnPressed += _ =>
         {
-            DeleteProgram.Disabled = true;
-            StartGrillButton.Disabled = true;
-            ProgramSelector.Visible = false;
-            MainMenu.Visible = true;
+            OnMainMenuOpened?.Invoke();
+            EnterMainMenu();
         };
 
         StartGrillButton.OnPressed += _ =>
         {
             if (_selectedProgram is null) return;
-            ProgramSelector.Visible = false;
-            CookingCountdown.Visible = true;
+            EnterCooking();
             OnCookingStarted?.Invoke(_selectedProgram.Value);
         };
 
         EnterStandby.OnPressed += _ =>
         {
-            ProgramSelector.Visible = false;
-            StandbyScreen.Visible = true;
+            EnterStandbyWindow();
             OnCookingStarted?.Invoke(new GrillProgram("StandbyProgram", 0, 120));
-
         };
 
         ExitStandbyButton.OnPressed += _ =>
         {
-            ProgramSelector.Visible = true;
-            StandbyScreen.Visible = false;
+            EnterProgramSelector();
             OnOpenPlaten?.Invoke(false, true);
-
         };
 
         AbortButton.OnPressed += _ =>
         {
-            TimeLabel.Text = Loc.GetString("grill-ui-dispose");
-            AbortButton.Visible = false;
-            GotItButton.Visible = true;
+            EnterCancellation();
             OnOpenPlaten?.Invoke(true, false);
+
         };
 
         GotItButton.OnPressed += _ =>
         {
-            AbortButton.Visible = true;
-            GotItButton.Visible = false;
+            EnterProgramSelector();
+            OnSelectorOpened?.Invoke();
             StopSounds?.Invoke();
-            ProgramSelector.Visible = true;
-            CookingCountdown.Visible = false;
         };
 
         NameLabel.SetMarkup(Loc.GetString("grill-ui-label-name"));
@@ -141,6 +147,7 @@ public sealed partial class ClamshellGrillMenu : FancyWindow
     /// </summary>
     public void Populate(IEnumerable<GrillProgram> programs)
     {
+        StartGrillButton.Disabled = true;
         ProgramList.Clear();
 
         foreach (var entry in programs)
@@ -149,11 +156,28 @@ public sealed partial class ClamshellGrillMenu : FancyWindow
         }
     }
 
-    public void UpdateTimer(TimeSpan time, float maxTime)
+    public void UpdateTimer(TimeSpan time, float maxTime, TimeSpan startTime)
     {
+        TimerLabel.Visible = !_programCancelled;
+        DisposeLabel.Visible = _programCancelled;
         TimerBar.MaxValue = maxTime;
-        TimerBar.Value = (float)time.Subtract(_timing.CurTime).TotalSeconds;
+        TimerBar.Value = (float)_timing.CurTime.Subtract(startTime).TotalSeconds;
         TimerLabel.Text = ((int)time.TotalSeconds).ToString();
+        StandbyTimerLabel.Text = _timing.CurTime.Subtract(startTime).ToString("h':'m':'s");
+    }
+
+    public void UpdateOverlay(bool overlay = false)
+    {
+        PlatenMovingOverlay.Visible = overlay;
+    }
+
+    public void UpdatePower(bool power = false)
+    {
+        UnpoweredOverlay.Visible = !power;
+        if (!power)
+        {
+            EnterMainMenu();
+        }
     }
 
     private void OnTextEdit()
@@ -170,14 +194,12 @@ public sealed partial class ClamshellGrillMenu : FancyWindow
     private void OnProgramSelected(ItemList.ItemListSelectedEventArgs obj)
     {
         _selectedProgram = (GrillProgram)obj.ItemList[obj.ItemIndex].Metadata!;
-        DeleteProgram.Disabled = false;
         StartGrillButton.Disabled = false;
     }
 
     private void OnProgramDeselected(ItemList.ItemListDeselectedEventArgs obj)
     {
         _selectedProgram = null;
-        DeleteProgram.Disabled = true;
         StartGrillButton.Disabled = true;
     }
 
@@ -186,5 +208,64 @@ public sealed partial class ClamshellGrillMenu : FancyWindow
         base.FrameUpdate(args);
 
         OnUpdateTime?.Invoke();
+        OnUpdateOverlay?.Invoke();
+        OnUpdatePower?.Invoke();
     }
+
+    #region Menu openers
+    public void EnterProgramEditor()
+    {
+        ProgramCreator.Visible = true;
+        MainMenu.Visible = false;
+    }
+
+    public void EnterProgramSelector()
+    {
+
+        OnPopulatePrograms?.Invoke();
+        ProgramSelector.Visible = true;
+        MainMenu.Visible = false;
+        StandbyScreen.Visible = false;
+        AbortButton.Visible = true;
+        GotItButton.Visible = false;
+        CookingCountdown.Visible = false;
+        _programCancelled = false;
+    }
+
+    public void EnterMainMenu()
+    {
+        ProgramCreator.Visible = false;
+        StartGrillButton.Disabled = true;
+        ProgramSelector.Visible = false;
+        CookingCountdown.Visible = false;
+        MainMenu.Visible = true;
+
+    }
+
+    public void EnterCooking()
+    {
+        MainMenu.Visible = false;
+        ProgramSelector.Visible = false;
+        CookingCountdown.Visible = true;
+    }
+
+    public void EnterStandbyWindow()
+    {
+        ProgramSelector.Visible = false;
+        MainMenu.Visible = false;
+        StandbyScreen.Visible = true;
+
+    }
+
+    public void EnterCancellation()
+    {
+        OnCookingCancelled?.Invoke();
+        MainMenu.Visible = false;
+        CookingCountdown.Visible = true;
+        AbortButton.Visible = false;
+        GotItButton.Visible = true;
+        _programCancelled = true;
+    }
+
+    #endregion Menu openers
 }

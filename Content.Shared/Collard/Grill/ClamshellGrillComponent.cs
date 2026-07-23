@@ -28,10 +28,10 @@ public sealed partial class ClamshellGrillComponent : Component
     public EntProtoId<GenpopIdCardComponent> IdCardProto = "PrisonerIDCard";
 
     [DataField, AutoNetworkedField]
-    public GrillState CurrentState = GrillState.Ready;
+    public GrillState CurrentState = GrillState.Unpowered;
 
     [DataField, AutoNetworkedField]
-    public GrillState NextState = GrillState.Ready;
+    public GrillState NextState = GrillState.Unpowered;
 
     /// <summary>
     /// When the current operation will end.
@@ -46,6 +46,20 @@ public sealed partial class ClamshellGrillComponent : Component
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoNetworkedField, AutoPausedField]
     public TimeSpan NextSecond;
+
+    /// <summary>
+    /// Start time.
+    /// </summary>
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+    [AutoNetworkedField, AutoPausedField]
+    public TimeSpan StartTime = TimeSpan.Zero;
+
+    /// <summary>
+    /// Time at which the timeout sound will play.
+    /// </summary>
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+    [AutoNetworkedField, AutoPausedField]
+    public TimeSpan TimeoutTime;
 
     /// <summary>
     /// The total duration of the platen moving.
@@ -91,6 +105,17 @@ public sealed class ClamshellGrillProgramCreatedMessage : BoundUserInterfaceMess
 }
 
 [Serializable, NetSerializable]
+public sealed class ClamshellGrillProgramDeletedMessage : BoundUserInterfaceMessage
+{
+    public GrillProgram Program;
+
+    public ClamshellGrillProgramDeletedMessage(GrillProgram program)
+    {
+        Program = program;
+    }
+}
+
+[Serializable, NetSerializable]
 public sealed class ClamshellGrillPlatenCloseMessage : BoundUserInterfaceMessage
 {
     public GrillProgram Program;
@@ -130,10 +155,14 @@ public enum GrillState : byte
     Closing,
     Cooking,
     Standby,
-    Ready,
     Error,
+    Cancelling,
     OpeningError,
-    ClosingError
+    ClosingError,
+    SelectingProgram,
+    EditingProgram,
+    Unpowered,
+    MainMenu
 }
 
 [DataDefinition, NetSerializable, Serializable]

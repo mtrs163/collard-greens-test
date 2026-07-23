@@ -439,8 +439,11 @@
     interfaces:
       enum.ClamshellGrillUiKey.Key:
         type: ClamshellGrillBoundUserInterface
-  - type: ActivatableUI
-    key: enum.ClamshellGrillUiKey.Key
+  - type: ApcPowerReceiver
+    load: 5000
+  - type: ExtensionCableReceiver
+  - type: Transform
+    anchored: true
   # - type: AccessReader # note! this access is for the UI, not the door. door access is handled on GenpopLocker
   #   access: [["Service"]]
     examinationText: access-reader-examination-functionality-restricted
@@ -452,6 +455,8 @@
     removedMasks: 20
   - type: PlaceableSurface
     isPlaceable: True
+  placement:
+    mode: SnapgridCenter
 
 - type: entity
   parent: [ GrillBase , LockerBaseSecure ]

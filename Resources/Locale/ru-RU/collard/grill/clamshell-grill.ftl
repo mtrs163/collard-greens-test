@@ -12,3 +12,6 @@ grill-ui-standby = Режим бездействия
 grill-ui-button-exit-standby = Выйти из режима бездействия
 grill-ui-button-exit-abort = Отмена
 grill-ui-button-exit-gotit = ОК
+grill-ui-dispose = Утилизируйте продукт!
+grill-ui-platen-moving = Плита движется
+grill-ui-unpowered = Нет питания

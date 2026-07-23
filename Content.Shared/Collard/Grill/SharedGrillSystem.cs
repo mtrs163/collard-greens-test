@@ -6,6 +6,7 @@ using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Lock;
 using Content.Shared.Popups;
+using Content.Shared.Power;
 using Content.Shared.Security.Components;
 using Content.Shared.Storage.Components;
 using Content.Shared.Storage.EntitySystems;
@@ -37,19 +38,38 @@ public abstract partial class SharedGrillSystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillPlatenCloseMessage>(OnPlatenCloseRequest);
+        SubscribeLocalEvent<ClamshellGrillComponent, PowerChangedEvent>(OnPowerChanged);
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillPlatenOpenMessage>(OnPlatenOpenRequest);
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillStopSoundsMessage>(OnStopSounds);
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillProgramCreatedMessage>(OnProgramCreated);
+        SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillProgramDeletedMessage>(OnProgramDeleted);
         SubscribeLocalEvent<ClamshellGrillComponent, StorageCloseAttemptEvent>(OnCloseAttempt);
         SubscribeLocalEvent<ClamshellGrillComponent, LockToggleAttemptEvent>(OnLockToggleAttempt);
         SubscribeLocalEvent<ClamshellGrillComponent, LockToggledEvent>(OnLockToggled);
+    }
+
+    private void OnPowerChanged(Entity<ClamshellGrillComponent> ent, ref PowerChangedEvent args)
+    {
+        if (args.Powered == false)
+        {
+            ent.Comp.CurrentState = GrillState.Unpowered;
+            ent.Comp.NextState = GrillState.Unpowered;
+            ent.Comp.AudioStream = Audio.Stop(ent.Comp.AudioStream);
+        }
+        else
+        {
+            ent.Comp.CurrentState = GrillState.MainMenu;
+            ent.Comp.NextState = GrillState.MainMenu;
+            _lock.Unlock(ent, ent);
+            _entityStorage.OpenStorage(ent);
+        }
     }
 
     private void OnPlatenCloseRequest(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillPlatenCloseMessage args)
     {
         // validation.
         if (string.IsNullOrWhiteSpace(args.Program.Name) ||
-            args.Program.Time <= 0 ||
+            args.Program.Time < 0 ||
             args.Program.Temperature < 0)
         {
             return;
@@ -64,6 +84,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         var isStandby = false;
         if (args.Program.Time == 0) isStandby = true;
         ent.Comp.SelectedProgram = args.Program;
+        ent.Comp.TimeoutTime = Timing.CurTime + TimeSpan.FromSeconds(args.Program.Time - 5 + ent.Comp.PlatenMoveDuration);
 
         ClosePlaten(ent, args.Program, isStandby);
     }
@@ -82,6 +103,14 @@ public abstract partial class SharedGrillSystem : EntitySystem
     private void OnProgramCreated(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillProgramCreatedMessage args)
     {
         ent.Comp.SavedPrograms.Add(new GrillProgram(args.Name, args.Time, args.Time));
+        // set main menu state for the UI
+        ent.Comp.CurrentState = GrillState.MainMenu;
+        ent.Comp.NextState = GrillState.MainMenu;
+    }
+
+    private void OnProgramDeleted(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillProgramDeletedMessage args)
+    {
+        ent.Comp.SavedPrograms.Remove(args.Program);
     }
 
     private void OnStopSounds(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillStopSoundsMessage args)
@@ -122,26 +151,6 @@ public abstract partial class SharedGrillSystem : EntitySystem
             return;
 
         // If we unlock the door, then we're gonna reset the ID.
-        CancelIdCard(ent);
-    }
-
-    private void CancelIdCard(Entity<ClamshellGrillComponent> ent, EntityUid? user = null)
-    {
-        if (ent.Comp.LinkedId == null)
-            return;
-
-        var metaData = MetaData(ent);
-        MetaDataSystem.SetEntityName(ent, Loc.GetString("genpop-locker-name-default"), metaData);
-        MetaDataSystem.SetEntityDescription(ent, Loc.GetString("genpop-locker-desc-default"), metaData);
-
-        ent.Comp.LinkedId = null;
-        _lock.Unlock(ent.Owner, user);
-        _entityStorage.OpenStorage(ent.Owner);
-
-        if (TryComp<ExpireIdCardComponent>(ent.Comp.LinkedId, out var expire))
-            IdCard.ExpireId((ent.Comp.LinkedId.Value, expire));
-
-        Dirty(ent);
     }
 
     public override void Update(float frameTime)
@@ -172,14 +181,19 @@ public abstract partial class SharedGrillSystem : EntitySystem
             {
                 if (grill.SelectedProgram is null) continue;
                 grill.OperationEndTime = Timing.CurTime + TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time);
+                grill.StartTime = Timing.CurTime;
                 grill.CurrentState = GrillState.Cooking;
                 grill.NextState = GrillState.Opening;
                 grill.AudioStream = Audio.Stop(grill.AudioStream);
+                continue;
             }
 
-            if (grill.OperationEndTime.Subtract(TimeSpan.FromSeconds(5)) < Timing.CurTime && grill.CurrentState == GrillState.Cooking)
+            if (grill.OperationEndTime < Timing.CurTime && grill.NextState == GrillState.Standby)
             {
-                PlayTimeoutSound((uid, grill));
+                grill.CurrentState = GrillState.Standby;
+                grill.NextState = GrillState.Standby;
+                grill.AudioStream = Audio.Stop(grill.AudioStream);
+                continue;
             }
 
             if (grill.OperationEndTime < Timing.CurTime && grill.CurrentState == GrillState.Cooking)
@@ -190,16 +204,25 @@ public abstract partial class SharedGrillSystem : EntitySystem
                 _entityStorage.OpenStorage(uid);
                 PlayDoneSound((uid, grill));
                 OpenPlaten((uid, grill), false, false);
+                continue;
             }
 
-            if (grill.OperationEndTime < Timing.CurTime && grill.NextState == GrillState.Ready)
+            if (grill.OperationEndTime < Timing.CurTime && grill.NextState == GrillState.SelectingProgram)
             {
-                grill.CurrentState = GrillState.Ready;
-                grill.NextState = GrillState.Ready;
+                grill.CurrentState = GrillState.SelectingProgram;
+                grill.NextState = GrillState.SelectingProgram;
                 grill.AudioStream = Audio.Stop(grill.AudioStream);
+                continue;
             }
 
-            if (grill.CurrentState == GrillState.Cooking || grill.CurrentState == GrillState.Standby) grill.AudioStream = Audio.Stop(grill.AudioStream);
+            if (grill.TimeoutTime < Timing.CurTime && grill.TimeoutTime != TimeSpan.Zero && grill.CurrentState == GrillState.Cooking)
+            {
+                PlayTimeoutSound((uid, grill));
+                grill.TimeoutTime = TimeSpan.Zero;
+                continue;
+            }
+
+            if (grill.OperationEndTime < Timing.CurTime && grill.CurrentState != GrillState.Cancelling) grill.AudioStream = Audio.Stop(grill.AudioStream);
         }
     }
 

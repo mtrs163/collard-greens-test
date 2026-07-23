@@ -10,7 +10,11 @@ public sealed partial class GrillSystem : SharedGrillSystem
         ent.Comp.OperationEndTime = Timing.CurTime + TimeSpan.FromSeconds(ent.Comp.PlatenMoveDuration);
         ent.Comp.CurrentState = GrillState.Closing;
         ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.PlatenMovingSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
-        if (isStandby) ent.Comp.NextState = GrillState.Standby;
+        if (isStandby)
+        {
+            ent.Comp.NextState = GrillState.Standby;
+            ent.Comp.StartTime = Timing.CurTime;
+        }
         else ent.Comp.NextState = GrillState.Cooking;
         Dirty(ent);
     }
@@ -19,12 +23,14 @@ public sealed partial class GrillSystem : SharedGrillSystem
     {
         ent.Comp.OperationEndTime = Timing.CurTime + TimeSpan.FromSeconds(ent.Comp.PlatenMoveDuration);
         ent.Comp.CurrentState = GrillState.Opening;
-        ent.Comp.NextState = GrillState.Ready;
+        ent.Comp.NextState = GrillState.SelectingProgram;
         Dirty(ent);
         if (silent) return;
         else if (error)
         {
             ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.ErrorSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
+            ent.Comp.CurrentState = GrillState.Cancelling;
+            ent.Comp.NextState = GrillState.Cancelling;
             return;
         }
         else ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.PlatenMovingSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
