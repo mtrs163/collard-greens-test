@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Buffers;
+using System.Linq;
 using Content.Client.Message;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Access.Components;
@@ -12,6 +13,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Configuration;
 using Robust.Shared.Timing;
+using Robust.Shared.Toolshed.Commands.Values;
 
 namespace Content.Client.Collard.Grill.UI;
 
@@ -163,7 +165,7 @@ public sealed partial class ClamshellGrillMenu : FancyWindow
         TimerBar.MaxValue = maxTime;
         TimerBar.Value = (float)_timing.CurTime.Subtract(startTime).TotalSeconds;
         TimerLabel.Text = ((int)time.TotalSeconds).ToString();
-        StandbyTimerLabel.Text = _timing.CurTime.Subtract(startTime).ToString("h':'m':'s");
+        StandbyTimerLabel.Text = _timing.CurTime.Subtract(startTime).ToString("hh':'mm':'ss");
     }
 
     public void UpdateOverlay(bool overlay = false)

@@ -4,6 +4,7 @@ using Robust.Shared.Serialization;
 using Content.Shared.Security.Components;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Audio;
+using Content.Shared.Damage;
 
 namespace Content.Shared.Collard.Grill;
 
@@ -87,6 +88,12 @@ public sealed partial class ClamshellGrillComponent : Component
 
     [DataField, AutoNetworkedField]
     public GrillProgram? SelectedProgram = null;
+
+    /// <summary>
+    /// Damage dealt each second to entities inside while platen is closed.
+    /// </summary>
+    [DataField]
+    public DamageSpecifier CrushingDamage = new();
 }
 
 [Serializable, NetSerializable]

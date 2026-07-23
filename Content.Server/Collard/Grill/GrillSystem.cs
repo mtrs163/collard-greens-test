@@ -1,3 +1,4 @@
+using Content.Server.Construction;
 using Content.Shared.Collard.Grill;
 using Robust.Shared.Audio;
 
@@ -5,6 +6,13 @@ namespace Content.Server.Collard.Grill;
 
 public sealed partial class GrillSystem : SharedGrillSystem
 {
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        SubscribeLocalEvent<ActivelyGrilledComponent, OnConstructionTemperatureEvent>(OnConstructionTemp);
+    }
+
     protected override void ClosePlaten(Entity<ClamshellGrillComponent> ent, GrillProgram program, bool isStandby)
     {
         ent.Comp.OperationEndTime = Timing.CurTime + TimeSpan.FromSeconds(ent.Comp.PlatenMoveDuration);
@@ -24,25 +32,37 @@ public sealed partial class GrillSystem : SharedGrillSystem
         ent.Comp.OperationEndTime = Timing.CurTime + TimeSpan.FromSeconds(ent.Comp.PlatenMoveDuration);
         ent.Comp.CurrentState = GrillState.Opening;
         ent.Comp.NextState = GrillState.SelectingProgram;
-        Dirty(ent);
-        if (silent) return;
+        if (silent)
+        {
+            Dirty(ent);
+            return;
+        }
         else if (error)
         {
             ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.ErrorSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
             ent.Comp.CurrentState = GrillState.Cancelling;
             ent.Comp.NextState = GrillState.Cancelling;
-            return;
         }
         else ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.PlatenMovingSound, ent, AudioParams.Default.WithMaxDistance(10f).WithLoop(true))?.Entity;
+        Dirty(ent);
     }
 
     protected override void PlayTimeoutSound(Entity<ClamshellGrillComponent> ent)
     {
         ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.TimeSound, ent, AudioParams.Default.WithMaxDistance(10f))?.Entity;
+        Dirty(ent);
     }
 
     protected override void PlayDoneSound(Entity<ClamshellGrillComponent> ent)
     {
         ent.Comp.AudioStream = Audio.PlayPvs(ent.Comp.DoneSound, ent, AudioParams.Default.WithMaxDistance(10f))?.Entity;
+        Dirty(ent);
+    }
+
+    // Stop items from transforming through constructiongraphs while being grilled.
+    // They spawn outside of the grill
+    private void OnConstructionTemp(Entity<ActivelyGrilledComponent> ent, ref OnConstructionTemperatureEvent args)
+    {
+        args.Result = HandleResult.False;
     }
 }

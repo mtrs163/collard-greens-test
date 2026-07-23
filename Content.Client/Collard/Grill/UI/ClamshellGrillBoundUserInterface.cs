@@ -71,6 +71,8 @@ public sealed partial class ClamshellGrillBoundUserInterface(EntityUid owner, En
             _menu?.UpdateTimer(TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time), (float)TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time).TotalSeconds, grill.StartTime);
         }
         else _menu?.UpdateTimer(grill.OperationEndTime.Subtract(_timing.CurTime), (float)TimeSpan.FromSeconds(grill.SelectedProgram.Value.Time).TotalSeconds, grill.StartTime);
+        if (grill.OperationEndTime < _timing.CurTime && grill.CurrentState == GrillState.Cooking)
+            _menu?.EnterProgramSelector();
     }
 
     public void UpdateOverlay()
