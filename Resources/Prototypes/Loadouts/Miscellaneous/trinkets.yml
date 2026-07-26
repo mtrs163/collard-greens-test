@@ -123,9 +123,9 @@
 
 - type: loadout
   id: BoxFolderClipboardThreePapers
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: Command
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: Command
   storage:
     back:
     - BoxFolderClipboardThreePapers
