@@ -117,22 +117,22 @@
 
 - type: loadout
   id: BibleDruid
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: DruidBibleRequirement
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: DruidBibleRequirement
   storage:
     back:
     - BibleDruid
 
 - type: loadout
   id: BibleNanoTrasen
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: NanoTrasenBibleRequirement
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: NanoTrasenBibleRequirement
   storage:
     back:
     - BibleNanoTrasen
-    
+
 - type: loadout
   id: BibleNarsie
   storage:
@@ -141,9 +141,9 @@
 
 - type: loadout
   id: BibleHonk
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ClownBibleRequirement
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: ClownBibleRequirement
   storage:
     back:
     - BibleHonk
