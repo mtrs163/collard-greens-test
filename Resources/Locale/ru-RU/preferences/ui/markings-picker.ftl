@@ -1,30 +1,67 @@
-markings-used = Используемые черты
-markings-unused = Неиспользуемые черты
-markings-add = Добавить черту
-markings-remove = Убрать черту
-markings-rank-up = Вверх
-markings-rank-down = Вниз
 markings-search = Поиск
-marking-points-remaining = Черт осталось: { $points }
-marking-used = { $marking-name }
-marking-used-forced = { $marking-name } (Принудительно)
-marking-slot-add = Добавить
-marking-slot-remove = Удалить
-marking-slot = Слот { $number }
+-markings-selection = { $selectable ->
+    [0] Вы больше не можете выбрать черт персонажа.
+    [one] Вы можете выбрать ещё одну черту.
+   *[other] Вы можете выбрать ещё { $selectable } черт.
+}
+markings-limits = { $required ->
+    [true] { $count ->
+        [-1] Выберите хотя бы одну черту.
+        [0] Вы не можете выбрать ни одной черты, но, каким то образом, вы должны это сделать? Это баг.
+        [one] Выберите одну черту.
+       *[other] Выберите хотя бы одну черту и вплоть до {$count} черт. { -markings-selection(selectable: $selectable) }
+    }
+   *[false] { $count ->
+        [-1] Выберите сколько угодно черт.
+        [0] Вы не можете выбрать ни одной черты.
+        [one] Выберите вплоть до одной черты.
+       *[other] Выберите вплоть до {$count} черт. { -markings-selection(selectable: $selectable) }
+    }
+}
+markings-reorder = Перераспределить черты
+
+humanoid-marking-modifier-respect-limits = Уважать ограничения
+humanoid-marking-modifier-respect-group-sex = Уважать ограничения по группе и полу
+humanoid-marking-modifier-base-layers = Базовые слои
+humanoid-marking-modifier-enable = Включить
+humanoid-marking-modifier-prototype-id = ID прототипа:
 
 # Categories
 
-markings-category-Special = Специальное
-markings-category-Hair = Причёска
-markings-category-FacialHair = Лицевая растительность
-markings-category-Head = Голова
-markings-category-HeadTop = Голова (верх)
-markings-category-HeadSide = Голова (бок)
-markings-category-Snout = Морда
-markings-category-UndergarmentTop = Нижнее бельё (Верх)
-markings-category-UndergarmentBottom = Нижнее бельё (Низ)
-markings-category-Chest = Грудь
-markings-category-Arms = Руки
-markings-category-Legs = Ноги
-markings-category-Tail = Хвост
-markings-category-Overlay = Наложение
+markings-organ-Torso = Торс
+markings-organ-Head = Голова
+markings-organ-ArmLeft = Левая рука
+markings-organ-ArmRight = Правая рука
+markings-organ-HandRight = Правая ладонь
+markings-organ-HandLeft = Левая ладонь
+markings-organ-LegLeft = Левая нога
+markings-organ-LegRight = Правая нога
+markings-organ-FootLeft = Левая ступня
+markings-organ-FootRight = Правая ступня
+markings-organ-Eyes = Глаза
+
+markings-layer-Special = Особые
+markings-layer-Tail = Хвост
+markings-layer-Tail-Moth = Крылья
+markings-layer-Hair = Волосы
+markings-layer-FacialHair = Лицевая растительность
+markings-layer-UndergarmentTop = Нижнее бельё (верх)
+markings-layer-UndergarmentBottom = Нижнее бельё (низ)
+markings-layer-Chest = Грудь
+markings-layer-Head = Голова
+markings-layer-Snout = Морда
+markings-layer-SnoutCover = Морда (покрытие)
+markings-layer-HeadSide = Голва (бока)
+markings-layer-HeadTop = Голова (верх)
+markings-layer-Eyes = Глаза
+markings-layer-RArm = Правая рука
+markings-layer-LArm = Левая рука
+markings-layer-RHand = Правая ладонь
+markings-layer-LHand = Левая ладонь
+markings-layer-RLeg = Правая нога
+markings-layer-LLeg = Левая нога
+markings-layer-RFoot = Правая ступня
+markings-layer-LFoot = Левая ступня
+markings-layer-Overlay = Оверлей
+markings-layer-TailOverlay = Оверлей
+
