@@ -52,8 +52,8 @@ public abstract partial class SharedGrillSystem : EntitySystem
         {
             ent.Comp.CurrentState = GrillState.MainMenu;
             ent.Comp.NextState = GrillState.MainMenu;
-            _lock.Unlock(ent, ent);
-            _entityStorage.OpenStorage(ent);
+            _lock.Unlock(ent.Owner, ent.Owner);
+            _entityStorage.OpenStorage(ent.Owner);
         }
     }
 
@@ -68,7 +68,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         }
 
         _lock.Lock(ent.Owner, args.Actor);
-        _entityStorage.CloseStorage(ent);
+        _entityStorage.CloseStorage(ent.Owner);
 
         var isStandby = false;
         if (args.Program.Time == 0) isStandby = true;
@@ -82,7 +82,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
     {
 
         _lock.Unlock(ent.Owner, args.Actor);
-        _entityStorage.OpenStorage(ent);
+        _entityStorage.OpenStorage(ent.Owner);
 
         OpenPlaten(ent, args.Error, args.Silent);
     }
