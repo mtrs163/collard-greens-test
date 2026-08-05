@@ -66,7 +66,8 @@
   - type: LockVisuals
   - type: EntityStorage
     open: True
-    removedMasks: 20
+    removedMasks: 0
+    masksToRemove: 0
   - type: Pullable
   placement:
     mode: SnapgridCenter
@@ -78,6 +79,28 @@
   description: A robust one-platen clamshell grill, capable of thoroughly cooking your stuff from two sides simultaneously.
   suffix: 1 platen
   components:
+  # - type: Fixtures
+  #   fixtures:
+  #     fix1:
+  #       shape: !type:PolygonShape
+  #         radius: 0.01
+  #         vertices:
+  #         - -0.25,-0.48
+  #         - 0.25,-0.48
+  #         - 0.25,0.48
+  #         - -0.25,0.48
+  #       mask:
+  #       - Impassable
+  #       - TableLayer
+  #       - LowImpassable
+  #       layer:
+  #       - BulletImpassable
+  #       - Opaque
+  #       density: 75
+  #       hard: True
+  #       restitution: 0
+  #       friction: 0.4
+  - type: Sprite
   - type: Fixtures
     fixtures:
       fix1:
@@ -88,15 +111,9 @@
           - 0.25,-0.48
           - 0.25,0.48
           - -0.25,0.48
-        mask:
+        density: 55
+        mask: # tables should collide with other tables
         - Impassable
-        - TableLayer
-        - LowImpassable
         layer:
-        - BulletImpassable
-        - Opaque
-        density: 75
-        hard: True
-        restitution: 0
-        friction: 0.4
+        - TableLayer
   - type: EntityStorage
