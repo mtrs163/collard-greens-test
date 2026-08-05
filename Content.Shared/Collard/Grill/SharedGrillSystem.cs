@@ -55,6 +55,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
             _lock.Unlock(ent.Owner, ent.Owner);
             _entityStorage.OpenStorage(ent.Owner);
         }
+        Dirty(ent);
     }
 
     private void OnPlatenCloseRequest(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillPlatenCloseMessage args)
@@ -76,6 +77,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         ent.Comp.TimeoutTime = Timing.CurTime + TimeSpan.FromSeconds(args.Program.Time - 5 + ent.Comp.PlatenMoveDuration);
 
         ClosePlaten(ent, args.Program, isStandby);
+        Dirty(ent);
     }
 
     private void OnPlatenOpenRequest(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillPlatenOpenMessage args)
@@ -85,6 +87,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         _entityStorage.OpenStorage(ent.Owner);
 
         OpenPlaten(ent, args.Error, args.Silent);
+        Dirty(ent);
     }
 
     private void OnProgramCreated(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillProgramCreatedMessage args)
@@ -95,6 +98,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         // set main menu state for the UI
         ent.Comp.CurrentState = GrillState.MainMenu;
         ent.Comp.NextState = GrillState.MainMenu;
+        Dirty(ent);
     }
 
     private void OnProgramDeleted(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillProgramDeletedMessage args)
@@ -102,11 +106,13 @@ public abstract partial class SharedGrillSystem : EntitySystem
         if (!_accessReader.IsAllowed(args.Actor, ent))
             return;
         ent.Comp.SavedPrograms.Remove(args.Program);
+        Dirty(ent);
     }
 
     private void OnStopSounds(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillStopSoundsMessage args)
     {
         ent.Comp.AudioStream = Audio.Stop(ent.Comp.AudioStream);
+        Dirty(ent);
     }
 
     private void OnCloseAttempt(Entity<ClamshellGrillComponent> ent, ref StorageCloseAttemptEvent args)
@@ -122,6 +128,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         // my heart yearns for this to be predicted but for some reason opening an entitystorage via
         // verb does not predict it properly.
         _userInterface.TryOpenUi(ent.Owner, ClamshellGrillUiKey.Key, user);
+        Dirty(ent);
     }
 
     private void OnLockToggleAttempt(Entity<ClamshellGrillComponent> ent, ref LockToggleAttemptEvent args)
@@ -134,6 +141,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         // my heart yearns for this to be predicted but for some reason opening an entitystorage via
         // verb does not predict it properly.
         _userInterface.TryOpenUi(ent.Owner, ClamshellGrillUiKey.Key, args.User);
+        Dirty(ent);
     }
 
     private void OnLockToggled(Entity<ClamshellGrillComponent> ent, ref LockToggledEvent args)
@@ -151,6 +159,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         {
             RemCompDeferred<ActivelyGrilledComponent>(item);
         }
+        Dirty(ent);
     }
 
     private void OnClosed(Entity<ClamshellGrillComponent> ent, ref StorageAfterCloseEvent args)
@@ -161,6 +170,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
             var grilledComp = EnsureComp<ActivelyGrilledComponent>(item);
             grilledComp.Grill = ent.Owner;
         }
+        Dirty(ent);
     }
 
     public override void Update(float frameTime)
@@ -218,12 +228,14 @@ public abstract partial class SharedGrillSystem : EntitySystem
                 grill.CurrentState = GrillState.SelectingProgram;
                 grill.NextState = GrillState.SelectingProgram;
                 grill.AudioStream = Audio.Stop(grill.AudioStream);
+                Dirty(uid, grill);
             }
 
             if (grill.TimeoutTime < Timing.CurTime && grill.TimeoutTime != TimeSpan.Zero && grill.CurrentState == GrillState.Cooking)
             {
                 PlayTimeoutSound((uid, grill));
                 grill.TimeoutTime = TimeSpan.Zero;
+                Dirty(uid, grill);
             }
 
             if (grill.CurrentState == GrillState.Cooking)
@@ -233,7 +245,11 @@ public abstract partial class SharedGrillSystem : EntitySystem
                 Dirty(uid, grill);
             }
 
-            if (grill.OperationEndTime < Timing.CurTime && grill.CurrentState != GrillState.Cancelling) grill.AudioStream = Audio.Stop(grill.AudioStream);
+            if (grill.OperationEndTime < Timing.CurTime && grill.CurrentState != GrillState.Cancelling)
+            {
+                grill.AudioStream = Audio.Stop(grill.AudioStream);
+                Dirty(uid, grill);
+            }
         }
     }
 
