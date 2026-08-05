@@ -82,6 +82,7 @@
   - FatExtractorMachineCircuitboard
   - BiofabricatorMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
+  - BiomassReclaimerMachineCircuitboard # || collard-LTE
 
 # Tier 2
 

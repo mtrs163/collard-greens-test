@@ -109,7 +109,7 @@
   - CryoPodMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
   # collard-CloningResearch-start
-  - CloningPodMachineCircuitboard
-  - CloningConsoleComputerCircuitboard
-  - MedicalScannerMachineCircuitboard
+  # - CloningPodMachineCircuitboard || collard-LTE
+  # - CloningConsoleComputerCircuitboard || collard-LTE
+  # - MedicalScannerMachineCircuitboard || collard-LTE
   # collard-CloningResearch-end
