@@ -9,3 +9,18 @@
       stackRequirements:
         Manipulator: 3
         Glass: 1
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: ClamshellGrillMachineCircuitboard
+  name: clamshell grill machine board
+  description: A machine printed circuit board for a clamshell grill.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: ClamshellGrill
+    stackRequirements:
+      Manipulator: 4
+      Steel: 10
+      Cable: 5

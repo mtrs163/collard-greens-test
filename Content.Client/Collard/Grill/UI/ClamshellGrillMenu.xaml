@@ -1,0 +1,108 @@
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    MinSize="450 260"
+    SetSize="450 260">
+    <!--Main Menu of the grill-->
+    <BoxContainer Name="MainMenu" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="10 5 10 10">
+        <BoxContainer Orientation="Horizontal" VerticalAlignment="Top" VerticalExpand="True" HorizontalExpand="True" Margin="20 10">
+            <Button Name="PressAndGo" Text="{Loc 'grill-ui-button-pressandgo'}" MinSize="200 200"/>
+            <Control MinSize="20 20"/>
+            <Button Name="ProgramEditor" Text="{Loc 'grill-ui-button-programeditor'}" MaxSize="220 100"/>
+        </BoxContainer>
+    </BoxContainer>
+    <!--Program selector (Press & Go tab)-->
+    <BoxContainer Name="ProgramSelector" Visible="False" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="10 5 10 10">
+        <BoxContainer Orientation="Horizontal"  VerticalExpand="True" HorizontalExpand="True">
+            <ItemList Name="ProgramList" SelectMode="Single" Margin="3 3 3 3"
+            HorizontalExpand="True" VerticalExpand="True" SizeFlagsStretchRatio="8"/>
+            <Button Name="StartGrillButton" Text="{Loc 'grill-ui-button-start'}" Disabled="True"/>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" VerticalExpand="False" HorizontalExpand="True" Margin="20 0">
+            <Button Name="SelBackButton" Text="{Loc 'grill-ui-button-back'}" HorizontalAlignment="Left"/>
+            <controls:ConfirmButton Name="EnterStandby" Text="{Loc 'grill-ui-button-standby'}" HorizontalAlignment="Left"/>
+            <controls:ConfirmButton Name="DeleteProgram" Text="{Loc 'grill-ui-button-delete'}" HorizontalAlignment="Left"/>
+        </BoxContainer>
+    </BoxContainer>
+    <!--Program creator-->
+    <BoxContainer Name="ProgramCreator" Visible="False" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="10 5 10 10">
+        <BoxContainer Orientation="Vertical" VerticalAlignment="Top" VerticalExpand="True" HorizontalExpand="True" Margin="20 0">
+            <RichTextLabel Name="NameLabel"/>
+            <LineEdit Name="NameEdit"/>
+            <Control MinWidth="5"/>
+            <RichTextLabel Name="TimeLabel"/>
+            <LineEdit Name="TimeEdit"/>
+            <Control MinWidth="5"/>
+            <RichTextLabel Name="TemperatureLabel"/>
+            <LineEdit Name="TemperatureEdit"/>
+        </BoxContainer>
+        <Control VerticalExpand="True"/>
+        <BoxContainer VerticalExpand="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <Button Name="ProgBackButton" Text="{Loc 'grill-ui-button-back'}"/>
+            <Button Name="ProgDoneButton" Text="{Loc 'grill-ui-button-done'}" Disabled="True"/>
+        </BoxContainer>
+    </BoxContainer>
+    <!--Countdown Screen-->
+    <BoxContainer Name="CookingCountdown" Visible="False" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="10 5 10 10">
+        <BoxContainer Orientation="Vertical" VerticalAlignment="Top" VerticalExpand="True" HorizontalExpand="True" Margin="20 0">
+            <RichTextLabel Name="ProgramLabel"/>
+            <ProgressBar Name="TimerBar"
+                                 HorizontalExpand="True"
+                                 MaxValue="1"
+                                 MinValue="0"
+                                 SetHeight="25"
+                                 Margin="10 0 10 0"
+                                 VerticalAlignment="Center">
+                <RichTextLabel Name="TimerLabel"
+                        Margin="4 0"
+                        Text="0" />
+                <RichTextLabel Name="DisposeLabel"
+                        Margin="4 0"
+                        Text="{Loc 'grill-ui-dispose'}" />
+            </ProgressBar>
+            <Button Name="AbortButton" Text="{Loc 'grill-ui-button-exit-abort'}" HorizontalExpand="True"/>
+            <Button Name="GotItButton" Visible="False" Text="{Loc 'grill-ui-button-exit-gotit'}" HorizontalExpand="True"/>
+        </BoxContainer>
+    </BoxContainer>
+    <!--Standby screen-->
+    <BoxContainer Name="StandbyScreen" Visible="False" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="10 5 10 10">
+        <BoxContainer Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalExpand="True" HorizontalExpand="True" Margin="20 0">
+            <RichTextLabel Name="StandbyLabel" Text="{Loc 'grill-ui-standby'}" HorizontalAlignment="Center"/>
+            <RichTextLabel Name="StandbyTimerLabel" Margin="4 0" Text="0" HorizontalAlignment="Center"/>
+            <Button Name="ExitStandbyButton" Text="{Loc 'grill-ui-button-exit-standby'}" HorizontalExpand="True"/>
+        </BoxContainer>
+    </BoxContainer>
+    <!--Platen moving message-->
+    <PanelContainer Name="PlatenMovingOverlay" Visible="False" MouseFilter="Stop">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#000000E5" />
+        </PanelContainer.PanelOverride>
+        <BoxContainer Orientation="Vertical" VerticalAlignment="Center" VerticalExpand="True" HorizontalExpand="True" Margin="20 0">
+            <TextureRect Stretch="KeepAspectCentered"
+                                    TexturePath="/Textures/Interface/info.svg.192dpi.png"
+                                    Modulate="#5A5A5A"
+                                    SetSize="50 50"/>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" Align="Center"
+                StyleClasses="LabelBig"
+                Text="{Loc grill-ui-platen-moving}" />
+        </BoxContainer>
+    </PanelContainer>
+    <!--Unpowered message-->
+    <PanelContainer Name="UnpoweredOverlay" Visible="False" MouseFilter="Stop">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#000000FF" />
+        </PanelContainer.PanelOverride>
+        <BoxContainer Orientation="Vertical" VerticalAlignment="Center" VerticalExpand="True" HorizontalExpand="True" Margin="20 0">
+            <TextureRect Stretch="KeepAspectCentered"
+                                    TexturePath="/Textures/Interface/info.svg.192dpi.png"
+                                    Modulate="#5A5A5A"
+                                    SetSize="50 50"/>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" Align="Center"
+                StyleClasses="LabelBig"
+                Text="{Loc grill-ui-unpowered}" />
+        </BoxContainer>
+    </PanelContainer>
+</controls:FancyWindow>
+
+

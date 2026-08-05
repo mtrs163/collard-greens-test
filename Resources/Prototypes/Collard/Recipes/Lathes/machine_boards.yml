@@ -1,0 +1,5 @@
+# Kitchen
+- type: latheRecipe
+  parent: [ BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory ]
+  id: ClamshellGrillMachineCircuitboard
+  result: ClamshellGrillMachineCircuitboard
