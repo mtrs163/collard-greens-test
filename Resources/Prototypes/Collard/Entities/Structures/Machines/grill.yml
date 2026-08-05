@@ -62,10 +62,14 @@
     examinationText: access-reader-examination-functionality-restricted
   - type: Lock
     locked: false
+    lockingSound: /Audio/Effects/card_drag.ogg
+    unlockingSound: /Audio/Effects/card_drag.ogg
     useAccess: false
   - type: LockVisuals
   - type: EntityStorage
     open: True
+    closeSound: /Audio/Effects/docking.ogg
+    openSound: /Audio/Effects/docking.ogg
     removedMasks: 0
     masksToRemove: 0
   - type: Pullable
