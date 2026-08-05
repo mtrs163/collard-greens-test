@@ -121,3 +121,8 @@
         layer:
         - TableLayer
   - type: EntityStorage
+  - type: Construction
+    containers:
+    - machine_parts
+    - machine_board
+    - entity_storage
