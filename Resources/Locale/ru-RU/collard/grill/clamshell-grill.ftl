@@ -15,6 +15,6 @@ grill-ui-button-exit-gotit = ОК
 grill-ui-dispose = Утилизируйте продукт!
 grill-ui-platen-moving = Плита движется
 grill-ui-unpowered = Нет питания
-ent-ClamshellGrill = двустворчатый гриль
+ent-ClamshellGrill = гриль Garland X-Press
     .desc = Профессиональный гриль, способный тщательно обжаривать ваши продукты сразу с обеих сторон.
     .suffix = 1 плита
