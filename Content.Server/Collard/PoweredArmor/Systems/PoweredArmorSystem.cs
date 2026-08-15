@@ -1,5 +1,3 @@
-using Content.Server.Power.Components;
-using Content.Server.Power.EntitySystems;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Examine;
 using Content.Shared.Item.ItemToggle;
@@ -18,6 +16,7 @@ using Robust.Server.Audio;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Network;
+using Content.Shared.Chemistry.Components;
 
 namespace Content.Server.Collard.PoweredArmor.Systems
 {
@@ -84,7 +83,7 @@ namespace Content.Server.Collard.PoweredArmor.Systems
                 return;
 
             if (_itemToggle.IsActivated(entity.Owner) && riggable.IsRigged)
-                _riggableSystem.Explode(entity.Owner, _battery.GetCharge((entity, battery)));
+                _riggableSystem.Explode((entity.Owner, riggable), _battery.GetCharge((entity, battery)));
         }
 
         private void OnChargeChanged(Entity<PoweredArmorComponent> entity, ref ChargeChangedEvent args)

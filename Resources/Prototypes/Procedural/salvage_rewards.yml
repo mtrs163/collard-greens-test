@@ -29,9 +29,9 @@
     SheetUranium: 1.0
     TechnologyDiskRare: 0.5
     # cloning boards
-    CloningPodMachineCircuitboard: 0.5
-    MedicalScannerMachineCircuitboard: 0.5
-    CloningConsoleComputerCircuitboard: 0.5
+    # CloningPodMachineCircuitboard: 0.5 || collard-LTE
+    # MedicalScannerMachineCircuitboard: 0.5 || collard-LTE
+    # CloningConsoleComputerCircuitboard: 0.5 || collard-LTE
     BiomassReclaimerMachineCircuitboard: 0.5
     # basic weapons
     Machete: 0.25

@@ -10,3 +10,10 @@
   femaleFirstNames: NamesReptilianFemale
   naming: FirstDashFirst
   sexualDimorphism: false # collard-SexualDimorphism
+  defaultSoundsBySex:
+  - MaleReptilian
+  - FemaleReptilian
+  - MaleReptilian
+  voices:
+  - MaleReptilian
+  - FemaleReptilian

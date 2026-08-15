@@ -9,16 +9,16 @@ public sealed partial class OwOAccentSystem : RelayAccentSystem<OwOAccentCompone
     [Dependency] private IRobustRandom _random = default!;
 
     private static readonly IReadOnlyList<string> Faces = new List<string>{
-            " (•`ω´•)", " ;;w;;", " owo", " UwU", " >w<", " ^w^"
-        }.AsReadOnly();
+        " (•`ω´•)", " ;;w;;", " owo", " UwU", " >w<", " ^w^"
+    }.AsReadOnly();
 
     private static readonly IReadOnlyDictionary<string, string> SpecialWords = new Dictionary<string, string>()
-        {
-            { "you", "wu" },
-            { "ты", "ти" }, // collard-Localization
-        };
+    {
+        { "you", "wu" },
+        { "ты", "ти" }, // collard-Localization
+    };
 
-    public string Accentuate(string message)
+    public override string Accentuate(string message, Entity<OwOAccentComponent>? ent = null)
     {
         foreach (var (word, repl) in SpecialWords)
         {
@@ -32,10 +32,5 @@ public sealed partial class OwOAccentSystem : RelayAccentSystem<OwOAccentCompone
             .Replace("р", "в").Replace("Р", "В")
             .Replace("л", "в").Replace("Л", "В");
             // collard-Localization-end
-    }
-
-    protected override string AccentuateInternal(EntityUid uid, OwOAccentComponent comp, string message)
-    {
-        return Accentuate(message);
     }
 }

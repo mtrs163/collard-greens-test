@@ -4,7 +4,9 @@
   id: ArmBlade
   description: A grotesque blade made out of bone and flesh that can pry open doors and cleaves through people as a hot knife through butter.
   components:
-  - type: Sharp
+  - type: Tool
+    qualities:
+    - Slicing
   - type: Execution
     doAfterDuration: 4.0
   - type: Sprite
@@ -16,7 +18,7 @@
     wideAnimationRotation: 90
     attackRate: 1
     damage:
-      types: # Same as energy sword, but slash/pierce instead of slash/heat
+      types:
         Slash: 30 # collard-LifeValue
         Piercing: 30 # collard-LifeValue
         Structural: 20

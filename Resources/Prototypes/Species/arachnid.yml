@@ -9,6 +9,12 @@
   maleFirstNames: NamesArachnidFirst
   femaleFirstNames: NamesArachnidFirst
   lastNames: NamesArachnidLast
-#  sexes: # collard-SexualDimorphism
-#  - Unsexed
   sexualDimorphism: false # collard-SexualDimorphism
+  sexes:
+  - Unsexed
+  defaultSoundsBySex:
+  - UnisexArachnid
+  - UnisexArachnid
+  - UnisexArachnid
+  voices:
+  - UnisexArachnid

@@ -53,9 +53,9 @@
 # Misc
 - type: loadout
   id: BartenderGoldenShaker
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorBar
+  # effects:
+  # - !type:GroupLoadoutEffect
+  #   proto: SeniorBar
   storage:
     back:
     - DrinkShakerGold

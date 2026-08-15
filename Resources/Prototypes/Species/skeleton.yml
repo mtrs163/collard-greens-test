@@ -9,3 +9,10 @@
   dollPrototype: AppearanceSkeletonPerson
   skinColoration: TintedHues
   sexualDimorphism: false # collard-SexualDimorphism
+  defaultSoundsBySex:
+  - Skeleton
+  - Skeleton
+  - Skeleton
+  voices:
+  - Skeleton
+  - Skeleton
