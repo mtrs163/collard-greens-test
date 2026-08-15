@@ -132,30 +132,22 @@ public sealed partial class ClamshellGrillBoundUserInterface(EntityUid owner, En
 
     public void OpenMainMenu()
     {
-        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
-        grill.CurrentState = GrillState.MainMenu;
-        grill.NextState = GrillState.MainMenu;
+        SendPredictedMessage(new ClamshellGrillStateChange(GrillState.MainMenu));
     }
 
     public void OpenEditor()
     {
-        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
-        grill.CurrentState = GrillState.EditingProgram;
-        grill.NextState = GrillState.EditingProgram;
+        SendPredictedMessage(new ClamshellGrillStateChange(GrillState.EditingProgram));
     }
 
     public void OpenSelector()
     {
-        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
-        grill.CurrentState = GrillState.SelectingProgram;
-        grill.NextState = GrillState.SelectingProgram;
+        SendPredictedMessage(new ClamshellGrillStateChange(GrillState.SelectingProgram));
     }
 
     public void CancelCooking()
     {
-        var grill = EntMan.GetComponent<ClamshellGrillComponent>(Owner);
-        grill.CurrentState = GrillState.Cancelling;
-        grill.NextState = GrillState.Cancelling;
+        SendPredictedMessage(new ClamshellGrillStateChange(GrillState.Cancelling));
     }
 
     protected override void Dispose(bool disposing)

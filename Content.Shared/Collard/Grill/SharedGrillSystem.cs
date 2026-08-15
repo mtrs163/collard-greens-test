@@ -9,6 +9,7 @@ using Robust.Shared.Timing;
 using Content.Shared.Atmos;
 using Robust.Shared.Collections;
 using Content.Shared.Damage.Systems;
+using System.Data;
 
 namespace Content.Shared.Collard.Grill;
 
@@ -33,6 +34,7 @@ public abstract partial class SharedGrillSystem : EntitySystem
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillStopSoundsMessage>(OnStopSounds);
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillProgramCreatedMessage>(OnProgramCreated);
         SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillProgramDeletedMessage>(OnProgramDeleted);
+        SubscribeLocalEvent<ClamshellGrillComponent, ClamshellGrillStateChange>(OnStateChangeRequest);
         SubscribeLocalEvent<ClamshellGrillComponent, StorageCloseAttemptEvent>(OnCloseAttempt);
         SubscribeLocalEvent<ClamshellGrillComponent, LockToggleAttemptEvent>(OnLockToggleAttempt);
         SubscribeLocalEvent<ClamshellGrillComponent, LockToggledEvent>(OnLockToggled);
@@ -106,6 +108,13 @@ public abstract partial class SharedGrillSystem : EntitySystem
         if (!_accessReader.IsAllowed(args.Actor, ent))
             return;
         ent.Comp.SavedPrograms.Remove(args.Program);
+        Dirty(ent);
+    }
+
+    private void OnStateChangeRequest(Entity<ClamshellGrillComponent> ent, ref ClamshellGrillStateChange args)
+    {
+        ent.Comp.CurrentState = args.State;
+        ent.Comp.NextState = args.State;
         Dirty(ent);
     }
 

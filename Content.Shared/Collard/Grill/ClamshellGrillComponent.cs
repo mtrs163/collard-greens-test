@@ -147,6 +147,17 @@ public sealed class ClamshellGrillPlatenOpenMessage : BoundUserInterfaceMessage
 }
 
 [Serializable, NetSerializable]
+public sealed class ClamshellGrillStateChange : BoundUserInterfaceMessage
+{
+    public GrillState State;
+
+    public ClamshellGrillStateChange(GrillState state)
+    {
+        State = state;
+    }
+}
+
+[Serializable, NetSerializable]
 public sealed class ClamshellGrillStopSoundsMessage : BoundUserInterfaceMessage { }
 
 [Serializable, NetSerializable]
